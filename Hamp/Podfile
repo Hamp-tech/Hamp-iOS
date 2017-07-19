@@ -1,0 +1,16 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Hamp' do
+
+  pod 'HampKit', :git => 'https://github.com/Hamp-tech/Hamp-iOS-Kit.git', :branch => 'features'
+
+  target 'HampTests' do
+    inherit! :search_paths
+  end
+
+  target 'HampUITests' do
+    inherit! :search_paths
+  end
+
+end
