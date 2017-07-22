@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
-		4E5B08881F04731C00236A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08871F04731C00236A9E /* ViewController.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
 		4E5B089B1F04731C00236A9E /* HampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B089A1F04731C00236A9E /* HampTests.swift */; };
 		4E5B08A61F04731C00236A9E /* HampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08A51F04731C00236A9E /* HampUITests.swift */; };
-		4EDF10011F2368BA007E15E9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10001F23677C007E15E9 /* Login.storyboard */; };
+		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
+		4E7D94E51F23852800C7BB4B /* HampGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */; };
+		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
+		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
+		4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10281F2372E5007E15E9 /* Main.storyboard */; };
+		4EDF102B1F237D4E007E15E9 /* HampGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */; };
+		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
 		57F5B662E028D7F847419376 /* Pods_HampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
 		A60DD42DE92F674E0E23DDF8 /* Pods_HampTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC5808EA03F5DF9E1401416 /* Pods_HampTests.framework */; };
@@ -40,7 +45,6 @@
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08851F04731C00236A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E5B08871F04731C00236A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E5B088C1F04731C00236A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E5B08911F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5B08961F04731C00236A9E /* HampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +53,13 @@
 		4E5B08A11F04731C00236A9E /* HampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08A51F04731C00236A9E /* HampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUITests.swift; sourceTree = "<group>"; };
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EDF10001F23677C007E15E9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampGradientButton.swift; sourceTree = "<group>"; };
+		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
+		4EDF10281F2372E5007E15E9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampGradientLayer.swift; sourceTree = "<group>"; };
+		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hamp/Pods-Hamp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HampUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6E5C16DECEC990824F825C /* Pods-HampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
-				4E5B08871F04731C00236A9E /* ViewController.swift */,
+				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
+				4EDF102C1F237E03007E15E9 /* Model */,
+				4EDF10051F236E21007E15E9 /* View */,
+				4EEA1A151F2380A00070E17A /* Extensions */,
 				4E5B08B41F04733900236A9E /* Supporting Files */,
 			);
 			path = Hamp;
@@ -140,11 +153,61 @@
 		4E5B08B41F04733900236A9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EDF10001F23677C007E15E9 /* Login.storyboard */,
+				4EDF10281F2372E5007E15E9 /* Main.storyboard */,
+				4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */,
+				4EDF10021F236A84007E15E9 /* Fonts */,
 				4E5B088C1F04731C00236A9E /* Assets.xcassets */,
 				4E5B08911F04731C00236A9E /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E7D94E11F2384D900C7BB4B /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4E7D94E11F2384D900C7BB4B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4EDF10021F236A84007E15E9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4EDF10051F236E21007E15E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */,
+				4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EDF102C1F237E03007E15E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EEA1A151F2380A00070E17A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		51541EF23E41448D2B691C0C /* Frameworks */ = {
@@ -283,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EDF10011F2368BA007E15E9 /* Login.storyboard in Resources */,
+				4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
+				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
+				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +512,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5B08881F04731C00236A9E /* ViewController.swift in Sources */,
+				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
+				4EDF102B1F237D4E007E15E9 /* HampGradientLayer.swift in Sources */,
+				4E7D94E51F23852800C7BB4B /* HampGradientButton.swift in Sources */,
+				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

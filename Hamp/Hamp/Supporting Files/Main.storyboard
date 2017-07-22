@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaS-vG-x6O">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FredokaOne-Regular.ttf">
+            <string>FredokaOne-Regular</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="qE6-q4-x6n">
+            <objects>
+                <viewController id="LaS-vG-x6O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="Ct5-1i-5hv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaundryBackgroundPattern" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-NO-4kh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SmallBag" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-TS-UZK">
+                                <rect key="frame" x="51" y="56" width="34" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
+                                <rect key="frame" x="189" y="407" width="105" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="9SR-XK-bFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Iniciar sessión">
+                                    <color key="titleColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2X-q5-vwm">
+                                <rect key="frame" x="51" y="407" width="136" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="eVs-1D-9hl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haz la colada más fácil que nunca" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-Vi-45B">
+                                <rect key="frame" x="51" y="171" width="238" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="d1H-bR-Wul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
+                                <color key="textColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="HampGradientButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="51" y="276" width="218" height="34"/>
+                                <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nIp-Jg-CDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Empieza">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HHn-Mi-zem" firstAttribute="bottom" secondItem="c2X-q5-vwm" secondAttribute="bottom" constant="55" id="3AL-Mr-R9c"/>
+                            <constraint firstItem="Xob-ZN-FTt" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" constant="51" id="45R-xk-y6I"/>
+                            <constraint firstItem="HHn-Mi-zem" firstAttribute="bottom" secondItem="WvV-4n-EA7" secondAttribute="bottom" constant="55" id="8kS-vA-hUZ"/>
+                            <constraint firstItem="WvV-4n-EA7" firstAttribute="leading" secondItem="c2X-q5-vwm" secondAttribute="trailing" constant="2" id="9Q3-fq-KYX"/>
+                            <constraint firstItem="HHn-Mi-zem" firstAttribute="trailing" secondItem="Xob-ZN-FTt" secondAttribute="trailing" constant="51" id="JPN-JE-CXK"/>
+                            <constraint firstItem="mwL-NO-4kh" firstAttribute="bottom" secondItem="HHn-Mi-zem" secondAttribute="bottom" id="KCR-Wn-wJU"/>
+                            <constraint firstItem="mwL-NO-4kh" firstAttribute="trailing" secondItem="HHn-Mi-zem" secondAttribute="trailing" id="N5h-4S-R7X"/>
+                            <constraint firstItem="Xob-ZN-FTt" firstAttribute="top" secondItem="nvr-Vi-45B" secondAttribute="bottom" constant="6" id="Rq1-fX-MG7"/>
+                            <constraint firstItem="mwL-NO-4kh" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" id="ZiR-Ta-mCf"/>
+                            <constraint firstItem="HHn-Mi-zem" firstAttribute="trailing" secondItem="nvr-Vi-45B" secondAttribute="trailing" constant="31" id="ft2-YZ-dVA"/>
+                            <constraint firstItem="mwL-NO-4kh" firstAttribute="top" secondItem="Ct5-1i-5hv" secondAttribute="top" id="g34-9H-6fZ"/>
+                            <constraint firstItem="c2X-q5-vwm" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" constant="51" id="tUo-8R-dXF"/>
+                            <constraint firstItem="nvr-Vi-45B" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" constant="51" id="vdG-ug-DNk"/>
+                            <constraint firstItem="nvr-Vi-45B" firstAttribute="centerY" secondItem="Ct5-1i-5hv" secondAttribute="centerY" constant="-19.5" id="xJo-uX-vcc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HHn-Mi-zem"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgm-Bj-2TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-416.25" y="170.07042253521126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaundryBackgroundPattern" width="372" height="667"/>
+        <image name="SmallBag" width="162" height="181"/>
+    </resources>
+</document>
