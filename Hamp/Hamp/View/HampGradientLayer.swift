@@ -9,7 +9,6 @@
 import UIKit
 
 class HampGradientLayer: CAGradientLayer {
-    
     //MARK: Constructors
     override init() {
         super.init()
@@ -23,6 +22,7 @@ class HampGradientLayer: CAGradientLayer {
 }
 
 private extension HampGradientLayer {
+    /// Setup gradient 
     func setup() {
         colors = [UIColor.darkPink.cgColor, UIColor.ligthPink.cgColor]
         startPoint = CGPoint(x: 1.0, y: 0.5)
