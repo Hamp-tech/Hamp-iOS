@@ -14,6 +14,7 @@ class LogoTitleBaseViewController: HampViewController {
         super.viewDidLoad()
         let image = #imageLiteral(resourceName: "SmallBag")
         let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: 0, y: 0, width: 27, height: 34)
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
         
