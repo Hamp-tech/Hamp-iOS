@@ -61,7 +61,7 @@
                                 <color key="textColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="HampGradientButton" customModule="Hamp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="51" y="369.5" width="273" height="34"/>
                                 <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -111,13 +111,48 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaundryBackgroundPattern" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-Bq-aG8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicia sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-UT-3Q8">
+                                <rect key="frame" x="19" y="26" width="340" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-az-LNP" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="19" y="85.5" width="337" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="ND8-w4-e4B"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Correo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-sq-IEM" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="19" y="143.5" width="337" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Cqi-e5-eCA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Contraseña"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hy2-sq-IEM" firstAttribute="leading" secondItem="P8W-XC-yim" secondAttribute="leading" constant="19" id="47b-rW-dFZ"/>
+                            <constraint firstItem="gGi-az-LNP" firstAttribute="top" secondItem="lhx-UT-3Q8" secondAttribute="bottom" constant="26" id="6E7-ZN-VtQ"/>
                             <constraint firstItem="Mws-Bq-aG8" firstAttribute="bottom" secondItem="P8W-XC-yim" secondAttribute="bottom" id="7BC-Vk-eMA"/>
                             <constraint firstItem="Mws-Bq-aG8" firstAttribute="top" secondItem="P8W-XC-yim" secondAttribute="top" id="Ce4-ly-Qkp"/>
+                            <constraint firstItem="lhx-UT-3Q8" firstAttribute="leading" secondItem="P8W-XC-yim" secondAttribute="leading" constant="19" id="Fem-Bq-UOh"/>
+                            <constraint firstItem="hy2-sq-IEM" firstAttribute="top" secondItem="gGi-az-LNP" secondAttribute="bottom" constant="5" id="FfZ-0s-MRK"/>
+                            <constraint firstItem="P8W-XC-yim" firstAttribute="trailing" secondItem="hy2-sq-IEM" secondAttribute="trailing" constant="19" id="M9L-0L-1MW"/>
+                            <constraint firstItem="gGi-az-LNP" firstAttribute="leading" secondItem="P8W-XC-yim" secondAttribute="leading" constant="19" id="NC4-bG-6no"/>
                             <constraint firstItem="Mws-Bq-aG8" firstAttribute="trailing" secondItem="P8W-XC-yim" secondAttribute="trailing" id="OqH-X5-Lke"/>
+                            <constraint firstItem="lhx-UT-3Q8" firstAttribute="top" secondItem="P8W-XC-yim" secondAttribute="top" constant="26" id="PMd-YK-A2b"/>
+                            <constraint firstItem="P8W-XC-yim" firstAttribute="trailing" secondItem="gGi-az-LNP" secondAttribute="trailing" constant="19" id="T2W-4m-nn2"/>
                             <constraint firstItem="Mws-Bq-aG8" firstAttribute="leading" secondItem="P8W-XC-yim" secondAttribute="leading" id="dCx-fa-bzF"/>
+                            <constraint firstItem="P8W-XC-yim" firstAttribute="trailing" secondItem="lhx-UT-3Q8" secondAttribute="trailing" constant="16" id="g8B-z9-1So"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P8W-XC-yim"/>
                     </view>
@@ -131,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="1212" y="168.6656671664168"/>
         </scene>
-        <!--Logo Title Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMN-iJ-9Eh" customClass="LogoTitleNavigationController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMN-iJ-9Eh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="K2c-Ep-BMp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

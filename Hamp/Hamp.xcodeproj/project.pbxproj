@@ -12,14 +12,16 @@
 		4E5B089B1F04731C00236A9E /* HampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B089A1F04731C00236A9E /* HampTests.swift */; };
 		4E5B08A61F04731C00236A9E /* HampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08A51F04731C00236A9E /* HampUITests.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
-		4E7D94E51F23852800C7BB4B /* HampGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */; };
+		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
+		4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA40711F24C0DA003F51EA /* HampTextField.swift */; };
+		4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA40731F24D4E4003F51EA /* InputTextField.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
 		4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10281F2372E5007E15E9 /* Main.storyboard */; };
-		4EDF102B1F237D4E007E15E9 /* HampGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */; };
+		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
 		57F5B662E028D7F847419376 /* Pods_HampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -57,14 +59,16 @@
 		4E5B08A51F04731C00236A9E /* HampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUITests.swift; sourceTree = "<group>"; };
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampGradientButton.swift; sourceTree = "<group>"; };
+		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
+		4ECA40711F24C0DA003F51EA /* HampTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTextField.swift; sourceTree = "<group>"; };
+		4ECA40731F24D4E4003F51EA /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF10281F2372E5007E15E9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampGradientLayer.swift; sourceTree = "<group>"; };
+		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hamp/Pods-Hamp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HampUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +210,10 @@
 		4EDF10051F236E21007E15E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4EDF102A1F237D4E007E15E9 /* HampGradientLayer.swift */,
-				4E7D94E41F23852800C7BB4B /* HampGradientButton.swift */,
+				4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */,
+				4E7D94E41F23852800C7BB4B /* GradientButton.swift */,
+				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
+				4ECA40731F24D4E4003F51EA /* InputTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,13 +535,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
-				4EDF102B1F237D4E007E15E9 /* HampGradientLayer.swift in Sources */,
-				4E7D94E51F23852800C7BB4B /* HampGradientButton.swift in Sources */,
+				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
+				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
+				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,7 +714,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -738,7 +746,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

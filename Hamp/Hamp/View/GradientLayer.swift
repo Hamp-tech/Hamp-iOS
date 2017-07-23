@@ -1,5 +1,5 @@
 //
-//  HampGradientLayer.swift
+//  GradientLayer.swift
 //  Hamp
 //
 //  Created by Joan Molinas Ramon on 22/7/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HampGradientLayer: CAGradientLayer {
+class GradientLayer: CAGradientLayer {
     //MARK: Constructors
     override init() {
         super.init()
@@ -21,7 +21,7 @@ class HampGradientLayer: CAGradientLayer {
     }
 }
 
-private extension HampGradientLayer {
+private extension GradientLayer {
     /// Setup gradient 
     func setup() {
         colors = [UIColor.darkPink.cgColor, UIColor.ligthPink.cgColor]
