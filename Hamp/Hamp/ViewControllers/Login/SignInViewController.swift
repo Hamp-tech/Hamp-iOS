@@ -15,6 +15,7 @@ class SignInViewController: LogoTitleBaseViewController {
     @IBOutlet weak private var passwordTextField: InputTextField!
     @IBOutlet weak private var optionsToolbar: SignInToolbar!
     @IBOutlet weak var optionsToolbarBottomContraint: NSLayoutConstraint!
+    @IBOutlet weak var loginButton: GradientButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -24,6 +25,8 @@ class SignInViewController: LogoTitleBaseViewController {
         
         passwordTextField.type = .password
         passwordTextField.delegate = self
+        
+        loginButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +81,11 @@ extension SignInViewController: InputTextFieldDelegate {
         default:
             break
         }
+    }
+    
+    func textField(_ textField: InputTextField, replacementString string: String) {
+        let textFieldsFilled = !mailTextField.isEmpty && !passwordTextField.isEmpty
+        loginButton.isEnabled = textFieldsFilled
     }
 
 }

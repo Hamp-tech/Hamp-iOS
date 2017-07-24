@@ -20,4 +20,10 @@ class GradientButton: UIButton {
         layer.masksToBounds = true
         layer.cornerRadius = rect.height/2
     }
+    
+    override var isEnabled:Bool {
+        didSet {
+            alpha = isEnabled ? 1 : 0.5
+        }
+    }
 }

@@ -223,6 +223,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginButton" destination="baY-05-VAZ" id="m3k-Ea-YHe"/>
                         <outlet property="mailTextField" destination="gGi-az-LNP" id="Aol-Ri-7mj"/>
                         <outlet property="optionsToolbar" destination="kb0-Bu-oGu" id="oaC-SP-IdF"/>
                         <outlet property="optionsToolbarBottomContraint" destination="X61-yB-kRP" id="PS7-bN-8vy"/>
