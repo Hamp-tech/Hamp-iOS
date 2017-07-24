@@ -32,16 +32,15 @@ PODS:
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
-  - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`, branch `features`)
+  - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`)
 
 EXTERNAL SOURCES:
   HampKit:
-    :branch: features
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 CHECKOUT OPTIONS:
   HampKit:
-    :commit: e1b1e28c361a0210ffeffe601cc9dcc726704eaa
+    :commit: f514af63d94520c5b8672c2bbee301a7a67fb487
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 SPEC CHECKSUMS:
@@ -49,9 +48,9 @@ SPEC CHECKSUMS:
   FirebaseCommunity: 3180af8da9e96e4e0114999eeebd8896c43e848f
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
-  HampKit: 250ea943f137db29cf960c0be3d0b6d08c300ba8
+  HampKit: ec060eefa4339a2693e40d288d8835c483b9a2d0
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: 3dedf66d60cac3627ccf1abf43538b49985e019b
+PODFILE CHECKSUM: c157527b5e2bf6058b6d8619853b2a14d818781c
 
 COCOAPODS: 1.2.1

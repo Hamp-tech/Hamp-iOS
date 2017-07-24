@@ -14,7 +14,7 @@ class LogoTitleBaseViewController: HampViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.white
         addImageToTitle()
-//        addBottomLayer()
+        addBottomLayer()
     }
     
     private func addImageToTitle() {

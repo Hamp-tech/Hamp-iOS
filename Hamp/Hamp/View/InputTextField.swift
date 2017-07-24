@@ -10,8 +10,13 @@ import UIKit
 
 
 enum InputType {
+    case name
     case username
+    case mail
     case password
+    case phone
+    case birthday
+    case gender
     case unknown
 }
 

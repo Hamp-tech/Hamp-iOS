@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
-		4E5B089B1F04731C00236A9E /* HampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B089A1F04731C00236A9E /* HampTests.swift */; };
-		4E5B08A61F04731C00236A9E /* HampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08A51F04731C00236A9E /* HampUITests.swift */; };
+		4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E201F264A8900CDE02D /* SignUpViewController.swift */; };
+		4E632E2C1F2653D500CDE02D /* SingUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */; };
+		4E632E2D1F2653D500CDE02D /* SingUpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */; };
 		4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6A08841F251D240044570C /* SignInToolbar.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
 		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
@@ -25,27 +26,8 @@
 		4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10281F2372E5007E15E9 /* Main.storyboard */; };
 		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
-		57F5B662E028D7F847419376 /* Pods_HampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
-		A60DD42DE92F674E0E23DDF8 /* Pods_HampTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC5808EA03F5DF9E1401416 /* Pods_HampTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4E5B08971F04731C00236A9E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E5B087A1F04731C00236A9E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E5B08811F04731C00236A9E;
-			remoteInfo = Hamp;
-		};
-		4E5B08A21F04731C00236A9E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E5B087A1F04731C00236A9E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E5B08811F04731C00236A9E;
-			remoteInfo = Hamp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,12 +36,13 @@
 		4E5B08851F04731C00236A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5B088C1F04731C00236A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E5B08911F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E5B08961F04731C00236A9E /* HampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B089A1F04731C00236A9E /* HampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTests.swift; sourceTree = "<group>"; };
 		4E5B089C1F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E5B08A11F04731C00236A9E /* HampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08A51F04731C00236A9E /* HampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUITests.swift; sourceTree = "<group>"; };
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E632E201F264A8900CDE02D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpTableViewCell.swift; sourceTree = "<group>"; };
+		4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUpTableViewCell.xib; sourceTree = "<group>"; };
 		4E6A08841F251D240044570C /* SignInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInToolbar.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
@@ -70,6 +53,7 @@
 		4ECA40711F24C0DA003F51EA /* HampTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTextField.swift; sourceTree = "<group>"; };
 		4ECA40731F24D4E4003F51EA /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF10281F2372E5007E15E9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
@@ -92,22 +76,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E5B08931F04731C00236A9E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A60DD42DE92F674E0E23DDF8 /* Pods_HampTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E5B089E1F04731C00236A9E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				57F5B662E028D7F847419376 /* Pods_HampUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -127,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				4E5B08821F04731C00236A9E /* Hamp.app */,
-				4E5B08961F04731C00236A9E /* HampTests.xctest */,
-				4E5B08A11F04731C00236A9E /* HampUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,9 +142,24 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4E632E221F264C5C00CDE02D /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		4E632E271F26508000CDE02D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
+				4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -196,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */,
+				4E632E201F264A8900CDE02D /* SignUpViewController.swift */,
 				4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */,
 			);
 			path = Login;
@@ -222,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6A08811F251B170044570C /* IB */,
+				4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */,
 				4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */,
 				4E7D94E41F23852800C7BB4B /* GradientButton.swift */,
 				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
@@ -234,6 +217,8 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E632E271F26508000CDE02D /* Factory */,
+				4E632E221F264C5C00CDE02D /* Data Source */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +235,7 @@
 		51541EF23E41448D2B691C0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */,
 				FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */,
 				DDC5808EA03F5DF9E1401416 /* Pods_HampTests.framework */,
 				9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */,
@@ -293,48 +279,6 @@
 			productReference = 4E5B08821F04731C00236A9E /* Hamp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E5B08951F04731C00236A9E /* HampTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E5B08AD1F04731C00236A9E /* Build configuration list for PBXNativeTarget "HampTests" */;
-			buildPhases = (
-				578DD72B7402E588EAC4191F /* [CP] Check Pods Manifest.lock */,
-				4E5B08921F04731C00236A9E /* Sources */,
-				4E5B08931F04731C00236A9E /* Frameworks */,
-				4E5B08941F04731C00236A9E /* Resources */,
-				9FA0C6D3D418F5602F1CB7D9 /* [CP] Embed Pods Frameworks */,
-				1CF378A1911CFBE9FE803C31 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E5B08981F04731C00236A9E /* PBXTargetDependency */,
-			);
-			name = HampTests;
-			productName = HampTests;
-			productReference = 4E5B08961F04731C00236A9E /* HampTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4E5B08A01F04731C00236A9E /* HampUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E5B08B01F04731C00236A9E /* Build configuration list for PBXNativeTarget "HampUITests" */;
-			buildPhases = (
-				21DB79ACBC6369DA46A4DCC9 /* [CP] Check Pods Manifest.lock */,
-				4E5B089D1F04731C00236A9E /* Sources */,
-				4E5B089E1F04731C00236A9E /* Frameworks */,
-				4E5B089F1F04731C00236A9E /* Resources */,
-				C1428C93B8082181CBB93C56 /* [CP] Embed Pods Frameworks */,
-				A6B8D7A34F9D3D77011CE0CE /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E5B08A31F04731C00236A9E /* PBXTargetDependency */,
-			);
-			name = HampUITests;
-			productName = HampUITests;
-			productReference = 4E5B08A11F04731C00236A9E /* HampUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -347,14 +291,6 @@
 				TargetAttributes = {
 					4E5B08811F04731C00236A9E = {
 						CreatedOnToolsVersion = 9.0;
-					};
-					4E5B08951F04731C00236A9E = {
-						CreatedOnToolsVersion = 9.0;
-						TestTargetID = 4E5B08811F04731C00236A9E;
-					};
-					4E5B08A01F04731C00236A9E = {
-						CreatedOnToolsVersion = 9.0;
-						TestTargetID = 4E5B08811F04731C00236A9E;
 					};
 				};
 			};
@@ -372,8 +308,6 @@
 			projectRoot = "";
 			targets = (
 				4E5B08811F04731C00236A9E /* Hamp */,
-				4E5B08951F04731C00236A9E /* HampTests */,
-				4E5B08A01F04731C00236A9E /* HampUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,56 +321,13 @@
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E5B08941F04731C00236A9E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E5B089F1F04731C00236A9E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4E632E2D1F2653D500CDE02D /* SingUpTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CF378A1911CFBE9FE803C31 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HampTests/Pods-HampTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		21DB79ACBC6369DA46A4DCC9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		2F1E27E7C24DAF320DBD0D60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,51 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hamp/Pods-Hamp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		578DD72B7402E588EAC4191F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9FA0C6D3D418F5602F1CB7D9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HampTests/Pods-HampTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6B8D7A34F9D3D77011CE0CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B1EC8AF50916C5BE49E42728 /* [CP] Copy Pods Resources */ = {
@@ -527,21 +373,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C1428C93B8082181CBB93C56 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -560,40 +391,13 @@
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
+				4E632E2C1F2653D500CDE02D /* SingUpTableViewCell.swift in Sources */,
+				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E5B08921F04731C00236A9E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E5B089B1F04731C00236A9E /* HampTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E5B089D1F04731C00236A9E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E5B08A61F04731C00236A9E /* HampUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4E5B08981F04731C00236A9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E5B08811F04731C00236A9E /* Hamp */;
-			targetProxy = 4E5B08971F04731C00236A9E /* PBXContainerItemProxy */;
-		};
-		4E5B08A31F04731C00236A9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E5B08811F04731C00236A9E /* Hamp */;
-			targetProxy = 4E5B08A21F04731C00236A9E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4E5B08A81F04731C00236A9E /* Debug */ = {
@@ -771,72 +575,6 @@
 			};
 			name = Release;
 		};
-		4E5B08AE1F04731C00236A9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC6E5C16DECEC990824F825C /* Pods-HampTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = U9QF88MGC2;
-				INFOPLIST_FILE = HampTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HampTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hamp.app/Hamp";
-			};
-			name = Debug;
-		};
-		4E5B08AF1F04731C00236A9E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = U9QF88MGC2;
-				INFOPLIST_FILE = HampTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HampTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hamp.app/Hamp";
-			};
-			name = Release;
-		};
-		4E5B08B11F04731C00236A9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D993B21BB4F7413B434D8295 /* Pods-HampUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
-				INFOPLIST_FILE = HampUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HampUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Hamp;
-			};
-			name = Debug;
-		};
-		4E5B08B21F04731C00236A9E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
-				INFOPLIST_FILE = HampUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HampUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Hamp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -854,24 +592,6 @@
 			buildConfigurations = (
 				4E5B08AB1F04731C00236A9E /* Debug */,
 				4E5B08AC1F04731C00236A9E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E5B08AD1F04731C00236A9E /* Build configuration list for PBXNativeTarget "HampTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E5B08AE1F04731C00236A9E /* Debug */,
-				4E5B08AF1F04731C00236A9E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E5B08B01F04731C00236A9E /* Build configuration list for PBXNativeTarget "HampUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E5B08B11F04731C00236A9E /* Debug */,
-				4E5B08B21F04731C00236A9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
