@@ -7,11 +7,19 @@
 //
 
 import UIKit
+
+
 enum InputType {
     case username
     case password
     case unknown
 }
+
+@objc protocol InputTextFieldDelegate {
+    @objc optional func textField(_ textField: InputTextField, replacementString string: String)
+    @objc optional func textfieldPressReturn(_ textfield : InputTextField)
+}
+
 class InputTextField: UIView {
 
     //MARK: Properties
@@ -25,13 +33,23 @@ class InputTextField: UIView {
             setTextFieldType(by: newValue)
         }
     }
-
+    var delegate: InputTextFieldDelegate? = nil
     private var textField: HampTextField!
 
     
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
         setupTextField()
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        super.resignFirstResponder()
+        return textField.resignFirstResponder()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        super.becomeFirstResponder()
+        return textField.becomeFirstResponder()
     }
 }
 private extension InputTextField {
@@ -73,11 +91,12 @@ extension InputTextField : UITextFieldDelegate {
             self.textField.textState = .empty
         }
         
+        delegate?.textField?(self, replacementString: completText)
         return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        delegate?.textfieldPressReturn?(self)
         return true
     }
 }

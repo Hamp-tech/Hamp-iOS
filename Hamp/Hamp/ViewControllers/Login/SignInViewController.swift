@@ -20,7 +20,10 @@ class SignInViewController: LogoTitleBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mailTextField.type = .username
+        mailTextField.delegate = self
+        
         passwordTextField.type = .password
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +34,20 @@ class SignInViewController: LogoTitleBaseViewController {
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension SignInViewController: InputTextFieldDelegate {
+    func textfieldPressReturn(_ textfield: InputTextField) {
+        switch textfield {
+        case mailTextField:
+            let _ = passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            let _ = passwordTextField.resignFirstResponder()
+        default:
+            break
+        }
+    }
+
 }
 
 private extension SignInViewController {

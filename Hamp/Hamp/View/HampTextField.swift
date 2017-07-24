@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class HampTextField: UITextField {
 
     //MARK: Properties
