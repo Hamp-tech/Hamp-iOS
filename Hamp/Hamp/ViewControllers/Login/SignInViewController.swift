@@ -31,8 +31,34 @@ class SignInViewController: LogoTitleBaseViewController {
         setupKeyboardNotifications()
     }
     
+    //MARK: Actions
+    
+    /// Dismiss view controller
+    ///
+    /// - Parameter sender: button pressed
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    /// Present forgot password view controller
+    ///
+    /// - Parameter sender: button pressed
+    @IBAction func forgotPassword(_ sender: UIBarButtonItem) {
+        print("Forgot password")
+    }
+    
+    /// Present login sdk
+    ///
+    /// - Parameter sender: button pressed
+    @IBAction func facebookLogin(_ sender: UIBarButtonItem) {
+        print("Login with facebook")
+    }
+    
+    /// Check if information is correct, if it is, log in, show error otherwise
+    ///
+    /// - Parameter sender: button pressed
+    @IBAction func login(_ sender: UIBarButtonItem) {
+        print("login")
     }
 }
 
