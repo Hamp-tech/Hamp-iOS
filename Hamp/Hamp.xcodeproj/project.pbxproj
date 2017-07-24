@@ -10,8 +10,6 @@
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
 		4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E201F264A8900CDE02D /* SignUpViewController.swift */; };
-		4E632E2C1F2653D500CDE02D /* SingUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */; };
-		4E632E2D1F2653D500CDE02D /* SingUpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */; };
 		4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6A08841F251D240044570C /* SignInToolbar.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
 		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
@@ -41,8 +39,6 @@
 		4E5B08A51F04731C00236A9E /* HampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUITests.swift; sourceTree = "<group>"; };
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E632E201F264A8900CDE02D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpTableViewCell.swift; sourceTree = "<group>"; };
-		4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUpTableViewCell.xib; sourceTree = "<group>"; };
 		4E6A08841F251D240044570C /* SignInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInToolbar.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
@@ -159,7 +155,6 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				4E632E2B1F2653D500CDE02D /* SingUpTableViewCell.xib */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -204,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				4E6A08811F251B170044570C /* IB */,
-				4E632E2A1F2653D500CDE02D /* SingUpTableViewCell.swift */,
 				4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */,
 				4E7D94E41F23852800C7BB4B /* GradientButton.swift */,
 				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
@@ -321,7 +315,6 @@
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
-				4E632E2D1F2653D500CDE02D /* SingUpTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +384,6 @@
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
-				4E632E2C1F2653D500CDE02D /* SingUpTableViewCell.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 			);
