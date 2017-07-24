@@ -151,10 +151,10 @@
                                             <state key="normal" title="Recuerda la contraseña">
                                                 <color key="titleColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="forgotPassword:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="l7o-Tn-ikR"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="forgotPassword:" destination="WI3-gQ-HJJ" id="3cT-ec-PL1"/>
-                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
@@ -164,13 +164,12 @@
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="facebookLogin:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="hSf-t6-8H1"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="facebookLogin:" destination="WI3-gQ-HJJ" id="4f0-r5-ZhK"/>
-                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="avw-Uq-EQq"/>
                                     <barButtonItem style="plain" id="LOP-A5-cWn">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
                                             <rect key="frame" x="306" y="7" width="53" height="30"/>
@@ -179,6 +178,9 @@
                                             <state key="normal" title="Entra">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="login:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="Gld-Ua-55f"/>
+                                            </connections>
                                         </button>
                                         <connections>
                                             <action selector="login:" destination="WI3-gQ-HJJ" id="o0l-ej-pSp"/>

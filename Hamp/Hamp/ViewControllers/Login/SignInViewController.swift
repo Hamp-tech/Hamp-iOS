@@ -43,23 +43,24 @@ class SignInViewController: LogoTitleBaseViewController {
     /// Present forgot password view controller
     ///
     /// - Parameter sender: button pressed
-    @IBAction func forgotPassword(_ sender: UIBarButtonItem) {
+    @IBAction func forgotPassword(_ sender: UIButton) {
         print("Forgot password")
     }
     
     /// Present login sdk
     ///
     /// - Parameter sender: button pressed
-    @IBAction func facebookLogin(_ sender: UIBarButtonItem) {
+    @IBAction func facebookLogin(_ sender: UIButton) {
         print("Login with facebook")
     }
     
     /// Check if information is correct, if it is, log in, show error otherwise
     ///
     /// - Parameter sender: button pressed
-    @IBAction func login(_ sender: UIBarButtonItem) {
+    @IBAction func login(_ sender: UIButton) {
         print("login")
     }
+    
 }
 
 extension SignInViewController: InputTextFieldDelegate {
