@@ -31,6 +31,11 @@ class SignInViewController: LogoTitleBaseViewController {
         setupKeyboardNotifications()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeKeyboardNotifications()
+    }
+    
     //MARK: Actions
     
     /// Dismiss view controller
@@ -83,6 +88,9 @@ private extension SignInViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: .UIKeyboardWillHide, object: nil)
     }
     
+    func removeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self)
+    }
     @objc func keyboardWillShow(sender: Notification) {
         moveToolBar(sender: sender, toTop: true)
     }

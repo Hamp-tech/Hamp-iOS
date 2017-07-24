@@ -38,7 +38,7 @@ class InputTextField: UIView {
             setTextFieldType(by: newValue)
         }
     }
-    var delegate: InputTextFieldDelegate? = nil
+    weak var delegate: InputTextFieldDelegate? = nil
     private var textField: HampTextField!
 
     
