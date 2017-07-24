@@ -9,7 +9,7 @@
 import UIKit
 
 
-enum InputType {
+enum InputType: CustomStringConvertible {
     case name
     case username
     case mail
@@ -18,6 +18,29 @@ enum InputType {
     case birthday
     case gender
     case unknown
+    
+    var description: String {
+        var text: String
+        switch self {
+        case .name:
+            text = "name"
+        case .username:
+            text = "username"
+        case .mail:
+            text = "mail"
+        case .password:
+            text = "password"
+        case .phone:
+            text = "phone"
+        case .birthday:
+            text = "birthday"
+        case .gender:
+            text = "gender"
+        case .unknown:
+            text = "unknown"
+        }
+        return text
+    }
 }
 
 @objc protocol InputTextFieldDelegate {
@@ -27,19 +50,23 @@ enum InputType {
 
 class InputTextField: UIView {
 
-    //MARK: Properties
-    @IBInspectable var placeholder: String = ""
+    //MARK: Private Properties
+    private var textField: HampTextField!
+    
+    //MARK: Public properties
+    var placeholder: String?
+    weak var delegate: InputTextFieldDelegate? = nil
     var type: InputType = .unknown {
         willSet(newValue) {
-            guard let _ = textField else {
-                return
-            }
-            
+            guard let _ = textField else { return }
             setTextFieldType(by: newValue)
         }
     }
-    weak var delegate: InputTextFieldDelegate? = nil
-    private var textField: HampTextField!
+    var text: String? {
+        get { return textField.text }
+        set { textField.text = newValue }
+    }
+    private(set) public var isEmpty: Bool = true
 
     
     //MARK: Life cycle
@@ -96,6 +123,7 @@ extension InputTextField : UITextFieldDelegate {
             self.textField.textState = .empty
         }
         
+        isEmpty = completText.count == 0
         delegate?.textField?(self, replacementString: completText)
         return true
     }

@@ -20,10 +20,12 @@ class SignInViewController: LogoTitleBaseViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        mailTextField.type = .username
+        mailTextField.type = .mail
+        mailTextField.placeholder = InputType.mail.description
         mailTextField.delegate = self
         
         passwordTextField.type = .password
+        passwordTextField.placeholder = InputType.password.description
         passwordTextField.delegate = self
         
         loginButton.isEnabled = false
