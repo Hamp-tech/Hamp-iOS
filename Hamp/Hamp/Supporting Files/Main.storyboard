@@ -74,6 +74,9 @@
                                 <state key="normal" title="Empieza">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="anX-xG-aS8" kind="presentation" id="96a-jn-0Kf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,7 +162,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IH2-eM-gBC">
-                                            <rect key="frame" x="271" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="274" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,7 +175,7 @@
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
                                     <barButtonItem style="plain" id="LOP-A5-cWn">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                            <rect key="frame" x="306" y="7" width="53" height="30"/>
+                                            <rect key="frame" x="309" y="7" width="50" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Entra">
@@ -228,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUm-kK-IVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211.5942028985507" y="167.93478260869566"/>
+            <point key="canvasLocation" x="334" y="973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
@@ -246,7 +249,102 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrN-uV-CQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459.19999999999999" y="169.11544227886057"/>
+            <point key="canvasLocation" x="-417" y="973"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="E93-yR-vt0">
+            <objects>
+                <viewController id="fz9-EU-BxP" customClass="SignUpViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="CbP-1w-REP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaundryBackgroundPattern" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-tu-nk3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regístrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thP-g0-cga">
+                                <rect key="frame" x="19" y="26" width="340" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xid-iP-Wa1">
+                                <rect key="frame" x="0.0" y="86" width="375" height="517"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ctr-hY-etr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctr-hY-etr" id="gpc-oR-LdZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sNB-tu-nk3" firstAttribute="leading" secondItem="vM8-Xt-Xfj" secondAttribute="leading" id="5sZ-xQ-fFU"/>
+                            <constraint firstItem="thP-g0-cga" firstAttribute="leading" secondItem="vM8-Xt-Xfj" secondAttribute="leading" constant="19" id="Lxo-mS-pEX"/>
+                            <constraint firstItem="xid-iP-Wa1" firstAttribute="top" secondItem="thP-g0-cga" secondAttribute="bottom" constant="26" id="QW9-9L-uIp"/>
+                            <constraint firstItem="xid-iP-Wa1" firstAttribute="trailing" secondItem="vM8-Xt-Xfj" secondAttribute="trailing" id="U0d-FB-ZJe"/>
+                            <constraint firstItem="xid-iP-Wa1" firstAttribute="bottom" secondItem="vM8-Xt-Xfj" secondAttribute="bottom" id="YJ7-Ru-Ugt"/>
+                            <constraint firstItem="sNB-tu-nk3" firstAttribute="trailing" secondItem="vM8-Xt-Xfj" secondAttribute="trailing" id="fhl-YD-jKr"/>
+                            <constraint firstItem="sNB-tu-nk3" firstAttribute="bottom" secondItem="vM8-Xt-Xfj" secondAttribute="bottom" id="hsg-FO-pZS"/>
+                            <constraint firstItem="sNB-tu-nk3" firstAttribute="top" secondItem="vM8-Xt-Xfj" secondAttribute="top" id="jNw-ws-Eiv"/>
+                            <constraint firstItem="thP-g0-cga" firstAttribute="top" secondItem="vM8-Xt-Xfj" secondAttribute="top" constant="26" id="mda-1b-qnA"/>
+                            <constraint firstItem="xid-iP-Wa1" firstAttribute="leading" secondItem="vM8-Xt-Xfj" secondAttribute="leading" id="nrX-wa-8Fo"/>
+                            <constraint firstItem="vM8-Xt-Xfj" firstAttribute="trailing" secondItem="thP-g0-cga" secondAttribute="trailing" constant="16" id="quZ-ox-PXQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vM8-Xt-Xfj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JQ2-PC-idM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mzB-NH-j2m">
+                            <color key="tintColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="fz9-EU-BxP" id="bDM-ld-8jh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="nmd-0o-Vv8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mq1-1R-jc4" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="307" y="7" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Entra">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="singUp:" destination="fz9-EU-BxP" eventType="touchUpInside" id="UUb-79-bNp"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xid-iP-Wa1" id="lCd-nf-t2m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDU-Ak-Iiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.8" y="168.6656671664168"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="erT-lW-aMy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="anX-xG-aS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="zfD-Kd-pvB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fz9-EU-BxP" kind="relationship" relationship="rootViewController" id="Tkv-fP-KLz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u65-Zy-GQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411.19999999999999" y="169.11544227886057"/>
         </scene>
     </scenes>
     <resources>
