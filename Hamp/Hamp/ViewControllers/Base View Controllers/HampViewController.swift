@@ -8,4 +8,8 @@
 
 import UIKit
 
-class HampViewController: UIViewController {}
+class HampViewController: UIViewController {
+    deinit {
+        print("\(type(of: self)) deinit")
+    }
+}
