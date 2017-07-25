@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HampKit
 
 class SignInViewController: LogoTitleBaseViewController {
 
@@ -68,7 +69,14 @@ class SignInViewController: LogoTitleBaseViewController {
     ///
     /// - Parameter sender: button pressed
     @IBAction func login(_ sender: UIButton) {
-        print("login")
+        Hamp.Auth.signIn(
+            mail: mailTextField.text!,
+            password: passwordTextField.text!,
+            onSuccess: { (response) in
+                print(response.data)
+        },  onError: { (error) in
+                print(error)
+        })
     }
     
 }
