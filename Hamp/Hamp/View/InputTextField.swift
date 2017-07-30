@@ -54,17 +54,24 @@ class InputTextField: UIView {
     private var textField: HampTextField!
     
     //MARK: Public properties
-    var placeholder: String?
     weak var delegate: InputTextFieldDelegate? = nil
+    var placeholder: String?
     var type: InputType = .unknown {
         willSet(newValue) {
             guard let _ = textField else { return }
             setTextFieldType(by: newValue)
         }
     }
+    private var _text: String?
     var text: String? {
-        get { return textField.text }
-        set { textField.text = newValue }
+        get {
+            if let t = textField { return t.text }
+            return _text
+        } set {
+            if let t = textField { t.text = newValue }
+            _text = newValue
+            isEmpty = newValue == nil
+        }
     }
     private(set) public var isEmpty: Bool = true
 
@@ -85,15 +92,21 @@ class InputTextField: UIView {
     }
 }
 private extension InputTextField {
+    
     /// Add HampTextfield with properly properties
     func setupTextField() {
+        let textFieldText = text
         textField = HampTextField(frame: bounds)
         textField.delegate = self
         textField.placeholder = placeholder
+        textField.text = textFieldText
         setTextFieldType(by: type)
         addSubview(textField)
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameter inputType: <#inputType description#>
     private func setTextFieldType(by inputType : InputType) {
         switch inputType {
         case .username:
@@ -109,6 +122,22 @@ private extension InputTextField {
             break
         }
     }
+    
+    /// <#Description#>
+    ///
+    /// - Parameter text: <#text description#>
+    /// - Returns: <#return value description#>
+    private func textState(by text: String) -> HampTextField.TextState {
+        var tfState: HampTextField.TextState = .empty
+        
+        if text.count > 0 && self.textField.textState == .empty {
+            tfState = .filled
+        } else if (text.count == 0 && self.textField.textState == .filled){
+            tfState = .empty
+        }
+        
+        return tfState
+    }
 }
 
 
@@ -117,11 +146,7 @@ extension InputTextField : UITextFieldDelegate {
         let baseText = (textField.text ?? "") as NSString
         let completText = baseText.replacingCharacters(in: range, with: string)
 
-        if completText.count > 0 && self.textField.textState == .empty {
-            self.textField.textState = .filled
-        } else if (completText.count == 0 && self.textField.textState == .filled){
-            self.textField.textState = .empty
-        }
+        self.textField.textState = textState(by: completText)
         
         isEmpty = completText.count == 0
         delegate?.textField?(self, replacementString: completText)
