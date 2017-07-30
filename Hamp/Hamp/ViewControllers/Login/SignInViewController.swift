@@ -29,7 +29,11 @@ class SignInViewController: LogoTitleBaseViewController {
         passwordTextField.placeholder = InputType.password.description
         passwordTextField.delegate = self
         
-        loginButton.isEnabled = false
+        #if DEBUG
+            enableLoginButtonIfTextFieldsAreNotEmpty()
+        #else
+            loginButton.isEnabled = false
+        #endif
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +85,16 @@ class SignInViewController: LogoTitleBaseViewController {
     
 }
 
+private extension SignInViewController {
+    //MARK: Private
+    
+    /// <#Description#>
+    func enableLoginButtonIfTextFieldsAreNotEmpty() {
+        let textFieldsFilled = !mailTextField.isEmpty && !passwordTextField.isEmpty
+        loginButton.isEnabled = textFieldsFilled
+    }
+}
+
 extension SignInViewController: InputTextFieldDelegate {
     func textfieldPressReturn(_ textfield: InputTextField) {
         switch textfield {
@@ -94,8 +108,7 @@ extension SignInViewController: InputTextFieldDelegate {
     }
     
     func textField(_ textField: InputTextField, replacementString string: String) {
-        let textFieldsFilled = !mailTextField.isEmpty && !passwordTextField.isEmpty
-        loginButton.isEnabled = textFieldsFilled
+        enableLoginButtonIfTextFieldsAreNotEmpty()
     }
 
 }
