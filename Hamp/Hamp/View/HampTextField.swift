@@ -52,7 +52,7 @@ private extension HampTextField {
     /// Set text default properties
     func setupProperties() {
         textAlignment = .center
-        font = UIFont(name: "HelveticaNeue-Medium", size: 20)
+        font = UIFont.helvetica(withSize: 20)
         textColor = color
         tintColor = color
         autocorrectionType = .no

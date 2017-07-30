@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
 		4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E201F264A8900CDE02D /* SignUpViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helvetica.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08851F04731C00236A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5B088C1F04731C00236A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */,
 				4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */,
+				4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
+				4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
@@ -515,14 +519,6 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/HampKit\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Protobuf\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
-					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseMessaging/Frameworks\"",
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";
@@ -547,14 +543,6 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/HampKit\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Protobuf\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
-					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseMessaging/Frameworks\"",
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";

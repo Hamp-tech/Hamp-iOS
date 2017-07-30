@@ -1,8 +1,9 @@
 platform :ios, '9.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'Hamp' do
 
-  pod 'HampKit', :git => 'https://github.com/Hamp-tech/Hamp-iOS-Kit.git'
+pod 'HampKit', :git => 'https://github.com/Hamp-tech/Hamp-iOS-Kit.git', :branch => 'features'
 
 end
