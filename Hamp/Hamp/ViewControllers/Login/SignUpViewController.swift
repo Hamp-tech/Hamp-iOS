@@ -44,8 +44,19 @@ extension SignUpViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpTextFieldTableViewCell
         cell.content = SignUpCellFactory.content(by: contentTypes[indexPath.row])
+        cell.inputDelegate = self
+        cell.tag = indexPath.row
         return cell
     }
-    
-    
+}
+
+extension SignUpViewController: InputTextFieldDelegate {
+    func textfieldPressReturn(_ textfield : InputTextField) {
+        let tag = textfield.tag/10+1
+        if let nextTextfield = tableView.viewWithTag(tag) {
+            nextTextfield.becomeFirstResponder()
+        } else {
+            _ = textfield.resignFirstResponder()
+        }
+    }
 }

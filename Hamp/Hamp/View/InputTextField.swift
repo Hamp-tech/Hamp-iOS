@@ -102,6 +102,7 @@ private extension InputTextField {
         textField.delegate = self
         textField.placeholder = placeholder
         textField.text = textFieldText
+        textField.clearButtonMode = .whileEditing
         textField.backgroundColor = UIColor.clear
         setTextFieldType(by: type)
         addSubview(textField)
@@ -116,7 +117,7 @@ private extension InputTextField {
             if #available(iOS 11, *) {
                 textField.textContentType = .username
             }
-        case .password:
+        case .password, .repeatPassword:
             if #available(iOS 11, *) {
                 textField.textContentType = .password
             }
@@ -131,15 +132,7 @@ private extension InputTextField {
     /// - Parameter text: text to compare
     /// - Returns: text state based on text string and textfield state
     private func textState(by text: String) -> HampTextField.TextState {
-        var tfState: HampTextField.TextState = self.textField.textState
-        
-        if text.count > 0 {
-            tfState = .filled
-        } else if (text.count == 0 && self.textField.textState == .filled){
-            tfState = .empty
-        }
-        
-        return tfState
+        return (text.count == 0) ? .empty : .filled
     }
 }
 
@@ -158,6 +151,11 @@ extension InputTextField : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.textfieldPressReturn?(self)
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        self.textField.textState = textState(by: "")
         return true
     }
 }
