@@ -14,7 +14,7 @@ extension UIFont {
     /// - Parameter size: size of the font
     /// - Returns: Helvetica neue font with size
     public static func helvetica(withSize size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.regular)
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.medium)
     }
     
     /// Fredoka font

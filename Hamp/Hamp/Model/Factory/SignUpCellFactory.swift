@@ -12,11 +12,15 @@ public final class SignUpCellContent {
     //MARK: Properties
     var placeholder: String?
     var text: String?
+    var inputType: InputType!
     
     //MARK: Constructors
-    init(placeholder: String, text: String? = nil) {
+    init(placeholder: String,
+         text: String? = nil,
+         inputType: InputType) {
         self.placeholder = placeholder
         self.text = text
+        self.inputType = inputType
     }
 }
 
@@ -34,70 +38,72 @@ public struct SignUpCellFactory {
     /// - Parameter type: type of cell
     /// - Returns: content of cell
     static func content(by type: InputType) -> SignUpCellContent {
-        var content: SignUpCellContent!
+        var cont: SignUpCellContent = content(inputType: type)
         switch type {
         case .name:
-            content = nameContent()
+            nameContent(with: &cont)
         case .mail:
-            content = mailContent()
+            mailContent(with: &cont)
         case .phone:
-            content = phoneContent()
+            phoneContent(with: &cont)
         case .birthday:
-            content = birthdayContent()
+            birthdayContent(with: &cont)
         case .password:
-            content = passwordContent()
+            passwordContent(with: &cont)
         case .repeatPassword:
-            content = repeatPasswordContent()
+            repeatPasswordContent(with: &cont)
         default:
             break
         }
-        
-        return content
+        return cont
     }
     
 }
 
 private extension SignUpCellFactory {
+    static func content(inputType: InputType) -> SignUpCellContent {
+        return SignUpCellContent.init(placeholder: inputType.description, inputType: inputType)
+    }
+    
     /// Content to name cell
     ///
     /// - Returns: cell content
-    static func nameContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.name.description)
+    static func nameContent(with content: inout SignUpCellContent) {
     }
     
     /// Content to mail cell
     ///
     /// - Returns: cell content
-    static func mailContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.mail.description)
+    static func mailContent(with content: inout SignUpCellContent) {
+        
     }
     
     /// Content to phone cell
     ///
     /// - Returns: cell content
-    static func phoneContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.phone.description)
+    static func phoneContent(with content: inout SignUpCellContent) {
+        
     }
     
     /// Content to birthday cell
     ///
     /// - Returns: cell content
-    static func birthdayContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.birthday.description)
+    static func birthdayContent(with content: inout SignUpCellContent) {
+        
     }
     
-    /// Content to p cell
+    /// Content to password cell
     ///
     /// - Returns: cell content
-    static func passwordContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.password.description)
+    static func passwordContent(with content: inout SignUpCellContent) {
+        
     }
     
-    /// Content to p cell
+    /// Content to repeatPassword cell
     ///
     /// - Returns: cell content
-    static func repeatPasswordContent() -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: InputType.repeatPassword.description)
+    static func repeatPasswordContent(with content: inout SignUpCellContent) {
+        
     }
 }
 

@@ -44,7 +44,7 @@ private extension HampTextField {
     /// Add a border bottom to textfield
     func setupBorderBottom() {
         let borderLayer = CALayer()
-        borderLayer.frame = CGRect(x: 0, y: bounds.height-1, width: bounds.width, height: 1)
+        borderLayer.frame = CGRect(x: 0, y: bounds.height-1.5, width: bounds.width, height: 1.5)
         borderLayer.backgroundColor = color.cgColor
         layer.addSublayer(borderLayer)
     }
