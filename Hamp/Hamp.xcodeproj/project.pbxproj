@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
-		4E08EBF81F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */; };
+		4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */; };
 		4E08EBFA1F2F9336007C0DFF /* SignUpCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF91F2F9336007C0DFF /* SignUpCellFactory.swift */; };
 		4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */; };
 		4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FD1F2F9FB2000AB18C /* Reusable.swift */; };
@@ -39,7 +39,7 @@
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		4E08EBF91F2F9336007C0DFF /* SignUpCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellFactory.swift; sourceTree = "<group>"; };
 		4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpContentableCell.swift; sourceTree = "<group>"; };
 		4E2304FD1F2F9FB2000AB18C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */,
-				4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */,
+				4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
-				4E08EBF81F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib in Resources */,
+				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

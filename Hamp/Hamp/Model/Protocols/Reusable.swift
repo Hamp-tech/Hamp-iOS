@@ -15,13 +15,11 @@ protocol Reusable: class {
 
 extension Reusable {
     static var reuseIdentifier: String {
-        return String.init(describing: type(of: self))
+        return String.init(describing: self)
         
     }
-    
     static var nib: UINib? {
-        return nil
-        
+        return UINib.init(nibName: reuseIdentifier, bundle: nil)
     }
 }
 
