@@ -12,18 +12,22 @@ import FacebookLogin
 import FacebookCore
 
 public struct FacebookAPIManager {
-    /// <#Description#>
+    
+    /// Login with facebook sdk
+    /// · LoginManager
+    /// · Graph API
     ///
     /// - Parameters:
-    ///   - viewController: <#viewController description#>
-    ///   - onSuccess: <#onSuccess description#>
-    ///   - onError: <#onError description#>
+    ///    viewController to present the login view
+    ///   - onSuccess: called if all was successfully
+    ///   - onError: called if an error occurred
     static func logIn(onViewController viewController: UIViewController,
                       onSuccess: ((HampUser, AccessToken) -> ())? = nil,
                       onError: ((Error) -> ())? = nil) {
         
         let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: [.publicProfile, .email, .userBirthday], viewController: viewController) { (loginResult) in
+        loginManager.logIn(readPermissions: [.publicProfile, .email, .userBirthday],
+                           viewController: viewController) { (loginResult) in
             switch loginResult {
             case .failed(let error):
                 onError?(error)
@@ -43,7 +47,11 @@ public struct FacebookAPIManager {
     private static func retrieveHampUserFromFacebookInformation(with token: AccessToken,
                                                                 onSuccess: ((HampUser) -> ())? = nil,
                                                                 onError: ((Error) -> ())? = nil) {
-        let req = GraphRequest(graphPath: "me", parameters: ["fields": "email, name, first_name, last_name, birthday, gender"], accessToken: token, httpMethod: .GET, apiVersion: .defaultVersion)
+        let req = GraphRequest(graphPath: "me",
+                               parameters: ["fields": "email, name, first_name, last_name, birthday, gender"],
+                               accessToken: token,
+                               httpMethod: .GET,
+                               apiVersion: .defaultVersion)
         req.start({ (reqResponse, reqResult) in
             switch reqResult {
             case .success(let reqResultResponse):

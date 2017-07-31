@@ -68,10 +68,17 @@ class SignInViewController: LogoTitleBaseViewController {
         FacebookAPIManager.logIn(
             onViewController: self,
             onSuccess: { (user, accessToken) in
-            print(user)
-            print(accessToken)
+                Hamp.Auth.facebookLogIn(
+                    with: accessToken.authenticationToken,
+                    user: user,
+                    onSuccess: { (response) in
+
+                }, onError: {(error) in
+
+                })
+            
         },  onError: { (error) in
-            print(error)
+                print(error)
         })
     }
     
@@ -83,9 +90,9 @@ class SignInViewController: LogoTitleBaseViewController {
             mail: mailTextField.text!,
             password: passwordTextField.text!,
             onSuccess: { (response) in
-//                print(response.data)
+
         },  onError: { (error) in
-//                print(error)
+            
         })
     }
     
