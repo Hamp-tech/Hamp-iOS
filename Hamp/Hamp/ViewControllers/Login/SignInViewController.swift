@@ -9,6 +9,7 @@
 import UIKit
 import HampKit
 
+
 class SignInViewController: LogoTitleBaseViewController {
 
     //MARK: Properties
@@ -24,16 +25,14 @@ class SignInViewController: LogoTitleBaseViewController {
         mailTextField.type = .mail
         mailTextField.placeholder = InputType.mail.description
         mailTextField.delegate = self
+        mailTextField.text = "test@test.com"
         
         passwordTextField.type = .password
         passwordTextField.placeholder = InputType.password.description
         passwordTextField.delegate = self
+        passwordTextField.text = "arcanine"
         
-        #if DEBUG
-            enableLoginButtonIfTextFieldsAreNotEmpty()
-        #else
-            loginButton.isEnabled = false
-        #endif
+        enableLoginButtonIfTextFieldsAreNotEmpty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +65,14 @@ class SignInViewController: LogoTitleBaseViewController {
     ///
     /// - Parameter sender: button pressed
     @IBAction func facebookLogin(_ sender: UIButton) {
-        print("Login with facebook")
+        FacebookAPIManager.logIn(
+            onViewController: self,
+            onSuccess: { (user, accessToken) in
+            print(user)
+            print(accessToken)
+        },  onError: { (error) in
+            print(error)
+        })
     }
     
     /// Check if information is correct, if it is, log in, show error otherwise
@@ -77,9 +83,9 @@ class SignInViewController: LogoTitleBaseViewController {
             mail: mailTextField.text!,
             password: passwordTextField.text!,
             onSuccess: { (response) in
-                print(response.data)
+//                print(response.data)
         },  onError: { (error) in
-                print(error)
+//                print(error)
         })
     }
     
@@ -88,11 +94,13 @@ class SignInViewController: LogoTitleBaseViewController {
 private extension SignInViewController {
     //MARK: Private
     
-    /// <#Description#>
+    /// Enable login button if both textfields aren't empty
     func enableLoginButtonIfTextFieldsAreNotEmpty() {
         let textFieldsFilled = !mailTextField.isEmpty && !passwordTextField.isEmpty
         loginButton.isEnabled = textFieldsFilled
     }
+    
+    
 }
 
 extension SignInViewController: InputTextFieldDelegate {
