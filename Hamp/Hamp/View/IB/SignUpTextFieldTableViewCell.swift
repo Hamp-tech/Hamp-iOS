@@ -19,6 +19,7 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
     var content: SignUpCellContent! {
         didSet {
             guard let _ = inputTextField else { return }
+            guard let _ = content else { return }
             configure()
         }
     }
@@ -42,6 +43,11 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
         inputTextField.delegate = inputDelegate
         inputTextField.tag = tag*10
         inputTextField.type = content.inputType
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        content = nil
     }
 }
 
