@@ -104,9 +104,9 @@ private extension InputTextField {
         addSubview(textField)
     }
     
-    /// <#Description#>
+    /// Set textfield type
     ///
-    /// - Parameter inputType: <#inputType description#>
+    /// - Parameter inputType: textfield type
     private func setTextFieldType(by inputType : InputType) {
         switch inputType {
         case .username:
