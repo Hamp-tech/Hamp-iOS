@@ -214,6 +214,9 @@
                     <navigationItem key="navigationItem" id="SbK-Re-kkA">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SUC-8f-qhB">
                             <color key="tintColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="WI3-gQ-HJJ" id="nKq-zD-Gst"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -264,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xid-iP-Wa1">
-                                <rect key="frame" x="0.0" y="86" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ctr-hY-etr">
@@ -282,7 +285,7 @@
                         <constraints>
                             <constraint firstItem="sNB-tu-nk3" firstAttribute="leading" secondItem="vM8-Xt-Xfj" secondAttribute="leading" id="5sZ-xQ-fFU"/>
                             <constraint firstItem="thP-g0-cga" firstAttribute="leading" secondItem="vM8-Xt-Xfj" secondAttribute="leading" constant="19" id="Lxo-mS-pEX"/>
-                            <constraint firstItem="xid-iP-Wa1" firstAttribute="top" secondItem="thP-g0-cga" secondAttribute="bottom" constant="26" id="QW9-9L-uIp"/>
+                            <constraint firstItem="xid-iP-Wa1" firstAttribute="top" secondItem="thP-g0-cga" secondAttribute="bottom" constant="5" id="QW9-9L-uIp"/>
                             <constraint firstItem="xid-iP-Wa1" firstAttribute="trailing" secondItem="vM8-Xt-Xfj" secondAttribute="trailing" id="U0d-FB-ZJe"/>
                             <constraint firstItem="xid-iP-Wa1" firstAttribute="bottom" secondItem="vM8-Xt-Xfj" secondAttribute="bottom" id="YJ7-Ru-Ugt"/>
                             <constraint firstItem="sNB-tu-nk3" firstAttribute="trailing" secondItem="vM8-Xt-Xfj" secondAttribute="trailing" id="fhl-YD-jKr"/>

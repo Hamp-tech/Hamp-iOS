@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-enum InputType: CustomStringConvertible {
+public enum InputType: CustomStringConvertible {
     case name
     case username
     case mail
@@ -19,7 +18,7 @@ enum InputType: CustomStringConvertible {
     case gender
     case unknown
     
-    var description: String {
+    public var description: String {
         var text: String
         switch self {
         case .name:
@@ -106,7 +105,7 @@ private extension InputTextField {
     
     /// Set textfield type
     ///
-    /// - Parameter inputType: textfield type
+    /// - Parameter inputType: textfield 
     private func setTextFieldType(by inputType : InputType) {
         switch inputType {
         case .username:

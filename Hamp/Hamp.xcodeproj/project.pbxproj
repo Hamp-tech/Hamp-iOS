@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
+		4E08EBF81F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */; };
+		4E08EBFA1F2F9336007C0DFF /* SignUpCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF91F2F9336007C0DFF /* SignUpCellFactory.swift */; };
+		4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */; };
+		4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FD1F2F9FB2000AB18C /* Reusable.swift */; };
+		4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
@@ -32,6 +38,12 @@
 /* Begin PBXFileReference section */
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		4E08EBF91F2F9336007C0DFF /* SignUpCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellFactory.swift; sourceTree = "<group>"; };
+		4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpContentableCell.swift; sourceTree = "<group>"; };
+		4E2304FD1F2F9FB2000AB18C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helvetica.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08851F04731C00236A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2304F81F2F9803000AB18C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */,
+				4E2304FD1F2F9FB2000AB18C /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4E5B08791F04731C00236A9E = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +174,7 @@
 		4E632E271F26508000CDE02D /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				4E08EBF91F2F9336007C0DFF /* SignUpCellFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -160,6 +182,8 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
+				4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */,
+				4E08EBF61F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -224,6 +248,7 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E632E271F26508000CDE02D /* Factory */,
 				4E632E221F264C5C00CDE02D /* Data Source */,
 			);
@@ -236,6 +261,7 @@
 				4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */,
 				4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */,
 				4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */,
+				4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +355,7 @@
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
+				4E08EBF81F2F87C2007C0DFF /* SingUpTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,10 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
+				4E08EBFA1F2F9336007C0DFF /* SignUpCellFactory.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
+				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
+				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */,
@@ -398,6 +429,7 @@
 				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
+				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
