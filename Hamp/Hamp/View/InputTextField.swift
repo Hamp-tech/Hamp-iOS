@@ -13,6 +13,7 @@ public enum InputType: CustomStringConvertible {
     case username
     case mail
     case password
+    case repeatPassword
     case phone
     case birthday
     case gender
@@ -29,6 +30,8 @@ public enum InputType: CustomStringConvertible {
             text = "mail"
         case .password:
             text = "password"
+        case .repeatPassword:
+            text = "repeat password"
         case .phone:
             text = "phone"
         case .birthday:
@@ -99,6 +102,7 @@ private extension InputTextField {
         textField.delegate = self
         textField.placeholder = placeholder
         textField.text = textFieldText
+        textField.backgroundColor = UIColor.clear
         setTextFieldType(by: type)
         addSubview(textField)
     }
@@ -127,9 +131,9 @@ private extension InputTextField {
     /// - Parameter text: text to compare
     /// - Returns: text state based on text string and textfield state
     private func textState(by text: String) -> HampTextField.TextState {
-        var tfState: HampTextField.TextState = .empty
+        var tfState: HampTextField.TextState = self.textField.textState
         
-        if text.count > 0 && self.textField.textState == .empty {
+        if text.count > 0 {
             tfState = .filled
         } else if (text.count == 0 && self.textField.textState == .filled){
             tfState = .empty

@@ -21,6 +21,7 @@ class SignUpViewController: LogoTitleBaseViewController {
         tableView.backgroundColor = UIColor.clear
         tableView.dataSource = self
         tableView.registerReusableCell(SignUpTextFieldTableViewCell.self)
+        tableView.rowHeight = 58
         tableView.tableFooterView = UIView()
 
     }
@@ -42,7 +43,7 @@ extension SignUpViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpTextFieldTableViewCell
-        cell.contentView.backgroundColor = SignUpCellFactory.content(by: contentTypes[indexPath.row]).color
+        cell.content = SignUpCellFactory.content(by: contentTypes[indexPath.row])
         return cell
     }
     

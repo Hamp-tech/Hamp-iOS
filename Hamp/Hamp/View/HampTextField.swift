@@ -44,14 +44,14 @@ private extension HampTextField {
     /// Add a border bottom to textfield
     func setupBorderBottom() {
         let borderLayer = CALayer()
-        borderLayer.frame = CGRect(x: 0, y: bounds.height-2, width: bounds.width, height: 2)
+        borderLayer.frame = CGRect(x: 0, y: bounds.height-1, width: bounds.width, height: 1)
         borderLayer.backgroundColor = color.cgColor
         layer.addSublayer(borderLayer)
     }
     
     /// Set text default properties
     func setupProperties() {
-        textAlignment = .center
+        textAlignment = .left
         font = UIFont.helvetica(withSize: 20)
         textColor = color
         tintColor = color

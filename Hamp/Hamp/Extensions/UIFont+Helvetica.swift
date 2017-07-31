@@ -12,15 +12,15 @@ extension UIFont {
     /// HelveticaNeue font
     ///
     /// - Parameter size: size of the font
-    /// - Returns: <#return value description#>
+    /// - Returns: Helvetica neue font with size
     public static func helvetica(withSize size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.regular)
     }
     
-    /// <#Description#>
+    /// Fredoka font
     ///
-    /// - Parameter size: <#size description#>
-    /// - Returns: <#return value description#>
+    /// - Parameter size: size of the font
+    /// - Returns: Fredoka font with size
     public static func fredoka(withSize size: CGFloat) -> UIFont {
         return UIFont(name: "FredokaOne-Regular", size: size)!
     }

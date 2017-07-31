@@ -9,11 +9,14 @@
 import UIKit
 
 public final class SignUpCellContent {
-    var color: UIColor = .white
+    //MARK: Properties
+    var placeholder: String?
+    var text: String?
     
-    
-    init(color: UIColor) {
-        self.color = color
+    //MARK: Constructors
+    init(placeholder: String, text: String? = nil) {
+        self.placeholder = placeholder
+        self.text = text
     }
 }
 
@@ -24,7 +27,7 @@ public struct SignUpCellFactory {
                                             .phone,
                                             .birthday,
                                             .password,
-                                            .password]
+                                            .repeatPassword]
     
     /// Factory method to get a cell content by type
     ///
@@ -43,6 +46,8 @@ public struct SignUpCellFactory {
             content = birthdayContent()
         case .password:
             content = passwordContent()
+        case .repeatPassword:
+            content = repeatPasswordContent()
         default:
             break
         }
@@ -57,35 +62,42 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func nameContent() -> SignUpCellContent {
-        return SignUpCellContent.init(color: UIColor.red)
+        return SignUpCellContent.init(placeholder: InputType.name.description)
     }
     
     /// Content to mail cell
     ///
     /// - Returns: cell content
     static func mailContent() -> SignUpCellContent {
-        return SignUpCellContent.init(color: UIColor.blue)
+        return SignUpCellContent.init(placeholder: InputType.mail.description)
     }
     
     /// Content to phone cell
     ///
     /// - Returns: cell content
     static func phoneContent() -> SignUpCellContent {
-        return SignUpCellContent.init(color: UIColor.green)
+        return SignUpCellContent.init(placeholder: InputType.phone.description)
     }
     
     /// Content to birthday cell
     ///
     /// - Returns: cell content
     static func birthdayContent() -> SignUpCellContent {
-        return SignUpCellContent.init(color: UIColor.brown)
+        return SignUpCellContent.init(placeholder: InputType.birthday.description)
     }
     
     /// Content to p cell
     ///
     /// - Returns: cell content
     static func passwordContent() -> SignUpCellContent {
-        return SignUpCellContent.init(color: UIColor.purple)
+        return SignUpCellContent.init(placeholder: InputType.password.description)
+    }
+    
+    /// Content to p cell
+    ///
+    /// - Returns: cell content
+    static func repeatPasswordContent() -> SignUpCellContent {
+        return SignUpCellContent.init(placeholder: InputType.repeatPassword.description)
     }
 }
 
