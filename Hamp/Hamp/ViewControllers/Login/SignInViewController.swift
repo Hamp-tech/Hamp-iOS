@@ -73,7 +73,7 @@ class SignInViewController: LogoTitleBaseViewController {
                     user: user,
                     onSuccess: { (response) in
 
-                }, onError: {(error) in
+                },  onError: {(error) in
 
                 })
             

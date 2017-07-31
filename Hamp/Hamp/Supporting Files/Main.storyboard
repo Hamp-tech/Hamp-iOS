@@ -155,7 +155,7 @@
                                                 <color key="titleColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
-                                                <action selector="forgotPassword:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="l7o-Tn-ikR"/>
+                                                <action selector="forgotPassword:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="sYf-Hr-wqd"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -168,7 +168,7 @@
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
-                                                <action selector="facebookLogin:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="hSf-t6-8H1"/>
+                                                <action selector="facebookLogin:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="Nlv-ZA-TXs"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -182,12 +182,9 @@
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
-                                                <action selector="login:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="Gld-Ua-55f"/>
+                                                <action selector="login:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="PMz-53-BWA"/>
                                             </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="login:" destination="WI3-gQ-HJJ" id="o0l-ej-pSp"/>
-                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,17 +214,14 @@
                     <navigationItem key="navigationItem" id="SbK-Re-kkA">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SUC-8f-qhB">
                             <color key="tintColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="cancel:" destination="WI3-gQ-HJJ" id="yz7-y8-Jp5"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="loginButton" destination="baY-05-VAZ" id="m3k-Ea-YHe"/>
-                        <outlet property="mailTextField" destination="gGi-az-LNP" id="Aol-Ri-7mj"/>
-                        <outlet property="optionsToolbar" destination="kb0-Bu-oGu" id="oaC-SP-IdF"/>
-                        <outlet property="optionsToolbarBottomContraint" destination="X61-yB-kRP" id="PS7-bN-8vy"/>
-                        <outlet property="passwordTextField" destination="hy2-sq-IEM" id="a5V-KJ-Hyr"/>
+                        <outlet property="loginButton" destination="baY-05-VAZ" id="Hfr-lE-wNf"/>
+                        <outlet property="mailTextField" destination="gGi-az-LNP" id="xvj-kf-8Iy"/>
+                        <outlet property="optionsToolbar" destination="kb0-Bu-oGu" id="aLM-vE-zld"/>
+                        <outlet property="optionsToolbarBottomContraint" destination="X61-yB-kRP" id="qvM-zb-JD8"/>
+                        <outlet property="passwordTextField" destination="hy2-sq-IEM" id="fFD-9n-oGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUm-kK-IVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,7 +239,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WI3-gQ-HJJ" kind="relationship" relationship="rootViewController" id="usT-gr-ffd"/>
+                        <segue destination="WI3-gQ-HJJ" kind="relationship" relationship="rootViewController" id="fkR-Vk-Sni"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrN-uV-CQr" userLabel="First Responder" sceneMemberID="firstResponder"/>

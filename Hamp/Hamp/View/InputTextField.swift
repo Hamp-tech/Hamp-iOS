@@ -123,10 +123,10 @@ private extension InputTextField {
         }
     }
     
-    /// <#Description#>
+    /// Text state by textfield text
     ///
-    /// - Parameter text: <#text description#>
-    /// - Returns: <#return value description#>
+    /// - Parameter text: text to compare
+    /// - Returns: text state based on text string and textfield state
     private func textState(by text: String) -> HampTextField.TextState {
         var tfState: HampTextField.TextState = .empty
         
