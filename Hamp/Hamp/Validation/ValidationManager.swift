@@ -14,8 +14,8 @@ public struct ValidationManager {
     private var validations = [String: Validation]()
     
     //MARK: Public
-    public mutating func add(by key: String, validation: Validation) {
-        self.validations[key] = validation
+    public mutating func add(by validation: Validation) {
+        self.validations[validation.key] = validation
     }
     
     public func validate(onSuccess: () -> (),

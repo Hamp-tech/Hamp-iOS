@@ -9,24 +9,20 @@
 import UIKit
 
 class SignUpViewController: LogoTitleBaseViewController {
-
+    
     //MARK: Properties
     @IBOutlet weak private var tableView: UITableView!
     
     let contentTypes = SignUpCellFactory.contentTypes
     var contents: [SignUpCellContent]!
+    var validationsManager = ValidationManager()
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        contents = contentTypes.map { SignUpCellFactory.content(by: $0) }
-        
-        tableView.backgroundColor = UIColor.clear
-        tableView.dataSource = self
-        tableView.registerReusableCell(SignUpTextFieldTableViewCell.self)
-        tableView.rowHeight = 58
-        tableView.tag = -1
-        tableView.tableFooterView = UIView()
+        createContens()
+        createValidations()
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,11 +45,62 @@ class SignUpViewController: LogoTitleBaseViewController {
             let cell = tableView.cellForRow(at: IndexPath.init(row: i, section: 0))
             cell?.resignFirstResponder()
         }
-        contents.forEach { print($0.text) }
+        
+        validationsManager.validate(
+            onSuccess: {
+                print("All valid")
+        },  onError: { () in
+                print("Incorrect")
+        })
+
+    }
+}
+
+private extension SignUpViewController {
+    //MARK: Private
+    /// Create contents to cells
+    func createContens() {
+        contents = contentTypes.map { SignUpCellFactory.content(by: $0) }
+    }
+    
+    /// Create validations to cell
+    func createValidations() {
+        var idx = 0
+        contents.map({ value in
+            Validation.init(
+                validationBlock: { () -> (Bool) in
+                    guard let t = value.text else { return false }
+                    return !t.isEmpty
+            },  validatedBlock: { (key, validated) in
+                let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as! SignUpTextFieldTableViewCell
+                if !validated {
+                    cell.inputTextField.textType = .error
+                } else {
+                    cell.inputTextField.textType = .filled
+                }
+                
+            })
+        }).forEach {
+            $0.key = String(idx)
+            idx += 1
+            self.validationsManager.add(by: $0)
+        }
+    }
+    
+    /// Setup UI of Tableview
+    func setupTableView() {
+        tableView.backgroundColor = UIColor.clear
+        tableView.dataSource = self
+        tableView.registerReusableCell(SignUpTextFieldTableViewCell.self)
+        tableView.rowHeight = 58
+        tableView.tag = -1
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
     }
 }
 
 extension SignUpViewController {
+    //MARK: Keyboard
     func setupKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: .UIKeyboardWillHide, object: nil)
@@ -92,7 +139,7 @@ extension SignUpViewController: UITableViewDataSource {
 extension SignUpViewController: InputTextFieldDelegate {
     func textfieldPressReturn(_ textfield : InputTextField) {
         let tag = textfield.tag/10+1
-
+        
         if let nextCell = tableView.viewWithTag(tag) {
             nextCell.becomeFirstResponder()
             scrollToRow(to: tableView.indexPath(for: nextCell as! UITableViewCell)!)
@@ -113,3 +160,4 @@ extension SignUpViewController: InputTextFieldDelegate {
         tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }
+

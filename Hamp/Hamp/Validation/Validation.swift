@@ -12,11 +12,14 @@ public class Validation {
     typealias ValidationBlock = () -> (Bool)
     typealias ValidatedBlock = (String, Bool) -> ()
     
+    var key: String 
     var validationBlock: ValidationBlock
     var validatedBlock: ValidatedBlock
     
-    init(by validationBlock: @escaping ValidationBlock,
+    init(with key: String = "",
+         validationBlock: @escaping ValidationBlock,
          validatedBlock: @escaping ValidatedBlock) {
+        self.key = key
         self.validationBlock = validationBlock
         self.validatedBlock = validatedBlock
     }

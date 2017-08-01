@@ -61,6 +61,12 @@ class InputTextField: UIView {
     
     //MARK: Public properties
     weak var delegate: InputTextFieldDelegate? = nil
+    var textType: HampTextField.TextState = .filled {
+        didSet {
+            guard let t = textField else { return }
+            t.textState = textType
+        }
+    }
     var placeholder: String?
     var type: InputType = .unknown {
         willSet(newValue) {
@@ -74,10 +80,7 @@ class InputTextField: UIView {
             if let t = textField { return t.text }
             return _text
         } set {
-            if let t = textField {
-                t.text = newValue
-                textField.textState = textState(by: newValue!)
-            }
+            if let t = textField { t.text = newValue }
             _text = newValue
             
             isEmpty = newValue == nil

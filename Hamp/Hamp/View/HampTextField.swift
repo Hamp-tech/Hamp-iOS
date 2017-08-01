@@ -12,10 +12,13 @@ class HampTextField: UITextField {
     //MARK: Properties
     public var textState: TextState = .empty {
         willSet(newValue){
-            if newValue == .empty {
+            switch newValue {
+            case .empty:
                 color = .black
-            } else {
+            case .filled:
                 color = .darkPink
+            case .error:
+                color = .red
             }
             
             setNeedsDisplay()
@@ -35,6 +38,7 @@ extension HampTextField {
     enum TextState {
         case filled
         case empty
+        case error
     }
 }
 
@@ -58,7 +62,7 @@ private extension HampTextField {
         autocorrectionType = .no
         
         if let placeholder = placeholder {
-            let str = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor:UIColor.black])
+            let str = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor: color])
             self.attributedPlaceholder = str
         }
 

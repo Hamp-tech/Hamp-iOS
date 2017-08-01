@@ -13,19 +13,13 @@ public final class SignUpCellContent {
     var placeholder: String?
     var text: String?
     var inputType: InputType!
-    var textFieldTextPointer = UnsafeMutablePointer<String>.allocate(capacity: 1)
     
     //MARK: Constructors
     init(placeholder: String,
          text: String? = nil,
          inputType: InputType) {
-        textFieldTextPointer.initialize(to: "")
         self.placeholder = placeholder
         self.inputType = inputType
-    }
-    
-    deinit {
-        textFieldTextPointer.deallocate(capacity: 1)
     }
 }
 
