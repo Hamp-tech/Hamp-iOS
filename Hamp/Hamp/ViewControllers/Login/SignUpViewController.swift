@@ -69,8 +69,7 @@ private extension SignUpViewController {
         contents.map({ value in
             Validation.init(
                 validationBlock: { () -> (Bool) in
-                    guard let t = value.text else { return false }
-                    return !t.isEmpty
+                    return value.valid()
             },  validatedBlock: { (key, validated) in
                 let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as! SignUpTextFieldTableViewCell
                 if !validated {

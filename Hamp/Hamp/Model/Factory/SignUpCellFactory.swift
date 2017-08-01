@@ -21,6 +21,12 @@ public final class SignUpCellContent {
         self.placeholder = placeholder
         self.inputType = inputType
     }
+    
+    func valid() -> Bool {
+        guard let t = text else { return false }
+        guard t.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 else { return false }
+        return t.count > 0
+    }
 }
 
 public struct SignUpCellFactory {
