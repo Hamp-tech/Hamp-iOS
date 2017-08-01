@@ -84,7 +84,7 @@ extension SignUpViewController: UITableViewDataSource {
 extension SignUpViewController: InputTextFieldDelegate {
     func textfieldPressReturn(_ textfield : InputTextField) {
         let tag = textfield.tag/10+1
-        print(tag)
+
         if let nextCell = tableView.viewWithTag(tag) {
             nextCell.becomeFirstResponder()
             scrollToRow(to: tableView.indexPath(for: nextCell as! UITableViewCell)!)

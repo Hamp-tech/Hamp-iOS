@@ -28,8 +28,8 @@
 		4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA40711F24C0DA003F51EA /* HampTextField.swift */; };
 		4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA40731F24D4E4003F51EA /* InputTextField.swift */; };
 		4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */; };
+		4ECFFAA21F30BE790043D4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECFFAA41F30BE790043D4B5 /* Main.storyboard */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
-		4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10281F2372E5007E15E9 /* Main.storyboard */; };
 		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -65,9 +65,9 @@
 		4ECA40711F24C0DA003F51EA /* HampTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTextField.swift; sourceTree = "<group>"; };
 		4ECA40731F24D4E4003F51EA /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		4ECFFAA31F30BE790043D4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
-		4EDF10281F2372E5007E15E9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hamp/Pods-Hamp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 				4EDF10051F236E21007E15E9 /* View */,
 				4E89E05C1F2EC24C008C658D /* Utils */,
 				4EEA1A151F2380A00070E17A /* Extensions */,
+				4ECFFAA11F30BDF70043D4B5 /* Localization */,
 				4E5B08B41F04733900236A9E /* Supporting Files */,
 			);
 			path = Hamp;
@@ -155,7 +156,7 @@
 		4E5B08B41F04733900236A9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EDF10281F2372E5007E15E9 /* Main.storyboard */,
+				4ECFFAA41F30BE790043D4B5 /* Main.storyboard */,
 				4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */,
 				4EDF10021F236A84007E15E9 /* Fonts */,
 				4E5B088C1F04731C00236A9E /* Assets.xcassets */,
@@ -222,6 +223,13 @@
 				4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */,
 			);
 			path = "Base View Controllers";
+			sourceTree = "<group>";
+		};
+		4ECFFAA11F30BDF70043D4B5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		4EDF10021F236A84007E15E9 /* Fonts */ = {
@@ -351,7 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EDF10291F2372E5007E15E9 /* Main.storyboard in Resources */,
+				4ECFFAA21F30BE790043D4B5 /* Main.storyboard in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
@@ -438,6 +446,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4ECFFAA41F30BE790043D4B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECFFAA31F30BE790043D4B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E5B08A81F04731C00236A9E /* Debug */ = {
