@@ -80,6 +80,7 @@ class InputTextField: UIView {
     
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
+        super.draw(rect)
         setupTextField()
     }
     
