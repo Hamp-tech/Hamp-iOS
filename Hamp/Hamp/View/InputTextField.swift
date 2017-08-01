@@ -23,21 +23,21 @@ public enum InputType: CustomStringConvertible {
         var text: String
         switch self {
         case .name:
-            text = "name"
+            text = Localization.localizableString(by: "input-type.name")
         case .username:
-            text = "username"
+            text = Localization.localizableString(by: "input-type.username")
         case .mail:
-            text = "mail"
+            text = Localization.localizableString(by: "input-type.email")
         case .password:
-            text = "password"
+            text = Localization.localizableString(by: "input-type.password")
         case .repeatPassword:
-            text = "repeat password"
+            text = Localization.localizableString(by: "input-type.repeat-password")
         case .phone:
-            text = "phone"
+            text = Localization.localizableString(by: "input-type.phone")
         case .birthday:
-            text = "birthday"
+            text = Localization.localizableString(by: "input-type.birthday")
         case .gender:
-            text = "gender"
+            text = Localization.localizableString(by: "input-type.gender")
         case .unknown:
             text = "unknown"
         }

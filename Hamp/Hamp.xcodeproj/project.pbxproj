@@ -29,6 +29,8 @@
 		4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA40731F24D4E4003F51EA /* InputTextField.swift */; };
 		4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */; };
 		4ECFFAA21F30BE790043D4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECFFAA41F30BE790043D4B5 /* Main.storyboard */; };
+		4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */; };
+		4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFAB11F30C22B0043D4B5 /* Localization.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
 		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
@@ -66,6 +68,10 @@
 		4ECA40731F24D4E4003F51EA /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		4ECFFAA31F30BE790043D4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4ECFFAAA1F30C0A40043D4B5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		4ECFFAAE1F30C0FF0043D4B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4ECFFAB01F30C1010043D4B5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localization.strings; sourceTree = "<group>"; };
+		4ECFFAB11F30C22B0043D4B5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		4E5B08B41F04733900236A9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */,
 				4ECFFAA41F30BE790043D4B5 /* Main.storyboard */,
 				4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */,
 				4EDF10021F236A84007E15E9 /* Fonts */,
@@ -228,6 +235,7 @@
 		4ECFFAA11F30BDF70043D4B5 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				4ECFFAB11F30C22B0043D4B5 /* Localization.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 4E5B08791F04731C00236A9E;
 			productRefGroup = 4E5B08831F04731C00236A9E /* Products */;
@@ -360,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ECFFAA21F30BE790043D4B5 /* Main.storyboard in Resources */,
+				4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
@@ -438,6 +448,7 @@
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
+				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
@@ -452,8 +463,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				4ECFFAA31F30BE790043D4B5 /* Base */,
+				4ECFFAAA1F30C0A40043D4B5 /* es */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECFFAAE1F30C0FF0043D4B5 /* en */,
+				4ECFFAB01F30C1010043D4B5 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -463,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -509,7 +531,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -522,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -562,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

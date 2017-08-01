@@ -1,0 +1,17 @@
+/* 
+  Localization.strings
+  Hamp
+
+  Created by Joan Molinas Ramon on 1/8/17.
+  Copyright © 2017 com.hamp.hampiOS. All rights reserved.
+*/
+
+"input-type.name" = "Name";
+"input-type.user-name" = "Name";
+"input-type.email" = "Email";
+"input-type.phone" = "Phone";
+"input-type.birthday" = "Birthday";
+"input-type.password" = "Password";
+"input-type.repeat-password" = "Repeat Password";
+"input-type.gender" = "Gender";
+
