@@ -92,7 +92,6 @@ extension SignUpViewController: UITableViewDataSource {
 extension SignUpViewController: InputTextFieldDelegate {
     func textfieldPressReturn(_ textfield : InputTextField) {
         let tag = textfield.tag/10+1
-        print(tag)
 
         if let nextCell = tableView.viewWithTag(tag) {
             nextCell.becomeFirstResponder()
@@ -105,7 +104,6 @@ extension SignUpViewController: InputTextFieldDelegate {
     
     func textfieldEndEditing(_ textfield: InputTextField) {
         let tag = textfield.tag/10
-        print(tag)
         if let cell = tableView.viewWithTag(tag) {
             (cell as! SignUpTextFieldTableViewCell).content.text = textfield.text
         }
