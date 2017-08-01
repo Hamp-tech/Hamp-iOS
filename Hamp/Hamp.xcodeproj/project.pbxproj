@@ -13,6 +13,7 @@
 		4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */; };
 		4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FD1F2F9FB2000AB18C /* Reusable.swift */; };
 		4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */; };
+		4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */; };
 		4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */; };
 		4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4786701F30DAB1007ABE00 /* Validation.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */; };
@@ -48,6 +49,7 @@
 		4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpContentableCell.swift; sourceTree = "<group>"; };
 		4E2304FD1F2F9FB2000AB18C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellContent.swift; sourceTree = "<group>"; };
 		4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		4E4786701F30DAB1007ABE00 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helvetica.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 				4E2304FD1F2F9FB2000AB18C /* Reusable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4E2BB6711F3132A0002DD4EE /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */,
+			);
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		4E47866D1F30DA67007ABE00 /* Validation */ = {
@@ -278,6 +288,7 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BB6711F3132A0002DD4EE /* Contents */,
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E632E271F26508000CDE02D /* Factory */,
 				4E632E221F264C5C00CDE02D /* Data Source */,
@@ -449,6 +460,7 @@
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellFactory.swift in Sources */,
+				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,

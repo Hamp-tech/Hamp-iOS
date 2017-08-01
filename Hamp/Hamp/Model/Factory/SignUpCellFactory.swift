@@ -7,27 +7,7 @@
 //
 
 import UIKit
-
-public final class SignUpCellContent {
-    //MARK: Properties
-    var placeholder: String?
-    var text: String?
-    var inputType: InputType!
-    
-    //MARK: Constructors
-    init(placeholder: String,
-         text: String? = nil,
-         inputType: InputType) {
-        self.placeholder = placeholder
-        self.inputType = inputType
-    }
-    
-    func valid() -> Bool {
-        guard let t = text else { return false }
-        guard t.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 else { return false }
-        return t.count > 0
-    }
-}
+import HampKit
 
 public struct SignUpCellFactory {
     /// Content types
@@ -74,6 +54,7 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func nameContent(with content: inout SignUpCellContent) {
+        
     }
     
     /// Content to mail cell

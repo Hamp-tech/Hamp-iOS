@@ -19,8 +19,9 @@ class HampTextField: UITextField {
                 color = .darkPink
             case .error:
                 color = .red
+            default:
+                break
             }
-            
             setNeedsDisplay()
         }
     }
@@ -39,6 +40,7 @@ extension HampTextField {
         case filled
         case empty
         case error
+        case auto
     }
 }
 

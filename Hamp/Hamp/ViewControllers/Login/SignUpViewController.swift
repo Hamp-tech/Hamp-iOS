@@ -69,13 +69,14 @@ private extension SignUpViewController {
         contents.map({ value in
             Validation.init(
                 validationBlock: { () -> (Bool) in
-                    return value.valid()
+                    guard let vb = value.validateBlock else { return true }
+                    return vb()
             },  validatedBlock: { (key, validated) in
                 let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as! SignUpTextFieldTableViewCell
                 if !validated {
                     cell.inputTextField.textType = .error
                 } else {
-                    cell.inputTextField.textType = .filled
+                    cell.inputTextField.textType = .auto
                 }
                 
             })

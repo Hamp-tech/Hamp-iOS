@@ -64,7 +64,11 @@ class InputTextField: UIView {
     var textType: HampTextField.TextState = .filled {
         didSet {
             guard let t = textField else { return }
-            t.textState = textType
+            if textType == .auto {
+                t.textState = textState(by: t.text)
+            } else {
+                t.textState = textType
+            }
         }
     }
     var placeholder: String?
@@ -143,8 +147,9 @@ private extension InputTextField {
     ///
     /// - Parameter text: text to compare
     /// - Returns: text state based on text string and textfield state
-    private func textState(by text: String) -> HampTextField.TextState {
-        return (text.count == 0) ? .empty : .filled
+    private func textState(by text: String?) -> HampTextField.TextState {
+        guard let t = text else { return .empty }
+        return (t.count == 0) ? .empty : .filled
     }
 }
 
