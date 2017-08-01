@@ -11,7 +11,7 @@ import UIKit
 class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reusable {
     
     //MARK: IB properties
-    @IBOutlet private weak var inputTextField: InputTextField!
+    @IBOutlet weak var inputTextField: InputTextField!
     
     //MARK: Properties
     weak var inputDelegate: InputTextFieldDelegate?
@@ -43,6 +43,7 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
         inputTextField.delegate = inputDelegate
         inputTextField.tag = tag*10
         inputTextField.type = content.inputType
+        inputTextField.text = content.text
     }
     
     override func prepareForReuse() {

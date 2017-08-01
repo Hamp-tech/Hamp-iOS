@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HampKit
 
 public enum InputType: CustomStringConvertible {
     case name
@@ -18,6 +19,8 @@ public enum InputType: CustomStringConvertible {
     case birthday
     case gender
     case unknown
+    
+    public typealias InputTypeBlock = () -> ()
     
     public var description: String {
         var text: String
@@ -48,6 +51,7 @@ public enum InputType: CustomStringConvertible {
 @objc protocol InputTextFieldDelegate {
     @objc optional func textField(_ textField: InputTextField, replacementString string: String)
     @objc optional func textfieldPressReturn(_ textfield : InputTextField)
+    @objc optional func textfieldEndEditing(_ textfield : InputTextField)
 }
 
 class InputTextField: UIView {
@@ -70,8 +74,12 @@ class InputTextField: UIView {
             if let t = textField { return t.text }
             return _text
         } set {
-            if let t = textField { t.text = newValue }
+            if let t = textField {
+                t.text = newValue
+                textField.textState = textState(by: newValue!)
+            }
             _text = newValue
+            
             isEmpty = newValue == nil
         }
     }
@@ -157,6 +165,11 @@ extension InputTextField : UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         self.textField.textState = textState(by: "")
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        delegate?.textfieldEndEditing?(self)
         return true
     }
 }

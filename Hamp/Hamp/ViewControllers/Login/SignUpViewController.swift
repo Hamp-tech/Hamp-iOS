@@ -14,14 +14,18 @@ class SignUpViewController: LogoTitleBaseViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     let contentTypes = SignUpCellFactory.contentTypes
+    var contents: [SignUpCellContent]!
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        contents = contentTypes.map { SignUpCellFactory.content(by: $0) }
+        
         tableView.backgroundColor = UIColor.clear
         tableView.dataSource = self
         tableView.registerReusableCell(SignUpTextFieldTableViewCell.self)
         tableView.rowHeight = 58
+        tableView.tag = -1
         tableView.tableFooterView = UIView()
     }
     
@@ -41,7 +45,11 @@ class SignUpViewController: LogoTitleBaseViewController {
     }
     
     @IBAction func singUp(_ sender: UIButton) {
-        
+        for i in 0..<tableView.numberOfRows(inSection: 0) {
+            let cell = tableView.cellForRow(at: IndexPath.init(row: i, section: 0))
+            cell?.resignFirstResponder()
+        }
+        contents.forEach { print($0.text) }
     }
 }
 
@@ -74,9 +82,9 @@ extension SignUpViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpTextFieldTableViewCell
-        cell.content = SignUpCellFactory.content(by: contentTypes[indexPath.row])
+        cell.content = contents[indexPath.row]
         cell.inputDelegate = self
-        cell.tag = indexPath.row
+        cell.tag = indexPath.row+1
         return cell
     }
 }
@@ -84,6 +92,7 @@ extension SignUpViewController: UITableViewDataSource {
 extension SignUpViewController: InputTextFieldDelegate {
     func textfieldPressReturn(_ textfield : InputTextField) {
         let tag = textfield.tag/10+1
+        print(tag)
 
         if let nextCell = tableView.viewWithTag(tag) {
             nextCell.becomeFirstResponder()
@@ -91,6 +100,14 @@ extension SignUpViewController: InputTextFieldDelegate {
         } else {
             _ = textfield.resignFirstResponder()
             scrollToRow(to: IndexPath.init(row: 0, section: 0))
+        }
+    }
+    
+    func textfieldEndEditing(_ textfield: InputTextField) {
+        let tag = textfield.tag/10
+        print(tag)
+        if let cell = tableView.viewWithTag(tag) {
+            (cell as! SignUpTextFieldTableViewCell).content.text = textfield.text
         }
     }
     
