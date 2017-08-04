@@ -7,6 +7,7 @@
 */
 
 "input-type.name" = "Name";
+"input-type.surname" = "Surname";
 "input-type.user-name" = "Name";
 "input-type.email" = "Email";
 "input-type.phone" = "Phone";

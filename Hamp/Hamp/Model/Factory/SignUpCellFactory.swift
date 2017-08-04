@@ -12,6 +12,7 @@ import HampKit
 public struct SignUpCellFactory {
     /// Content types
     static let contentTypes: [InputType] = [.name,
+                                            .surname, 
                                             .mail,
                                             .password,
                                             .repeatPassword,

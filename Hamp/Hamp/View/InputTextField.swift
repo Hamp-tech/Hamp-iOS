@@ -11,6 +11,7 @@ import HampKit
 
 public enum InputType: CustomStringConvertible {
     case name
+    case surname
     case username
     case mail
     case password
@@ -27,6 +28,8 @@ public enum InputType: CustomStringConvertible {
         switch self {
         case .name:
             text = Localization.localizableString(by: "input-type.name")
+        case .surname:
+            text = Localization.localizableString(by: "input-type.surname")
         case .username:
             text = Localization.localizableString(by: "input-type.username")
         case .mail:
