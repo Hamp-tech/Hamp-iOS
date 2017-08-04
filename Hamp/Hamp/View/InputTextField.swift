@@ -64,6 +64,21 @@ class InputTextField: UIView {
     
     //MARK: Public properties
     weak var delegate: InputTextFieldDelegate? = nil
+    
+    var keyboardType: UIKeyboardType = .default {
+        didSet {
+            guard let t =  textField else { return }
+            t.keyboardType = keyboardType
+        }
+    }
+    
+    var autocapitazationType: UITextAutocapitalizationType = .sentences {
+        didSet {
+            guard let t =  textField else { return }
+            t.autocapitalizationType = autocapitazationType
+        }
+    }
+    
     var textType: HampTextField.TextState = .filled {
         didSet {
             guard let t = textField else { return }
@@ -123,6 +138,8 @@ private extension InputTextField {
         textField.text = textFieldText
         textField.clearButtonMode = .whileEditing
         textField.backgroundColor = UIColor.clear
+        textField.keyboardType = keyboardType
+        textField.autocapitalizationType = autocapitazationType
         setTextFieldType(by: type)
         addSubview(textField)
     }

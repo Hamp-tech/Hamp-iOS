@@ -16,13 +16,7 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
     //MARK: Properties
     weak var inputDelegate: InputTextFieldDelegate?
     
-    var content: SignUpCellContent! {
-        didSet {
-            guard let _ = inputTextField else { return }
-            guard let _ = content else { return }
-            configure()
-        }
-    }
+    var content: SignUpCellContent!
     
     //MARK: Life cycle
     override func awakeFromNib() {
@@ -44,6 +38,8 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
         inputTextField.tag = tag*10
         inputTextField.type = content.inputType
         inputTextField.text = content.text
+        inputTextField.keyboardType = content.keyboardType
+        inputTextField.autocapitazationType = content.autocapitalizationType
     }
     
     override func prepareForReuse() {

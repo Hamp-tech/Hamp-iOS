@@ -62,27 +62,29 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func mailContent(with content: inout SignUpCellContent) {
-    
+        content.keyboardType = .emailAddress
+        content.autocapitalizationType = .none
     }
     
     /// Content to phone cell
     ///
     /// - Returns: cell content
     static func phoneContent(with content: inout SignUpCellContent) {
-        
+        content.keyboardType = .phonePad
     }
     
     /// Content to birthday cell
     ///
     /// - Returns: cell content
     static func birthdayContent(with content: inout SignUpCellContent) {
-                content.placeholder = content.placeholder! + " (dd/MM/YYYY)"
+        content.placeholder = content.placeholder! + " (dd/MM/YYYY)"
     }
     
     /// Content to password cell
     ///
     /// - Returns: cell content
     static func passwordContent(with content: inout SignUpCellContent) {
+        content.autocapitalizationType = .none
         
     }
     
@@ -90,6 +92,7 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func repeatPasswordContent(with content: inout SignUpCellContent) {
+        content.autocapitalizationType = .none
         
     }
 }

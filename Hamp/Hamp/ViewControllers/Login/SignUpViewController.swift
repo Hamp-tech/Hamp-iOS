@@ -55,8 +55,9 @@ class SignUpViewController: LogoTitleBaseViewController {
                 let phone = contents.filter{ $0.inputType == .phone }.first?.text
                 let password = contents.filter{ $0.inputType == .password }.first?.text
                 let birthday = contents.filter{ $0.inputType == .birthday }.first?.text
-                let gender = "M"
-                var user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, phone: phone!, birthday: birthday!, gender: gender, tokenFCM: nil, language: nil, OS: nil, signupDate: nil)
+                let gender = "M" //TODO:Change when gender cell will be added
+                
+                let user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, phone: phone!, birthday: birthday!, gender: gender, tokenFCM: nil, language: nil, OS: nil, signupDate: nil)
                 Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
                     print(response.data)
                 }, onError: { (error) in

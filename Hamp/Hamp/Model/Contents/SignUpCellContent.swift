@@ -6,7 +6,7 @@
 //  Copyright © 2017 com.hamp.hampiOS. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public final class SignUpCellContent {
     
@@ -15,13 +15,19 @@ public final class SignUpCellContent {
     var text: String?
     var inputType: InputType!
     var validateBlock: Validation.ValidationBlock?
+    var keyboardType: UIKeyboardType
+    var autocapitalizationType: UITextAutocapitalizationType
     
     //MARK: Constructors
     init(placeholder: String,
          text: String? = nil,
-         inputType: InputType) {
+         inputType: InputType,
+         keyboardType: UIKeyboardType = .default,
+         autocapitalizationType: UITextAutocapitalizationType = .sentences) {
         self.placeholder = placeholder
         self.inputType = inputType
+        self.keyboardType = keyboardType
+        self.autocapitalizationType = autocapitalizationType
     }
     
 }
