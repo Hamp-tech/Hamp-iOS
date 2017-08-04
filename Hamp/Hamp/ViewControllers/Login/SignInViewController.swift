@@ -25,12 +25,12 @@ class SignInViewController: LogoTitleBaseViewController {
         mailTextField.type = .mail
         mailTextField.placeholder = InputType.mail.description
         mailTextField.delegate = self
-        mailTextField.text = "test@test.com"
+        mailTextField.autocapitazationType = .none
+        mailTextField.keyboardType = .emailAddress
         
         passwordTextField.type = .password
         passwordTextField.placeholder = InputType.password.description
         passwordTextField.delegate = self
-        passwordTextField.text = "arcanine"
         
         enableLoginButtonIfTextFieldsAreNotEmpty()
     }
