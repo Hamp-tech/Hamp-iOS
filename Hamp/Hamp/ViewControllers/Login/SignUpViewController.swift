@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HampKit
 
 class SignUpViewController: LogoTitleBaseViewController {
     
@@ -68,10 +69,8 @@ private extension SignUpViewController {
         var idx = 0
         contents.map({ value in
             Validation.init(
-                validationBlock: { () -> (Bool) in
-                    guard let vb = value.validateBlock else { return true }
-                    return vb()
-            },  validatedBlock: { (key, validated) in
+                validationBlock: validationBlock(by: value),
+                validatedBlock: { (key, validated) in
                 let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as! SignUpTextFieldTableViewCell
                 if !validated {
                     cell.inputTextField.textType = .error
@@ -96,6 +95,59 @@ private extension SignUpViewController {
         tableView.tag = -1
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+    }
+}
+
+private extension SignUpViewController {
+    func validationBlock(by content: SignUpCellContent) -> Validation.ValidationBlock {
+        switch content.inputType {
+        case .name:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    return true
+                })
+            }
+        case .mail:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
+                })
+            }
+        case .phone:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    return try! HampRegex.init(pattern: "^[9|6|7][0-9]{8}$").parse(input: text)
+                })
+            }
+        case .birthday:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    return true
+                })
+            }
+        case .password:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    let c = self.contents.filter { $0.inputType == .repeatPassword }.first
+                    return text == c?.text
+                })
+            }
+        case .repeatPassword:
+            return {
+                self.foo(text: content.text, block: { (text) -> (Bool) in
+                    let c = self.contents.filter { $0.inputType == .password }.first
+                    return text == c?.text
+                })
+            }
+        default:
+            return { return true }
+        }
+    }
+    
+    func foo(text: String?, block: (String) -> (Bool)) -> Bool {
+        guard let t = text, t.count > 0 else { return false }
+        guard t.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
+        return block(t)
     }
 }
 

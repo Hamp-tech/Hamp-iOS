@@ -13,10 +13,10 @@ public struct SignUpCellFactory {
     /// Content types
     static let contentTypes: [InputType] = [.name,
                                             .mail,
-                                            .phone,
-                                            .birthday,
                                             .password,
-                                            .repeatPassword]
+                                            .repeatPassword,
+                                            .phone,
+                                            .birthday]
     
     /// Factory method to get a cell content by type
     ///
@@ -61,7 +61,7 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func mailContent(with content: inout SignUpCellContent) {
-        
+    
     }
     
     /// Content to phone cell
@@ -75,7 +75,7 @@ private extension SignUpCellFactory {
     ///
     /// - Returns: cell content
     static func birthdayContent(with content: inout SignUpCellContent) {
-        
+                content.placeholder = content.placeholder! + " (dd/MM/YYYY)"
     }
     
     /// Content to password cell
