@@ -49,7 +49,19 @@ class SignUpViewController: LogoTitleBaseViewController {
         
         validationsManager.validate(
             onSuccess: {
-                print("All valid")
+                let name = contents.filter{ $0.inputType == .name }.first?.text
+                let surname = contents.filter{ $0.inputType == .surname }.first?.text
+                let mail = contents.filter{ $0.inputType == .mail }.first?.text
+                let phone = contents.filter{ $0.inputType == .phone }.first?.text
+                let password = contents.filter{ $0.inputType == .password }.first?.text
+                let birthday = contents.filter{ $0.inputType == .birthday }.first?.text
+                let gender = "M"
+                var user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, phone: phone!, birthday: birthday!, gender: gender, tokenFCM: nil, language: nil, OS: nil, signupDate: nil)
+                Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
+                    print(response.data)
+                }, onError: { (error) in
+                    print(error)
+                })
         },  onError: { () in
                 print("Incorrect")
         })
@@ -99,42 +111,53 @@ private extension SignUpViewController {
 }
 
 private extension SignUpViewController {
+    /// Create a new validation deppends
+    ///
+    /// - Parameter content: cell content
+    /// - Returns: validation to cell
     func validationBlock(by content: SignUpCellContent) -> Validation.ValidationBlock {
         switch content.inputType {
         case .name:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     return true
                 })
             }
+        case .surname:
+            return {
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
+                    return true
+                })
+            }
+            
         case .mail:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
                 })
             }
         case .phone:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     return try! HampRegex.init(pattern: "^[9|6|7][0-9]{8}$").parse(input: text)
                 })
             }
         case .birthday:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     return true
                 })
             }
         case .password:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     let c = self.contents.filter { $0.inputType == .repeatPassword }.first
                     return text == c?.text
                 })
             }
         case .repeatPassword:
             return {
-                self.foo(text: content.text, block: { (text) -> (Bool) in
+                self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
                     let c = self.contents.filter { $0.inputType == .password }.first
                     return text == c?.text
                 })
@@ -144,7 +167,13 @@ private extension SignUpViewController {
         }
     }
     
-    func foo(text: String?, block: (String) -> (Bool)) -> Bool {
+    /// Ensure if parameter text is not nil and 
+    ///
+    /// - Parameters:
+    ///   - text: text to ensure
+    ///   - block: called when pass the first requirements
+    /// - Returns:if text is correct and if text is valid on validation block
+    func ensureCellTextIfCorrect(text: String?, block: (String) -> (Bool)) -> Bool {
         guard let t = text, t.count > 0 else { return false }
         guard t.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
         return block(t)
