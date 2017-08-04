@@ -107,7 +107,7 @@
             <objects>
                 <viewController id="WI3-gQ-HJJ" customClass="SignInViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONe-ZZ-e4Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaundryBackgroundPattern" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-Bq-aG8">
@@ -253,7 +253,7 @@
             <objects>
                 <viewController id="fz9-EU-BxP" customClass="SignUpViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbP-1w-REP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaundryBackgroundPattern" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-tu-nk3">
@@ -305,7 +305,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nmd-0o-Vv8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mq1-1R-jc4" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="307" y="9" width="52" height="30"/>
+                                <rect key="frame" x="307" y="7" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Entra">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

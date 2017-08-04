@@ -12,7 +12,10 @@ import HampKit
 
 class SignInViewController: LogoTitleBaseViewController {
 
-    //MARK: Properties
+    //MARK: Private properties
+    private var validationsManager = ValidationManager()
+    
+    //MARK: Public Properties
     @IBOutlet weak private var mailTextField: InputTextField!
     @IBOutlet weak private var passwordTextField: InputTextField!
     @IBOutlet weak private var optionsToolbar: SignInToolbar!
@@ -33,6 +36,27 @@ class SignInViewController: LogoTitleBaseViewController {
         passwordTextField.delegate = self
         
         enableLoginButtonIfTextFieldsAreNotEmpty()
+        
+        let mailValidation = Validation.init(with: "mail", validationBlock: { () -> (Bool) in
+            guard let text = self.mailTextField.text, text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
+            return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
+        }, validatedBlock: { (key, validated) in
+            if(!validated) {
+                self.mailTextField.textType = .error
+            }
+        })
+        
+        let password = Validation.init(with: "password", validationBlock: { () -> (Bool) in
+            guard let text = self.passwordTextField.text, text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
+            return true
+        }, validatedBlock: { (key, validated) in
+            if(!validated) {
+                self.passwordTextField.textType = .error
+            }
+        })
+        
+        validationsManager.add(by: mailValidation)
+        validationsManager.add(by: password)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,14 +110,19 @@ class SignInViewController: LogoTitleBaseViewController {
     ///
     /// - Parameter sender: button pressed
     @IBAction func login(_ sender: UIButton) {
-        Hamp.Auth.signIn(
-            mail: mailTextField.text!,
-            password: passwordTextField.text!,
-            onSuccess: { (response) in
-
-        },  onError: { (error) in
-            
+        validationsManager.validate(onSuccess: {
+            Hamp.Auth.signIn(
+                mail: mailTextField.text!,
+                password: passwordTextField.text!,
+                onSuccess: { (response) in
+                    
+            },  onError: { (error) in
+                
+            })
+        }, onError: {
+            print("Not correct fields")
         })
+        
     }
     
 }
@@ -104,7 +133,14 @@ private extension SignInViewController {
     /// Enable login button if both textfields aren't empty
     func enableLoginButtonIfTextFieldsAreNotEmpty() {
         let textFieldsFilled = !mailTextField.isEmpty && !passwordTextField.isEmpty
-        loginButton.isEnabled = textFieldsFilled
+        setLoginButtonEnabled(isEnabled: textFieldsFilled)
+    }
+    
+    /// Set enabled to login button
+    ///
+    /// - Parameter isEnabled: isEnabled state
+    func setLoginButtonEnabled(isEnabled: Bool) {
+        loginButton.isEnabled = isEnabled
     }
     
     
@@ -125,7 +161,10 @@ extension SignInViewController: InputTextFieldDelegate {
     func textField(_ textField: InputTextField, replacementString string: String) {
         enableLoginButtonIfTextFieldsAreNotEmpty()
     }
-
+    
+    func textFieldWasClear(_ textfield: InputTextField) {
+         setLoginButtonEnabled(isEnabled: false)
+    }
 }
 
 private extension SignInViewController {

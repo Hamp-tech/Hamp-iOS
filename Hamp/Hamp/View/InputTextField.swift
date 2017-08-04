@@ -53,8 +53,9 @@ public enum InputType: CustomStringConvertible {
 
 @objc protocol InputTextFieldDelegate {
     @objc optional func textField(_ textField: InputTextField, replacementString string: String)
-    @objc optional func textfieldPressReturn(_ textfield : InputTextField)
-    @objc optional func textfieldEndEditing(_ textfield : InputTextField)
+    @objc optional func textfieldPressReturn(_ textfield: InputTextField)
+    @objc optional func textfieldEndEditing(_ textfield: InputTextField)
+    @objc optional func textFieldWasClear(_ textfield: InputTextField)
 }
 
 class InputTextField: UIView {
@@ -193,6 +194,7 @@ extension InputTextField : UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         self.textField.textState = textState(by: "")
+        delegate?.textFieldWasClear?(self)
         return true
     }
     
