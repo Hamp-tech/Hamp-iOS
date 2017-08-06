@@ -14,7 +14,7 @@ class SignUpViewController: LogoTitleBaseViewController {
     //MARK: Properties
     @IBOutlet weak private var tableView: UITableView!
     
-    let contentTypes = SignUpCellFactory.contentTypes
+    let contentTypes = SignUpCellContentFactory.contentTypes
     var contents: [SignUpCellContent]!
     var validationsManager = ValidationManager()
     
@@ -59,7 +59,7 @@ class SignUpViewController: LogoTitleBaseViewController {
                 
                 let user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, phone: phone!, birthday: birthday!, gender: gender, tokenFCM: nil, language: nil, OS: nil, signupDate: nil)
                 Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
-                    print(response.data)
+                    self.showTabBarViewController()
                 }, onError: { (error) in
                     print(error)
                 })
@@ -74,7 +74,7 @@ private extension SignUpViewController {
     //MARK: Private
     /// Create contents to cells
     func createContens() {
-        contents = contentTypes.map { SignUpCellFactory.content(by: $0) }
+        contents = contentTypes.map { SignUpCellContentFactory.content(by: $0) }
     }
     
     /// Create validations to cell
@@ -104,10 +104,19 @@ private extension SignUpViewController {
         tableView.backgroundColor = UIColor.clear
         tableView.dataSource = self
         tableView.registerReusableCell(SignUpTextFieldTableViewCell.self)
+        tableView.registerReusableCell(SignUpGenderTableViewCell.self)
         tableView.rowHeight = 58
         tableView.tag = -1
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+    }
+    
+    /// Show tab bar view controller
+    func showTabBarViewController() {
+        let identifier = tabBarNavigationViewControllerIdentifier
+        let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: identifier)
+        self.navigationController?.present(navigationController, animated: true, completion:nil)
     }
 }
 
@@ -210,9 +219,11 @@ extension SignUpViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpTextFieldTableViewCell
-        cell.content = contents[indexPath.row]
-        cell.inputDelegate = self
+        let cell = SignUpCellFactory.cell(by: contents[indexPath.row],
+                                          tableView: tableView,
+                                          indexPath: indexPath,
+                                          delegate: self)
+//        cell.inputDelegate = self
         cell.tag = indexPath.row+1
         return cell
     }

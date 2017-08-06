@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reusable {
+class SignUpTextFieldTableViewCell: SignUpBaseTableViewCell {
     
     //MARK: IB properties
     @IBOutlet weak var inputTextField: InputTextField!
@@ -16,23 +16,15 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
     //MARK: Properties
     weak var inputDelegate: InputTextFieldDelegate?
     
-    var content: SignUpCellContent!
     
     //MARK: Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.selectionStyle = .none
-        self.contentView.backgroundColor = UIColor.clear
-        self.backgroundColor = UIColor.clear
-    }
-    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         configure()
     }
     
     /// Public
-    func configure() {
+    override func configure() {
         inputTextField.placeholder = content.placeholder
         inputTextField.delegate = inputDelegate
         inputTextField.tag = tag*10
@@ -45,6 +37,7 @@ class SignUpTextFieldTableViewCell: UITableViewCell, SignUpContentableCell, Reus
     override func prepareForReuse() {
         super.prepareForReuse()
         content = nil
+        
     }
 }
 

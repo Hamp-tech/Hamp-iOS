@@ -2,98 +2,41 @@
 //  SignUpCellFactory.swift
 //  Hamp
 //
-//  Created by Joan Molinas Ramon on 31/7/17.
+//  Created by Joan Molinas Ramon on 7/8/17.
 //  Copyright © 2017 com.hamp.hampiOS. All rights reserved.
 //
 
 import UIKit
-import HampKit
 
 public struct SignUpCellFactory {
-    /// Content types
-    static let contentTypes: [InputType] = [.name,
-                                            .surname, 
-                                            .mail,
-                                            .password,
-                                            .repeatPassword,
-                                            .phone,
-                                            .birthday]
-    
-    /// Factory method to get a cell content by type
-    ///
-    /// - Parameter type: type of cell
-    /// - Returns: content of cell
-    static func content(by type: InputType) -> SignUpCellContent {
-        var cont: SignUpCellContent = content(inputType: type)
-        switch type {
-        case .name:
-            nameContent(with: &cont)
-        case .mail:
-            mailContent(with: &cont)
-        case .phone:
-            phoneContent(with: &cont)
-        case .birthday:
-            birthdayContent(with: &cont)
-        case .password:
-            passwordContent(with: &cont)
-        case .repeatPassword:
-            repeatPasswordContent(with: &cont)
+    static func cell(by content: SignUpCellContent,
+                     tableView: UITableView,
+                     indexPath: IndexPath,
+                     delegate: SignUpContentable) -> SignUpBaseTableViewCell {
+        var cell: SignUpBaseTableViewCell!
+        switch content.inputType {
+        case .name, .surname, .username, .mail, .password, .repeatPassword, .phone, .birthday:
+            cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpTextFieldTableViewCell
+            (cell as! SignUpTextFieldTableViewCell).inputDelegate = (delegate as! InputTextFieldDelegate)
+        case .gender:
+            cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpGenderTableViewCell
         default:
             break
         }
-        return cont
-    }
-    
-}
-
-private extension SignUpCellFactory {
-    static func content(inputType: InputType) -> SignUpCellContent {
-        return SignUpCellContent.init(placeholder: inputType.description, inputType: inputType)
-    }
-    
-    /// Content to name cell
-    ///
-    /// - Returns: cell content
-    static func nameContent(with content: inout SignUpCellContent) {
         
-    }
-    
-    /// Content to mail cell
-    ///
-    /// - Returns: cell content
-    static func mailContent(with content: inout SignUpCellContent) {
-        content.keyboardType = .emailAddress
-        content.autocapitalizationType = .none
-    }
-    
-    /// Content to phone cell
-    ///
-    /// - Returns: cell content
-    static func phoneContent(with content: inout SignUpCellContent) {
-        content.keyboardType = .phonePad
-    }
-    
-    /// Content to birthday cell
-    ///
-    /// - Returns: cell content
-    static func birthdayContent(with content: inout SignUpCellContent) {
-        content.placeholder = content.placeholder! + " (dd/MM/YYYY)"
-    }
-    
-    /// Content to password cell
-    ///
-    /// - Returns: cell content
-    static func passwordContent(with content: inout SignUpCellContent) {
-        content.autocapitalizationType = .none
+        cell.content = content
         
-    }
-    
-    /// Content to repeatPassword cell
-    ///
-    /// - Returns: cell content
-    static func repeatPasswordContent(with content: inout SignUpCellContent) {
-        content.autocapitalizationType = .none
-        
+        return cell
     }
 }
+//case name
+//case surname
+//case username
+//case mail
+//case password
+//case repeatPassword
+//case phone
+//case birthday
+//case gender
+//case unknown
 

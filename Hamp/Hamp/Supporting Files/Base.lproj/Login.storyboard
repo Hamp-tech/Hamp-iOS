@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
-                                <rect key="frame" x="243" y="487" width="57" height="17"/>
+                                <rect key="frame" x="235" y="487" width="61" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="nV0-xp-H5b"/>
                                 </constraints>
@@ -70,10 +70,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2X-q5-vwm">
-                                <rect key="frame" x="51" y="486" width="184" height="18"/>
+                                <rect key="frame" x="51" y="486" width="180" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="2jS-YG-JYK"/>
-                                    <constraint firstAttribute="width" constant="184" id="PNB-Lb-7wV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -89,14 +88,14 @@
                             <constraint firstItem="mwL-NO-4kh" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" id="MeL-AX-Mzy"/>
                             <constraint firstItem="Xob-ZN-FTt" firstAttribute="top" secondItem="nvr-Vi-45B" secondAttribute="bottom" constant="6" id="Rq1-fX-MG7"/>
                             <constraint firstItem="c2X-q5-vwm" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" constant="51" id="Sfo-em-3tS"/>
-                            <constraint firstItem="WvV-4n-EA7" firstAttribute="leading" secondItem="c2X-q5-vwm" secondAttribute="trailing" constant="8" id="U9j-10-tcO"/>
+                            <constraint firstItem="WvV-4n-EA7" firstAttribute="leading" secondItem="c2X-q5-vwm" secondAttribute="trailing" constant="4" id="U9j-10-tcO"/>
                             <constraint firstItem="mwL-NO-4kh" firstAttribute="bottom" secondItem="HHn-Mi-zem" secondAttribute="bottom" id="eb0-qH-r8l"/>
                             <constraint firstItem="HHn-Mi-zem" firstAttribute="trailing" secondItem="nvr-Vi-45B" secondAttribute="trailing" constant="31" id="ft2-YZ-dVA"/>
                             <constraint firstItem="mwL-NO-4kh" firstAttribute="trailing" secondItem="HHn-Mi-zem" secondAttribute="trailing" id="iID-Zl-kGm"/>
                             <constraint firstItem="HHn-Mi-zem" firstAttribute="bottom" secondItem="c2X-q5-vwm" secondAttribute="bottom" constant="64" id="qyp-QC-dCF"/>
                             <constraint firstItem="nvr-Vi-45B" firstAttribute="leading" secondItem="HHn-Mi-zem" secondAttribute="leading" constant="51" id="vdG-ug-DNk"/>
                             <constraint firstItem="nvr-Vi-45B" firstAttribute="centerY" secondItem="Ct5-1i-5hv" secondAttribute="centerY" constant="-19" id="xJo-uX-vcc"/>
-                            <constraint firstItem="HHn-Mi-zem" firstAttribute="trailing" secondItem="WvV-4n-EA7" secondAttribute="trailing" constant="20" id="xNu-o1-eEP"/>
+                            <constraint firstItem="HHn-Mi-zem" firstAttribute="trailing" secondItem="WvV-4n-EA7" secondAttribute="trailing" constant="24" id="xNu-o1-eEP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HHn-Mi-zem"/>
                     </view>

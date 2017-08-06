@@ -54,7 +54,7 @@ class SignInViewController: LogoTitleBaseViewController {
                 self.passwordTextField.textType = .error
             }
         })
-        
+            
         validationsManager.add(by: mailValidation)
         validationsManager.add(by: password)
     }
@@ -96,7 +96,7 @@ class SignInViewController: LogoTitleBaseViewController {
                     with: accessToken.authenticationToken,
                     user: user,
                     onSuccess: { (response) in
-                    
+                    self.showTabBarViewController()
                 },  onError: {(error) in
 
                 })
@@ -143,6 +143,7 @@ private extension SignInViewController {
         loginButton.isEnabled = isEnabled
     }
     
+    /// Show tab bar view controller
     func showTabBarViewController() {
         let identifier = tabBarNavigationViewControllerIdentifier
         let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)

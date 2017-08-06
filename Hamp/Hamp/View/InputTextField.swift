@@ -51,7 +51,7 @@ public enum InputType: CustomStringConvertible {
     }
 }
 
-@objc protocol InputTextFieldDelegate {
+@objc protocol InputTextFieldDelegate: SignUpContentable {
     @objc optional func textField(_ textField: InputTextField, replacementString string: String)
     @objc optional func textfieldPressReturn(_ textfield: InputTextField)
     @objc optional func textfieldEndEditing(_ textfield: InputTextField)
