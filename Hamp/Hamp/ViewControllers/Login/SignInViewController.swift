@@ -45,7 +45,7 @@ class SignInViewController: LogoTitleBaseViewController {
                 self.mailTextField.textType = .error
             }
         })
-        
+
         let password = Validation.init(with: "password", validationBlock: { () -> (Bool) in
             guard let text = self.passwordTextField.text, text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
             return true
@@ -96,7 +96,7 @@ class SignInViewController: LogoTitleBaseViewController {
                     with: accessToken.authenticationToken,
                     user: user,
                     onSuccess: { (response) in
-
+                    
                 },  onError: {(error) in
 
                 })
@@ -115,7 +115,7 @@ class SignInViewController: LogoTitleBaseViewController {
                 mail: mailTextField.text!,
                 password: passwordTextField.text!,
                 onSuccess: { (response) in
-                    
+                   self.showTabBarViewController()
             },  onError: { (error) in
                 
             })
@@ -143,7 +143,12 @@ private extension SignInViewController {
         loginButton.isEnabled = isEnabled
     }
     
-    
+    func showTabBarViewController() {
+        let identifier = tabBarNavigationViewControllerIdentifier
+        let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: identifier)
+        self.navigationController?.present(navigationController, animated: true, completion:nil)
+    }
 }
 
 extension SignInViewController: InputTextFieldDelegate {

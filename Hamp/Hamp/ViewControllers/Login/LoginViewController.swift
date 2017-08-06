@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HampKit
 
 class LoginViewController: HampViewController {
 

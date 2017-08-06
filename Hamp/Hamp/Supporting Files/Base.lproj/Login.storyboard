@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="qE6-q4-x6n">
             <objects>
-                <viewController id="LaS-vG-x6O" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LaS-vG-x6O" customClass="LoginViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ct5-1i-5hv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IH2-eM-gBC">
-                                            <rect key="frame" x="288" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="274" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,7 +174,7 @@
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
                                     <barButtonItem width="50" style="plain" id="LOP-A5-cWn">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                            <rect key="frame" x="323" y="7" width="36" height="30"/>
+                                            <rect key="frame" x="309" y="7" width="50" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Entra">
@@ -224,11 +224,12 @@
                         <outlet property="optionsToolbar" destination="kb0-Bu-oGu" id="aLM-vE-zld"/>
                         <outlet property="optionsToolbarBottomContraint" destination="X61-yB-kRP" id="qvM-zb-JD8"/>
                         <outlet property="passwordTextField" destination="hy2-sq-IEM" id="fFD-9n-oGh"/>
+                        <segue destination="Mbi-no-bXV" kind="presentation" id="RZx-zg-4zj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUm-kK-IVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="973"/>
+            <point key="canvasLocation" x="1193" y="1281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
@@ -246,7 +247,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrN-uV-CQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-417" y="973"/>
+            <point key="canvasLocation" x="410" y="1281"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="E93-yR-vt0">
@@ -318,6 +319,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xid-iP-Wa1" id="lCd-nf-t2m"/>
+                        <segue destination="Mbi-no-bXV" kind="presentation" id="Tma-zM-5Xc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDU-Ak-Iiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,10 +345,21 @@
             </objects>
             <point key="canvasLocation" x="411.19999999999999" y="169.11544227886057"/>
         </scene>
+        <!--TabBar-->
+        <scene sceneID="Ecw-4T-zmA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="Mbi-no-bXV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcW-bd-LPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="622"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LaundryBackgroundPattern" width="372" height="667"/>
         <image name="SmallBag" width="162" height="181"/>
         <image name="facebook" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RZx-zg-4zj"/>
+    </inferredMetricsTieBreakers>
 </document>
