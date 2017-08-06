@@ -11,20 +11,23 @@ import Foundation
 public struct ValidationManager {
     
     //MARK: Validation
-    private var validations = [String: Validation]()
+//    private var validations = [String: Validation]()
+    private var validations = NSMapTable<NSString, Validation>.init(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.weakMemory)
     
     //MARK: Public
     public mutating func add(by validation: Validation) {
-        self.validations[validation.key] = validation
+        self.validations.setObject(validation, forKey: validation.key as NSString)
     }
     
     public func validate(onSuccess: () -> (),
                          onError: () -> ()) {
         var allValid = true
         
-        validations.forEach {
-            let valid = $0.value.validationBlock()
-            $0.value.validatedBlock($0.key, valid)
+        let enumerator = validations.objectEnumerator()
+        
+        while let value: Validation = enumerator?.nextObject() as? Validation  {
+            let valid = value.validationBlock()
+            value.validatedBlock(value.key, valid)
             if allValid { allValid = valid }
         }
         
@@ -35,9 +38,10 @@ public struct ValidationManager {
                       onError: () -> ()) {
         var allValid = true
         
-        validations.forEach {
-            let valid = $0.value.validationBlock()
-            $0.value.validatedBlock($0.key, valid)
+        let enumerator = validations.objectEnumerator()
+        
+        while let value: Validation = enumerator?.nextObject() as? Validation  {
+            let valid = value.validationBlock()
             if allValid { allValid = valid }
         }
         
