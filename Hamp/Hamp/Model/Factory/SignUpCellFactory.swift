@@ -29,14 +29,4 @@ public struct SignUpCellFactory {
         return cell
     }
 }
-//case name
-//case surname
-//case username
-//case mail
-//case password
-//case repeatPassword
-//case phone
-//case birthday
-//case gender
-//case unknown
 

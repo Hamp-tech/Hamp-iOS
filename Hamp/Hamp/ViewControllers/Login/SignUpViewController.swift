@@ -223,7 +223,6 @@ extension SignUpViewController: UITableViewDataSource {
                                           tableView: tableView,
                                           indexPath: indexPath,
                                           delegate: self)
-//        cell.inputDelegate = self
         cell.tag = indexPath.row+1
         return cell
     }

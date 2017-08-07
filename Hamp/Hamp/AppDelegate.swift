@@ -18,8 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
         try? Hamp.connect()
+        //self.showMainViewController()
         
         return true
+    }
+}
+
+private extension AppDelegate {
+    func showMainViewController() {
+        var identifier: String
+        var storyboardName: String
+        
+        if let _ = Hamp.Auth.user() {
+            identifier = tabBarNavigationViewControllerIdentifier
+            storyboardName = "TabBar"
+        } else {
+            identifier = loginViewControllerIdentifier
+            storyboardName = "Login"
+        }
+        
+        let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+        
     }
 }
 
