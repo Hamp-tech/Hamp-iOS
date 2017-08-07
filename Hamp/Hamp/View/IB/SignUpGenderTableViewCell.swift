@@ -8,21 +8,40 @@
 
 import UIKit
 
+@objc protocol GenderCellDelegate: SignUpContentable {
+    func manCheckboxWasPressed(_ cell: SignUpGenderTableViewCell)
+    func womanCheckboxWasPressed(_ cell: SignUpGenderTableViewCell)
+}
+
+public enum Gender: String {
+    case man = "M", woman = "W", unknown = "U"
+}
+
 class SignUpGenderTableViewCell: SignUpBaseTableViewCell {
     
-    @IBOutlet weak var manCheckbox: CheckBoxButton!
-    @IBOutlet weak var womanCheckbox: CheckBoxButton!
+    //MARK: IB properties
+    @IBOutlet private weak var manCheckbox: CheckBoxButton!
+    @IBOutlet private weak var womanCheckbox: CheckBoxButton!
+    override var canBecomeFirstResponder: Bool { return true }
     
-    override func configure() {
-        
-    }
+    //MARK: Properties
+    weak var genderDelegate: GenderCellDelegate?
+    var genderSelected: Gender = .unknown
+    
+    override func configure() {}
+    
     ///MARK: Actions
     @IBAction func manCheckboxWasPressed(_ sender: UIButton) {
+        genderSelected = .man
         manCheckbox.isSelected = !manCheckbox.isSelected
         womanCheckbox.isSelected = false
+        genderDelegate?.manCheckboxWasPressed(self)
+ 
     }
     @IBAction func womanCheckboxWasPressed(_ sender: UIButton) {
+        genderSelected = .woman
         womanCheckbox.isSelected = !womanCheckbox.isSelected
         manCheckbox.isSelected = false
+        genderDelegate?.womanCheckboxWasPressed(self)
     }
 }

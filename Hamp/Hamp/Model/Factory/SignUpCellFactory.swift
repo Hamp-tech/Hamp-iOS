@@ -20,6 +20,7 @@ public struct SignUpCellFactory {
             (cell as! SignUpTextFieldTableViewCell).inputDelegate = (delegate as! InputTextFieldDelegate)
         case .gender:
             cell = tableView.dequeReusableCell(indexPath: indexPath) as SignUpGenderTableViewCell
+            (cell as! SignUpGenderTableViewCell).genderDelegate = (delegate as! GenderCellDelegate)
         default:
             break
         }

@@ -15,7 +15,7 @@ class SignUpTextFieldTableViewCell: SignUpBaseTableViewCell {
     
     //MARK: Properties
     weak var inputDelegate: InputTextFieldDelegate?
-    
+    override var canBecomeFirstResponder: Bool { return false }
     
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {

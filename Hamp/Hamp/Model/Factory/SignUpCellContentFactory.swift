@@ -39,6 +39,8 @@ public struct SignUpCellContentFactory {
             passwordContent(with: &cont)
         case .repeatPassword:
             repeatPasswordContent(with: &cont)
+        case .gender:
+            genderContent(with: &cont)
         default:
             break
         }
@@ -95,6 +97,13 @@ private extension SignUpCellContentFactory {
     static func repeatPasswordContent(with content: inout SignUpCellContent) {
         content.autocapitalizationType = .none
         
+    }
+    
+    /// Content to repeatPassword cell
+    ///
+    /// - Returns: cell content
+    static func genderContent(with content: inout SignUpCellContent) {
+        content.text = Gender.unknown.rawValue
     }
 }
 
