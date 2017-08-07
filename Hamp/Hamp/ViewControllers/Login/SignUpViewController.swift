@@ -38,6 +38,7 @@ class SignUpViewController: LogoTitleBaseViewController {
     
     //MARK: Actions
     @IBAction func cancel(_ sender: UIBarButtonItem) {
+        self.validationsManager.removeAll()
         dismiss(animated: true, completion: nil)
     }
     
@@ -61,7 +62,7 @@ class SignUpViewController: LogoTitleBaseViewController {
                 Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
                     self.showTabBarViewController()
                 }, onError: { (error) in
-                    print(error)
+                    self.showAlertError(with: "Sign up error", message: error.description)
                 })
         },  onError: { () in
                 print("Incorrect")
@@ -84,13 +85,9 @@ private extension SignUpViewController {
             Validation.init(
                 validationBlock: validationBlock(by: value),
                 validatedBlock: { (key, validated) in
-                let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as! SignUpTextFieldTableViewCell
-                if !validated {
-                    cell.inputTextField.textType = .error
-                } else {
-                    cell.inputTextField.textType = .auto
-                }
-                
+                    if let cell = self.tableView.cellForRow(at: IndexPath.init(row: Int(key)!, section: 0)) as? SignUpTextFieldTableViewCell {
+                        cell.inputTextField.textType = validated ? .auto : .error
+                    }
             })
         }).forEach {
             $0.key = String(idx)
@@ -117,6 +114,22 @@ private extension SignUpViewController {
         let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: identifier)
         self.navigationController?.present(navigationController, animated: true, completion:nil)
+    }
+    
+    /// Show alert error controller
+    ///
+    /// - Parameters:
+    ///   - title: title to alert
+    ///   - message: message to alert
+    func showAlertError(with title: String,
+                        message: String) {
+        let alertController = UIAlertController.init(title: title,
+                                                     message: message,
+                                                     actions: .ok) { (foo) in
+                                                        print(foo)
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

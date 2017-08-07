@@ -75,6 +75,7 @@ class SignInViewController: LogoTitleBaseViewController {
     ///
     /// - Parameter sender: button pressed
     @IBAction func cancel(_ sender: UIBarButtonItem) {
+        self.validationsManager.removeAll()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -98,11 +99,10 @@ class SignInViewController: LogoTitleBaseViewController {
                     onSuccess: { (response) in
                     self.showTabBarViewController()
                 },  onError: {(error) in
-
+                    self.showAlertError(with: "Facebook error", message: error.description)
                 })
-            
         },  onError: { (error) in
-                print(error)
+                self.showAlertError(with: "Facebook error", message: error.localizedDescription)
         })
     }
     
@@ -117,7 +117,7 @@ class SignInViewController: LogoTitleBaseViewController {
                 onSuccess: { (response) in
                    self.showTabBarViewController()
             },  onError: { (error) in
-                
+                self.showAlertError(with: "Sign in error", message: error.description)
             })
         }, onError: {
             print("Not correct fields")
@@ -149,6 +149,22 @@ private extension SignInViewController {
         let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: identifier)
         self.navigationController?.present(navigationController, animated: true, completion:nil)
+    }
+    
+    /// Show alert error controller
+    ///
+    /// - Parameters:
+    ///   - title: title to alert
+    ///   - message: message to alert
+    func showAlertError(with title: String,
+                        message: String) {
+        let alertController = UIAlertController.init(title: title,
+                               message: message,
+                               actions: .ok) { (foo) in
+                                print(foo)
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

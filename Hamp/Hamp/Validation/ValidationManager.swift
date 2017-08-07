@@ -8,14 +8,14 @@
 
 import Foundation
 
-public struct ValidationManager {
+public class ValidationManager {
     
     //MARK: Validation
 //    private var validations = [String: Validation]()
-    private var validations = NSMapTable<NSString, Validation>.init(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.weakMemory)
+    private var validations = NSMapTable<NSString, Validation>.init(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
     
     //MARK: Public
-    public mutating func add(by validation: Validation) {
+    public func add(by validation: Validation) {
         self.validations.setObject(validation, forKey: validation.key as NSString)
     }
     
@@ -46,5 +46,9 @@ public struct ValidationManager {
         }
         
         allValid ? onSuccess() : onError()
+    }
+    
+    public func removeAll() {
+        self.validations.removeAllObjects()
     }
 }
