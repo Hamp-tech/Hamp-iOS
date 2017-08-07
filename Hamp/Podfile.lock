@@ -6,6 +6,9 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.21)
@@ -50,6 +53,8 @@ PODS:
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - FacebookCore (from `https://github.com/ulidev/facebook-sdk-swift.git`)
   - FacebookLogin (from `https://github.com/ulidev/facebook-sdk-swift.git`)
   - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`, branch `features`)
@@ -77,6 +82,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
   FacebookCore: b1dfb5bba65380aba6dbe5c545ce02d03d0b59b2
   FacebookLogin: da4d16833831769a6827a4ddfcf439d673949f12
   FBSDKCoreKit: 53e3f4bfb64e80c5f229dd30ae33ff57fbbbd2d1
@@ -87,6 +94,6 @@ SPEC CHECKSUMS:
   HampKit: 42b051dfd2b692e79b8a4896d1a017fb9df7da42
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: d12066f3fc56d69bf3623eb6f6986a0cd03b7c6d
+PODFILE CHECKSUM: 55caaf97156877cd6b999e790ba4e02baeecd0eb
 
 COCOAPODS: 1.2.1

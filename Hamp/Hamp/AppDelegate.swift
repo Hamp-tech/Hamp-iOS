@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
         try? Hamp.connect()
+        
+        FabricManager.configure()
+        
         //self.showMainViewController()
         
         return true
