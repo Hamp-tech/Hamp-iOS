@@ -12,14 +12,22 @@ class CreditCard: UIView {
     
     //MARK: Properties
     private var marginsSeparation: CGFloat = 17.0
+    private var color = UIColor.gray
     private var cardView: UIView!
     private var firstHorizontalSeparatorLine: UIView!
     private var secondHorizontalSeparatorLine: UIView!
     private var verticalSeparatorLine: UIView!
     private var cardImageView: UIImageView!
     private var creditNumberTextField: UITextField!
+    private var cvvTextField: UITextField!
+    private var nameTextField: UITextField!
+    private var dateTextField: UITextField!
+    
     lazy var separatorYMargin = {
         return self.bounds.height/3.0
+    }()
+    lazy var subviewsHeight = {
+        return self.separatorYMargin-30
     }()
 
     //MARK: Constructors
@@ -45,17 +53,34 @@ class CreditCard: UIView {
         super.draw(rect)
         setupFirstHorizontalSeparator()
         setupSecondHorizontalSeparator()
-        setupCardImageView()
         setupVerticalSeparator()
-        setupTextField()
+        setupCardImageView()
+        setupCreditNumberTextField()
+        setupDateTextField()
+        setupCVVTextfield()
+        setupNameTextfield()
     }
     
 }
 
 private extension CreditCard {
+    
+    func createBaseTextfield(with placeholder: String,
+                             textColor: UIColor,
+                             textAlignment: NSTextAlignment = .left,
+                             keyboardType: UIKeyboardType = .numberPad) -> UITextField {
+        let textfield = UITextField.init()
+        textfield.placeholder = placeholder
+        textfield.textAlignment = textAlignment
+        textfield.keyboardType = keyboardType
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        return textfield
+    }
+    
+    //MARK: UI Elements
     func setupFirstHorizontalSeparator() {
         firstHorizontalSeparatorLine = UIView.init()
-        firstHorizontalSeparatorLine.backgroundColor = UIColor.lightGray
+        firstHorizontalSeparatorLine.backgroundColor = color
         firstHorizontalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(firstHorizontalSeparatorLine)
         
@@ -69,7 +94,7 @@ private extension CreditCard {
     
     func setupSecondHorizontalSeparator() {
         secondHorizontalSeparatorLine = UIView.init()
-        secondHorizontalSeparatorLine.backgroundColor = UIColor.lightGray
+        secondHorizontalSeparatorLine.backgroundColor = color
         secondHorizontalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(secondHorizontalSeparatorLine)
         
@@ -85,7 +110,7 @@ private extension CreditCard {
         cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
         cardView.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false
-        let imageHeight = separatorYMargin - 30
+        let imageHeight = subviewsHeight
         let topMarginSeparation = separatorYMargin/2 - imageHeight/2 //Center to top section
         
         NSLayoutConstraint.activate([
@@ -96,12 +121,8 @@ private extension CreditCard {
             ])
     }
     
-    func setupTextField() {
-        creditNumberTextField = UITextField.init()
-        creditNumberTextField.translatesAutoresizingMaskIntoConstraints = false
-        creditNumberTextField.textColor = UIColor.gray
-        creditNumberTextField.keyboardType = .numberPad
-        creditNumberTextField.placeholder = "XXXX XXXX XXXX XXXX"
+    func setupCreditNumberTextField() {
+        creditNumberTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.number"), textColor: color)
         cardView.addSubview(creditNumberTextField)
         
         NSLayoutConstraint.activate([
@@ -114,7 +135,7 @@ private extension CreditCard {
     
     func setupVerticalSeparator() {
         verticalSeparatorLine = UIView.init()
-        verticalSeparatorLine.backgroundColor = UIColor.lightGray
+        verticalSeparatorLine.backgroundColor = color
         verticalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(verticalSeparatorLine)
         
@@ -124,7 +145,51 @@ private extension CreditCard {
             verticalSeparatorLine.widthAnchor.constraint(equalToConstant: 1),
             verticalSeparatorLine.heightAnchor.constraint(equalToConstant: separatorYMargin-15)
             ])
+    }
+    
+    func setupDateTextField() {
+        dateTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.date"),
+                            textColor: color,
+                            textAlignment: .center)
+        cardView.addSubview(dateTextField)
+    
+        NSLayoutConstraint.activate([
+            dateTextField.centerYAnchor.constraint(equalTo: verticalSeparatorLine.centerYAnchor),
+            dateTextField.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: marginsSeparation),
+            dateTextField.rightAnchor.constraint(equalTo: verticalSeparatorLine.centerXAnchor, constant: 0),
+            dateTextField.heightAnchor.constraint(equalToConstant: subviewsHeight)
+            ])
+    }
+    
+    func setupCVVTextfield() {
+        cvvTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.cvv"),
+                                           textColor: color,
+                                           textAlignment: .center)
+        cardView.addSubview(cvvTextField)
         
+
+        NSLayoutConstraint.activate([
+            cvvTextField.leftAnchor.constraint(equalTo: verticalSeparatorLine.centerXAnchor, constant: 0),
+            cvvTextField.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: -marginsSeparation),
+            cvvTextField.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
+            cvvTextField.heightAnchor.constraint(equalTo: creditNumberTextField.heightAnchor)
+            ])
+    }
+    
+    func setupNameTextfield() {
+        nameTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.name"),
+                                            textColor: color, keyboardType: .default)
+        cardView.addSubview(nameTextField)
+        
+        let height = subviewsHeight
+        let topMarginSeparation = separatorYMargin/2 - height/2
+        
+        NSLayoutConstraint.activate([
+            nameTextField.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: marginsSeparation),
+            nameTextField.topAnchor.constraint(equalTo: secondHorizontalSeparatorLine.centerYAnchor, constant: topMarginSeparation),
+            nameTextField.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: -marginsSeparation),
+            nameTextField.heightAnchor.constraint(equalToConstant: height)
+            ])
         
     }
 }

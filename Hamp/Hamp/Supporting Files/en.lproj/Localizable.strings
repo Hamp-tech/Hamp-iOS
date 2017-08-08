@@ -16,3 +16,8 @@
 "input-type.repeat-password" = "Repeat Password";
 "input-type.gender" = "Gender";
 
+"credit-card.placeholder.name" = "Owner's name";
+"credit-card.placeholder.date" = "DD/YY";
+"credit-card.placeholder.number" = "XXXX XXXX XXXX XXXX";
+"credit-card.placeholder.cvv" = "CVV";
+
