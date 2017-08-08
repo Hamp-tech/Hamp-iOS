@@ -11,8 +11,13 @@
 		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
 		4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */; };
 		4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */; };
+		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
 		4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF651F38EAB700EEC314 /* FabricManager.swift */; };
+		4E22CF6B1F38F9CE00EEC314 /* CreditCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E22CF6A1F38F9CE00EEC314 /* CreditCard.xib */; };
+		4E22CF6D1F38F9DD00EEC314 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6C1F38F9DD00EEC314 /* CreditCard.swift */; };
+		4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */; };
+		4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */; };
 		4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */; };
 		4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FD1F2F9FB2000AB18C /* Reusable.swift */; };
 		4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */; };
@@ -58,8 +63,13 @@
 		4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellContentFactory.swift; sourceTree = "<group>"; };
+		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
 		4E22CF651F38EAB700EEC314 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
+		4E22CF6A1F38F9CE00EEC314 /* CreditCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCard.xib; sourceTree = "<group>"; };
+		4E22CF6C1F38F9DD00EEC314 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCreditCardViewController.swift; sourceTree = "<group>"; };
 		4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpContentableCell.swift; sourceTree = "<group>"; };
 		4E2304FD1F2F9FB2000AB18C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
@@ -128,6 +138,27 @@
 		4E22CF671F38F74900EEC314 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
+				4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */,
+			);
+			path = "Credit Card";
+			sourceTree = "<group>";
+		};
+		4E22CF681F38F7A200EEC314 /* Sign up */ = {
+			isa = PBXGroup;
+			children = (
+				4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */,
+				4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */,
+				4E7253571F37CE89006382B4 /* SignUpGenderTableViewCell.swift */,
+				4E7253581F37CE89006382B4 /* SignUpGenderTableViewCell.xib */,
+			);
+			path = "Sign up";
+			sourceTree = "<group>";
+		};
+		4E22CF691F38F9BF00EEC314 /* Credit Card */ = {
+			isa = PBXGroup;
+			children = (
+				4E22CF6A1F38F9CE00EEC314 /* CreditCard.xib */,
+				4E22CF6C1F38F9DD00EEC314 /* CreditCard.swift */,
 			);
 			path = "Credit Card";
 			sourceTree = "<group>";
@@ -247,10 +278,8 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */,
-				4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */,
-				4E7253571F37CE89006382B4 /* SignUpGenderTableViewCell.swift */,
-				4E7253581F37CE89006382B4 /* SignUpGenderTableViewCell.xib */,
+				4E22CF691F38F9BF00EEC314 /* Credit Card */,
+				4E22CF681F38F7A200EEC314 /* Sign up */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -344,6 +373,8 @@
 				4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */,
 				4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */,
 				4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */,
+				4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */,
+				4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +472,7 @@
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E72535A1F37CE89006382B4 /* SignUpGenderTableViewCell.xib in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
+				4E22CF6B1F38F9CE00EEC314 /* CreditCard.xib in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
 			);
@@ -518,6 +550,7 @@
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
+				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
@@ -528,7 +561,10 @@
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
+				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
+				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
+				4E22CF6D1F38F9DD00EEC314 /* CreditCard.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
