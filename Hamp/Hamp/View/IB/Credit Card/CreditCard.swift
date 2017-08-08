@@ -21,7 +21,7 @@ class CreditCard: UIView {
     lazy var separatorYMargin = {
         return self.bounds.height/3.0
     }()
-    
+
     //MARK: Constructors
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,8 +47,9 @@ class CreditCard: UIView {
         setupSecondHorizontalSeparator()
         setupCardImageView()
         setupVerticalSeparator()
-//        setupTextField()
+        setupTextField()
     }
+    
 }
 
 private extension CreditCard {
@@ -57,45 +58,13 @@ private extension CreditCard {
         firstHorizontalSeparatorLine.backgroundColor = UIColor.lightGray
         firstHorizontalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(firstHorizontalSeparatorLine)
-        var constraints = [NSLayoutConstraint]()
-        let leftConstraint = NSLayoutConstraint.init(item: firstHorizontalSeparatorLine,
-                                           attribute: .left,
-                                           relatedBy: .equal,
-                                           toItem: cardView,
-                                           attribute: .left,
-                                           multiplier: 1,
-                                           constant: marginsSeparation)
         
-        let rightConstraint = NSLayoutConstraint.init(item: firstHorizontalSeparatorLine,
-                                           attribute: .right,
-                                           relatedBy: .equal,
-                                           toItem: cardView,
-                                           attribute: .right,
-                                           multiplier: 1,
-                                           constant: -marginsSeparation)
-        
-        let topConstraint = NSLayoutConstraint.init(item: firstHorizontalSeparatorLine,
-                                           attribute: .top,
-                                           relatedBy: .equal,
-                                           toItem: cardView,
-                                           attribute: .top,
-                                           multiplier: 1,
-                                           constant: separatorYMargin)
-
-        let heightConstraint = NSLayoutConstraint.init(item: firstHorizontalSeparatorLine,
-                                           attribute: .height,
-                                           relatedBy: .equal,
-                                           toItem: nil,
-                                           attribute: .notAnAttribute,
-                                           multiplier: 1,
-                                           constant: 1)
-        firstHorizontalSeparatorLine.addConstraint(heightConstraint)
-        
-        constraints.append(leftConstraint)
-        constraints.append(rightConstraint)
-        constraints.append(topConstraint)
-        
-        cardView.addConstraints(constraints)
+        NSLayoutConstraint.activate([
+            firstHorizontalSeparatorLine.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: marginsSeparation),
+            firstHorizontalSeparatorLine.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: -marginsSeparation),
+            firstHorizontalSeparatorLine.topAnchor.constraint(equalTo: cardView.topAnchor, constant: separatorYMargin),
+            firstHorizontalSeparatorLine.heightAnchor.constraint(equalToConstant: 1)
+            ])
     }
     
     func setupSecondHorizontalSeparator() {
@@ -103,145 +72,44 @@ private extension CreditCard {
         secondHorizontalSeparatorLine.backgroundColor = UIColor.lightGray
         secondHorizontalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(secondHorizontalSeparatorLine)
-        var constraints = [NSLayoutConstraint]()
-        let leftConstraint = NSLayoutConstraint.init(item: secondHorizontalSeparatorLine,
-                                                     attribute: .left,
-                                                     relatedBy: .equal,
-                                                     toItem: cardView,
-                                                     attribute: .left,
-                                                     multiplier: 1,
-                                                     constant: 17)
         
-        let rightConstraint = NSLayoutConstraint.init(item: secondHorizontalSeparatorLine,
-                                                      attribute: .right,
-                                                      relatedBy: .equal,
-                                                      toItem: cardView,
-                                                      attribute: .right,
-                                                      multiplier: 1,
-                                                      constant: -17)
-        
-        let topConstraint = NSLayoutConstraint.init(item: secondHorizontalSeparatorLine,
-                                                    attribute: .top,
-                                                    relatedBy: .equal,
-                                                    toItem: firstHorizontalSeparatorLine,
-                                                    attribute: .top,
-                                                    multiplier: 1,
-                                                    constant: separatorYMargin)
-        
-        let heightConstraint = NSLayoutConstraint.init(item: secondHorizontalSeparatorLine,
-                                                       attribute: .height,
-                                                       relatedBy: .equal,
-                                                       toItem: nil,
-                                                       attribute: .notAnAttribute,
-                                                       multiplier: 1,
-                                                       constant: 1)
-        secondHorizontalSeparatorLine.addConstraint(heightConstraint)
-        
-        constraints.append(leftConstraint)
-        constraints.append(rightConstraint)
-        constraints.append(topConstraint)
-        
-        cardView.addConstraints(constraints)
+        NSLayoutConstraint.activate([
+            secondHorizontalSeparatorLine.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: marginsSeparation),
+            secondHorizontalSeparatorLine.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: -marginsSeparation),
+            secondHorizontalSeparatorLine.topAnchor.constraint(equalTo: firstHorizontalSeparatorLine.topAnchor, constant: separatorYMargin),
+            secondHorizontalSeparatorLine.heightAnchor.constraint(equalToConstant: 1)
+            ])
     }
-    
-//    func setupVerticalSeparatorLine
-    
+        
     func setupCardImageView() {
         cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
         cardView.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false
         let imageHeight = separatorYMargin - 30
         let topMarginSeparation = separatorYMargin/2 - imageHeight/2 //Center to top section
-        var constraints = [NSLayoutConstraint]()
-        let leftConstraint = NSLayoutConstraint.init(item: cardImageView,
-                                                    attribute: .left,
-                                                    relatedBy: .equal,
-                                                    toItem: cardView,
-                                                    attribute: .left,
-                                                    multiplier: 1,
-                                                    constant: marginsSeparation)
-
-        let topConstraint = NSLayoutConstraint.init(item: cardImageView,
-                                                    attribute: .top,
-                                                    relatedBy: .equal,
-                                                    toItem: cardView,
-                                                    attribute: .top,
-                                                    multiplier: 1,
-                                                    constant: topMarginSeparation)
         
-        let aspectRationConstraint = NSLayoutConstraint.init(item: cardImageView,
-                                                            attribute: .height,
-                                                            relatedBy: .equal,
-                                                            toItem: cardImageView,
-                                                            attribute: .width,
-                                                            multiplier: cardImageView.frame.size.height/cardImageView.frame.size.width,
-                                                            constant: 0)
-        
-        let heightConstraint = NSLayoutConstraint.init(item: cardImageView,
-                                                       attribute: .height,
-                                                       relatedBy: .equal,
-                                                       toItem: nil,
-                                                       attribute: .notAnAttribute,
-                                                       multiplier: 1,
-                                                       constant: imageHeight)
-        cardImageView.addConstraint(heightConstraint)
-        
-        constraints.append(leftConstraint)
-        constraints.append(topConstraint)
-        constraints.append(aspectRationConstraint)
-        cardView.addConstraints(constraints)
+        NSLayoutConstraint.activate([
+            cardImageView.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: marginsSeparation),
+            cardImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: topMarginSeparation),
+            cardImageView.heightAnchor.constraint(equalTo: cardImageView.widthAnchor, multiplier: cardImageView.frame.height/cardImageView.frame.width, constant: 0),
+            cardImageView.heightAnchor.constraint(equalToConstant: imageHeight)
+            ])
     }
     
     func setupTextField() {
         creditNumberTextField = UITextField.init()
-        creditNumberTextField.backgroundColor = UIColor.blue
         creditNumberTextField.translatesAutoresizingMaskIntoConstraints = false
+        creditNumberTextField.textColor = UIColor.gray
         creditNumberTextField.keyboardType = .numberPad
         creditNumberTextField.placeholder = "XXXX XXXX XXXX XXXX"
         cardView.addSubview(creditNumberTextField)
         
-        var constraints = [NSLayoutConstraint]()
-        let leftContraint = NSLayoutConstraint.init(item: creditNumberTextField,
-                                                    attribute: .leftMargin,
-                                                    relatedBy: .equal,
-                                                    toItem: cardImageView,
-                                                    attribute: .leftMargin,
-                                                    multiplier: 3,
-                                                    constant: 0)
-        
-        let rightConstraint = NSLayoutConstraint.init(item: creditNumberTextField,
-                                                    attribute: .right,
-                                                    relatedBy: .equal,
-                                                    toItem: cardView,
-                                                    attribute: .right,
-                                                    multiplier: 1,
-                                                    constant: -marginsSeparation)
-        
-        let topConstraint = NSLayoutConstraint.init(item: creditNumberTextField,
-                                                    attribute: .top,
-                                                    relatedBy: .equal,
-                                                    toItem: cardImageView,
-                                                    attribute: .top,
-                                                    multiplier: 1,
-                                                    constant: 0)
-        
-        let heightConstraint = NSLayoutConstraint.init(item: creditNumberTextField,
-                                                       attribute: .height,
-                                                       relatedBy: .equal,
-                                                       toItem: cardImageView,
-                                                       attribute: .height,
-                                                       multiplier: 1.0,
-                                                       constant: 0)
-        
-        
-        
-        
-        constraints.append(leftContraint)
-        constraints.append(rightConstraint)
-        constraints.append(topConstraint)
-        constraints.append(heightConstraint)
-        
-        cardView.addConstraints(constraints)
+        NSLayoutConstraint.activate([
+            creditNumberTextField.leftAnchor.constraint(equalTo: cardImageView.rightAnchor, constant: marginsSeparation),
+            creditNumberTextField.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: -marginsSeparation),
+            creditNumberTextField.topAnchor.constraint(equalTo: cardImageView.topAnchor),
+            creditNumberTextField.heightAnchor.constraint(equalTo: cardImageView.heightAnchor)
+            ])
     }
     
     func setupVerticalSeparator() {
@@ -250,42 +118,12 @@ private extension CreditCard {
         verticalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
         cardView.addSubview(verticalSeparatorLine)
         
-        var constraints = [NSLayoutConstraint]()
-        let centerX = NSLayoutConstraint.init(item: verticalSeparatorLine,
-                                                    attribute: .centerX,
-                                                    relatedBy: .equal,
-                                                    toItem: cardView,
-                                                    attribute: .centerX,
-                                                    multiplier: 1,
-                                                    constant: 0)
-        
-        let centerY = NSLayoutConstraint.init(item: verticalSeparatorLine,
-                                              attribute: .centerY,
-                                              relatedBy: .equal,
-                                              toItem: cardView,
-                                              attribute: .centerY,
-                                              multiplier: 1,
-                                              constant: 0)
-        let width = NSLayoutConstraint.init(item: verticalSeparatorLine,
-                                            attribute: .width,
-                                            relatedBy: .equal,
-                                            toItem: nil,
-                                            attribute: .notAnAttribute,
-                                            multiplier: 1, 
-                                            constant: 1)
-        
-        let height = NSLayoutConstraint.init(item: verticalSeparatorLine,
-                                            attribute: .height,
-                                            relatedBy: .equal,
-                                            toItem: nil,
-                                            attribute: .notAnAttribute,
-                                            multiplier: 1,
-                                            constant: separatorYMargin-15)
-        constraints.append(centerX)
-        constraints.append(centerY)
-        constraints.append(width)
-        constraints.append(height)
-        cardView.addConstraints(constraints)
+        NSLayoutConstraint.activate([
+            verticalSeparatorLine.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
+            verticalSeparatorLine.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
+            verticalSeparatorLine.widthAnchor.constraint(equalToConstant: 1),
+            verticalSeparatorLine.heightAnchor.constraint(equalToConstant: separatorYMargin-15)
+            ])
         
         
     }
