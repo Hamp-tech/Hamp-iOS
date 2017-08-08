@@ -14,14 +14,14 @@
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
 		4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF651F38EAB700EEC314 /* FabricManager.swift */; };
-		4E22CF6D1F38F9DD00EEC314 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6C1F38F9DD00EEC314 /* CreditCardView.swift */; };
+		4E22CF6D1F38F9DD00EEC314 /* CreditCardUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6C1F38F9DD00EEC314 /* CreditCardUIComponent.swift */; };
 		4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */; };
 		4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */; };
 		4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */; };
 		4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FD1F2F9FB2000AB18C /* Reusable.swift */; };
 		4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */; };
 		4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */; };
-		4E2E2F501F3A460A0063E466 /* CreditCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFF0DD21F3A458200F4D250 /* CreditCardView.xib */; };
+		4E2E2F501F3A460A0063E466 /* CreditCardUIComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFF0DD21F3A458200F4D250 /* CreditCardUIComponent.xib */; };
 		4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */; };
 		4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4786701F30DAB1007ABE00 /* Validation.swift */; };
 		4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */; };
@@ -68,7 +68,7 @@
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
 		4E22CF651F38EAB700EEC314 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
-		4E22CF6C1F38F9DD00EEC314 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		4E22CF6C1F38F9DD00EEC314 /* CreditCardUIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUIComponent.swift; sourceTree = "<group>"; };
 		4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCreditCardViewController.swift; sourceTree = "<group>"; };
 		4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpContentableCell.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreditCardInputTextFieldMaskManager.swift; path = Delegate/CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
-		4EFF0DD21F3A458200F4D250 /* CreditCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardView.xib; sourceTree = "<group>"; };
+		4EFF0DD21F3A458200F4D250 /* CreditCardUIComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIComponent.xib; sourceTree = "<group>"; };
 		614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hamp/Pods-Hamp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HampUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6E5C16DECEC990824F825C /* Pods-HampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		4E22CF691F38F9BF00EEC314 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
-				4EFF0DD21F3A458200F4D250 /* CreditCardView.xib */,
-				4E22CF6C1F38F9DD00EEC314 /* CreditCardView.swift */,
+				4EFF0DD21F3A458200F4D250 /* CreditCardUIComponent.xib */,
+				4E22CF6C1F38F9DD00EEC314 /* CreditCardUIComponent.swift */,
 			);
 			path = "Credit Card";
 			sourceTree = "<group>";
@@ -183,6 +183,14 @@
 				4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */,
 			);
 			path = Contents;
+			sourceTree = "<group>";
+		};
+		4E2E2F511F3A87040063E466 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				4E22CF691F38F9BF00EEC314 /* Credit Card */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		4E47866D1F30DA67007ABE00 /* Validation */ = {
@@ -228,6 +236,7 @@
 				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
 				4EDF102C1F237E03007E15E9 /* Model */,
 				4EDF10051F236E21007E15E9 /* View */,
+				4E2E2F511F3A87040063E466 /* UI Components */,
 				4E89E05C1F2EC24C008C658D /* Utils */,
 				4EEA1A151F2380A00070E17A /* Extensions */,
 				4E47866D1F30DA67007ABE00 /* Validation */,
@@ -290,7 +299,6 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				4E22CF691F38F9BF00EEC314 /* Credit Card */,
 				4E22CF681F38F7A200EEC314 /* Sign up */,
 			);
 			path = IB;
@@ -480,7 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2E2F501F3A460A0063E466 /* CreditCardView.xib in Resources */,
+				4E2E2F501F3A460A0063E466 /* CreditCardUIComponent.xib in Resources */,
 				4E7253541F37BC8E006382B4 /* TabBar.storyboard in Resources */,
 				4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */,
 				4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */,
@@ -580,7 +588,7 @@
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
-				4E22CF6D1F38F9DD00EEC314 /* CreditCardView.swift in Sources */,
+				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIComponent.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,

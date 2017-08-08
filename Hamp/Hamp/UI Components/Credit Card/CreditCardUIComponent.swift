@@ -10,10 +10,10 @@ import UIKit
 import InputMask
 
 protocol CreditCardDelegate: class {
-    func creditCardWasCompleted(_ creditCard: CreditCardView, inputTexts: [String])
+    func creditCardWasCompleted(_ creditCard: CreditCardUIComponent, inputTexts: [String])
 }
 
-class CreditCardView: UIView {
+class CreditCardUIComponent: UIView {
     
     weak var delegate: CreditCardDelegate?
     
@@ -67,7 +67,7 @@ class CreditCardView: UIView {
     
 }
 
-extension CreditCardView: CreditCardInputTextDelegate{
+extension CreditCardUIComponent: CreditCardInputTextDelegate{
     
     //MARK: Backend
     func createInputTextManager() {
@@ -82,7 +82,7 @@ extension CreditCardView: CreditCardInputTextDelegate{
     }
 }
 
-private extension CreditCardView {
+private extension CreditCardUIComponent {
     //MARK: UI
     func createUI() {
         setupFirstHorizontalSeparator()
