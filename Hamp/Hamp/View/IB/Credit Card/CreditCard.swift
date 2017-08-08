@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class CreditCard: UIView {
     
     //MARK: Properties
@@ -65,18 +67,6 @@ class CreditCard: UIView {
 
 private extension CreditCard {
     
-    func createBaseTextfield(with placeholder: String,
-                             textColor: UIColor,
-                             textAlignment: NSTextAlignment = .left,
-                             keyboardType: UIKeyboardType = .numberPad) -> UITextField {
-        let textfield = UITextField.init()
-        textfield.placeholder = placeholder
-        textfield.textAlignment = textAlignment
-        textfield.keyboardType = keyboardType
-        textfield.translatesAutoresizingMaskIntoConstraints = false
-        return textfield
-    }
-    
     //MARK: UI Elements
     func setupFirstHorizontalSeparator() {
         firstHorizontalSeparatorLine = UIView.init()
@@ -122,7 +112,7 @@ private extension CreditCard {
     }
     
     func setupCreditNumberTextField() {
-        creditNumberTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.number"), textColor: color)
+        creditNumberTextField = CreditCardTextFieldFactory.textField(by: .number)
         cardView.addSubview(creditNumberTextField)
         
         NSLayoutConstraint.activate([
@@ -148,9 +138,7 @@ private extension CreditCard {
     }
     
     func setupDateTextField() {
-        dateTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.date"),
-                            textColor: color,
-                            textAlignment: .center)
+        dateTextField = CreditCardTextFieldFactory.textField(by: .date)
         cardView.addSubview(dateTextField)
     
         NSLayoutConstraint.activate([
@@ -162,9 +150,7 @@ private extension CreditCard {
     }
     
     func setupCVVTextfield() {
-        cvvTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.cvv"),
-                                           textColor: color,
-                                           textAlignment: .center)
+        cvvTextField = CreditCardTextFieldFactory.textField(by: .cvv)
         cardView.addSubview(cvvTextField)
         
 
@@ -177,8 +163,7 @@ private extension CreditCard {
     }
     
     func setupNameTextfield() {
-        nameTextField = createBaseTextfield(with: Localization.localizableString(by: "credit-card.placeholder.name"),
-                                            textColor: color, keyboardType: .default)
+        nameTextField = CreditCardTextFieldFactory.textField(by: .name)
         cardView.addSubview(nameTextField)
         
         let height = subviewsHeight

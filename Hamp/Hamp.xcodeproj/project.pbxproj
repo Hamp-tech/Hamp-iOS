@@ -24,6 +24,7 @@
 		4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */; };
 		4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */; };
 		4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4786701F30DAB1007ABE00 /* Validation.swift */; };
+		4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Helvetica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellContent.swift; sourceTree = "<group>"; };
 		4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		4E4786701F30DAB1007ABE00 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTextFieldFactory.swift; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Helvetica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helvetica.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B08851F04731C00236A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,13 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		4E4F38FB1F39F83400003131 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		4E5B08791F04731C00236A9E = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +280,7 @@
 			children = (
 				4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */,
 				4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */,
+				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -356,6 +366,7 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E4F38FB1F39F83400003131 /* Delegate */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E632E271F26508000CDE02D /* Factory */,
@@ -559,6 +570,7 @@
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
+				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
