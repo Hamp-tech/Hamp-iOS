@@ -24,7 +24,7 @@ class CreditCard: UIView {
     private var cvvTextField: UITextField!
     private var nameTextField: UITextField!
     private var dateTextField: UITextField!
-    
+    private var textFields = [UITextField]()
     lazy var separatorYMargin = {
         return self.bounds.height/3.0
     }()
@@ -53,6 +53,14 @@ class CreditCard: UIView {
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        createUI()
+    }
+    
+}
+
+private extension CreditCard {
+    
+    func createUI() {
         setupFirstHorizontalSeparator()
         setupSecondHorizontalSeparator()
         setupVerticalSeparator()
@@ -62,10 +70,6 @@ class CreditCard: UIView {
         setupCVVTextfield()
         setupNameTextfield()
     }
-    
-}
-
-private extension CreditCard {
     
     //MARK: UI Elements
     func setupFirstHorizontalSeparator() {
@@ -95,6 +99,20 @@ private extension CreditCard {
             secondHorizontalSeparatorLine.heightAnchor.constraint(equalToConstant: 1)
             ])
     }
+    
+    func setupVerticalSeparator() {
+        verticalSeparatorLine = UIView.init()
+        verticalSeparatorLine.backgroundColor = color
+        verticalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
+        cardView.addSubview(verticalSeparatorLine)
+        
+        NSLayoutConstraint.activate([
+            verticalSeparatorLine.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
+            verticalSeparatorLine.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
+            verticalSeparatorLine.widthAnchor.constraint(equalToConstant: 1),
+            verticalSeparatorLine.heightAnchor.constraint(equalToConstant: separatorYMargin-15)
+            ])
+    }
         
     func setupCardImageView() {
         cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
@@ -114,6 +132,7 @@ private extension CreditCard {
     func setupCreditNumberTextField() {
         creditNumberTextField = CreditCardTextFieldFactory.textField(by: .number)
         cardView.addSubview(creditNumberTextField)
+        textFields.append(creditNumberTextField)
         
         NSLayoutConstraint.activate([
             creditNumberTextField.leftAnchor.constraint(equalTo: cardImageView.rightAnchor, constant: marginsSeparation),
@@ -123,23 +142,10 @@ private extension CreditCard {
             ])
     }
     
-    func setupVerticalSeparator() {
-        verticalSeparatorLine = UIView.init()
-        verticalSeparatorLine.backgroundColor = color
-        verticalSeparatorLine.translatesAutoresizingMaskIntoConstraints = false
-        cardView.addSubview(verticalSeparatorLine)
-        
-        NSLayoutConstraint.activate([
-            verticalSeparatorLine.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
-            verticalSeparatorLine.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
-            verticalSeparatorLine.widthAnchor.constraint(equalToConstant: 1),
-            verticalSeparatorLine.heightAnchor.constraint(equalToConstant: separatorYMargin-15)
-            ])
-    }
-    
     func setupDateTextField() {
         dateTextField = CreditCardTextFieldFactory.textField(by: .date)
         cardView.addSubview(dateTextField)
+        textFields.append(dateTextField)
     
         NSLayoutConstraint.activate([
             dateTextField.centerYAnchor.constraint(equalTo: verticalSeparatorLine.centerYAnchor),
@@ -152,6 +158,7 @@ private extension CreditCard {
     func setupCVVTextfield() {
         cvvTextField = CreditCardTextFieldFactory.textField(by: .cvv)
         cardView.addSubview(cvvTextField)
+        textFields.append(cvvTextField)
         
 
         NSLayoutConstraint.activate([
@@ -165,6 +172,7 @@ private extension CreditCard {
     func setupNameTextfield() {
         nameTextField = CreditCardTextFieldFactory.textField(by: .name)
         cardView.addSubview(nameTextField)
+        textFields.append(nameTextField)
         
         let height = subviewsHeight
         let topMarginSeparation = separatorYMargin/2 - height/2
