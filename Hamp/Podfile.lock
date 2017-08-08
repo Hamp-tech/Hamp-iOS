@@ -50,6 +50,7 @@ PODS:
     - FirebaseCommunity
     - FirebaseCommunity/Auth
     - FirebaseCommunity/Database
+  - InputMask (2.2.6)
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - FacebookCore (from `https://github.com/ulidev/facebook-sdk-swift.git`)
   - FacebookLogin (from `https://github.com/ulidev/facebook-sdk-swift.git`)
   - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`, branch `features`)
+  - InputMask
 
 EXTERNAL SOURCES:
   FacebookCore:
@@ -92,8 +94,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   HampKit: 42b051dfd2b692e79b8a4896d1a017fb9df7da42
+  InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: 55caaf97156877cd6b999e790ba4e02baeecd0eb
+PODFILE CHECKSUM: ff3a08c98d02b8fbfacdbf800ceee959dfb3e91b
 
 COCOAPODS: 1.2.1

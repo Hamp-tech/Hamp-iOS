@@ -9,4 +9,5 @@ pod 'FacebookCore', :git => 'https://github.com/ulidev/facebook-sdk-swift.git'
 pod 'FacebookLogin', :git => 'https://github.com/ulidev/facebook-sdk-swift.git'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'InputMask'
 end

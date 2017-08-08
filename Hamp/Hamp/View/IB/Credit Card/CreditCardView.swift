@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import InputMask
 
+protocol CreditCardDelegate: class {
+    func creditCardWasCompleted(_ creditCard: CreditCardView, inputTexts: [String])
+}
 
-
-class CreditCard: UIView {
+class CreditCardView: UIView {
+    
+    weak var delegate: CreditCardDelegate?
     
     //MARK: Properties
     private var marginsSeparation: CGFloat = 17.0
@@ -31,18 +36,22 @@ class CreditCard: UIView {
     lazy var subviewsHeight = {
         return self.separatorYMargin-30
     }()
+    
+    private var inputMaskManager: CreditCardInputTextFieldMaskManager!
 
     //MARK: Constructors
     override init(frame: CGRect) {
         super.init(frame: frame)
         cardView = fromNib()
         backgroundColor = UIColor.white
+        createInputTextManager()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         cardView = fromNib()
         backgroundColor = UIColor.white
+        createInputTextManager()
         
     }
     
@@ -58,8 +67,23 @@ class CreditCard: UIView {
     
 }
 
-private extension CreditCard {
+extension CreditCardView: CreditCardInputTextDelegate{
     
+    //MARK: Backend
+    func createInputTextManager() {
+        inputMaskManager = CreditCardInputTextFieldMaskManager.init()
+        inputMaskManager.delegate = self
+    }
+    
+    func textfieldWasFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type, text: String) {
+        let nextValue = type.rawValue + 1
+        guard nextValue < textFields.count else { return }
+        textFields[nextValue].becomeFirstResponder()
+    }
+}
+
+private extension CreditCardView {
+    //MARK: UI
     func createUI() {
         setupFirstHorizontalSeparator()
         setupSecondHorizontalSeparator()
@@ -69,6 +93,7 @@ private extension CreditCard {
         setupDateTextField()
         setupCVVTextfield()
         setupNameTextfield()
+        delegate?.creditCardWasCompleted(self, inputTexts: [])
     }
     
     //MARK: UI Elements
@@ -116,6 +141,7 @@ private extension CreditCard {
         
     func setupCardImageView() {
         cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
+        cardImageView.tintColor = UIColor.darkPink
         cardView.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false
         let imageHeight = subviewsHeight
@@ -131,6 +157,10 @@ private extension CreditCard {
     
     func setupCreditNumberTextField() {
         creditNumberTextField = CreditCardTextFieldFactory.textField(by: .number)
+        inputMaskManager.subscribe(textfield: creditNumberTextField,
+                                   type: .number,
+                                   inputMaskType: .format("[0000] [0000] [0000] [0000]"))
+        
         cardView.addSubview(creditNumberTextField)
         textFields.append(creditNumberTextField)
         
@@ -144,6 +174,9 @@ private extension CreditCard {
     
     func setupDateTextField() {
         dateTextField = CreditCardTextFieldFactory.textField(by: .date)
+        inputMaskManager.subscribe(textfield: dateTextField,
+                                   type: .date,
+                                   inputMaskType: .format("[00]/[00]"))
         cardView.addSubview(dateTextField)
         textFields.append(dateTextField)
     
@@ -157,6 +190,9 @@ private extension CreditCard {
     
     func setupCVVTextfield() {
         cvvTextField = CreditCardTextFieldFactory.textField(by: .cvv)
+        inputMaskManager.subscribe(textfield: cvvTextField,
+                                   type: .cvv,
+                                   inputMaskType: .format("[000]"))
         cardView.addSubview(cvvTextField)
         textFields.append(cvvTextField)
         
@@ -171,6 +207,9 @@ private extension CreditCard {
     
     func setupNameTextfield() {
         nameTextField = CreditCardTextFieldFactory.textField(by: .name)
+        inputMaskManager.subscribe(textfield: nameTextField,
+                                   type: .name,
+                                   inputMaskType: .none)
         cardView.addSubview(nameTextField)
         textFields.append(nameTextField)
         

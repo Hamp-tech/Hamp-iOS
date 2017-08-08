@@ -45,6 +45,9 @@ private extension CreditCardTextFieldFactory {
                              keyboardType: UIKeyboardType = .numberPad) -> UITextField {
         let textfield = UITextField.init()
         textfield.placeholder = Localization.localizableString(by: placeholder)
+        textfield.minimumFontSize = 20
+        textfield.adjustsFontSizeToFitWidth = true
+        textfield.textColor = textColor
         textfield.textAlignment = textAlignment
         textfield.keyboardType = keyboardType
         textfield.translatesAutoresizingMaskIntoConstraints = false
