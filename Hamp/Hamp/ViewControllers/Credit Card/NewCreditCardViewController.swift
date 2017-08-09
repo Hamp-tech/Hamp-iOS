@@ -10,7 +10,7 @@ import UIKit
 import HampKit
 
 class NewCreditCardViewController: HampViewController {
-    @IBOutlet weak var creditCardView: CreditCardUIComponent!
+    @IBOutlet weak var creditCardView: CreditCardUIController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class NewCreditCardViewController: HampViewController {
 }
 
 extension NewCreditCardViewController: CreditCardDelegate {
-    func creditCardWasCompleted(_ creditCardUI: CreditCardUIComponent, creditCard: HampCreditCard) {
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard) {
         print(creditCard)
         dismiss(animated: true, completion: nil)
     }
