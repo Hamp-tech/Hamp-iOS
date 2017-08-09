@@ -1,16 +1,13 @@
 platform :ios, '9.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'Hamp' do
 
-  pod 'HampKit', :git => 'https://github.com/Hamp-tech/Hamp-iOS-Kit.git', :branch => 'features'
-
-  target 'HampTests' do
-    inherit! :search_paths
-  end
-
-  target 'HampUITests' do
-    inherit! :search_paths
-  end
-
+pod 'HampKit', :git => 'https://github.com/Hamp-tech/Hamp-iOS-Kit.git', :branch => 'features'
+pod 'FacebookCore', :git => 'https://github.com/ulidev/facebook-sdk-swift.git'
+pod 'FacebookLogin', :git => 'https://github.com/ulidev/facebook-sdk-swift.git'
+pod 'Fabric'
+pod 'Crashlytics'
+pod 'InputMask'
 end
