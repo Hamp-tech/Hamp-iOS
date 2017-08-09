@@ -7,13 +7,9 @@
 //
 
 import UIKit
+import HampKit
 
-class NewCreditCardViewController: HampViewController, CreditCardDelegate {
-    func creditCardWasCompleted(_ creditCard: CreditCardUIComponent, inputTexts: [String]) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-
+class NewCreditCardViewController: HampViewController {
     @IBOutlet weak var creditCardView: CreditCardUIComponent!
     
     override func viewDidLoad() {
@@ -21,4 +17,11 @@ class NewCreditCardViewController: HampViewController, CreditCardDelegate {
         creditCardView.delegate = self
 
      }
+}
+
+extension NewCreditCardViewController: CreditCardDelegate {
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIComponent, creditCard: HampCreditCard) {
+        print(creditCard)
+        dismiss(animated: true, completion: nil)
+    }
 }

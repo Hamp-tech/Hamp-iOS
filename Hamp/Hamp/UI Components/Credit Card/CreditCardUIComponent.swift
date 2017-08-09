@@ -8,9 +8,10 @@
 
 import UIKit
 import InputMask
+import HampKit
 
 protocol CreditCardDelegate: class {
-    func creditCardWasCompleted(_ creditCard: CreditCardUIComponent, inputTexts: [String])
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIComponent, creditCard: HampCreditCard)
 }
 
 class CreditCardUIComponent: UIView {
@@ -30,14 +31,14 @@ class CreditCardUIComponent: UIView {
     private var nameTextField: UITextField!
     private var dateTextField: UITextField!
     private var textFields = [UITextField]()
+    private var hampCreditCard: HampCreditCard!
+    private var inputMaskManager: CreditCardInputTextFieldMaskManager!
     lazy var separatorYMargin = {
         return self.bounds.height/3.0
     }()
     lazy var subviewsHeight = {
         return self.separatorYMargin-30
     }()
-    
-    private var inputMaskManager: CreditCardInputTextFieldMaskManager!
 
     //MARK: Constructors
     override init(frame: CGRect) {
@@ -45,6 +46,7 @@ class CreditCardUIComponent: UIView {
         cardView = fromNib()
         backgroundColor = UIColor.white
         createInputTextManager()
+        setupHampCreditCard()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,6 +54,7 @@ class CreditCardUIComponent: UIView {
         cardView = fromNib()
         backgroundColor = UIColor.white
         createInputTextManager()
+        setupHampCreditCard()
         
     }
     
@@ -67,6 +70,13 @@ class CreditCardUIComponent: UIView {
     
 }
 
+private extension CreditCardUIComponent {
+    //MARK: HampKit
+    func setupHampCreditCard() {
+        hampCreditCard = HampCreditCard.init()
+    }
+}
+
 extension CreditCardUIComponent: CreditCardInputTextDelegate{
     
     //MARK: Backend
@@ -77,7 +87,28 @@ extension CreditCardUIComponent: CreditCardInputTextDelegate{
     
     func textfieldWasFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type, text: String) {
         let nextValue = type.rawValue + 1
-        guard nextValue < textFields.count else { return }
+        switch type {
+        case .number:
+            hampCreditCard.number = text
+        case .date:
+            hampCreditCard.month = text.substring(with: 0..<2)
+            hampCreditCard.year = text.substring(with: 2..<4)
+        case .cvv:
+            hampCreditCard.cvv = text
+        case .name:
+            hampCreditCard.name = text
+            
+        }
+        guard nextValue < textFields.count else {
+            print(hampCreditCard)
+            do {
+                try hampCreditCard.validate()
+                delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
+            } catch {
+                print(error)
+            }
+            return
+        }
         textFields[nextValue].becomeFirstResponder()
     }
 }
@@ -93,7 +124,6 @@ private extension CreditCardUIComponent {
         setupDateTextField()
         setupCVVTextfield()
         setupNameTextfield()
-        delegate?.creditCardWasCompleted(self, inputTexts: [])
     }
     
     //MARK: UI Elements
