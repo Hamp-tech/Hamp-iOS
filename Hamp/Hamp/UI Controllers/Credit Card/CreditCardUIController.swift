@@ -11,10 +11,10 @@ import InputMask
 import HampKit
 
 protocol CreditCardDelegate: class {
-    func creditCardWasCompleted(_ creditCardUI: CreditCardUIComponent, creditCard: HampCreditCard)
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard)
 }
 
-class CreditCardUIComponent: UIView {
+class CreditCardUIController: UIView {
     
     weak var delegate: CreditCardDelegate?
     
@@ -70,14 +70,14 @@ class CreditCardUIComponent: UIView {
     
 }
 
-private extension CreditCardUIComponent {
+private extension CreditCardUIController {
     //MARK: HampKit
     func setupHampCreditCard() {
         hampCreditCard = HampCreditCard.init()
     }
 }
 
-extension CreditCardUIComponent: CreditCardInputTextDelegate{
+extension CreditCardUIController: CreditCardInputTextDelegate{
     
     //MARK: Backend
     func createInputTextManager() {
@@ -104,16 +104,14 @@ extension CreditCardUIComponent: CreditCardInputTextDelegate{
             do {
                 try hampCreditCard.validate()
                 delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
-            } catch {
-                print(error)
-            }
+            } catch {}
             return
         }
         textFields[nextValue].becomeFirstResponder()
     }
 }
 
-private extension CreditCardUIComponent {
+private extension CreditCardUIController {
     //MARK: UI
     func createUI() {
         setupFirstHorizontalSeparator()

@@ -54,7 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xyn-jU-OgV" kind="presentation" id="Dm8-wK-RAi"/>
+                                    <segue destination="anX-xG-aS8" kind="presentation" id="KQc-qY-L74"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
@@ -242,7 +242,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-4z-qOs" customClass="CreditCardUIComponent" customModule="Hamp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-4z-qOs" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="31" y="139" width="258" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6RQ-4z-qOs" secondAttribute="height" multiplier="43:23" id="i7q-5z-WH9"/>

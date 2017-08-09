@@ -18,7 +18,7 @@ class HampTextField: UITextField {
             case .filled:
                 color = .darkPink
             case .error:
-                color = .red
+                shake()
             default:
                 break
             }
