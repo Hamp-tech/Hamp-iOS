@@ -99,14 +99,14 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
             hampCreditCard.name = text
             
         }
-        guard nextValue < textFields.count else {
-            print(hampCreditCard)
-            do {
-                try hampCreditCard.validate()
-                delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
-            } catch {}
-            return
-        }
+        
+        do {
+            try hampCreditCard.validate()
+            delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
+            print("valid")
+        } catch {}
+        
+        guard nextValue < textFields.count else { return }
         textFields[nextValue].becomeFirstResponder()
     }
 }
