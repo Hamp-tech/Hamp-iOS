@@ -21,6 +21,7 @@ protocol CreditCardInputTextDelegate: class {
 public final class CreditCardInputTextFieldMaskManager: NSObject {
     
     private var maskTypes = [UITextField: InputMaskType]()
+    private var masks = [UITextField: UITextFieldDelegate]()
     private var dict = [UITextField: CreditCardTextFieldFactory.type]()
     weak var delegate: CreditCardInputTextDelegate?
     
@@ -40,6 +41,7 @@ public final class CreditCardInputTextFieldMaskManager: NSObject {
         
         textfield.delegate = delegate
         maskTypes[textfield] = inputMaskType
+        masks[textfield] = delegate
         dict[textfield] = type
         
         

@@ -40,4 +40,12 @@ class GradientStatesButton: GradientButton {
         currentContent = c
         self.setTitle(c.title, for: .normal)
     }
+    
+    func executeAction() {
+        guard let c = currentContent else {
+            assert(false, "No content specified")
+        }
+        
+        c.action()
+    }
 }

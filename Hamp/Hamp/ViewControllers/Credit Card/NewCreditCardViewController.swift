@@ -20,19 +20,25 @@ class NewCreditCardViewController: HampViewController {
         let notCompletedCreditCardContent = createContent(
             action: {
             print("aaa")
-        },  title: "Later",
+        },  title: Localization.localizableString(by: "new-credit-card.button.not-completed-text"),
             identifier: gradientStatesButtonNotCompletedContentIdentifier)
         
         let completedCreditCardContent = createContent(
             action: {
-            print("aaa")
-        },  title: "OK",
+            print("bbb")
+        },  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
             identifier: gradientStatesButtonCompletedContentIdentifier)
         
-        statesGradientButton.addActionContent(content: notCompletedCreditCardContent, identifier: notCompletedCreditCardContent.identifier)
-        statesGradientButton.addActionContent(content: completedCreditCardContent, identifier: completedCreditCardContent.identifier)
+        statesGradientButton.addActionContent(content: notCompletedCreditCardContent,
+                                              identifier: notCompletedCreditCardContent.identifier)
+        statesGradientButton.addActionContent(content: completedCreditCardContent,
+                                              identifier: completedCreditCardContent.identifier)
+        statesGradientButton.changeContent(to: gradientStatesButtonNotCompletedContentIdentifier)
      }
     
+    @IBAction func buttonWasPressed(_ sender: GradientStatesButton) {
+        sender.executeAction()
+    }
 }
 
 private extension NewCreditCardViewController {
