@@ -43,7 +43,10 @@
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
 		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
+		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
+		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
+		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
@@ -104,7 +107,10 @@
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
+		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +317,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E7E32F01F41F1F8009C0099 /* TabBar Controller */,
 				4E22CF671F38F74900EEC314 /* Credit Card */,
 				4ECA40681F24B8AF003F51EA /* Base View Controllers */,
 				4E7D94E11F2384D900C7BB4B /* Login */,
@@ -328,11 +335,20 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4E7E32F01F41F1F8009C0099 /* TabBar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */,
+			);
+			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
 				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
+				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -373,6 +389,7 @@
 				4E6A08841F251D240044570C /* SignInToolbar.swift */,
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
+				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -589,6 +606,7 @@
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
+				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
@@ -604,6 +622,8 @@
 				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
+				4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */,
+				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,

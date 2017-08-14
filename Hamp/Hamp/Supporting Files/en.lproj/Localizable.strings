@@ -21,3 +21,6 @@
 "credit-card.placeholder.number" = "1234 5678 9123 4567";
 "credit-card.placeholder.cvv" = "CVV";
 
+"new-credit-card.button.not-completed-text" = "Later";
+"new-credit-card.button.completed-text" = "Continue";
+

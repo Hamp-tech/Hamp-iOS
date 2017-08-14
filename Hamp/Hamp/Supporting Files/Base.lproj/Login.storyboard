@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xyn-jU-OgV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaS-vG-x6O">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="anX-xG-aS8" kind="presentation" id="KQc-qY-L74"/>
+                                    <segue destination="anX-xG-aS8" kind="presentation" id="eic-Tj-49K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
@@ -164,7 +163,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IH2-eM-gBC">
-                                            <rect key="frame" x="227" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="214" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,7 +176,7 @@
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
                                     <barButtonItem width="60" style="plain" id="LOP-A5-cWn">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                            <rect key="frame" x="262" y="7" width="42" height="30"/>
+                                            <rect key="frame" x="249" y="7" width="55" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Log in">
@@ -233,37 +232,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUm-kK-IVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1193" y="1281"/>
-        </scene>
-        <!--New Credit Card View Controller-->
-        <scene sceneID="V8d-YP-pwf">
-            <objects>
-                <viewController id="xyn-jU-OgV" customClass="NewCreditCardViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jaP-ht-wi2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-4z-qOs" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="31" y="139" width="258" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6RQ-4z-qOs" secondAttribute="height" multiplier="43:23" id="i7q-5z-WH9"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="yps-UF-R1G" firstAttribute="trailing" secondItem="6RQ-4z-qOs" secondAttribute="trailing" constant="31" id="7DK-I5-xq5"/>
-                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="leading" secondItem="yps-UF-R1G" secondAttribute="leading" constant="31" id="9Sc-XK-el2"/>
-                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="top" secondItem="yps-UF-R1G" secondAttribute="top" constant="119" id="9cy-jS-l1m"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yps-UF-R1G"/>
-                    </view>
-                    <connections>
-                        <outlet property="creditCardView" destination="6RQ-4z-qOs" id="Lhr-SQ-7gW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xzY-nm-6m5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-836" y="1280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
@@ -394,6 +362,6 @@
         <image name="facebook" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RZx-zg-4zj"/>
+        <segue reference="Tma-zM-5Xc"/>
     </inferredMetricsTieBreakers>
 </document>
