@@ -12,6 +12,7 @@ import HampKit
 
 protocol CreditCardDelegate: class {
     func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard)
+    func creditCardWasIncompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard)
 }
 
 class CreditCardUIController: UIView {
@@ -97,17 +98,26 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
             hampCreditCard.cvv = text
         case .name:
             hampCreditCard.name = text
-            
         }
         
         do {
             try hampCreditCard.validate()
             delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
-            print("valid")
         } catch {}
         
         guard nextValue < textFields.count else { return }
         textFields[nextValue].becomeFirstResponder()
+    }
+    
+    func textFieldAreNotFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type) {
+        self.delegate?.creditCardWasIncompleted(self, creditCard: hampCreditCard)
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        textFields.forEach {
+            $0.resignFirstResponder()
+        }
+        return super.resignFirstResponder()
     }
 }
 

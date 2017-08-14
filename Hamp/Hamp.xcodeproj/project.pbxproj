@@ -44,6 +44,7 @@
 		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
+		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
@@ -105,6 +106,7 @@
 		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
+		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				4E6A08841F251D240044570C /* SignInToolbar.swift */,
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
+				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
+				4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,

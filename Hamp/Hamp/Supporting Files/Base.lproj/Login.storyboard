@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xyn-jU-OgV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaS-vG-x6O">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,7 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="anX-xG-aS8" kind="presentation" id="KQc-qY-L74"/>
+                                    <segue destination="xyn-jU-OgV" kind="presentation" id="yvY-0U-qo6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
@@ -242,28 +242,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-4z-qOs" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="31" y="139" width="258" height="138"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add credit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMB-xZ-B0H">
+                                <rect key="frame" x="31" y="49" width="273" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6RQ-4z-qOs" secondAttribute="height" multiplier="43:23" id="i7q-5z-WH9"/>
+                                    <constraint firstAttribute="height" constant="43" id="5HO-ps-yzT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-J7-2LF" customClass="GradientStatesButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="31" y="514" width="273" height="34"/>
+                                <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="t7y-qY-LHd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Later">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-4z-qOs" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="120" width="244" height="130.5"/>
+                                <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6RQ-4z-qOs" secondAttribute="height" multiplier="43:23" id="3FY-6R-UcQ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yps-UF-R1G" firstAttribute="trailing" secondItem="6RQ-4z-qOs" secondAttribute="trailing" constant="31" id="7DK-I5-xq5"/>
-                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="leading" secondItem="yps-UF-R1G" secondAttribute="leading" constant="31" id="9Sc-XK-el2"/>
-                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="top" secondItem="yps-UF-R1G" secondAttribute="top" constant="119" id="9cy-jS-l1m"/>
+                            <constraint firstItem="l0E-J7-2LF" firstAttribute="leading" secondItem="yps-UF-R1G" secondAttribute="leading" constant="31" id="23g-9U-sfh"/>
+                            <constraint firstItem="yps-UF-R1G" firstAttribute="trailing" secondItem="XMB-xZ-B0H" secondAttribute="trailing" constant="16" id="3tH-9F-QHy"/>
+                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="top" secondItem="XMB-xZ-B0H" secondAttribute="bottom" constant="28" id="Jxq-BW-QNI"/>
+                            <constraint firstItem="6RQ-4z-qOs" firstAttribute="leading" secondItem="yps-UF-R1G" secondAttribute="leading" constant="38" id="Kn8-kQ-qYN"/>
+                            <constraint firstItem="XMB-xZ-B0H" firstAttribute="leading" secondItem="yps-UF-R1G" secondAttribute="leading" constant="31" id="cBm-8R-kWW"/>
+                            <constraint firstItem="XMB-xZ-B0H" firstAttribute="top" secondItem="yps-UF-R1G" secondAttribute="top" constant="29" id="gxn-9B-uGU"/>
+                            <constraint firstItem="yps-UF-R1G" firstAttribute="bottom" secondItem="l0E-J7-2LF" secondAttribute="bottom" constant="20" id="vea-id-RDM"/>
+                            <constraint firstItem="yps-UF-R1G" firstAttribute="trailing" secondItem="l0E-J7-2LF" secondAttribute="trailing" constant="16" id="vmE-bY-Rzw"/>
+                            <constraint firstItem="yps-UF-R1G" firstAttribute="trailing" secondItem="6RQ-4z-qOs" secondAttribute="trailing" constant="38" id="ySj-81-6ko"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yps-UF-R1G"/>
                     </view>
                     <connections>
                         <outlet property="creditCardView" destination="6RQ-4z-qOs" id="Lhr-SQ-7gW"/>
+                        <outlet property="statesGradientButton" destination="l0E-J7-2LF" id="3QZ-hE-sOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzY-nm-6m5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-836" y="1280"/>
+            <point key="canvasLocation" x="-836.25" y="1279.2253521126761"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
