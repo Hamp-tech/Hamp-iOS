@@ -1,49 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DyS-oe-Htl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6jk-H9-Py1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="yWm-Ci-gbk">
+        <!--New Credit Card View Controller-->
+        <scene sceneID="opF-13-2Gc">
             <objects>
-                <viewController id="Sa0-Y2-Bwt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O94-Mr-dPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                <viewController storyboardIdentifier="newCreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wqr-5f-awJ" customClass="NewCreditCardViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IaC-Qi-cbA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="XRg-si-gT4"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add credit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9F-m3-ary">
+                                <rect key="frame" x="31" y="49" width="328" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="RDJ-cJ-bpb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQB-WU-ij3" customClass="GradientStatesButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="31" y="613" width="328" height="34"/>
+                                <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Raz-F2-WLH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Later">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonWasPressed:" destination="wqr-5f-awJ" eventType="touchUpInside" id="vQT-Me-uRK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-Wx-3j2" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="38" y="120" width="299" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bg1-Wx-3j2" secondAttribute="height" multiplier="43:23" id="9W5-hx-bKW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bg1-Wx-3j2" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="38" id="4ns-dK-HjO"/>
+                            <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="MQB-WU-ij3" secondAttribute="trailing" constant="16" id="Hq8-k4-OX3"/>
+                            <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="z9F-m3-ary" secondAttribute="trailing" constant="16" id="Qee-aO-pU2"/>
+                            <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="bg1-Wx-3j2" secondAttribute="trailing" constant="38" id="be6-Kc-QBr"/>
+                            <constraint firstItem="6mE-db-xuG" firstAttribute="bottom" secondItem="MQB-WU-ij3" secondAttribute="bottom" constant="20" id="f6o-Tv-kWO"/>
+                            <constraint firstItem="z9F-m3-ary" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="31" id="hyX-Yp-sqp"/>
+                            <constraint firstItem="MQB-WU-ij3" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="31" id="py1-Bc-jzk"/>
+                            <constraint firstItem="z9F-m3-ary" firstAttribute="top" secondItem="6mE-db-xuG" secondAttribute="top" constant="29" id="tBI-GE-99v"/>
+                            <constraint firstItem="bg1-Wx-3j2" firstAttribute="top" secondItem="z9F-m3-ary" secondAttribute="bottom" constant="28" id="tn3-EB-C2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6mE-db-xuG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cqK-dS-oWX"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TH7-aV-xQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3065" y="643"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1Az-CI-fPy">
-            <objects>
-                <navigationController storyboardIdentifier="tabBarNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DyS-oe-Htl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MT4-Gk-i5d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Sa0-Y2-Bwt" kind="relationship" relationship="rootViewController" id="mR4-gL-UaS"/>
+                        <outlet property="creditCardView" destination="bg1-Wx-3j2" id="4uR-eg-a0T"/>
+                        <outlet property="statesGradientButton" destination="MQB-WU-ij3" id="x4w-ds-rSq"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="anA-1H-195" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4H-me-tcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2241.5999999999999" y="643.17841079460277"/>
+            <point key="canvasLocation" x="2252" y="1388"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="B8Z-aD-fDl">
+            <objects>
+                <viewController id="pId-Wk-RwA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ze7-7F-0zE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uUJ-ZE-4RV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="hGn-LL-Fk7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpZ-kd-xrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3207" y="925"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="nSs-Ag-r1b">
+            <objects>
+                <viewController id="DFs-O3-VSb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hwu-Pb-Pxd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sra-aL-M2Y"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="5cH-FE-0v5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yi5-T3-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3207" y="164"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="yv6-QR-zeN">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6jk-H9-Py1" customClass="MainTabBarViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="exf-Nq-APg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DFs-O3-VSb" kind="relationship" relationship="viewControllers" id="12i-OA-bwW"/>
+                        <segue destination="pId-Wk-RwA" kind="relationship" relationship="viewControllers" id="zDU-gx-MHM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sX-Jn-68h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="492"/>
         </scene>
     </scenes>
 </document>

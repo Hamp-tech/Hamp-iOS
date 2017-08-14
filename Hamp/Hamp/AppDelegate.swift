@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FabricManager.configure()
         
-        //self.showMainViewController()
+        self.showMainViewController()
         
         return true
     }
