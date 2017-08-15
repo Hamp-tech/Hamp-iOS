@@ -126,7 +126,7 @@
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
-		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreditCardInputTextFieldMaskManager.swift; path = Delegate/CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
+		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
 		614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hamp/Pods-Hamp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4FBE7AE31A21445A6CE888 /* Pods_HampUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HampUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,13 +212,6 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		4E4F38FB1F39F83400003131 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
 		4E5B08791F04731C00236A9E = {
 			isa = PBXGroup;
 			children = (
@@ -243,14 +236,12 @@
 			isa = PBXGroup;
 			children = (
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
-				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
+				4EC6361D1F43ACEA0045520F /* Controllers */,
+				4E632E271F26508000CDE02D /* Factories */,
 				4EDF102C1F237E03007E15E9 /* Model */,
 				4EDF10051F236E21007E15E9 /* View */,
-				4E2E2F511F3A87040063E466 /* UI Controllers */,
 				4E89E05C1F2EC24C008C658D /* Utils */,
 				4EEA1A151F2380A00070E17A /* Extensions */,
-				4E47866D1F30DA67007ABE00 /* Validation */,
-				4ECFFAA11F30BDF70043D4B5 /* Localization */,
 				4E5B08B41F04733900236A9E /* Supporting Files */,
 			);
 			path = Hamp;
@@ -289,21 +280,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4E632E221F264C5C00CDE02D /* Data Source */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Source";
-			sourceTree = "<group>";
-		};
-		4E632E271F26508000CDE02D /* Factory */ = {
+		4E632E271F26508000CDE02D /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */,
 				4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */,
 				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
 			);
-			path = Factory;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		4E6A08811F251B170044570C /* IB */ = {
@@ -346,11 +330,31 @@
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4E47866D1F30DA67007ABE00 /* Validation */,
+				4ECFFAA11F30BDF70043D4B5 /* Localization */,
 				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
 				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4EC6361C1F43AC830045520F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4EC6361D1F43ACEA0045520F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6361C1F43AC830045520F /* Managers */,
+				4E2E2F511F3A87040063E466 /* UI Controllers */,
+				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		4ECA40681F24B8AF003F51EA /* Base View Controllers */ = {
@@ -397,12 +401,8 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E4F38FB1F39F83400003131 /* Delegate */,
-				4E2BB6711F3132A0002DD4EE /* Contents */,
 				4E2304F81F2F9803000AB18C /* Protocols */,
-				4E632E271F26508000CDE02D /* Factory */,
-				4E632E221F264C5C00CDE02D /* Data Source */,
-				4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */,
+				4E2BB6711F3132A0002DD4EE /* Contents */,
 			);
 			path = Model;
 			sourceTree = "<group>";
