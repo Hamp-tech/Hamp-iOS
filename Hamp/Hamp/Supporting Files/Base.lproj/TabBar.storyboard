@@ -77,33 +77,49 @@
             </objects>
             <point key="canvasLocation" x="2252" y="1388"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
+        <scene sceneID="RNB-ED-gn1">
+            <objects>
+                <viewController id="LFG-OQ-zzn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0h-Dl-HeK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wse-Ky-i8X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile-empty" selectedImage="profile-filled" id="Jd8-Os-HnM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZb-qH-VDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="1601"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="B8Z-aD-fDl">
             <objects>
                 <viewController id="pId-Wk-RwA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-7F-0zE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uUJ-ZE-4RV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="hGn-LL-Fk7"/>
+                    <tabBarItem key="tabBarItem" title="" image="bag-empty" selectedImage="bag-filled" id="hGn-LL-Fk7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpZ-kd-xrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3207" y="925"/>
+            <point key="canvasLocation" x="3206" y="896"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="nSs-Ag-r1b">
             <objects>
                 <viewController id="DFs-O3-VSb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwu-Pb-Pxd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sra-aL-M2Y"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="5cH-FE-0v5"/>
+                    <tabBarItem key="tabBarItem" title="" image="clock-empty" selectedImage="clock-filled" id="5cH-FE-0v5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yi5-T3-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,14 +129,22 @@
         <scene sceneID="yv6-QR-zeN">
             <objects>
                 <tabBarController storyboardIdentifier="tabBarNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6jk-H9-Py1" customClass="MainTabBarViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="exf-Nq-APg">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="exf-Nq-APg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="DFs-O3-VSb" kind="relationship" relationship="viewControllers" id="12i-OA-bwW"/>
                         <segue destination="pId-Wk-RwA" kind="relationship" relationship="viewControllers" id="zDU-gx-MHM"/>
+                        <segue destination="LFG-OQ-zzn" kind="relationship" relationship="viewControllers" id="6gZ-uP-J6t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sX-Jn-68h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,4 +152,12 @@
             <point key="canvasLocation" x="2252" y="492"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bag-empty" width="23" height="33"/>
+        <image name="bag-filled" width="25" height="32"/>
+        <image name="clock-empty" width="31" height="31"/>
+        <image name="clock-filled" width="29" height="29"/>
+        <image name="profile-empty" width="24" height="31"/>
+        <image name="profile-filled" width="24" height="30"/>
+    </resources>
 </document>
