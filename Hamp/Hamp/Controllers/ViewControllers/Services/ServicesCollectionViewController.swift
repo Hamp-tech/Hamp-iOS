@@ -12,21 +12,25 @@ class ServicesCollectionViewController: UICollectionViewController {
     
     //MARK: Properties
     private var orderServices = OrderServicesProvider.orderServices
+    private var basketButton: BasketButton!
+    private var videoTutorialButton: UIButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
-        let rightButton = UIButton.init(type: .roundedRect)
-        rightButton.setImage(#imageLiteral(resourceName: "basket"), for: .normal)
-        addRightBarButtonWhenLargeTitles(rightButton: rightButton)
+        basketButton = BarRightButtonsFactory.basketButton()
+        basketButton.isEnabled = false
+//        basketButton.addTarget(self, action: #selector(), for: .touchUpInside)
+        addRightBarButtonWhenLargeTitles(rightButton: basketButton)
         
-        let rightButton2 = UIButton.init(type: .roundedRect)
-        rightButton2.setImage(#imageLiteral(resourceName: "video-tutorial"), for: .normal)
-        rightButton2.setTitleColor(.purple, for: .normal)
-        addRightBarButtonWhenLargeTitles(rightButton: rightButton2)
+        videoTutorialButton = UIButton.init(type: .system)
+        videoTutorialButton.setImage(#imageLiteral(resourceName: "video-tutorial"), for: .normal)
+
+        addRightBarButtonWhenLargeTitles(rightButton: videoTutorialButton)
         
     }
+    
 }
 
 internal extension ServicesCollectionViewController {
@@ -49,6 +53,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         var o = order
         o.amount += 1
         cell.updateAmountLabel()
+        basketButton.updateAmount(with: amount())
     }
     
     func removeWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
@@ -56,6 +61,13 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         var o = order
         o.amount -= 1
         cell.updateAmountLabel()
+        basketButton.updateAmount(with: amount())
+    }
+    
+    private func amount() -> Int {
+        return orderServices.filter{$0.amount > 0}.reduce(0) { (initial, service) in
+            initial + service.amount
+        }
     }
 }
 
