@@ -48,6 +48,7 @@
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */; };
+		4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
@@ -113,6 +114,7 @@
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLargeTitlesNavigationViewController.swift; sourceTree = "<group>"; };
+		4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewController.swift; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4EC636221F43B2D10045520F /* Services */,
 				4E7E32F01F41F1F8009C0099 /* TabBar Controller */,
 				4E22CF671F38F74900EEC314 /* Credit Card */,
 				4ECA40681F24B8AF003F51EA /* Base View Controllers */,
@@ -359,6 +362,21 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		4EC636221F43B2D10045520F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4EC636281F43B9820045520F /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		4ECA40681F24B8AF003F51EA /* Base View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +422,7 @@
 		4EDF102C1F237E03007E15E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4EC636281F43B9820045520F /* Layouts */,
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
 			);
@@ -597,6 +616,7 @@
 			files = (
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
+				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
