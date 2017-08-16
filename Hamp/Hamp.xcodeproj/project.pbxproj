@@ -52,6 +52,9 @@
 		4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */; };
 		4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */; };
 		4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */; };
+		4ECA351C1F4498640031580B /* OrderableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351B1F4498640031580B /* OrderableService.swift */; };
+		4ECA351E1F449B530031580B /* OrderServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351D1F449B530031580B /* OrderServicesProvider.swift */; };
+		4ECA35201F449C230031580B /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351F1F449C230031580B /* OrderService.swift */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
@@ -121,6 +124,9 @@
 		4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
+		4ECA351B1F4498640031580B /* OrderableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderableService.swift; sourceTree = "<group>"; };
+		4ECA351D1F449B530031580B /* OrderServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServicesProvider.swift; sourceTree = "<group>"; };
+		4ECA351F1F449C230031580B /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */,
 				4E2304FD1F2F9FB2000AB18C /* Reusable.swift */,
 				4E72535F1F37D982006382B4 /* SignUpContentable.swift */,
+				4ECA351B1F4498640031580B /* OrderableService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4E2BB6721F3132B8002DD4EE /* SignUpCellContent.swift */,
+				4ECA351F1F449C230031580B /* OrderService.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 				4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */,
 				4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */,
 				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
+				4ECA351D1F449B530031580B /* OrderServicesProvider.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -655,6 +664,7 @@
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
+				4ECA351E1F449B530031580B /* OrderServicesProvider.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
@@ -676,8 +686,10 @@
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
+				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
+				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
 			);
