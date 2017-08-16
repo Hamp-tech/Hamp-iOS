@@ -49,6 +49,9 @@
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */; };
 		4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */; };
+		4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */; };
+		4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */; };
+		4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
 		4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */; };
@@ -115,6 +118,9 @@
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLargeTitlesNavigationViewController.swift; sourceTree = "<group>"; };
 		4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewController.swift; sourceTree = "<group>"; };
+		4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
 		4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleBaseViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +303,7 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
+				4ECA351A1F4466140031580B /* Services */,
 				4E22CF681F38F7A200EEC314 /* Sign up */,
 			);
 			path = IB;
@@ -377,6 +384,15 @@
 			path = Layouts;
 			sourceTree = "<group>";
 		};
+		4ECA351A1F4466140031580B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */,
+				4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4ECA40681F24B8AF003F51EA /* Base View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +458,7 @@
 				4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */,
 				4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */,
 				4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */,
+				4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -535,6 +552,7 @@
 			files = (
 				4E2E2F501F3A460A0063E466 /* CreditCardUIController.xib in Resources */,
 				4E7253541F37BC8E006382B4 /* TabBar.storyboard in Resources */,
+				4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */,
 				4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */,
 				4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
@@ -619,12 +637,14 @@
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */,
+				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
+				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,

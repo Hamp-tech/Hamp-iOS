@@ -8,13 +8,11 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class ServicesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reuse")
+        collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
         
     }
 }
@@ -26,10 +24,7 @@ extension ServicesCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuse", for: indexPath)
-        
-        cell.contentView.backgroundColor = .red
-        
+        let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesCollectionViewCell
         return cell
     }
 }
