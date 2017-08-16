@@ -17,5 +17,7 @@ class MainTabBarViewController: UITabBarController {
             viewControllers?.first?.present(vc, animated: true, completion: nil)
             FirstTimeActionsManager.changeFirstTimeState(to: .presentNewCreditCard, executeNextTime: false)
         }
+        
+        selectedIndex = 1
     }
 }
