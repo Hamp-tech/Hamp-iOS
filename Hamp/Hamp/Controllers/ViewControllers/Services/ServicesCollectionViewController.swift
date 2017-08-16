@@ -17,11 +17,19 @@ class ServicesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
+        let rightButton = UIButton.init(type: .roundedRect)
+        rightButton.setImage(#imageLiteral(resourceName: "basket"), for: .normal)
+        addRightBarButtonWhenLargeTitles(rightButton: rightButton)
+        
+        let rightButton2 = UIButton.init(type: .roundedRect)
+        rightButton2.setImage(#imageLiteral(resourceName: "video-tutorial"), for: .normal)
+        rightButton2.setTitleColor(.purple, for: .normal)
+        addRightBarButtonWhenLargeTitles(rightButton: rightButton2)
         
     }
 }
 
-extension ServicesCollectionViewController {
+internal extension ServicesCollectionViewController {
     //MARK: DataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return orderServices.count
@@ -29,8 +37,25 @@ extension ServicesCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesCollectionViewCell
-        cell.order = orderServices[indexPath.row]
+        cell.service = orderServices[indexPath.row]
+        cell.delegate = self
         return cell
+    }
+}
+
+extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
+    func addWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
+        guard order.amount >= 0 else { return }
+        var o = order
+        o.amount += 1
+        cell.updateAmountLabel()
+    }
+    
+    func removeWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
+        guard order.amount > 0 else { return }
+        var o = order
+        o.amount -= 1
+        cell.updateAmountLabel()
     }
 }
 
@@ -46,3 +71,4 @@ extension ServicesCollectionViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets.init(top: 10, left: 12.5, bottom: 10, right: 12.5)
     }
 }
+

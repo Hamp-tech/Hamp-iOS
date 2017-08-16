@@ -52,6 +52,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bg1-Wx-3j2" secondAttribute="height" multiplier="43:23" id="9W5-hx-bKW"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
