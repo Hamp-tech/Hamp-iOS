@@ -178,7 +178,7 @@ private extension CreditCardUIController {
     }
         
     func setupCardImageView() {
-        cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
+        cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "credit-card"))
         cardImageView.tintColor = UIColor.darkPink
         cardView.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false

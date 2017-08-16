@@ -18,7 +18,7 @@ class LogoTitleBaseViewController: HampViewController {
     }
     
     private func addImageToTitle() {
-        let image = #imageLiteral(resourceName: "SmallBag")
+        let image = #imageLiteral(resourceName: "small-bag")
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 0, y: 0, width: 27, height: 34)
         imageView.contentMode = .scaleAspectFit
