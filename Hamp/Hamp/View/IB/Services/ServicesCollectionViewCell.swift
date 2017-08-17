@@ -33,7 +33,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
     override func layoutSubviews() {
         super.layoutSubviews()
         serviceImageView.image = UIImage.init(named: service.imageName)
-        titleLabel.text = service.name
+        titleLabel.text = service.service.name
         amountSelectionView.updateAmount(with: service.service.amount)
     }
     

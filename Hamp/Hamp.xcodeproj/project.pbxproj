@@ -51,7 +51,7 @@
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
 		4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DA1F45C271006F3BA7 /* Service.swift */; };
-		4EB242DD1F45C2CC006F3BA7 /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* ServicesFactory.swift */; };
+		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */; };
@@ -60,7 +60,7 @@
 		4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */; };
 		4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */; };
 		4ECA351C1F4498640031580B /* OrderableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351B1F4498640031580B /* OrderableService.swift */; };
-		4ECA351E1F449B530031580B /* OrderServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351D1F449B530031580B /* OrderServicesProvider.swift */; };
+		4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */; };
 		4ECA35201F449C230031580B /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA351F1F449C230031580B /* OrderService.swift */; };
 		4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */; };
 		4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA406D1F24BD31003F51EA /* HampViewController.swift */; };
@@ -133,7 +133,7 @@
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		4EB242DC1F45C2CC006F3BA7 /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
+		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLargeTitlesNavigationViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		4ECA35161F44660B0031580B /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4ECA351B1F4498640031580B /* OrderableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderableService.swift; sourceTree = "<group>"; };
-		4ECA351D1F449B530031580B /* OrderServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServicesProvider.swift; sourceTree = "<group>"; };
+		4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesProvider.swift; sourceTree = "<group>"; };
 		4ECA351F1F449C230031580B /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		4ECA406B1F24BBB3003F51EA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4ECA406D1F24BD31003F51EA /* HampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampViewController.swift; sourceTree = "<group>"; };
@@ -326,9 +326,9 @@
 				4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */,
 				4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */,
 				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
-				4ECA351D1F449B530031580B /* OrderServicesProvider.swift */,
+				4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */,
 				4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */,
-				4EB242DC1F45C2CC006F3BA7 /* ServicesFactory.swift */,
+				4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
 				4E46C8B81F44CED40051BF84 /* BasketButton.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
-				4ECA351E1F449B530031580B /* OrderServicesProvider.swift in Sources */,
+				4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */,
 				4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
@@ -728,7 +728,7 @@
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
-				4EB242DD1F45C2CC006F3BA7 /* ServicesFactory.swift in Sources */,
+				4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */,
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,

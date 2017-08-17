@@ -13,17 +13,15 @@ public class OrderService: OrderableService {
     //MARK: Properties
     var service: Service
     var imageName: String
-    var name: String
     
     /// Create a new service
     ///
     /// - Parameters:
     ///   - imageName: order image
     ///   - title: title text
-    init(service: Service, imageName: String, name: String) {
+    init(service: Service, imageName: String) {
         self.service = service
         self.imageName = imageName
-        self.name = name
     }
 }
 

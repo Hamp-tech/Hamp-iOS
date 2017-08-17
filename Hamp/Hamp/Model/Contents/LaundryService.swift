@@ -8,17 +8,22 @@
 
 import Foundation
 
-class LaundryService: Service{
+class LaundryService: Service {
+    
     
     //MARK: Properties
     var identifier: String
     var amount: Int
+    var price: Int
+    var name: String
     
     /// Create a new Service
     ///
     /// - Parameter identifier: service identifier
-    init(identifier: String) {
+    init(identifier: String, price: Int, name: String) {
         self.identifier = identifier
+        self.price = price
+        self.name = name
         amount = 0
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class ServicesCollectionViewController: HampCollectionViewController {
     
     //MARK: Properties
-    private var orderServices = OrderServicesProvider.orderServices
+    private var orderServices = LaundryServicesProvider.orderServices
     private var basketButton: BasketButton!
     private var videoTutorialButton: UIButton!
     

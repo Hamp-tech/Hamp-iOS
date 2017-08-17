@@ -11,4 +11,6 @@ import Foundation
 protocol Service {
     var identifier: String { get set }
     var amount: Int { get set }
+    var price: Int { get set }
+    var name: String { get set }
 }
