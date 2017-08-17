@@ -10,7 +10,6 @@ import Foundation
 
 class LaundryService: Service {
     
-    
     //MARK: Properties
     var identifier: String
     var amount: Int
@@ -20,10 +19,10 @@ class LaundryService: Service {
     /// Create a new Service
     ///
     /// - Parameter identifier: service identifier
-    init(identifier: String, price: Int, name: String) {
+    init(identifier: String, price: Int, name: String, amount: Int = 0) {
         self.identifier = identifier
         self.price = price
         self.name = name
-        amount = 0
+        self.amount = amount
     }
 }
