@@ -68,7 +68,7 @@ internal extension ServicesCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesCollectionViewCell
-        cell.service = orderServices[indexPath.row]
+        cell.orderableService = orderServices[indexPath.row]
         cell.delegate = self
         return cell
     }

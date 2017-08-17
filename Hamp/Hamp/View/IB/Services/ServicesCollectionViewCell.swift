@@ -21,7 +21,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
     @IBOutlet private weak var amountSelectionView: AmountSelectionView!
     
     //MARK: Properties
-    var service: OrderableService!
+    var orderableService: OrderableService!
     weak var delegate: ServicesCollectionViewCellDelegate?
     
     //MARK: Life cycle
@@ -32,9 +32,9 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        serviceImageView.image = UIImage.init(named: service.imageName)
-        titleLabel.text = service.service.name
-        amountSelectionView.updateAmount(with: service.service.amount)
+        serviceImageView.image = UIImage.init(named: orderableService.imageName)
+        titleLabel.text = orderableService.service.name
+        amountSelectionView.updateAmount(with: orderableService.service.amount)
     }
     
     override func prepareForReuse() {
@@ -47,21 +47,21 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
 
 extension ServicesCollectionViewCell {
     func updateAmountLabel() {
-       amountSelectionView.updateAmount(with: service.service.amount)
+       amountSelectionView.updateAmount(with: orderableService.service.amount)
     }
 }
 
 extension ServicesCollectionViewCell: AmountSelectionViewDelegate {
     func removeWasPressed(on view: AmountSelectionView) {
-        delegate?.removeWasPressed(on: self, order: service)
+        delegate?.removeWasPressed(on: self, order: orderableService)
     }
     
     func addWasPressed(on view: AmountSelectionView) {
-        delegate?.addWasPressed(on: self, order: service)
+        delegate?.addWasPressed(on: self, order: orderableService)
     }
     
     func initialAmount() -> Int {
-        return service.service.amount
+        return orderableService.service.amount
     }
     
     
