@@ -9,6 +9,7 @@
 import Foundation
 
 protocol OrderableService {
+    var service: Service { get }
     var imageName: String { get set }
     var name: String { get set }
     var amount: Int { get set }

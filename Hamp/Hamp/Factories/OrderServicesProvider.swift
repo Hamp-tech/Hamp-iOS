@@ -17,20 +17,20 @@ public struct OrderServicesProvider {
 private extension OrderServicesProvider {
     static func createOrderServices() -> [OrderableService] {
         var services = [OrderableService]()
-        services.append(orderService(by: "small-bag", name: "Small Bag"))
-        services.append(orderService(by: "big-bag", name: "Big Bag"))
-        services.append(orderService(by: "sofa-cover", name: "Sofa cover"))
-        services.append(orderService(by: "blanket", name: "Blanket"))
-        services.append(orderService(by: "curtain", name: "Curtain"))
-        services.append(orderService(by: "cushion", name: "Cushion"))
-        services.append(orderService(by: "small-quilt", name: "Small quilt"))
-        services.append(orderService(by: "big-quilt", name: "Big quilt"))
+        services.append(orderService(service: ServicesFactory.service(by: .smallBag), by: "small-bag", name: "Small Bag"))
+        services.append(orderService(service: ServicesFactory.service(by: .bigBag), by: "big-bag", name: "Big Bag"))
+        services.append(orderService(service: ServicesFactory.service(by: .sofaCover), by: "sofa-cover", name: "Sofa cover"))
+        services.append(orderService(service: ServicesFactory.service(by: .blanket), by: "blanket", name: "Blanket"))
+        services.append(orderService(service: ServicesFactory.service(by: .curtain), by: "curtain", name: "Curtain"))
+        services.append(orderService(service: ServicesFactory.service(by: .cushion), by: "cushion", name: "Cushion"))
+        services.append(orderService(service: ServicesFactory.service(by: .smallQuilt), by: "small-quilt", name: "Small quilt"))
+        services.append(orderService(service: ServicesFactory.service(by: .bigQuilt), by: "big-quilt", name: "Big quilt"))
         
         return services
         
     }
     
-    static func orderService(by imageName: String, name: String) -> OrderableService {
-        return OrderService.init(imageName: imageName, name: name)
+    private static func orderService(service: Service, by imageName: String, name: String) -> OrderableService {
+        return OrderService.init(service: service, imageName: imageName, name: name)
     }
 }

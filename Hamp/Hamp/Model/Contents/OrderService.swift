@@ -11,6 +11,7 @@ import Foundation
 public class OrderService: OrderableService {
     
     //MARK: Properties
+    var service: Service
     var imageName: String
     var name: String
     var amount: Int
@@ -20,9 +21,11 @@ public class OrderService: OrderableService {
     /// - Parameters:
     ///   - imageName: order image
     ///   - title: title text
-    init(imageName: String, name: String) {
+    init(service: Service, imageName: String, name: String) {
+        self.service = service
         self.imageName = imageName
         self.name = name
         self.amount = 0
     }
 }
+
