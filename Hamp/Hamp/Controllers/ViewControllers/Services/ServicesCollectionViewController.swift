@@ -31,6 +31,12 @@ class ServicesCollectionViewController: HampCollectionViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView?.reloadData()
+        basketButton.updateAmount(with: amount())
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showNavigationBarRightButtons()
@@ -39,6 +45,18 @@ class ServicesCollectionViewController: HampCollectionViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         hideNavigationBarRightButtons()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else { return }
+        
+        switch id {
+        case "OrderServicesDetail":
+         (segue.destination as! ServiceDetailViewController).orderService = (sender as! OrderableService)
+            
+        default:
+            break
+        }
     }
 }
 
@@ -57,7 +75,7 @@ internal extension ServicesCollectionViewController {
     
     //MARK: Delegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "OrderServicesDetail", sender: nil)
+        performSegue(withIdentifier: "OrderServicesDetail", sender: orderServices[indexPath.row])
     }
 }
 

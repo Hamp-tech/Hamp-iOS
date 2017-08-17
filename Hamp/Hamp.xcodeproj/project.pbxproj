@@ -70,6 +70,7 @@
 		4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFAB11F30C22B0043D4B5 /* Localization.swift */; };
 		4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */; };
 		4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */; };
+		4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
 		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
@@ -151,6 +152,7 @@
 		4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampCollectionViewController.swift; sourceTree = "<group>"; };
 		4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
+		4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountSelectionView.swift; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
 				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
 				4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */,
+				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
+				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,

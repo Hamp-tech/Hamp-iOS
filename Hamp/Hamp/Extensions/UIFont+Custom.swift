@@ -17,6 +17,14 @@ extension UIFont {
         return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.medium)
     }
     
+    /// HelveticaNeue Bold font
+    ///
+    /// - Parameter size: size of the font
+    /// - Returns: Helvetica neue font with size
+    public static func helveticaBold(withSize size: CGFloat) -> UIFont {
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.bold)
+    }
+    
     /// Fredoka font
     ///
     /// - Parameter size: size of the font

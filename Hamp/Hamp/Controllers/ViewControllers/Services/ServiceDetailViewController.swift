@@ -9,9 +9,50 @@
 import UIKit
 
 class ServiceDetailViewController: HampViewController {
-
+    
+    //MARK: IB Properties
+    @IBOutlet weak private var serviceImageView: UIImageView!
+    @IBOutlet weak private var descriptionTextView: UITextView!
+    @IBOutlet weak private var amountSelectionView: AmountSelectionView!
+    @IBOutlet weak private var textViewHeightConstraint: NSLayoutConstraint!
+    
+    //MARK: Properties
+    public var orderService: OrderableService!
+    
+    //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        adjustTextView()
+        serviceImageView.image = UIImage.init(named: orderService.imageName)
+        title = orderService.name
+        amountSelectionView.delegate = self
     }
 }
+
+private extension ServiceDetailViewController {
+    //MARK: Private
+    func adjustTextView() {
+        let size = descriptionTextView.sizeThatFits(CGSize.init(width: descriptionTextView.frame.width, height: CGFloat.init(Float.greatestFiniteMagnitude)))
+        textViewHeightConstraint.constant = size.height
+    }
+}
+
+extension ServiceDetailViewController: AmountSelectionViewDelegate {
+    
+    func removeWasPressed(on view: AmountSelectionView) {
+        guard orderService.amount > 0 else { return }
+        orderService.amount -= 1
+        view.updateAmount(with: orderService.amount)
+    }
+    
+    func addWasPressed(on view: AmountSelectionView) {
+        guard orderService.amount >= 0 else { return }
+        orderService.amount += 1
+        view.updateAmount(with: orderService.amount)
+    }
+    
+    func initialAmount() -> Int {
+        return orderService.amount
+    }
+}
+

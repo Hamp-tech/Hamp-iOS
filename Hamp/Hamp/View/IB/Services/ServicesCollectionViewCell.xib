@@ -31,7 +31,7 @@
                             <constraint firstAttribute="width" secondItem="m7a-QG-PQV" secondAttribute="height" multiplier="51:23" constant="-19.956521739130437" id="3eW-I7-rLW"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small bag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8Y-pF-2EJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small bag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="l8Y-pF-2EJ">
                         <rect key="frame" x="10" y="93" width="153" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="fVs-Wv-wL4"/>
