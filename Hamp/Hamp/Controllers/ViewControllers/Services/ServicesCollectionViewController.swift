@@ -12,16 +12,21 @@ class ServicesCollectionViewController: HampCollectionViewController {
     
     //MARK: Properties
     private var orderServices = LaundryServicesProvider.orderServices
+    private var order: Order = Order.init()
+    private var orderManager: OrderManager!
     private var basketButton: BasketButton!
     private var videoTutorialButton: UIButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        orderManager = OrderManager.init(order: order)
+        
         collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
         basketButton = BarRightButtonsFactory.basketButton()
-        basketButton.isEnabled = false
-//        basketButton.addTarget(self, action: #selector(), for: .touchUpInside)
+//        basketButton.isEnabled = false
+        basketButton.addTarget(self, action: #selector(hireServices(_:)), for: .touchUpInside)
         addRightBarButtonWhenLargeTitles(rightButton: basketButton)
         
         videoTutorialButton = UIButton.init(type: .system)
@@ -35,6 +40,7 @@ class ServicesCollectionViewController: HampCollectionViewController {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
         basketButton.updateAmount(with: amount())
+        orderManager.removeEmptyServices()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,11 +58,24 @@ class ServicesCollectionViewController: HampCollectionViewController {
         
         switch id {
         case "OrderServicesDetail":
-         (segue.destination as! ServiceDetailViewController).orderService = (sender as! OrderableService)
+            let vc = (segue.destination as! ServiceDetailViewController)
+            vc.orderService = (sender as! OrderableService)
+            vc.orderManager = orderManager
             
         default:
             break
         }
+    }
+}
+
+extension ServicesCollectionViewController {
+    //MARK: Actions
+    @objc func hireServices(_ sender: UIButton) {
+        order.services().forEach {
+            print("\($0.name) -> \($0.amount) = \($0.amount * $0.price)")
+        }
+        
+        print("\(order.totalAmount)")
     }
 }
 
@@ -80,20 +99,24 @@ internal extension ServicesCollectionViewController {
 }
 
 extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
-    func addWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
-        guard order.service.amount >= 0 else { return }
-        var o = order
+    func addWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService) {
+        guard orderableService.service.amount >= 0 else { return }
+        var o = orderableService
         o.service.amount += 1
         cell.updateAmountLabel()
         basketButton.updateAmount(with: amount())
+        
+        orderManager.addIfNotExists(service: o.service)
     }
     
-    func removeWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
-        guard order.service.amount > 0 else { return }
-        var o = order
+    func removeWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService) {
+        guard orderableService.service.amount > 0 else { return }
+        var o = orderableService
         o.service.amount -= 1
         cell.updateAmountLabel()
         basketButton.updateAmount(with: amount())
+        
+        orderManager.deleteServiceIfAmountZero(service: o.service)
     }
     
     private func amount() -> Int {

@@ -43,6 +43,14 @@ extension Order {
         }
     }
     
+    /// True if contains service, false otherwise
+    ///
+    /// - Parameter service: service to check
+    /// - Returns: True = exists, false otherwise
+    func contains(service: Service) -> Bool {
+        return _services.index(where: {$0.identifier == service.identifier}) != nil
+    }
+    
     /// Services hired
     ///
     /// - Returns: services
@@ -51,7 +59,7 @@ extension Order {
     }
 
     /// Remove services with amount = 0
-    func cleanEmptyServices() {
+    func removeEmptyServices() {
         _services = _services.filter { $0.amount > 0 }
     }
 }

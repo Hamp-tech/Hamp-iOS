@@ -16,8 +16,10 @@ class ServiceDetailViewController: HampViewController {
     @IBOutlet weak private var amountSelectionView: AmountSelectionView!
     @IBOutlet weak private var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var priceLabel: UILabel!
+    
     //MARK: Properties
     public var orderService: OrderableService!
+    public var orderManager: OrderManager!
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -49,6 +51,8 @@ extension ServiceDetailViewController: AmountSelectionViewDelegate {
         orderService.service.amount -= 1
         view.updateAmount(with: orderService.service.amount)
         updatePriceLabel()
+        
+        orderManager.deleteServiceIfAmountZero(service: orderService.service)
     }
     
     func addWasPressed(on view: AmountSelectionView) {
@@ -56,6 +60,8 @@ extension ServiceDetailViewController: AmountSelectionViewDelegate {
         orderService.service.amount += 1
         view.updateAmount(with: orderService.service.amount)
         updatePriceLabel()
+        
+        orderManager.addIfNotExists(service: orderService.service)
     }
     
     func initialAmount() -> Int {

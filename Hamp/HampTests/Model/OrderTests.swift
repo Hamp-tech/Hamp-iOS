@@ -101,4 +101,58 @@ class OrderTests: XCTestCase {
         
         XCTAssertEqual(order.totalAmount, 14)
     }
+    
+    func testOrder_containsExistingElement() {
+        let order = Order.init()
+        
+        order.add(service: services[0])
+        order.add(service: services[1])
+        order.add(service: services[2])
+        
+        XCTAssertTrue(order.contains(service: services[0]))
+        XCTAssertTrue(order.contains(service: services[1]))
+        XCTAssertTrue(order.contains(service: services[1]))
+    }
+    
+    func testOrder_containsNonExistingElement() {
+        let order = Order.init()
+        
+        order.add(service: services[0])
+        order.add(service: services[1])
+        order.add(service: services[2])
+        
+        XCTAssertFalse(order.contains(service: services[4]))
+    }
+    
+    func testOrder_removeEmptyServices() {
+        let order = Order.init()
+        
+        services[0].amount = 0
+        services[1].amount = 0
+        services[2].amount = 0
+        
+        order.add(service: services[0])
+        order.add(service: services[1])
+        order.add(service: services[2])
+        
+        order.removeEmptyServices()
+        XCTAssertEqual(order.count, 0)
+        XCTAssertFalse(order.contains(service: services[0]))
+    }
+    
+    func testOrder_removeEmptyServicesNotAll() {
+        let order = Order.init()
+        
+        services[1].amount = 0
+        services[2].amount = 0
+        
+        order.add(service: services[0])
+        order.add(service: services[1])
+        order.add(service: services[2])
+        
+        order.removeEmptyServices()
+        XCTAssertEqual(order.count, 1)
+        XCTAssertTrue(order.contains(service: services[0]))
+        XCTAssertFalse(order.contains(service: services[1]))
+    }
 }

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ServicesCollectionViewCellDelegate: class {
-    func addWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService)
-    func removeWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService)
+    func addWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService)
+    func removeWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService)
 }
 
 class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
@@ -53,11 +53,11 @@ extension ServicesCollectionViewCell {
 
 extension ServicesCollectionViewCell: AmountSelectionViewDelegate {
     func removeWasPressed(on view: AmountSelectionView) {
-        delegate?.removeWasPressed(on: self, order: orderableService)
+        delegate?.removeWasPressed(on: self, orderableService: orderableService)
     }
     
     func addWasPressed(on view: AmountSelectionView) {
-        delegate?.addWasPressed(on: self, order: orderableService)
+        delegate?.addWasPressed(on: self, orderableService: orderableService)
     }
     
     func initialAmount() -> Int {
