@@ -26,14 +26,15 @@ class Order {
 extension Order {
     //MARK: Public
     
-    /// Add a service to order
+    /// Add a service to order if services doesn't contains the service
     ///
     /// - Parameter service: service to add
     func add(service: Service) {
+        guard _services.index(where: {$0.identifier == service.identifier}) == nil else { return }
         _services.append(service)
     }
     
-    /// Remove a services from order
+    /// Remove a services from order if contains the service
     ///
     /// - Parameter service: service to remove
     func remove(service: Service) {
@@ -42,7 +43,15 @@ extension Order {
         }
     }
     
+    /// Services hired
+    ///
+    /// - Returns: services
     func services() -> [Service] {
         return _services
+    }
+
+    /// Remove services with amount = 0
+    func cleanEmptyServices() {
+        _services = _services.filter { $0.amount > 0 }
     }
 }
