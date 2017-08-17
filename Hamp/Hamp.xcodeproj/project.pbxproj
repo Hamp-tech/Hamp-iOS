@@ -68,6 +68,8 @@
 		4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECFFAA41F30BE790043D4B5 /* Login.storyboard */; };
 		4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */; };
 		4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFAB11F30C22B0043D4B5 /* Localization.swift */; };
+		4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */; };
+		4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
 		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
@@ -147,6 +149,8 @@
 		4ECFFAB01F30C1010043D4B5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localization.strings; sourceTree = "<group>"; };
 		4ECFFAB11F30C22B0043D4B5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		4EDC394C1F263F2400947007 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampCollectionViewController.swift; sourceTree = "<group>"; };
+		4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */,
+				4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				4ECA406D1F24BD31003F51EA /* HampViewController.swift */,
 				4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */,
 				4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */,
+				4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */,
 			);
 			path = "Base View Controllers";
 			sourceTree = "<group>";
@@ -707,7 +713,9 @@
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
+				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
+				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ServicesCollectionViewController: UICollectionViewController {
+class ServicesCollectionViewController: HampCollectionViewController {
     
     //MARK: Properties
     private var orderServices = OrderServicesProvider.orderServices
@@ -31,6 +31,15 @@ class ServicesCollectionViewController: UICollectionViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showNavigationBarRightButtons()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideNavigationBarRightButtons()
+    }
 }
 
 internal extension ServicesCollectionViewController {
@@ -44,6 +53,11 @@ internal extension ServicesCollectionViewController {
         cell.service = orderServices[indexPath.row]
         cell.delegate = self
         return cell
+    }
+    
+    //MARK: Delegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "OrderServicesDetail", sender: nil)
     }
 }
 

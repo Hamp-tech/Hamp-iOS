@@ -37,4 +37,12 @@ extension UIViewController {
             rightButton.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -15)
             ])
     }
+    
+    func hideNavigationBarRightButtons() {
+        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: UIButton.self)}.forEach { $0.alpha = 0 }
+    }
+    
+    func showNavigationBarRightButtons() {
+        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: UIButton.self)}.forEach { $0.alpha = 1 }
+    }
 }

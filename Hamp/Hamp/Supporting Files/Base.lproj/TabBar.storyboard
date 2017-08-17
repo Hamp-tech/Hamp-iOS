@@ -166,6 +166,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aM5-Yg-gk1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.90588235294117647" green="0.18431372549019609" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -206,10 +207,29 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Services" id="6MW-15-P1g"/>
+                    <connections>
+                        <segue destination="kbI-2l-i6U" kind="push" identifier="OrderServicesDetail" id="ScU-xi-Mg3"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXs-7F-qGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3992.8000000000002" y="895.50224887556226"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="4r5-hM-cqu">
+            <objects>
+                <viewController id="kbI-2l-i6U" customClass="HampViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jDA-hT-Icg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bxp-vj-ZxX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="cv4-Fd-Dt1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owI-9r-CQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4879" y="896"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">
