@@ -26,6 +26,7 @@
 		4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */; };
 		4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3309191F45CF6D00A43B25 /* Order.swift */; };
 		4E4496561F45EDEC00C5EE99 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496551F45EDEC00C5EE99 /* OrderManager.swift */; };
+		4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */; };
 		4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */; };
 		4E46C8B81F44CED40051BF84 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B71F44CED40051BF84 /* BasketButton.swift */; };
 		4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */; };
@@ -118,6 +119,7 @@
 		4E33092F1F45D2D200A43B25 /* HampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E33093B1F45D30200A43B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4496551F45EDEC00C5EE99 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderViewController.swift; sourceTree = "<group>"; };
 		4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LargeTitlesRightBarButton.swift"; sourceTree = "<group>"; };
 		4E46C8B71F44CED40051BF84 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
 		4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarRightButtonsFactory.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			children = (
 				4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */,
 				4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */,
+				4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
+				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,

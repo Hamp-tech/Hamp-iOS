@@ -81,11 +81,12 @@ extension ServicesCollectionViewController: OrderManagerDelegate {
     
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
-        orderManager.order.services().forEach {
-            print("\($0.name) -> \($0.amount) = \($0.amount * $0.price)")
-        }
-        
-        print("\(orderManager.order.totalAmount)")
+//        orderManager.order.services().forEach {
+//            print("\($0.name) -> \($0.amount) = \($0.amount * $0.price)")
+//        }
+//
+//        print("\(orderManager.order.totalAmount)")
+        performSegue(withIdentifier: "OrderViewController", sender: nil)
     }
 }
 

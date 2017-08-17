@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4H-me-tcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="1388"/>
+            <point key="canvasLocation" x="2252" y="1596"/>
         </scene>
         <!--Profile-->
         <scene sceneID="RNB-ED-gn1">
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZb-qH-VDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3993" y="1600"/>
+            <point key="canvasLocation" x="3992" y="2067"/>
         </scene>
         <!--History-->
         <scene sceneID="nSs-Ag-r1b">
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yi5-T3-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3993" y="163"/>
+            <point key="canvasLocation" x="3990" y="-334"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yv6-QR-zeN">
@@ -158,7 +158,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2U-fK-fwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3206.4000000000001" y="163.71814092953525"/>
+            <point key="canvasLocation" x="3204" y="-334"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">
@@ -211,14 +211,15 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Services" id="6MW-15-P1g"/>
                     <connections>
-                        <segue destination="kbI-2l-i6U" kind="push" identifier="OrderServicesDetail" id="ScU-xi-Mg3"/>
+                        <segue destination="kbI-2l-i6U" kind="show" identifier="OrderServicesDetail" id="ScU-xi-Mg3"/>
+                        <segue destination="d92-hf-58r" kind="show" identifier="OrderViewController" id="Cb4-Kf-bba"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXs-7F-qGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3992.8000000000002" y="895.50224887556226"/>
         </scene>
-        <!--Title-->
+        <!--Detail-->
         <scene sceneID="4r5-hM-cqu">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="kbI-2l-i6U" customClass="ServiceDetailViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,7 +286,7 @@ Lorem Ipsum.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bxp-vj-ZxX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="cv4-Fd-Dt1"/>
+                    <navigationItem key="navigationItem" title="Detail" id="cv4-Fd-Dt1"/>
                     <connections>
                         <outlet property="amountSelectionView" destination="j5f-9F-rx6" id="Qcf-7X-Vcg"/>
                         <outlet property="descriptionTextView" destination="89y-2i-4j3" id="dzZ-ZU-V5Y"/>
@@ -296,7 +297,23 @@ Lorem Ipsum.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owI-9r-CQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4878.75" y="895.77464788732391"/>
+            <point key="canvasLocation" x="5046" y="564"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="maG-A4-8DC">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="d92-hf-58r" customClass="ServicesOrderViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIR-zu-Do8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LR1-3O-2ln"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Order" id="ulx-kR-Sfw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHa-mO-qi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5046" y="1229"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">
@@ -315,7 +332,7 @@ Lorem Ipsum.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-R4-wYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204.8000000000002" y="1600.2998500749627"/>
+            <point key="canvasLocation" x="3204" y="2067"/>
         </scene>
     </scenes>
     <resources>
