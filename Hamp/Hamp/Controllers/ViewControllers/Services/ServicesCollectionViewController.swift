@@ -81,24 +81,24 @@ internal extension ServicesCollectionViewController {
 
 extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
     func addWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
-        guard order.amount >= 0 else { return }
+        guard order.service.amount >= 0 else { return }
         var o = order
-        o.amount += 1
+        o.service.amount += 1
         cell.updateAmountLabel()
         basketButton.updateAmount(with: amount())
     }
     
     func removeWasPressed(on cell: ServicesCollectionViewCell, order: OrderableService) {
-        guard order.amount > 0 else { return }
+        guard order.service.amount > 0 else { return }
         var o = order
-        o.amount -= 1
+        o.service.amount -= 1
         cell.updateAmountLabel()
         basketButton.updateAmount(with: amount())
     }
     
     private func amount() -> Int {
-        return orderServices.filter{$0.amount > 0}.reduce(0) { (initial, service) in
-            initial + service.amount
+        return orderServices.filter{$0.service.amount > 0}.reduce(0) { (initial, service) in
+            initial + service.service.amount
         }
     }
 }

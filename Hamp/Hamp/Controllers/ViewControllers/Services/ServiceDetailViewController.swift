@@ -40,19 +40,19 @@ private extension ServiceDetailViewController {
 extension ServiceDetailViewController: AmountSelectionViewDelegate {
     
     func removeWasPressed(on view: AmountSelectionView) {
-        guard orderService.amount > 0 else { return }
-        orderService.amount -= 1
-        view.updateAmount(with: orderService.amount)
+        guard orderService.service.amount > 0 else { return }
+        orderService.service.amount -= 1
+        view.updateAmount(with: orderService.service.amount)
     }
     
     func addWasPressed(on view: AmountSelectionView) {
-        guard orderService.amount >= 0 else { return }
-        orderService.amount += 1
-        view.updateAmount(with: orderService.amount)
+        guard orderService.service.amount >= 0 else { return }
+        orderService.service.amount += 1
+        view.updateAmount(with: orderService.service.amount)
     }
     
     func initialAmount() -> Int {
-        return orderService.amount
+        return orderService.service.amount
     }
 }
 

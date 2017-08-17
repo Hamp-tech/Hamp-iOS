@@ -12,11 +12,13 @@ class HampService: Service{
     
     //MARK: Properties
     var identifier: String
+    var amount: Int
     
     /// Create a new Service
     ///
     /// - Parameter identifier: service identifier
     init(identifier: String) {
         self.identifier = identifier
+        amount = 0
     }
 }

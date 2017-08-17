@@ -34,7 +34,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
         super.layoutSubviews()
         serviceImageView.image = UIImage.init(named: service.imageName)
         titleLabel.text = service.name
-        amountSelectionView.updateAmount(with: service.amount)
+        amountSelectionView.updateAmount(with: service.service.amount)
     }
     
     override func prepareForReuse() {
@@ -47,7 +47,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
 
 extension ServicesCollectionViewCell {
     func updateAmountLabel() {
-       amountSelectionView.updateAmount(with: service.amount)
+       amountSelectionView.updateAmount(with: service.service.amount)
     }
 }
 
@@ -61,7 +61,7 @@ extension ServicesCollectionViewCell: AmountSelectionViewDelegate {
     }
     
     func initialAmount() -> Int {
-        return service.amount
+        return service.service.amount
     }
     
     

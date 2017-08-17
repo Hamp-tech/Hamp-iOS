@@ -14,7 +14,6 @@ public class OrderService: OrderableService {
     var service: Service
     var imageName: String
     var name: String
-    var amount: Int
     
     /// Create a new service
     ///
@@ -25,7 +24,6 @@ public class OrderService: OrderableService {
         self.service = service
         self.imageName = imageName
         self.name = name
-        self.amount = 0
     }
 }
 
