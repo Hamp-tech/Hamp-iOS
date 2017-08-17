@@ -17,7 +17,8 @@ class ServicesOrderViewController: HampCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
+//        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
+        collectionView?.registerReusableCell(ServicesOrderCollectionViewCell.self)
         
         services = orderManager.servicesHired()
     }
@@ -31,9 +32,7 @@ extension ServicesOrderViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath)
-        cell.contentView.backgroundColor = .red
-        
+        let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesOrderCollectionViewCell
         return cell
     }
 }
