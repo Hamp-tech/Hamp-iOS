@@ -26,6 +26,7 @@ class ServiceDetailViewController: HampViewController {
         serviceImageView.image = UIImage.init(named: orderService.imageName)
         title = orderService.name
         amountSelectionView.delegate = self
+
     }
 }
 

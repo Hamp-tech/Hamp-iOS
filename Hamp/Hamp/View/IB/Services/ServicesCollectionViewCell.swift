@@ -18,7 +18,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
     //MARK: IB Properties
     @IBOutlet private weak var serviceImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var servicesOrderedLabel: UILabel!
+    @IBOutlet private weak var amountSelectionView: AmountSelectionView!
     
     //MARK: Properties
     var service: OrderableService!
@@ -27,38 +27,42 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
     //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        amountSelectionView.delegate = self
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         serviceImageView.image = UIImage.init(named: service.imageName)
         titleLabel.text = service.name
-        servicesOrderedLabel.text = String.init(service.amount)
+        amountSelectionView.updateAmount(with: service.amount)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         serviceImageView.image = nil
-        servicesOrderedLabel.text = "0"
         titleLabel.text = nil
-    }
-    
-    //MARK: Actions
-    @IBAction func addWasPressed(_ sender: UIButton) {
-        delegate?.addWasPressed(on: self, order: service)
-    }
-    
-    @IBAction func removeWasPressed(_ sender: UIButton) {
-        delegate?.removeWasPressed(on: self, order: service)
+        amountSelectionView.updateAmount(with: 0)
     }
 }
 
 extension ServicesCollectionViewCell {
     func updateAmountLabel() {
-       updateAmountLabel(with: String.init(service.amount))
+       amountSelectionView.updateAmount(with: service.amount)
+    }
+}
+
+extension ServicesCollectionViewCell: AmountSelectionViewDelegate {
+    func removeWasPressed(on view: AmountSelectionView) {
+        delegate?.removeWasPressed(on: self, order: service)
     }
     
-    private func updateAmountLabel(with text: String) {
-        servicesOrderedLabel.text = text
+    func addWasPressed(on view: AmountSelectionView) {
+        delegate?.addWasPressed(on: self, order: service)
     }
+    
+    func initialAmount() -> Int {
+        return service.amount
+    }
+    
+    
 }

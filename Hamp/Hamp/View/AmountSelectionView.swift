@@ -32,7 +32,8 @@ class AmountSelectionView: UIView {
 
 extension AmountSelectionView {
     func updateAmount(with amount: Int) {
-        amountLabel.text = String.init(amount)
+        guard let al = amountLabel else { return }
+        al.text = String.init(amount)
     }
 }
 

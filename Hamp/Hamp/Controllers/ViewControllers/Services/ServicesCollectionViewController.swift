@@ -74,7 +74,7 @@ internal extension ServicesCollectionViewController {
     }
     
     //MARK: Delegate
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        
         performSegue(withIdentifier: "OrderServicesDetail", sender: orderServices[indexPath.row])
     }
 }
