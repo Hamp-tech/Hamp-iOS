@@ -1,5 +1,5 @@
 //
-//  HampService.swift
+//  LaundryService.swift
 //  Hamp
 //
 //  Created by Joan Molinas Ramon on 17/8/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HampService: Service{
+class LaundryService: Service{
     
     //MARK: Properties
     var identifier: String

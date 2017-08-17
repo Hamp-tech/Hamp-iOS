@@ -21,6 +21,6 @@ enum ServiceType: String {
 
 struct ServicesFactory {
     static func service(by type: ServiceType) -> Service {
-        return HampService.init(identifier: type.rawValue)
+        return LaundryService.init(identifier: type.rawValue)
     }
 }
