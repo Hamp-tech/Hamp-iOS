@@ -40,7 +40,7 @@ extension OrderManager {
              order.remove(service: service)
         }
         
-        if servicesHired() == 0 { delegate?.orderWasEmptied(on: self) }
+        if amountServicesHired() == 0 { delegate?.orderWasEmptied(on: self) }
         else { delegate?.orderWasUpdated(on: self) }
        
     }
@@ -53,9 +53,11 @@ extension OrderManager {
     /// Number of services hired
     ///
     /// - Returns: Number of services hired
-    func servicesHired() -> Int {
+    func amountServicesHired() -> Int {
         return order.services().reduce(0) {(initial, service) in
             initial + service.amount
         }
     }
+    
+    
 }

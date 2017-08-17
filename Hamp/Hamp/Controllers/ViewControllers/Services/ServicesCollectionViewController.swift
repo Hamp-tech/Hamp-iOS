@@ -105,7 +105,7 @@ internal extension ServicesCollectionViewController {
     
     //MARK: Delegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        
-        performSegue(withIdentifier: "OrderServicesDetail", sender: orderServices[indexPath.row])
+        performSegue(withIdentifier: "showOrderServicesDetail", sender: orderServices[indexPath.row])
     }
 }
 
@@ -127,7 +127,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
     }
     
     private func amount() -> Int {
-        return orderManager.servicesHired()
+        return orderManager.amountServicesHired()
     }
 }
 
