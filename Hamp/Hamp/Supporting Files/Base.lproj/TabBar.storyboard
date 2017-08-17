@@ -289,6 +289,7 @@ Lorem Ipsum.</string>
                     <connections>
                         <outlet property="amountSelectionView" destination="j5f-9F-rx6" id="Qcf-7X-Vcg"/>
                         <outlet property="descriptionTextView" destination="89y-2i-4j3" id="dzZ-ZU-V5Y"/>
+                        <outlet property="priceLabel" destination="jny-SG-SPK" id="5v8-zv-nzg"/>
                         <outlet property="serviceImageView" destination="5gX-D0-hLl" id="2E1-e8-OhE"/>
                         <outlet property="textViewHeightConstraint" destination="vgY-6P-jJB" id="Q3Y-QH-Udc"/>
                     </connections>

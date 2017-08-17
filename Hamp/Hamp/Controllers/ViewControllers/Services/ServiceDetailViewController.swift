@@ -15,7 +15,7 @@ class ServiceDetailViewController: HampViewController {
     @IBOutlet weak private var descriptionTextView: UITextView!
     @IBOutlet weak private var amountSelectionView: AmountSelectionView!
     @IBOutlet weak private var textViewHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak private var priceLabel: UILabel!
     //MARK: Properties
     public var orderService: OrderableService!
     
@@ -26,6 +26,7 @@ class ServiceDetailViewController: HampViewController {
         serviceImageView.image = UIImage.init(named: orderService.imageName)
         title = orderService.service.name
         amountSelectionView.delegate = self
+        updatePriceLabel()
     }
 }
 
@@ -35,6 +36,10 @@ private extension ServiceDetailViewController {
         let size = descriptionTextView.sizeThatFits(CGSize.init(width: descriptionTextView.frame.width, height: CGFloat.init(Float.greatestFiniteMagnitude)))
         textViewHeightConstraint.constant = size.height
     }
+    
+    func updatePriceLabel() {
+        priceLabel.text = "\(orderService.service.amount * orderService.service.price)€"
+    }
 }
 
 extension ServiceDetailViewController: AmountSelectionViewDelegate {
@@ -43,12 +48,14 @@ extension ServiceDetailViewController: AmountSelectionViewDelegate {
         guard orderService.service.amount > 0 else { return }
         orderService.service.amount -= 1
         view.updateAmount(with: orderService.service.amount)
+        updatePriceLabel()
     }
     
     func addWasPressed(on view: AmountSelectionView) {
         guard orderService.service.amount >= 0 else { return }
         orderService.service.amount += 1
         view.updateAmount(with: orderService.service.amount)
+        updatePriceLabel()
     }
     
     func initialAmount() -> Int {
