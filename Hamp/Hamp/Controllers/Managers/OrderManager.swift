@@ -8,14 +8,15 @@
 
 import Foundation
 
+protocol OrderManagerDelegate: class {
+    func orderWasUpdated(on manager: OrderManager)
+    func orderWasEmptied(on manager: OrderManager)
+}
+
 final class OrderManager {
     /// Properties
     public private(set) var order: Order = Order.init()
-    
-    /// Create a new order manager
-    ///
-    init() {
-    }
+    weak var delegate: OrderManagerDelegate?
 }
 
 extension OrderManager {
@@ -23,20 +24,38 @@ extension OrderManager {
     ///
     /// - Parameter service: service to add
     func addIfNotExists(service: Service) {
-        guard !order.contains(service: service), service.amount > 0 else { return }
-        order.add(service: service)
+        if !order.contains(service: service), service.amount > 0 {
+            order.add(service: service)
+        }
+        
+        delegate?.orderWasUpdated(on: self)
+        
     }
     
     /// Remove service from order if exists
     ///
     /// - Parameter service: service to remove
     func deleteServiceIfAmountZero(service: Service) {
-        guard order.contains(service: service), service.amount == 0 else { return }
-        order.remove(service: service)
+        if order.contains(service: service), service.amount == 0 {
+             order.remove(service: service)
+        }
+        
+        if servicesHired() == 0 { delegate?.orderWasEmptied(on: self) }
+        else { delegate?.orderWasUpdated(on: self) }
+       
     }
     
     /// Remove services with 0 amount
     func removeEmptyServices() {
         order.removeEmptyServices()
+    }
+    
+    /// Number of services hired
+    ///
+    /// - Returns: Number of services hired
+    func servicesHired() -> Int {
+        return order.services().reduce(0) {(initial, service) in
+            initial + service.amount
+        }
     }
 }

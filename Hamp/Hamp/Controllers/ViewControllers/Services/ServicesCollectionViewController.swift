@@ -21,6 +21,7 @@ class ServicesCollectionViewController: HampCollectionViewController {
         super.viewDidLoad()
         
         orderManager = OrderManager.init()
+        orderManager.delegate = self
         
         collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
         basketButton = BarRightButtonsFactory.basketButton()
@@ -67,7 +68,19 @@ class ServicesCollectionViewController: HampCollectionViewController {
     }
 }
 
-extension ServicesCollectionViewController {
+extension ServicesCollectionViewController: OrderManagerDelegate {
+    
+    func orderWasUpdated(on manager: OrderManager) {
+        basketButton.isEnabled = true
+        basketButton.updateAmount(with: amount())
+    }
+    
+    func orderWasEmptied(on manager: OrderManager) {
+        basketButton.isEnabled = false
+    }
+    
+    
+    
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
         orderManager.order.services().forEach {
@@ -102,24 +115,20 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         guard orderableService.service.amount >= 0 else { return }
         var o = orderableService
         o.service.amount += 1
-        cell.updateAmountLabel()
-        basketButton.updateAmount(with: amount())
-        
         orderManager.addIfNotExists(service: o.service)
+        cell.updateAmountLabel()
     }
     
     func removeWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService) {
         guard orderableService.service.amount > 0 else { return }
         var o = orderableService
         o.service.amount -= 1
-        cell.updateAmountLabel()
-        basketButton.updateAmount(with: amount())
-        
         orderManager.deleteServiceIfAmountZero(service: o.service)
+        cell.updateAmountLabel()
     }
     
     private func amount() -> Int {
-        return orderManager.order.totalAmount
+        return orderManager.servicesHired()
     }
 }
 
