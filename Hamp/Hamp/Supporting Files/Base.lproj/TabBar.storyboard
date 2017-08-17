@@ -259,12 +259,8 @@ Lorem Ipsum.</string>
                                     <constraint firstAttribute="height" constant="37" id="bmd-ir-JHL"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="262" y="386" width="42" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="IaZ-KB-QM8"/>
-                                    <constraint firstAttribute="height" constant="37" id="K8l-hz-y45"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
+                                <rect key="frame" x="245" y="386" width="59" height="37"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -274,15 +270,16 @@ Lorem Ipsum.</string>
                         <constraints>
                             <constraint firstItem="j5f-9F-rx6" firstAttribute="leading" secondItem="bxp-vj-ZxX" secondAttribute="leading" constant="16" id="6Nn-Sm-c8a"/>
                             <constraint firstItem="7Jt-I8-TC4" firstAttribute="top" secondItem="5gX-D0-hLl" secondAttribute="bottom" constant="16" id="738-JN-mbY"/>
-                            <constraint firstItem="bxp-vj-ZxX" firstAttribute="trailing" secondItem="jny-SG-SPK" secondAttribute="trailing" constant="16" id="BiM-AR-gc5"/>
                             <constraint firstItem="j5f-9F-rx6" firstAttribute="top" secondItem="89y-2i-4j3" secondAttribute="bottom" id="ENS-Cd-4D2"/>
                             <constraint firstItem="5gX-D0-hLl" firstAttribute="top" secondItem="bxp-vj-ZxX" secondAttribute="top" constant="15" id="Kxs-ge-3ZT"/>
                             <constraint firstItem="bxp-vj-ZxX" firstAttribute="trailing" secondItem="89y-2i-4j3" secondAttribute="trailing" constant="16" id="Nom-D9-0Dx"/>
+                            <constraint firstItem="bxp-vj-ZxX" firstAttribute="trailing" secondItem="jny-SG-SPK" secondAttribute="trailing" constant="16" id="Qoe-jL-Krb"/>
                             <constraint firstItem="bxp-vj-ZxX" firstAttribute="trailing" secondItem="5gX-D0-hLl" secondAttribute="trailing" constant="100" id="Sku-QQ-l8z"/>
+                            <constraint firstItem="jny-SG-SPK" firstAttribute="leading" secondItem="j5f-9F-rx6" secondAttribute="trailing" constant="108" id="XwX-By-bZC"/>
+                            <constraint firstItem="jny-SG-SPK" firstAttribute="top" secondItem="89y-2i-4j3" secondAttribute="bottom" id="co0-rf-gQI"/>
                             <constraint firstItem="bxp-vj-ZxX" firstAttribute="trailing" secondItem="7Jt-I8-TC4" secondAttribute="trailing" constant="16" id="h17-Zb-6FF"/>
                             <constraint firstItem="89y-2i-4j3" firstAttribute="leading" secondItem="bxp-vj-ZxX" secondAttribute="leading" constant="16" id="icz-aS-bTi"/>
                             <constraint firstItem="5gX-D0-hLl" firstAttribute="leading" secondItem="bxp-vj-ZxX" secondAttribute="leading" constant="100" id="oCe-Cf-ZJC"/>
-                            <constraint firstItem="jny-SG-SPK" firstAttribute="top" secondItem="89y-2i-4j3" secondAttribute="bottom" id="siw-xG-ca8"/>
                             <constraint firstItem="7Jt-I8-TC4" firstAttribute="leading" secondItem="bxp-vj-ZxX" secondAttribute="leading" constant="16" id="u50-0i-HHm"/>
                             <constraint firstItem="89y-2i-4j3" firstAttribute="top" secondItem="7Jt-I8-TC4" secondAttribute="bottom" constant="8" id="xBd-jD-Cc2"/>
                         </constraints>
