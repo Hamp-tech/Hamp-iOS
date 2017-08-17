@@ -37,7 +37,7 @@ class BasketButton: UIButton {
     
     //MARK: Public
     func updateAmount(with amount: Int) {
-//        isEnabled = amount > 0
+        isEnabled = amount > 0
         guard let al = amountLabel else { return }
         al.text = String.init(amount)
     }

@@ -12,7 +12,6 @@ class ServicesCollectionViewController: HampCollectionViewController {
     
     //MARK: Properties
     private var orderServices = LaundryServicesProvider.orderServices
-    private var order: Order = Order.init()
     private var orderManager: OrderManager!
     private var basketButton: BasketButton!
     private var videoTutorialButton: UIButton!
@@ -21,11 +20,11 @@ class ServicesCollectionViewController: HampCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        orderManager = OrderManager.init(order: order)
+        orderManager = OrderManager.init()
         
         collectionView?.registerReusableCell(ServicesCollectionViewCell.self)
         basketButton = BarRightButtonsFactory.basketButton()
-//        basketButton.isEnabled = false
+        basketButton.isEnabled = false
         basketButton.addTarget(self, action: #selector(hireServices(_:)), for: .touchUpInside)
         addRightBarButtonWhenLargeTitles(rightButton: basketButton)
         
@@ -71,11 +70,11 @@ class ServicesCollectionViewController: HampCollectionViewController {
 extension ServicesCollectionViewController {
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
-        order.services().forEach {
+        orderManager.order.services().forEach {
             print("\($0.name) -> \($0.amount) = \($0.amount * $0.price)")
         }
         
-        print("\(order.totalAmount)")
+        print("\(orderManager.order.totalAmount)")
     }
 }
 
@@ -120,9 +119,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
     }
     
     private func amount() -> Int {
-        return orderServices.filter{$0.service.amount > 0}.reduce(0) { (initial, service) in
-            initial + service.service.amount
-        }
+        return orderManager.order.totalAmount
     }
 }
 

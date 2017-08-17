@@ -10,13 +10,11 @@ import Foundation
 
 final class OrderManager {
     /// Properties
-    public private(set) var order: Order
+    public private(set) var order: Order = Order.init()
     
     /// Create a new order manager
     ///
-    /// - Parameter order: order
-    init(order: Order) {
-        self.order = order
+    init() {
     }
 }
 
