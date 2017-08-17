@@ -8,11 +8,45 @@
 
 import UIKit
 
-class ServicesOrderViewController: HampViewController {
+class ServicesOrderViewController: HampCollectionViewController {
 
+    //MARK: Properties
+    public var orderManager: OrderManager!
+    public var services: [Service]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
+        
+        services = orderManager.servicesHired()
+    }
+}
+
+extension ServicesOrderViewController {
+    
+    //MARK: DataSource
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return services.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "identifier", for: indexPath)
+        cell.contentView.backgroundColor = .red
+        
+        return cell
+    }
+}
+
+extension ServicesOrderViewController: UICollectionViewDelegateFlowLayout {
+    //MARK: Layout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat = 20
+        let size: CGFloat = collectionView.frame.width - padding*2
+        return CGSize.init(width: size, height: 62)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 10, left: 20, bottom: 10, right: 20)
     }
 }

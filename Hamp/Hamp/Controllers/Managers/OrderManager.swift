@@ -59,5 +59,12 @@ extension OrderManager {
         }
     }
     
+    /// Differents services hired
+    ///
+    /// - Returns: services hired
+    func servicesHired() -> [Service] {
+        return order.services()
+    }
+    
     
 }

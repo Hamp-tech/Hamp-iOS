@@ -57,11 +57,13 @@ class ServicesCollectionViewController: HampCollectionViewController {
         guard let id = segue.identifier else { return }
         
         switch id {
-        case "OrderServicesDetail":
+        case "showOrderServicesDetail":
             let vc = (segue.destination as! ServiceDetailViewController)
             vc.orderService = (sender as! OrderableService)
             vc.orderManager = orderManager
-            
+        case "showOrderViewController":
+            let vc = (segue.destination as! ServicesOrderViewController)
+            vc.orderManager = orderManager
         default:
             break
         }
@@ -86,7 +88,7 @@ extension ServicesCollectionViewController: OrderManagerDelegate {
 //        }
 //
 //        print("\(orderManager.order.totalAmount)")
-        performSegue(withIdentifier: "OrderViewController", sender: nil)
+        performSegue(withIdentifier: "showOrderViewController", sender: nil)
     }
 }
 

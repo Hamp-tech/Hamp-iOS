@@ -211,8 +211,8 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Services" id="6MW-15-P1g"/>
                     <connections>
-                        <segue destination="kbI-2l-i6U" kind="show" identifier="OrderServicesDetail" id="ScU-xi-Mg3"/>
-                        <segue destination="d92-hf-58r" kind="show" identifier="OrderViewController" id="Cb4-Kf-bba"/>
+                        <segue destination="kbI-2l-i6U" kind="show" identifier="showOrderServicesDetail" id="ScU-xi-Mg3"/>
+                        <segue destination="SlI-MD-TMQ" kind="show" identifier="showOrderViewController" id="HHD-Xa-tYm"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXs-7F-qGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +261,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
+                                <rect key="frame" x="245" y="386" width="59" height="35"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -300,20 +300,38 @@ Lorem Ipsum.</string>
             <point key="canvasLocation" x="5046" y="564"/>
         </scene>
         <!--Order-->
-        <scene sceneID="maG-A4-8DC">
+        <scene sceneID="fgo-73-FZH">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="d92-hf-58r" customClass="ServicesOrderViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MIR-zu-Do8">
+                <collectionViewController title="Order" hidesBottomBarWhenPushed="YES" id="SlI-MD-TMQ" customClass="ServicesOrderViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sVy-rU-cZG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="LR1-3O-2ln"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Order" id="ulx-kR-Sfw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QHa-mO-qi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ktZ-3k-TcG">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rP3-fe-5gd">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="SlI-MD-TMQ" id="9Kw-0X-5TF"/>
+                            <outlet property="delegate" destination="SlI-MD-TMQ" id="zVl-cC-ZTX"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDV-Kw-FXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5046" y="1229"/>
+            <point key="canvasLocation" x="5046" y="1259"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">
