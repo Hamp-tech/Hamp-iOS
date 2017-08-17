@@ -88,7 +88,7 @@
             <objects>
                 <viewController id="LFG-OQ-zzn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0h-Dl-HeK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wse-Ky-i8X"/>
@@ -104,7 +104,7 @@
             <objects>
                 <viewController id="DFs-O3-VSb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwu-Pb-Pxd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sra-aL-M2Y"/>
@@ -119,7 +119,7 @@
         <scene sceneID="yv6-QR-zeN">
             <objects>
                 <tabBarController storyboardIdentifier="tabBarNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6jk-H9-Py1" customClass="MainTabBarViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="exf-Nq-APg">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="exf-Nq-APg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,8 +184,8 @@
         <scene sceneID="kJa-tX-Nuo">
             <objects>
                 <collectionViewController id="6Y1-Jc-hDn" customClass="ServicesCollectionViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="o8W-tO-sZd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="o8W-tO-sZd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I4n-9c-hMf">
@@ -221,7 +221,7 @@
         <!--Title-->
         <scene sceneID="4r5-hM-cqu">
             <objects>
-                <viewController id="kbI-2l-i6U" customClass="ServiceDetailViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="kbI-2l-i6U" customClass="ServiceDetailViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDA-hT-Icg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="35"/>
+                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

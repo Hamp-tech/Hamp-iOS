@@ -79,8 +79,6 @@ extension ServicesCollectionViewController: OrderManagerDelegate {
         basketButton.isEnabled = false
     }
     
-    
-    
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
         orderManager.order.services().forEach {

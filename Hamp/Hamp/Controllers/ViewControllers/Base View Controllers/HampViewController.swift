@@ -9,6 +9,9 @@
 import UIKit
 
 class HampViewController: UIViewController {
+
+    //MARK: Life cycle
+    
     deinit {
         print("\(type(of: self)) deinit")
     }
