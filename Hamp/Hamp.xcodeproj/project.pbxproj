@@ -13,6 +13,9 @@
 		4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */; };
 		4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */; };
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
+		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
+		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
+		4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
 		4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF651F38EAB700EEC314 /* FabricManager.swift */; };
 		4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6C1F38F9DD00EEC314 /* CreditCardUIController.swift */; };
@@ -48,7 +51,7 @@
 		4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535F1F37D982006382B4 /* SignUpContentable.swift */; };
 		4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
-		4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* GradientButton.swift */; };
+		4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
 		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
@@ -80,7 +83,7 @@
 		4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */; };
 		4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
-		4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */; };
+		4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */; };
 		4EDF25091F45D36000CC29A0 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF25081F45D36000CC29A0 /* OrderTests.swift */; };
 		4EDF250C1F45E67F00CC29A0 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
@@ -107,6 +110,9 @@
 		4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellContentFactory.swift; sourceTree = "<group>"; };
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
+		4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientButton.swift; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
 		4E22CF651F38EAB700EEC314 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
 		4E22CF6C1F38F9DD00EEC314 /* CreditCardUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUIController.swift; sourceTree = "<group>"; };
@@ -147,7 +153,7 @@
 		4E72535F1F37D982006382B4 /* SignUpContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContentable.swift; sourceTree = "<group>"; };
 		4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4E7D94E41F23852800C7BB4B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
@@ -182,7 +188,7 @@
 		4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountSelectionView.swift; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
-		4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
+		4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientLayer.swift; sourceTree = "<group>"; };
 		4EDF25081F45D36000CC29A0 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
@@ -488,8 +494,10 @@
 			isa = PBXGroup;
 			children = (
 				4E6A08811F251B170044570C /* IB */,
-				4EDF102A1F237D4E007E15E9 /* GradientLayer.swift */,
-				4E7D94E41F23852800C7BB4B /* GradientButton.swift */,
+				4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */,
+				4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */,
+				4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */,
+				4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */,
 				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
 				4ECA40731F24D4E4003F51EA /* InputTextField.swift */,
 				4E6A08841F251D240044570C /* SignInToolbar.swift */,
@@ -536,6 +544,7 @@
 				4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */,
 				4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */,
 				4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */,
+				4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -764,6 +773,7 @@
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
+				4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
@@ -787,20 +797,21 @@
 				4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */,
 				4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
-				4EDF102B1F237D4E007E15E9 /* GradientLayer.swift in Sources */,
+				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
 				4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */,
 				4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */,
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
-				4E7D94E51F23852800C7BB4B /* GradientButton.swift in Sources */,
+				4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
+				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
@@ -808,6 +819,7 @@
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
+				4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 				4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */,
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaS-vG-x6O">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,18 +19,18 @@
             <objects>
                 <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LaS-vG-x6O" customClass="LoginViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ct5-1i-5hv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-NO-4kh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="small-bag" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-TS-UZK">
                                 <rect key="frame" x="51" y="56" width="34" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make laundry easier than ever." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-Vi-45B">
-                                <rect key="frame" x="51" y="215.5" width="238" height="99"/>
+                                <rect key="frame" x="51" y="231.5" width="518" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="d1H-bR-Wul"/>
                                 </constraints>
@@ -42,8 +38,8 @@
                                 <color key="textColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="51" y="320.5" width="218" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="51" y="336.5" width="498" height="34"/>
                                 <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nIp-Jg-CDx"/>
@@ -57,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
-                                <rect key="frame" x="235" y="487" width="61" height="17"/>
+                                <rect key="frame" x="235" y="519" width="341" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="nV0-xp-H5b"/>
                                 </constraints>
@@ -70,7 +66,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2X-q5-vwm">
-                                <rect key="frame" x="51" y="486" width="180" height="18"/>
+                                <rect key="frame" x="51" y="518" width="180" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="2jS-YG-JYK"/>
                                 </constraints>
@@ -109,20 +105,20 @@
             <objects>
                 <viewController id="WI3-gQ-HJJ" customClass="SignInViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONe-ZZ-e4Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-Bq-aG8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-UT-3Q8">
-                                <rect key="frame" x="19" y="26" width="285" height="34"/>
+                                <rect key="frame" x="19" y="26" width="565" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-az-LNP" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="19" y="85.5" width="282" height="53"/>
+                                <rect key="frame" x="19" y="85.5" width="562" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ND8-w4-e4B"/>
@@ -132,7 +128,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-sq-IEM" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="19" y="143.5" width="282" height="53"/>
+                                <rect key="frame" x="19" y="143.5" width="562" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Cqi-e5-eCA"/>
@@ -142,7 +138,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb0-Bu-oGu" customClass="SignInToolbar" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="T8K-cd-hgC"/>
@@ -150,7 +146,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="3i7-f3-oJf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aBh-wl-DSd">
-                                            <rect key="frame" x="16" y="7" width="145" height="30"/>
+                                            <rect key="frame" x="20" y="7" width="145" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Remember password">
                                                 <color key="titleColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,7 +159,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IH2-eM-gBC">
-                                            <rect key="frame" x="227" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="503" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,8 +171,8 @@
                                     </barButtonItem>
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
                                     <barButtonItem width="60" style="plain" id="LOP-A5-cWn">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
-                                            <rect key="frame" x="262" y="7" width="42" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                            <rect key="frame" x="538" y="7" width="42" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Log in">
@@ -256,20 +252,20 @@
             <objects>
                 <viewController id="fz9-EU-BxP" customClass="SignUpViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbP-1w-REP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-tu-nk3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thP-g0-cga">
-                                <rect key="frame" x="19" y="26" width="285" height="34"/>
+                                <rect key="frame" x="19" y="26" width="565" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xid-iP-Wa1">
-                                <rect key="frame" x="0.0" y="65" width="320" height="439"/>
+                                <rect key="frame" x="0.0" y="65" width="600" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ctr-hY-etr">
@@ -307,7 +303,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nmd-0o-Vv8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mq1-1R-jc4" customClass="GradientButton" customModule="Hamp" customModuleProvider="target">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mq1-1R-jc4" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="252" y="7" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Entra">

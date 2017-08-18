@@ -33,7 +33,6 @@ class ServicesCollectionViewController: HampCollectionViewController {
         videoTutorialButton.setImage(#imageLiteral(resourceName: "video-tutorial"), for: .normal)
 
         addRightBarButtonWhenLargeTitles(rightButton: videoTutorialButton)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
