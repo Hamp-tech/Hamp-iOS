@@ -36,6 +36,7 @@ private extension ServicesOrderViewController {
         payButton.roundCorners(with: floatButtonSize/2)
         payButton.translatesAutoresizingMaskIntoConstraints = false
         payButton.setImage(UIImage.init(named: "credit-card")?.scaled(withScale: 0.6), for: .normal)
+        payButton.addTarget(self, action: #selector(payWasPressed(_:)), for: .touchUpInside)
         payButton.tintColor = .white
         view.addSubview(payButton)
         
@@ -45,6 +46,13 @@ private extension ServicesOrderViewController {
             payButton.widthAnchor.constraint(equalToConstant: floatButtonSize),
             payButton.heightAnchor.constraint(equalToConstant: floatButtonSize)
         ])
+    }
+}
+
+extension ServicesOrderViewController {
+    //MARK: Actions
+    @objc func payWasPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "showPaymentViewController", sender: nil)
     }
 }
 

@@ -328,10 +328,29 @@ Lorem Ipsum.</string>
                             <outlet property="delegate" destination="SlI-MD-TMQ" id="zVl-cC-ZTX"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="Xhe-H1-p2k" kind="push" identifier="showPaymentViewController" id="37s-lR-yW2"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDV-Kw-FXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5046" y="1259"/>
+        </scene>
+        <!--Payment method-->
+        <scene sceneID="j3O-u5-UCK">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Xhe-H1-p2k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lli-ap-Wjs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="950-On-NGs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment method" id="3ya-NU-gh1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApA-np-uyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5775" y="1258"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">
