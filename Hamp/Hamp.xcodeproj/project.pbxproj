@@ -64,6 +64,10 @@
 		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
+		4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */; };
+		4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */; };
+		4EC2CE7C1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2CE7A1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib */; };
+		4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */; };
 		4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */; };
 		4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */; };
 		4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */; };
@@ -168,6 +172,10 @@
 		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
+		4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentViewController.swift; sourceTree = "<group>"; };
+		4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EC2CE7A1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesPaymentCollectionViewCell.xib; sourceTree = "<group>"; };
+		4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLargeTitlesNavigationViewController.swift; sourceTree = "<group>"; };
 		4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewController.swift; sourceTree = "<group>"; };
 		4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -427,6 +435,70 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		4EC2CE7D1F478F0E002439CD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
+				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
+				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
+				4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */,
+				4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		4EC2CE7E1F478F30002439CD /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */,
+				4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		4EC2CE7F1F478F44002439CD /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
+				4ECA40731F24D4E4003F51EA /* InputTextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		4EC2CE801F478F66002439CD /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
+				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		4EC2CE811F478F77002439CD /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		4EC2CE821F478F7F002439CD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
+				4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4EC2CE851F478FAC002439CD /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				4E6A08841F251D240044570C /* SignInToolbar.swift */,
+			);
+			path = Toolbars;
+			sourceTree = "<group>";
+		};
 		4EC6361C1F43AC830045520F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +524,7 @@
 				4EC636231F43B3080045520F /* ServicesCollectionViewController.swift */,
 				4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */,
 				4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */,
+				4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -463,6 +536,8 @@
 				4ECA35171F44660B0031580B /* ServicesCollectionViewCell.xib */,
 				4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */,
 				4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */,
+				4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */,
+				4EC2CE7A1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -498,20 +573,13 @@
 			isa = PBXGroup;
 			children = (
 				4E6A08811F251B170044570C /* IB */,
-				4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */,
-				4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */,
-				4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */,
-				4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */,
-				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
-				4ECA40731F24D4E4003F51EA /* InputTextField.swift */,
-				4E6A08841F251D240044570C /* SignInToolbar.swift */,
-				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
-				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
-				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
-				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
-				4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */,
-				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
-				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
+				4EC2CE7E1F478F30002439CD /* Layers */,
+				4EC2CE7D1F478F0E002439CD /* Buttons */,
+				4EC2CE7F1F478F44002439CD /* Textfields */,
+				4EC2CE801F478F66002439CD /* UIViews */,
+				4EC2CE851F478FAC002439CD /* Toolbars */,
+				4EC2CE821F478F7F002439CD /* Cells */,
+				4EC2CE811F478F77002439CD /* Labels */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -683,6 +751,7 @@
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
+				4EC2CE7C1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,8 +844,10 @@
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
+				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
+				4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */,
@@ -797,6 +868,7 @@
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
+				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
