@@ -9,6 +9,8 @@
 import UIKit
 
 class HampCollectionViewController: UICollectionViewController {
+    
+    //MARK: Life cycle
     deinit {
         print("\(type(of: self)) deinit")
     }

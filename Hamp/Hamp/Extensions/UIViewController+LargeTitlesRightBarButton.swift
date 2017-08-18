@@ -13,16 +13,19 @@ extension UIViewController {
         
         guard let nav = navigationController else { return }
         
-        let previousButton = nav.navigationBar.subviews.filter { $0.isKind(of: TrailingBarButtonItem.self) }.first
+        let previousButton = trailingBarButtons()?.first as? TrailingBarButtonItem
+        
         nav.navigationBar.addSubview(rightButton)
         
+        rightButton.viewController = rightButton.parentViewController
         let navigationBar = nav.navigationBar
         
         let targetView: UIView!
         let anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>
         let constant: CGFloat = -15
         
-        if let pb = previousButton {
+        
+        if let pb = previousButton, pb.viewController == rightButton.viewController {
             targetView = pb
             anchor = targetView.leftAnchor
         } else {
@@ -41,10 +44,30 @@ extension UIViewController {
     }
     
     func hideNavigationBarRightButtons() {
-        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: TrailingBarButtonItem.self)}.forEach { $0.alpha = 0 }
+        trailingButtonFromActualViewController()?.forEach { $0.alpha = 0 }
     }
     
     func showNavigationBarRightButtons() {
-        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: TrailingBarButtonItem.self)}.forEach { $0.alpha = 1 }
+        trailingButtonFromActualViewController()?.forEach { $0.alpha = 1 }
+    }
+    
+    func removeRightBarButtonItemsFromActualParentViewController() {
+        trailingButtonFromActualViewController()?.forEach { $0.removeFromSuperview() }
+    }
+    
+    func removeRightBarButtonItems(from viewController: UIViewController) {
+        trailingBarButtons(from: viewController)?.forEach { $0.removeFromSuperview() }
+    }
+    
+    func trailingBarButtons() -> [UIView]? {
+        return navigationController?.navigationBar.subviews.filter{ $0.isKind(of: TrailingBarButtonItem.self)}
+    }
+    
+    func trailingButtonFromActualViewController() -> [UIView]? {
+        return trailingBarButtons(from: self)
+    }
+    
+    func trailingBarButtons(from viewController: UIViewController) -> [UIView]? {
+        return trailingBarButtons()?.filter{ ($0 as! TrailingBarButtonItem ).viewController == viewController}
     }
 }
