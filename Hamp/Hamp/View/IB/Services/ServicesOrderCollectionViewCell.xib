@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,16 +25,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwX-nQ-sOW">
-                        <rect key="frame" x="16" y="16" width="29" height="30"/>
+                        <rect key="frame" x="16" y="17.5" width="29" height="28"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="29" id="KdJ-3O-EAH"/>
+                            <constraint firstAttribute="width" constant="29" id="uhB-zm-MPg"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-ha-gYt">
-                        <rect key="frame" x="47" y="22" width="153" height="18"/>
+                        <rect key="frame" x="47" y="19" width="153" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -43,13 +42,16 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-eq-xg1">
                         <rect key="frame" x="263" y="8" width="19" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="0We-zH-wNP"/>
-                            <constraint firstAttribute="width" constant="19" id="Qk9-3C-ZkZ"/>
+                            <constraint firstAttribute="width" constant="19" id="JBW-t3-RlI"/>
+                            <constraint firstAttribute="height" constant="22" id="WIu-ZQ-q3y"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="24"/>
                         <state key="normal" title="+">
                             <color key="titleColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="addWasPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="zN9-H8-aEA"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jva-70-It9">
                         <rect key="frame" x="263" y="33" width="19" height="22"/>
@@ -57,11 +59,14 @@
                         <state key="normal" title="-">
                             <color key="titleColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="removeWasPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dxd-RW-XcE"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-zq-1Cc">
                         <rect key="frame" x="209" y="22" width="43" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="43" id="7p5-W2-YXZ"/>
+                            <constraint firstAttribute="width" constant="43" id="k2d-6B-czH"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="23"/>
                         <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,22 +76,21 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="CQk-zq-1Cc" firstAttribute="leading" secondItem="q5b-ha-gYt" secondAttribute="trailing" constant="9" id="2wA-nM-6KC"/>
-                <constraint firstItem="jva-70-It9" firstAttribute="top" secondItem="WJJ-eq-xg1" secondAttribute="bottom" constant="3" id="5Sn-qe-2HM"/>
-                <constraint firstAttribute="trailing" secondItem="WJJ-eq-xg1" secondAttribute="trailing" constant="11" id="7Ph-OR-OzM"/>
-                <constraint firstItem="UwX-nQ-sOW" firstAttribute="centerY" secondItem="q5b-ha-gYt" secondAttribute="centerY" id="8jo-zR-di3"/>
-                <constraint firstItem="UwX-nQ-sOW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="HWd-x5-tT8"/>
-                <constraint firstItem="q5b-ha-gYt" firstAttribute="top" secondItem="CQk-zq-1Cc" secondAttribute="top" id="OdW-oY-hSC"/>
-                <constraint firstItem="q5b-ha-gYt" firstAttribute="leading" secondItem="UwX-nQ-sOW" secondAttribute="trailing" constant="2" id="RGb-12-TrD"/>
-                <constraint firstItem="q5b-ha-gYt" firstAttribute="bottom" secondItem="CQk-zq-1Cc" secondAttribute="bottom" id="TQ1-KX-CkK"/>
-                <constraint firstItem="WJJ-eq-xg1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="VuQ-cf-ctz"/>
-                <constraint firstItem="WJJ-eq-xg1" firstAttribute="trailing" secondItem="jva-70-It9" secondAttribute="trailing" id="WJg-6q-2PS"/>
-                <constraint firstAttribute="bottom" secondItem="jva-70-It9" secondAttribute="bottom" constant="7" id="WbA-nc-UIJ"/>
-                <constraint firstItem="jva-70-It9" firstAttribute="leading" secondItem="CQk-zq-1Cc" secondAttribute="trailing" constant="11" id="a0c-0l-ffK"/>
-                <constraint firstItem="UwX-nQ-sOW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="arH-Pe-yvK"/>
-                <constraint firstItem="WJJ-eq-xg1" firstAttribute="leading" secondItem="jva-70-It9" secondAttribute="leading" id="f28-VD-SPq"/>
-                <constraint firstItem="UwX-nQ-sOW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="jKo-Oc-XRB"/>
-                <constraint firstItem="UwX-nQ-sOW" firstAttribute="baseline" secondItem="q5b-ha-gYt" secondAttribute="firstBaseline" id="wxz-fa-bIU"/>
+                <constraint firstAttribute="trailing" secondItem="WJJ-eq-xg1" secondAttribute="trailing" constant="11" id="0hP-0u-Agi"/>
+                <constraint firstItem="UwX-nQ-sOW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="6g1-WC-TQl"/>
+                <constraint firstItem="WJJ-eq-xg1" firstAttribute="trailing" secondItem="jva-70-It9" secondAttribute="trailing" id="AMk-C4-cU0"/>
+                <constraint firstItem="q5b-ha-gYt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="19" id="Elk-YT-MX7"/>
+                <constraint firstItem="CQk-zq-1Cc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="22" id="F6Y-Gl-9fW"/>
+                <constraint firstItem="jva-70-It9" firstAttribute="top" secondItem="WJJ-eq-xg1" secondAttribute="bottom" constant="3" id="NJg-Vz-RiM"/>
+                <constraint firstItem="WJJ-eq-xg1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="RTf-53-5N7"/>
+                <constraint firstItem="WJJ-eq-xg1" firstAttribute="leading" secondItem="jva-70-It9" secondAttribute="leading" id="UC4-WF-4Wt"/>
+                <constraint firstItem="CQk-zq-1Cc" firstAttribute="leading" secondItem="q5b-ha-gYt" secondAttribute="trailing" constant="9" id="V6o-ru-lpi"/>
+                <constraint firstAttribute="bottom" secondItem="jva-70-It9" secondAttribute="bottom" constant="7" id="WEH-88-kYW"/>
+                <constraint firstItem="UwX-nQ-sOW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="p8V-nJ-hJ6"/>
+                <constraint firstItem="UwX-nQ-sOW" firstAttribute="centerY" secondItem="CQk-zq-1Cc" secondAttribute="centerY" id="qCi-oz-FZk"/>
+                <constraint firstItem="UwX-nQ-sOW" firstAttribute="baseline" secondItem="q5b-ha-gYt" secondAttribute="baseline" id="sBn-gx-8ED"/>
+                <constraint firstItem="q5b-ha-gYt" firstAttribute="leading" secondItem="UwX-nQ-sOW" secondAttribute="trailing" constant="2" id="sQQ-sO-k25"/>
+                <constraint firstItem="jva-70-It9" firstAttribute="leading" secondItem="CQk-zq-1Cc" secondAttribute="trailing" constant="11" id="zfx-ce-UYO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="293" height="62"/>
@@ -99,6 +103,11 @@
                     <real key="value" value="9"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="amountLabel" destination="UwX-nQ-sOW" id="ahf-Ez-mId"/>
+                <outlet property="nameLabel" destination="q5b-ha-gYt" id="kCf-o1-rNa"/>
+                <outlet property="priceLabel" destination="CQk-zq-1Cc" id="3DH-3y-vkw"/>
+            </connections>
             <point key="canvasLocation" x="177.5" y="38"/>
         </collectionViewCell>
     </objects>
