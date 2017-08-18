@@ -46,7 +46,7 @@ class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
 }
 
 extension ServicesCollectionViewCell {
-    func updateAmountLabel() {
+    func needsUpdateUI() {
        amountSelectionView.updateAmount(with: orderableService.service.amount)
     }
 }

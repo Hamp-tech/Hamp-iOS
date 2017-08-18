@@ -32,6 +32,7 @@ extension ServicesOrderViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesOrderCollectionViewCell
         cell.service = services[indexPath.row]
+        cell.delegate = self
         return cell
     }
 }
@@ -47,4 +48,22 @@ extension ServicesOrderViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 10, left: 20, bottom: 10, right: 20)
     }
+}
+
+extension ServicesOrderViewController: ServicesOrderCellDelegate {
+    //MARK: Cell Delegate
+    func addWasPressed(on cell: ServicesOrderCollectionViewCell, service: Service) {
+        guard service.amount >= 0 else { return }
+        var o = service
+        o.amount += 1
+        cell.needsUpdateUI()
+    }
+    
+    func removeWasPressed(on cell: ServicesOrderCollectionViewCell, service: Service) {
+        guard service.amount > 0 else { return }
+        var o = service
+        o.amount -= 1
+        cell.needsUpdateUI()
+    }
+
 }

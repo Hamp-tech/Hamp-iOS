@@ -72,6 +72,7 @@ class ServicesCollectionViewController: HampCollectionViewController {
 
 extension ServicesCollectionViewController: OrderManagerDelegate {
     
+    //MARK: Order manager delegate
     func orderWasUpdated(on manager: OrderManager) {
         basketButton.isEnabled = true
         basketButton.updateAmount(with: amount())
@@ -80,14 +81,11 @@ extension ServicesCollectionViewController: OrderManagerDelegate {
     func orderWasEmptied(on manager: OrderManager) {
         basketButton.isEnabled = false
     }
-    
+}
+
+extension ServicesCollectionViewController {
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
-//        orderManager.order.services().forEach {
-//            print("\($0.name) -> \($0.amount) = \($0.amount * $0.price)")
-//        }
-//
-//        print("\(orderManager.order.totalAmount)")
         performSegue(withIdentifier: "showOrderViewController", sender: nil)
     }
 }
@@ -117,7 +115,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         var o = orderableService
         o.service.amount += 1
         orderManager.addIfNotExists(service: o.service)
-        cell.updateAmountLabel()
+        cell.needsUpdateUI()
     }
     
     func removeWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService) {
@@ -125,7 +123,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         var o = orderableService
         o.service.amount -= 1
         orderManager.deleteServiceIfAmountZero(service: o.service)
-        cell.updateAmountLabel()
+        cell.needsUpdateUI()
     }
     
     private func amount() -> Int {
