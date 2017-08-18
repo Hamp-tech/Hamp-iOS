@@ -329,7 +329,7 @@ Lorem Ipsum.</string>
                         </connections>
                     </collectionView>
                     <connections>
-                        <segue destination="Xhe-H1-p2k" kind="push" identifier="showPaymentViewController" id="37s-lR-yW2"/>
+                        <segue destination="Xhe-H1-p2k" kind="show" identifier="showPaymentViewController" id="37s-lR-yW2"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDV-Kw-FXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -339,18 +339,70 @@ Lorem Ipsum.</string>
         <!--Payment method-->
         <scene sceneID="j3O-u5-UCK">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Xhe-H1-p2k" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Xhe-H1-p2k" customClass="ServicesPaymentViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lli-ap-Wjs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-6r-qOE" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="499" width="288" height="34"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8bS-1a-6tE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="End order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="endOrderWasPressedWithSender:" destination="Xhe-H1-p2k" eventType="touchUpInside" id="P0d-R1-cBu"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Kv-U4-h4Q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="427"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nz2-Ri-CUj">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="3GE-L4-ea5">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xhe-H1-p2k" id="roR-UU-dAK"/>
+                                    <outlet property="delegate" destination="Xhe-H1-p2k" id="YTW-i8-DuS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Kv-U4-h4Q" firstAttribute="top" secondItem="950-On-NGs" secondAttribute="top" id="C7U-9h-GYY"/>
+                            <constraint firstItem="gsi-6r-qOE" firstAttribute="leading" secondItem="950-On-NGs" secondAttribute="leading" constant="16" id="QyS-sq-3cI"/>
+                            <constraint firstItem="gsi-6r-qOE" firstAttribute="top" secondItem="7Kv-U4-h4Q" secondAttribute="bottom" constant="8" id="SgT-Pj-K5S"/>
+                            <constraint firstItem="950-On-NGs" firstAttribute="bottom" secondItem="gsi-6r-qOE" secondAttribute="bottom" constant="35" id="Ymm-wq-nev"/>
+                            <constraint firstItem="7Kv-U4-h4Q" firstAttribute="trailing" secondItem="950-On-NGs" secondAttribute="trailing" id="ZMS-ob-EQ3"/>
+                            <constraint firstItem="950-On-NGs" firstAttribute="trailing" secondItem="gsi-6r-qOE" secondAttribute="trailing" constant="16" id="tVY-VO-oAa"/>
+                            <constraint firstItem="7Kv-U4-h4Q" firstAttribute="leading" secondItem="950-On-NGs" secondAttribute="leading" id="uho-hg-RGO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="950-On-NGs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Payment method" id="3ya-NU-gh1"/>
+                    <connections>
+                        <outlet property="collectionView" destination="7Kv-U4-h4Q" id="VlI-TK-jz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApA-np-uyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5775" y="1258"/>
+            <point key="canvasLocation" x="5780.625" y="1257.0422535211267"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">

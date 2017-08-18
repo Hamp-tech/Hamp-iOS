@@ -13,7 +13,7 @@ protocol ServicesOrderCellDelegate: class {
     func removeWasPressed(on cell: ServicesOrderCollectionViewCell, service: Service)
 }
 
-class ServicesOrderCollectionViewCell: UICollectionViewCell {
+class ServicesOrderCollectionViewCell: ReusableCollectionViewCell {
 
     //MARK: IB Properties
     @IBOutlet weak private var amountLabel: UILabel!
@@ -49,8 +49,6 @@ class ServicesOrderCollectionViewCell: UICollectionViewCell {
         delegate?.removeWasPressed(on: self, service: service)
     }
 }
-
-extension ServicesOrderCollectionViewCell: Reusable { }
 
 extension ServicesOrderCollectionViewCell {
     //MARK: Public

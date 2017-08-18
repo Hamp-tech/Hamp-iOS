@@ -13,7 +13,7 @@ protocol ServicesCollectionViewCellDelegate: class {
     func removeWasPressed(on cell: ServicesCollectionViewCell, orderableService: OrderableService)
 }
 
-class ServicesCollectionViewCell: UICollectionViewCell, Reusable {
+class ServicesCollectionViewCell: ReusableCollectionViewCell {
 
     //MARK: IB Properties
     @IBOutlet private weak var serviceImageView: UIImageView!

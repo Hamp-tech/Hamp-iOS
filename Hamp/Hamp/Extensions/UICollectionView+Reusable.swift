@@ -28,3 +28,18 @@ extension UICollectionView {
         return self.dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
 }
+
+extension UICollectionView {
+    func registerReusableSupplementaryView<T: UICollectionReusableView>(_ : T.Type, kind: String) where T: Reusable {
+        if let nib = T.nib {
+            self.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.reuseIdentifier)
+        } else {
+            self.register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.reuseIdentifier)
+        }
+    }
+    
+    func dequeReusableSupplementaryView<T: UICollectionReusableView>(kind: String, indexPath: IndexPath) -> T where T: Reusable {
+        return self.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
+    }
+    
+}
