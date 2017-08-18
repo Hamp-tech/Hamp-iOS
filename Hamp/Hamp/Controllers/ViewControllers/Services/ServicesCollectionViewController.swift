@@ -27,12 +27,11 @@ class ServicesCollectionViewController: HampCollectionViewController {
         basketButton = BarRightButtonsFactory.basketButton()
         basketButton.isEnabled = false
         basketButton.addTarget(self, action: #selector(hireServices(_:)), for: .touchUpInside)
-        addRightBarButtonWhenLargeTitles(rightButton: basketButton)
+        addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: basketButton))
         
-        videoTutorialButton = UIButton.init(type: .system)
-        videoTutorialButton.setImage(#imageLiteral(resourceName: "video-tutorial"), for: .normal)
-
-        addRightBarButtonWhenLargeTitles(rightButton: videoTutorialButton)
+        videoTutorialButton = BarRightButtonsFactory.videoTutorialButton()
+        addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: videoTutorialButton))
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

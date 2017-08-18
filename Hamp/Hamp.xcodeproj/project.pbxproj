@@ -16,6 +16,7 @@
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
 		4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */; };
+		4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
 		4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF651F38EAB700EEC314 /* FabricManager.swift */; };
 		4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF6C1F38F9DD00EEC314 /* CreditCardUIController.swift */; };
@@ -113,6 +114,7 @@
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
 		4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientButton.swift; sourceTree = "<group>"; };
+		4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingBarButtonItem.swift; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
 		4E22CF651F38EAB700EEC314 /* FabricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricManager.swift; sourceTree = "<group>"; };
 		4E22CF6C1F38F9DD00EEC314 /* CreditCardUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUIController.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
 				4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */,
 				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
+				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
+				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,

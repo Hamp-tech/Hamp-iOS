@@ -29,6 +29,7 @@ class ServicesOrderViewController: HampCollectionViewController {
 }
 
 private extension ServicesOrderViewController {
+    //MARK: Private
     func setupFloatButton() {
         payButton = VerticalGradientButton.init(type: .system)
         payButton.backgroundColor = UIColor.darkPink

@@ -9,18 +9,18 @@
 import UIKit
 
 extension UIViewController {
-    func addRightBarButtonWhenLargeTitles(rightButton: UIButton) {
+    func addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem) {
         
         guard let nav = navigationController else { return }
         
-        let previousButton = nav.navigationBar.subviews.filter { $0.isKind(of: UIButton.self) }.first
+        let previousButton = nav.navigationBar.subviews.filter { $0.isKind(of: TrailingBarButtonItem.self) }.first
         nav.navigationBar.addSubview(rightButton)
         
         let navigationBar = nav.navigationBar
         
         let targetView: UIView!
         let anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>
-        let constant: CGFloat = -20
+        let constant: CGFloat = -15
         
         if let pb = previousButton {
             targetView = pb
@@ -34,15 +34,17 @@ extension UIViewController {
         
         NSLayoutConstraint.activate([
             rightButton.rightAnchor.constraint(equalTo: anchor, constant: constant),
-            rightButton.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -15)
+            rightButton.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: constant),
+            rightButton.widthAnchor.constraint(equalToConstant: rightButton.frame.width),
+            rightButton.heightAnchor.constraint(equalToConstant: rightButton.frame.height)
             ])
     }
     
     func hideNavigationBarRightButtons() {
-        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: UIButton.self)}.forEach { $0.alpha = 0 }
+        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: TrailingBarButtonItem.self)}.forEach { $0.alpha = 0 }
     }
     
     func showNavigationBarRightButtons() {
-        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: UIButton.self)}.forEach { $0.alpha = 1 }
+        navigationController?.navigationBar.subviews.filter{ $0.isKind(of: TrailingBarButtonItem.self)}.forEach { $0.alpha = 1 }
     }
 }
