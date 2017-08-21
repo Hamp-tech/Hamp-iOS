@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4H-me-tcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="1596"/>
+            <point key="canvasLocation" x="7127" y="895"/>
         </scene>
         <!--Profile-->
         <scene sceneID="RNB-ED-gn1">
@@ -398,11 +398,12 @@ Lorem Ipsum.</string>
                     <navigationItem key="navigationItem" title="Payment method" id="3ya-NU-gh1"/>
                     <connections>
                         <outlet property="collectionView" destination="7Kv-U4-h4Q" id="VlI-TK-jz9"/>
+                        <segue destination="wqr-5f-awJ" kind="presentation" identifier="presentAddCreditCard" id="89w-Hn-EOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApA-np-uyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5780.625" y="1257.0422535211267"/>
+            <point key="canvasLocation" x="5884" y="1258"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="iJB-EO-aOo">

@@ -46,8 +46,9 @@ extension ServicesPaymentViewController: UICollectionViewDataSource {
 }
 
 extension ServicesPaymentViewController: ServicesPaymentFooterDelegate {
+    //MARK: Footer delegate
     func footerWasPressed(on footerView: ServicesPaymentFooterView) {
-        print("tap")
+        performSegue(withIdentifier: "presentAddCreditCard", sender: nil)
     }
 }
 
