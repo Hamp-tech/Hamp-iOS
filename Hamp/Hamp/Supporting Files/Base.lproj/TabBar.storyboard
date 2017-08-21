@@ -134,6 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SYT-Ta-lKJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -168,10 +169,80 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="4cD-Vx-aBg"/>
+                    <connections>
+                        <segue destination="pwa-98-0Tu" kind="push" identifier="showHistoryDetail" id="OZO-eR-iYE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sx-jK-kOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4058" y="-335"/>
+        </scene>
+        <!--01/01/1900-->
+        <scene sceneID="IuZ-BN-SEX">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="pwa-98-0Tu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="56r-FM-bx7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXV-Q4-6x8" customClass="HistoryDetailPaymentSectionView" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="280" height="126"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Payment method"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-y1-XHO" customClass="HistoryDetailSectionView" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="190" width="280" height="126"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Description"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Li3-hZ-BAw" customClass="HistoryDetailSectionView" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="316" width="280" height="126"/>
+                                <color key="backgroundColor" red="1" green="0.28627450980000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delivery code"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcM-Oc-Cye" customClass="HistoryDetailSectionView" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="442" width="280" height="126"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Collection code"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mRb-va-DxF" firstAttribute="trailing" secondItem="rsl-y1-XHO" secondAttribute="trailing" constant="20" id="4Tq-vU-olv"/>
+                            <constraint firstItem="Li3-hZ-BAw" firstAttribute="top" secondItem="rsl-y1-XHO" secondAttribute="bottom" id="FKC-nk-Def"/>
+                            <constraint firstItem="Li3-hZ-BAw" firstAttribute="top" secondItem="rsl-y1-XHO" secondAttribute="bottom" id="JZT-1N-AK9"/>
+                            <constraint firstItem="OcM-Oc-Cye" firstAttribute="bottom" secondItem="mRb-va-DxF" secondAttribute="bottom" id="MOY-Hl-m4i"/>
+                            <constraint firstItem="rsl-y1-XHO" firstAttribute="height" secondItem="HXV-Q4-6x8" secondAttribute="height" id="Nvf-FY-pm1"/>
+                            <constraint firstItem="HXV-Q4-6x8" firstAttribute="leading" secondItem="mRb-va-DxF" secondAttribute="leading" constant="20" id="PMg-6R-TQc"/>
+                            <constraint firstItem="OcM-Oc-Cye" firstAttribute="height" secondItem="Li3-hZ-BAw" secondAttribute="height" id="PzA-fE-O5R"/>
+                            <constraint firstItem="Li3-hZ-BAw" firstAttribute="height" secondItem="rsl-y1-XHO" secondAttribute="height" id="QAw-1Z-khj"/>
+                            <constraint firstItem="mRb-va-DxF" firstAttribute="trailing" secondItem="Li3-hZ-BAw" secondAttribute="trailing" constant="20" id="Wco-Fe-Ebj"/>
+                            <constraint firstItem="rsl-y1-XHO" firstAttribute="leading" secondItem="mRb-va-DxF" secondAttribute="leading" constant="20" id="XB6-0L-5sB"/>
+                            <constraint firstItem="rsl-y1-XHO" firstAttribute="top" secondItem="HXV-Q4-6x8" secondAttribute="bottom" id="auN-zV-rOV"/>
+                            <constraint firstItem="OcM-Oc-Cye" firstAttribute="top" secondItem="Li3-hZ-BAw" secondAttribute="bottom" id="hXS-iN-C2Y"/>
+                            <constraint firstItem="rsl-y1-XHO" firstAttribute="top" secondItem="HXV-Q4-6x8" secondAttribute="bottom" id="j3j-e9-SPY"/>
+                            <constraint firstItem="OcM-Oc-Cye" firstAttribute="leading" secondItem="mRb-va-DxF" secondAttribute="leading" constant="20" id="lFr-bT-vRj"/>
+                            <constraint firstItem="Li3-hZ-BAw" firstAttribute="leading" secondItem="mRb-va-DxF" secondAttribute="leading" constant="20" id="mN9-iH-FfF"/>
+                            <constraint firstItem="HXV-Q4-6x8" firstAttribute="top" secondItem="mRb-va-DxF" secondAttribute="top" id="oac-Fc-9S8"/>
+                            <constraint firstItem="mRb-va-DxF" firstAttribute="trailing" secondItem="HXV-Q4-6x8" secondAttribute="trailing" constant="20" id="pqf-wA-uW9"/>
+                            <constraint firstItem="mRb-va-DxF" firstAttribute="trailing" secondItem="OcM-Oc-Cye" secondAttribute="trailing" constant="20" id="rGF-Fe-3tY"/>
+                            <constraint firstItem="OcM-Oc-Cye" firstAttribute="top" secondItem="Li3-hZ-BAw" secondAttribute="bottom" id="roo-Xx-oPi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mRb-va-DxF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="01/01/1900" id="zpk-1O-zKy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFs-wB-KKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5045.625" y="-335.91549295774649"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">

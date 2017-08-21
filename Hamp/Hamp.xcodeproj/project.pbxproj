@@ -68,6 +68,9 @@
 		4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DA1F45C271006F3BA7 /* Service.swift */; };
 		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
+		4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */; };
+		4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */; };
+		4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */; };
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */; };
 		4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */; };
@@ -184,6 +187,9 @@
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
+		4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailSectionHeaderView.swift; sourceTree = "<group>"; };
+		4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailSectionView.swift; sourceTree = "<group>"; };
+		4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailPaymentSectionView.swift; sourceTree = "<group>"; };
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentViewController.swift; sourceTree = "<group>"; };
 		4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -444,6 +450,9 @@
 		4E871D101F4AF2D70028DA0D /* History */ = {
 			isa = PBXGroup;
 			children = (
+				4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */,
+				4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */,
+				4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */,
 				4E871D171F4AF8D50028DA0D /* CircleView.swift */,
 				4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */,
 				4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */,
@@ -922,6 +931,7 @@
 				4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
+				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
@@ -944,6 +954,7 @@
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
+				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
@@ -960,6 +971,7 @@
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,
 				4EDF250C1F45E67F00CC29A0 /* OrderManager.swift in Sources */,
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
+				4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
 			);
