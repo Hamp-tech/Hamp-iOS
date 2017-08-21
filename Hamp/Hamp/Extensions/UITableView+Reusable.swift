@@ -8,6 +8,8 @@
 
 import UIKit
 
+//extension UITableViewCell: Reusable { }
+
 extension UITableView {
     /// Register cell
     ///

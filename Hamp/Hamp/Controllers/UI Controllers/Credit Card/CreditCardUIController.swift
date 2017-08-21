@@ -88,21 +88,28 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
     
     func textfieldWasFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type, text: String) {
         let nextValue = type.rawValue + 1
-        switch type {
-        case .number:
-            hampCreditCard.number = text
-        case .date:
-            hampCreditCard.month = text.substring(with: 0..<2)
-            hampCreditCard.year = text.substring(with: 2..<4)
-        case .cvv:
-            hampCreditCard.cvv = text
-        case .name:
-            hampCreditCard.name = text  
+
+        hampCreditCard.number = creditNumberTextField.text?.replacingOccurrences(of: " ", with: "")
+        if let dtf = dateTextField.text, dtf.count > 0 {
+            hampCreditCard.month = dtf.substring(with: 0..<2)
+            hampCreditCard.year = dtf.substring(with: 3..<5)
         }
+        hampCreditCard.cvv = cvvTextField.text
+        hampCreditCard.name = nameTextField.text
         
         do {
             try hampCreditCard.validate()
             delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
+        } catch HampCreditCard.CreditCardError.invalidNumber {
+            creditNumberTextField.shake()
+        } catch HampCreditCard.CreditCardError.invalidMonth {
+            dateTextField.shake()
+        } catch HampCreditCard.CreditCardError.invalidYear {
+            dateTextField.shake()
+        } catch HampCreditCard.CreditCardError.invalidCVV {
+            cvvTextField.shake()
+        } catch HampCreditCard.CreditCardError.invalidName {
+            nameTextField.shake()
         } catch {}
         
         guard nextValue < textFields.count else { return }
@@ -178,7 +185,7 @@ private extension CreditCardUIController {
     }
         
     func setupCardImageView() {
-        cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "CreditCard"))
+        cardImageView = UIImageView.init(image: #imageLiteral(resourceName: "credit-card"))
         cardImageView.tintColor = UIColor.darkPink
         cardView.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false

@@ -22,9 +22,9 @@ extension UIView {
     }
     
     fileprivate func addShadow(shadowColor: CGColor = UIColor.black.cgColor,
-                               shadowOffset: CGSize = CGSize.init(width: 2, height: 2),
-                               shadowOpacity: Float = 0.35,
-                               shadowRadius: CGFloat = 8.0) {
+                               shadowOffset: CGSize = CGSize.init(width: 1, height: 1),
+                               shadowOpacity: Float = 0.5,
+                               shadowRadius: CGFloat = 2.0) {
         let layer = self.layer
         layer.masksToBounds = false
         

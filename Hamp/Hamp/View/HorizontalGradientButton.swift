@@ -1,5 +1,5 @@
 //
-//  GradientButton.swift
+//  HorizontalGradientButton.swift
 //  Hamp
 //
 //  Created by Joan Molinas Ramon on 22/7/17.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class GradientButton: UIButton {
+class HorizontalGradientButton: UIButton {
 
     //MARK: Properties
-    let gradient = GradientLayer()
+    let gradient = HorizontalGradientLayer()
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
