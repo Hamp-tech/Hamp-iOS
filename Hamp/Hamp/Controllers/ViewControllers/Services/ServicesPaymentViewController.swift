@@ -12,6 +12,7 @@ class ServicesPaymentViewController: HampViewController {
     
     //MARK: Properties
     @IBOutlet weak var collectionView: UICollectionView!
+    private let cardsProvider = CreditCardsProvider.creditCards
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -30,11 +31,12 @@ class ServicesPaymentViewController: HampViewController {
 extension ServicesPaymentViewController: UICollectionViewDataSource {
     //MARK: DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return cardsProvider.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesPaymentCollectionViewCell
+        cell.creditCard = cardsProvider[indexPath.row]
         return cell
     }
     

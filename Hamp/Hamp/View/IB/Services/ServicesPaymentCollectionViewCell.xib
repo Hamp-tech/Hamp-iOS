@@ -67,6 +67,9 @@
                     <real key="value" value="9"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="creditNumberLabel" destination="0F6-oH-WbQ" id="WFz-To-FME"/>
+            </connections>
             <point key="canvasLocation" x="90" y="49"/>
         </collectionViewCell>
     </objects>

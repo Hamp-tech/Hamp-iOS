@@ -94,6 +94,7 @@
 		4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */; };
 		4EDF25091F45D36000CC29A0 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF25081F45D36000CC29A0 /* OrderTests.swift */; };
 		4EDF250C1F45E67F00CC29A0 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */; };
+		4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
 		4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -207,6 +208,7 @@
 		4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientLayer.swift; sourceTree = "<group>"; };
 		4EDF25081F45D36000CC29A0 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsProvider.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
 				4EC6361D1F43ACEA0045520F /* Controllers */,
 				4E632E271F26508000CDE02D /* Factories */,
+				4EE5F1161F4AD5D70056AA2C /* Providers */,
 				4EDF102C1F237E03007E15E9 /* Model */,
 				4EDF10051F236E21007E15E9 /* View */,
 				4E89E05C1F2EC24C008C658D /* Utils */,
@@ -381,7 +384,6 @@
 				4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */,
 				4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */,
 				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
-				4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */,
 				4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */,
 				4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */,
 			);
@@ -606,6 +608,15 @@
 				4E4496551F45EDEC00C5EE99 /* OrderManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4EE5F1161F4AD5D70056AA2C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */,
+				4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		4EEA1A151F2380A00070E17A /* Extensions */ = {
@@ -876,6 +887,7 @@
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
+				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
