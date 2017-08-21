@@ -99,22 +99,6 @@
             </objects>
             <point key="canvasLocation" x="3992" y="2067"/>
         </scene>
-        <!--History-->
-        <scene sceneID="nSs-Ag-r1b">
-            <objects>
-                <viewController id="DFs-O3-VSb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hwu-Pb-Pxd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sra-aL-M2Y"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="History" largeTitleDisplayMode="always" id="pd0-Hc-G4z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yi5-T3-6wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3990" y="-334"/>
-        </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yv6-QR-zeN">
             <objects>
@@ -153,12 +137,41 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="DFs-O3-VSb" kind="relationship" relationship="rootViewController" id="2Rc-Xx-ceU"/>
+                        <segue destination="183-Gv-Pd0" kind="relationship" relationship="rootViewController" id="XZc-Xe-wFp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2U-fK-fwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3204" y="-334"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="X23-K4-T3l">
+            <objects>
+                <tableViewController id="183-Gv-Pd0" customClass="HistoryViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B4L-X9-UOp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kno-jF-6TB">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kno-jF-6TB" id="UVf-fx-ae2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="183-Gv-Pd0" id="uos-q2-qGf"/>
+                            <outlet property="delegate" destination="183-Gv-Pd0" id="CWi-kW-49R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="History" id="4cD-Vx-aBg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Sx-jK-kOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4058" y="-335"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">
@@ -261,7 +274,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
+                                <rect key="frame" x="245" y="386" width="59" height="35"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

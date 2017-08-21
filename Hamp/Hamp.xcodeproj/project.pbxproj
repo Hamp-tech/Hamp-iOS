@@ -57,6 +57,11 @@
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
 		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
+		4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */; };
+		4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */; };
+		4E871D161F4AF3230028DA0D /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */; };
+		4E871D181F4AF8D50028DA0D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D171F4AF8D50028DA0D /* CircleView.swift */; };
+		4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88B6E91F4AE9930005838F /* HistoryViewController.swift */; };
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
 		4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */; };
 		4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */; };
@@ -168,6 +173,11 @@
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
+		4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTableViewController.swift; sourceTree = "<group>"; };
+		4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		4E871D171F4AF8D50028DA0D /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		4E88B6E91F4AE9930005838F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
 		4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesOrderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -393,6 +403,7 @@
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
+				4E871D101F4AF2D70028DA0D /* History */,
 				4ECA351A1F4466140031580B /* Services */,
 				4E22CF681F38F7A200EEC314 /* Sign up */,
 			);
@@ -402,6 +413,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E88B6E81F4AE8FA0005838F /* History */,
 				4EC636221F43B2D10045520F /* Services */,
 				4E7E32F01F41F1F8009C0099 /* TabBar Controller */,
 				4E22CF671F38F74900EEC314 /* Credit Card */,
@@ -427,6 +439,24 @@
 				4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */,
 			);
 			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
+		4E871D101F4AF2D70028DA0D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4E871D171F4AF8D50028DA0D /* CircleView.swift */,
+				4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */,
+				4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		4E88B6E81F4AE8FA0005838F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4E88B6E91F4AE9930005838F /* HistoryViewController.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
@@ -557,6 +587,7 @@
 				4ECA406F1F24BD96003F51EA /* LogoTitleBaseViewController.swift */,
 				4EC636201F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift */,
 				4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */,
+				4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */,
 			);
 			path = "Base View Controllers";
 			sourceTree = "<group>";
@@ -769,6 +800,7 @@
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
+				4E871D161F4AF3230028DA0D /* HistoryTableViewCell.xib in Resources */,
 				4EC2CE7C1F477E1A002439CD /* ServicesPaymentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -874,6 +906,7 @@
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
+				4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */,
 				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
@@ -886,6 +919,7 @@
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
+				4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
@@ -903,6 +937,7 @@
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,
+				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
@@ -917,6 +952,7 @@
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
+				4E871D181F4AF8D50028DA0D /* CircleView.swift in Sources */,
 				4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */,
 				4EC2CE881F479199002439CD /* ServicesPaymentFooterView.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
