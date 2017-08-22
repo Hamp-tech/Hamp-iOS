@@ -25,11 +25,14 @@ public struct FirstTimeActionsManager {
 extension FirstTimeActionsManager {
     enum Action {
         case presentNewCreditCard
+        case presentTutorial
         
         var rawValue: String {
             switch self {
             case .presentNewCreditCard:
                 return presentNewCreditCardViewControllerOnFirstTime
+            case .presentTutorial:
+                return presentTutorialOnFirstTime
             }
         }
     }

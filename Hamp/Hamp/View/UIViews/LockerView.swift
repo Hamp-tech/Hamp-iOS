@@ -41,7 +41,7 @@ private extension LockerView {
     
     func setupNumberLabel() {
         numberLabel = UILabel.init()
-        numberLabel.text = "13"
+        numberLabel.text = String.init(number)
         numberLabel.numberOfLines = 1
         numberLabel.minimumScaleFactor = 0.4
         numberLabel.adjustsFontSizeToFitWidth = true

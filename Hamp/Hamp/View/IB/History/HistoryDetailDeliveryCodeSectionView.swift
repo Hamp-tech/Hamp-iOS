@@ -25,7 +25,6 @@ private extension HistoryDetailDeliveryCodeSectionView {
     func setupLockerView() {
         lockerView = LockerView.init()
         lockerView.translatesAutoresizingMaskIntoConstraints = false
-//        lockerView.backgroundColor = UIColor.green
         contentView.addSubview(lockerView)
         
         NSLayoutConstraint.activate([

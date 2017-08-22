@@ -35,11 +35,14 @@ private extension AppDelegate {
         if let _ = Hamp.Auth.user() {
             identifier = tabBarNavigationViewControllerIdentifier
             storyboardName = "TabBar"
+        } else if FirstTimeActionsManager.needsExecuteAction(by: .presentTutorial){
+            identifier = tutorialViewControllerIdentifier
+            storyboardName = "Tutorial"
         } else {
             identifier = loginViewControllerIdentifier
             storyboardName = "Login"
         }
-        
+    
         let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
         
