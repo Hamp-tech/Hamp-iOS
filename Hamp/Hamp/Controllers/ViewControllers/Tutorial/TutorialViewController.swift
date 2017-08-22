@@ -36,8 +36,6 @@ class TutorialViewController: HampViewController {
         
         contents = createContents()
         
-        descriptionTextView.minimumZoomScale = 0.8
-        
         updateUI(to: 0, changeContent: true, animated: false)
         
         scrollView.contentSize = CGSize.init(width: view.frame.width * 4, height: view.frame.height)
@@ -61,45 +59,6 @@ extension TutorialViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateUI(to: Double.init(currentPageNumber), ended: true)
     }
-    
-    private func fontToFitHeight() -> UIFont {
-        
-        var minFontSize: CGFloat = 20
-        var maxFontSize: CGFloat = 250
-        var fontSizeAverage: CGFloat = 0
-        var textAndLabelHeightDiff: CGFloat = 0
-        
-        while (minFontSize <= maxFontSize) {
-            fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 2
-            
-            if let labelText: String = descriptionTextView.text {
-                let labelHeight = descriptionTextView.frame.size.height
-                
-                let testStringHeight = labelText.size(withAttributes: [NSAttributedStringKey.font: descriptionTextView.font?.withSize(fontSizeAverage) as Any]).height
-                
-                textAndLabelHeightDiff = labelHeight - testStringHeight
-                
-                if (fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize) {
-                    if (textAndLabelHeightDiff < 0) {
-                        return (descriptionTextView.font?.withSize(fontSizeAverage - 1))!
-                    }
-                    return (descriptionTextView.font?.withSize(fontSizeAverage))!
-                }
-                
-                if (textAndLabelHeightDiff < 0) {
-                    maxFontSize = fontSizeAverage - 1
-                    
-                } else if (textAndLabelHeightDiff > 0) {
-                    minFontSize = fontSizeAverage + 1
-                    
-                } else {
-                    return (descriptionTextView.font?.withSize(fontSizeAverage))!
-                }
-            }
-        }
-        return (descriptionTextView.font?.withSize(fontSizeAverage))!
-    }
-    
 }
 
 private extension TutorialViewController {
@@ -117,12 +76,12 @@ private extension TutorialViewController {
         
     }
     
-    func changeContentUI(animated: Bool = true) {
+    func changeContentUI(animated: Bool) {
         let content = contents[self.currentPageNumber]
         UIView.animate(withDuration: animated ? 0.5 : 0, animations: {
             self.contentImageView.image = UIImage.init(named: content.imageName)
             self.titleLabel.text = content.title
-            self.startButton.isHidden = !content.showStartButton
+            self.startButton.alpha = content.showStartButton ? 1 : 0
         })
         self.descriptionTextView.text = content.description
     }
@@ -130,7 +89,7 @@ private extension TutorialViewController {
     func updateUI(to percentage: Double, ended: Bool = false, changeContent: Bool = false, animated: Bool = true) {
         rotateImageView(to: percentage, ended: ended)
         pageControl.currentPage = currentPageNumber
-        if changeContent { changeContentUI() }
+        if changeContent { changeContentUI(animated: animated) }
     }
     
     func createContents() -> [TutorialContent] {
