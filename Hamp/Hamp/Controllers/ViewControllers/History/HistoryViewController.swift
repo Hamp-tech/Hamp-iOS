@@ -38,7 +38,7 @@ private extension HistoryViewController {
         NSLayoutConstraint.activate([
             bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: rowHeight*CGFloat.init(history)),
             bottomInfiniteLine.widthAnchor.constraint(equalToConstant: 2),
-            bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  500),
+            bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  1000),
             bottomInfiniteLine.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 20)
             ])
     }

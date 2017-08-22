@@ -33,10 +33,10 @@ private extension HistoryDetailPaymentSectionView {
         contentView.addSubview(creditCardImageView)
         
         NSLayoutConstraint.activate([
-                creditCardImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                creditCardImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: contentView.frame.height/3),
                 creditCardImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
-                creditCardImageView.widthAnchor.constraint(equalToConstant: 39),
-                creditCardImageView.heightAnchor.constraint(equalToConstant: 28)
+                creditCardImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -contentView.frame.height/3),
+                creditCardImageView.widthAnchor.constraint(equalTo: creditCardImageView.heightAnchor, multiplier: creditCardImageView.frame.width/creditCardImageView.frame.height)
             ])
     }
     
@@ -45,7 +45,8 @@ private extension HistoryDetailPaymentSectionView {
         creditCardNumberLabel.text = numberText
         creditCardNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         creditCardNumberLabel.textColor = .lightGray
-        creditCardNumberLabel.font = UIFont.systemFont(ofSize: 18, weight: .light)
+        creditCardNumberLabel.font = UIFont.systemFont(ofSize: 25, weight: .light)
+        creditCardNumberLabel.adjustsFontSizeToFitWidth = true
         contentView.addSubview(creditCardNumberLabel)
         
         NSLayoutConstraint.activate([

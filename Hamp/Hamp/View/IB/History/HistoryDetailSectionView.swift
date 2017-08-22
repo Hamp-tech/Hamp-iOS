@@ -35,6 +35,7 @@ private extension HistoryDetailSectionView {
     //MARK: Private
     func setupHeaderView() {
         headerView = HistoryDetailSectionHeaderView.init()
+        headerView.backgroundColor = UIColor.clear
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.title = title
         addSubview(headerView)

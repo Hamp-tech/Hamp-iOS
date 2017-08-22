@@ -71,6 +71,8 @@
 		4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */; };
 		4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */; };
 		4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */; };
+		4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */; };
+		4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C51F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift */; };
 		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */; };
 		4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */; };
@@ -190,6 +192,8 @@
 		4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailSectionHeaderView.swift; sourceTree = "<group>"; };
 		4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailSectionView.swift; sourceTree = "<group>"; };
 		4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailPaymentSectionView.swift; sourceTree = "<group>"; };
+		4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerView.swift; sourceTree = "<group>"; };
+		4EBAD5C51F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailDeliveryCodeSectionView.swift; sourceTree = "<group>"; };
 		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC2CE771F477736002439CD /* ServicesPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentViewController.swift; sourceTree = "<group>"; };
 		4EC2CE791F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPaymentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 				4EBAD5BB1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift */,
 				4EBAD5BF1F4B88E80070CEE9 /* HistoryDetailSectionView.swift */,
 				4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */,
+				4EBAD5C51F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift */,
 				4E871D171F4AF8D50028DA0D /* CircleView.swift */,
 				4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */,
 				4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */,
@@ -515,6 +520,7 @@
 			children = (
 				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
 				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
+				4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -662,19 +668,19 @@
 		4EEA1A151F2380A00070E17A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */,
 				4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */,
 				4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */,
 				4ECFAFC91F2534BD005FDF05 /* UIImage+Color.swift */,
+				4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */,
 				4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */,
 				4E2304FF1F2FA01E000AB18C /* UITableView+Reusable.swift */,
-				4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */,
+				4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */,
 				4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */,
 				4E22CF6E1F38FD1C00EEC314 /* UIView+Nib.swift */,
 				4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */,
-				4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */,
+				4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */,
 				4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */,
-				4ECA35141F44645F0031580B /* UICollectionView+Reusable.swift */,
-				4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */,
 				4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */,
 			);
 			path = Extensions;
@@ -921,6 +927,7 @@
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
 				4E46C8B81F44CED40051BF84 /* BasketButton.swift in Sources */,
+				4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */,
 				4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */,
@@ -947,6 +954,7 @@
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,
+				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,

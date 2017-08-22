@@ -199,9 +199,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Description"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Li3-hZ-BAw" customClass="HistoryDetailSectionView" customModule="Hamp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Li3-hZ-BAw" customClass="HistoryDetailDeliveryCodeSectionView" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="316" width="280" height="126"/>
-                                <color key="backgroundColor" red="1" green="0.28627450980000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delivery code"/>
                                 </userDefinedRuntimeAttributes>
