@@ -42,6 +42,9 @@ class TutorialViewController: HampViewController {
         scrollView.delegate = self
     }
     
+    @IBAction func startWasPressed(_ sender: HorizontalGradientButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension TutorialViewController: UIScrollViewDelegate {
