@@ -17,7 +17,7 @@ class LoginViewController: HampViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if FirstTimeActionsManager.needsExecuteAction(by: .presentTutorial) {
+//        if FirstTimeActionsManager.needsExecuteAction(by: .presentTutorial) {
             let identifier = tutorialViewControllerIdentifier
             let storyboardName = "Tutorial"
             let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
@@ -25,6 +25,6 @@ class LoginViewController: HampViewController {
             present(viewController, animated: false, completion: {
                 FirstTimeActionsManager.changeFirstTimeState(to: .presentTutorial, executeNextTime: false)
             })
-        }
+//        }
     }
 }

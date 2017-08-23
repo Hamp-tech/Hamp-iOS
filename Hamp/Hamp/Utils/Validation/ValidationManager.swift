@@ -11,7 +11,6 @@ import Foundation
 public class ValidationManager {
     
     //MARK: Validation
-//    private var validations = [String: Validation]()
     private var validations = NSMapTable<NSString, Validation>.init(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
     
     //MARK: Public
