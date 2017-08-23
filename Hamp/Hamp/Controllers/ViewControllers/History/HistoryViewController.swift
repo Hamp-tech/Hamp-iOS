@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryViewController: HampTableViewController {
 
-    let history = 10
+    let history = 1
     let rowHeight: CGFloat = 87
     
     //MARK: Life cycle
@@ -38,7 +38,7 @@ private extension HistoryViewController {
         NSLayoutConstraint.activate([
             bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: rowHeight*CGFloat.init(history)),
             bottomInfiniteLine.widthAnchor.constraint(equalToConstant: 2),
-            bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  500),
+            bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  1000),
             bottomInfiniteLine.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 20)
             ])
     }
@@ -47,16 +47,18 @@ private extension HistoryViewController {
 extension HistoryViewController {
    
     //MARK: TableView datasource
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return history
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return history
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
         return cell
+    }
+}
+
+extension HistoryViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showHistoryDetail", sender: nil)
     }
 }
