@@ -79,13 +79,7 @@ class SignInViewController: LogoTitleBaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    /// Present forgot password view controller
-    ///
-    /// - Parameter sender: button pressed
-    @IBAction func forgotPassword(_ sender: UIButton) {
-        print("Forgot password")
-    }
-    
+
     /// Present login sdk
     ///
     /// - Parameter sender: button pressed

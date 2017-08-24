@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaS-vG-x6O">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +24,18 @@
             <objects>
                 <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LaS-vG-x6O" customClass="LoginViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ct5-1i-5hv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-NO-4kh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="small-bag" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-TS-UZK">
                                 <rect key="frame" x="51" y="56" width="34" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make laundry easier than ever." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-Vi-45B">
-                                <rect key="frame" x="51" y="231.5" width="518" height="99"/>
+                                <rect key="frame" x="51" y="215.5" width="238" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="d1H-bR-Wul"/>
                                 </constraints>
@@ -39,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-ZN-FTt" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="51" y="336.5" width="498" height="34"/>
+                                <rect key="frame" x="51" y="320.5" width="218" height="34"/>
                                 <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nIp-Jg-CDx"/>
@@ -53,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-4n-EA7">
-                                <rect key="frame" x="235" y="519" width="341" height="17"/>
+                                <rect key="frame" x="235" y="487" width="61" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="nV0-xp-H5b"/>
                                 </constraints>
@@ -66,7 +71,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2X-q5-vwm">
-                                <rect key="frame" x="51" y="518" width="180" height="18"/>
+                                <rect key="frame" x="51" y="486" width="180" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="2jS-YG-JYK"/>
                                 </constraints>
@@ -105,20 +110,20 @@
             <objects>
                 <viewController id="WI3-gQ-HJJ" customClass="SignInViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONe-ZZ-e4Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-Bq-aG8">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-UT-3Q8">
-                                <rect key="frame" x="19" y="26" width="565" height="34"/>
+                                <rect key="frame" x="19" y="26" width="285" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-az-LNP" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="19" y="85.5" width="562" height="53"/>
+                                <rect key="frame" x="19" y="85.5" width="282" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ND8-w4-e4B"/>
@@ -128,7 +133,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-sq-IEM" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="19" y="143.5" width="562" height="53"/>
+                                <rect key="frame" x="19" y="143.5" width="282" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Cqi-e5-eCA"/>
@@ -138,7 +143,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb0-Bu-oGu" customClass="SignInToolbar" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="T8K-cd-hgC"/>
@@ -146,20 +151,20 @@
                                 <items>
                                     <barButtonItem style="plain" id="3i7-f3-oJf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aBh-wl-DSd">
-                                            <rect key="frame" x="20" y="7" width="145" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="145" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Remember password">
                                                 <color key="titleColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
-                                                <action selector="forgotPassword:" destination="WI3-gQ-HJJ" eventType="touchUpInside" id="sYf-Hr-wqd"/>
+                                                <segue destination="f5C-Rb-7qh" kind="presentation" id="eOc-UP-RzH"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gOV-8f-1pY"/>
                                     <barButtonItem style="plain" id="AfS-Ex-c48">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IH2-eM-gBC">
-                                            <rect key="frame" x="503" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="209" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="facebook">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,7 +177,7 @@
                                     <barButtonItem width="5" style="plain" systemItem="fixedSpace" id="9cc-vs-dci"/>
                                     <barButtonItem width="60" style="plain" id="LOP-A5-cWn">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="baY-05-VAZ" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
-                                            <rect key="frame" x="538" y="7" width="42" height="30"/>
+                                            <rect key="frame" x="244" y="7" width="60" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Log in">
@@ -229,6 +234,96 @@
             </objects>
             <point key="canvasLocation" x="1193" y="1281"/>
         </scene>
+        <!--Restore Password View Controller-->
+        <scene sceneID="rLL-7D-fh9">
+            <objects>
+                <viewController id="Zp3-iy-thK" customClass="RestorePasswordViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHo-ST-xPH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-nw-D3q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhZ-gC-r6g">
+                                <rect key="frame" x="19" y="26" width="285" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0kg-lR-uRt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email and you will receive a link to change your password" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-EF-9Wf">
+                                <rect key="frame" x="19" y="68" width="285" height="68.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q70-EF-9Wf" secondAttribute="height" multiplier="170:41" id="B0j-WD-QcQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAH-UK-OnV" customClass="InputTextField" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="19" y="154" width="282" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="0Aw-ua-BUY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Correo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAZ-r7-sAO" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="19" y="454" width="282" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="A4W-Hp-Uwd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoreWasPressed:" destination="Zp3-iy-thK" eventType="touchUpInside" id="PvY-FT-C8D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FB9-nw-D3q" firstAttribute="top" secondItem="H6V-rL-Dju" secondAttribute="top" id="41d-oJ-xfQ"/>
+                            <constraint firstItem="FB9-nw-D3q" firstAttribute="trailing" secondItem="H6V-rL-Dju" secondAttribute="trailing" id="62z-Lj-cBi"/>
+                            <constraint firstItem="H6V-rL-Dju" firstAttribute="trailing" secondItem="Q70-EF-9Wf" secondAttribute="trailing" constant="16" id="I9o-tb-UNH"/>
+                            <constraint firstItem="H6V-rL-Dju" firstAttribute="trailing" secondItem="lAZ-r7-sAO" secondAttribute="trailing" constant="19" id="IQa-0u-b8W"/>
+                            <constraint firstItem="PhZ-gC-r6g" firstAttribute="leading" secondItem="H6V-rL-Dju" secondAttribute="leading" constant="19" id="JrT-sw-L6x"/>
+                            <constraint firstItem="AAH-UK-OnV" firstAttribute="leading" secondItem="H6V-rL-Dju" secondAttribute="leading" constant="19" id="RTT-RE-KoS"/>
+                            <constraint firstItem="Q70-EF-9Wf" firstAttribute="top" secondItem="PhZ-gC-r6g" secondAttribute="bottom" constant="8" id="SLu-zg-eok"/>
+                            <constraint firstItem="H6V-rL-Dju" firstAttribute="trailing" secondItem="AAH-UK-OnV" secondAttribute="trailing" constant="19" id="T23-fw-46o"/>
+                            <constraint firstItem="FB9-nw-D3q" firstAttribute="leading" secondItem="H6V-rL-Dju" secondAttribute="leading" id="TKr-eo-qDa"/>
+                            <constraint firstItem="H6V-rL-Dju" firstAttribute="trailing" secondItem="PhZ-gC-r6g" secondAttribute="trailing" constant="16" id="Uro-Un-bFX"/>
+                            <constraint firstItem="H6V-rL-Dju" firstAttribute="bottom" secondItem="lAZ-r7-sAO" secondAttribute="bottom" constant="16" id="Vwy-hH-sl0"/>
+                            <constraint firstItem="FB9-nw-D3q" firstAttribute="bottom" secondItem="H6V-rL-Dju" secondAttribute="bottom" id="j9o-w8-L0b"/>
+                            <constraint firstItem="lAZ-r7-sAO" firstAttribute="leading" secondItem="H6V-rL-Dju" secondAttribute="leading" constant="19" id="la5-5x-330"/>
+                            <constraint firstItem="AAH-UK-OnV" firstAttribute="top" secondItem="Q70-EF-9Wf" secondAttribute="bottom" constant="18" id="lcA-u3-MNP"/>
+                            <constraint firstItem="PhZ-gC-r6g" firstAttribute="top" secondItem="H6V-rL-Dju" secondAttribute="top" constant="26" id="oRr-qp-Owq"/>
+                            <constraint firstItem="Q70-EF-9Wf" firstAttribute="leading" secondItem="H6V-rL-Dju" secondAttribute="leading" constant="19" id="tbX-qU-tCZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H6V-rL-Dju"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L3w-Ot-SSy">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="svy-Fm-IaM">
+                            <color key="tintColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelWasPressed:" destination="Zp3-iy-thK" id="KJb-ru-yxo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mailTextfield" destination="AAH-UK-OnV" id="HS0-G4-KxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0y-vR-q9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948.125" y="2033.4507042253522"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Cv-Zq-Fgt">
             <objects>
@@ -252,20 +347,20 @@
             <objects>
                 <viewController id="fz9-EU-BxP" customClass="SignUpViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbP-1w-REP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laundry-background-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-tu-nk3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thP-g0-cga">
-                                <rect key="frame" x="19" y="26" width="565" height="34"/>
+                                <rect key="frame" x="19" y="26" width="285" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xid-iP-Wa1">
-                                <rect key="frame" x="0.0" y="65" width="600" height="471"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ctr-hY-etr">
@@ -351,6 +446,25 @@
             </objects>
             <point key="canvasLocation" x="2044" y="622"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X12-Mu-Fh5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f5C-Rb-7qh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kBD-Wk-gYP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zp3-iy-thK" kind="relationship" relationship="rootViewController" id="Kmu-rf-TsK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOd-0l-UTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="2036"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook" width="30" height="30"/>
@@ -358,6 +472,6 @@
         <image name="small-bag" width="162" height="181"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tma-zM-5Xc"/>
+        <segue reference="RZx-zg-4zj"/>
     </inferredMetricsTieBreakers>
 </document>
