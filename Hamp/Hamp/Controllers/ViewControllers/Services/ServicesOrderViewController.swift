@@ -76,7 +76,7 @@ extension ServicesOrderViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let padding: CGFloat = 20
         let size: CGFloat = collectionView.frame.width - padding*2
-        return CGSize.init(width: size, height: 62)
+        return CGSize.init(width: size, height: 74)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
