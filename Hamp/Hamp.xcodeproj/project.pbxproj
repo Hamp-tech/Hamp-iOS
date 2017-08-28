@@ -54,8 +54,9 @@
 		4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535F1F37D982006382B4 /* SignUpContentable.swift */; };
 		4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
-		4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */; };
+		4E7D94E51F23852800C7BB4B /* HorizontalCircleGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
+		4E7DF3A01F54B6C900C1A180 /* HorizontalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */; };
 		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
 		4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */; };
@@ -180,8 +181,9 @@
 		4E72535F1F37D982006382B4 /* SignUpContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContentable.swift; sourceTree = "<group>"; };
 		4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
+		4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCircleGradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
 		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
 		4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTableViewController.swift; sourceTree = "<group>"; };
@@ -522,7 +524,8 @@
 				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
 				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
 				4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */,
-				4E7D94E41F23852800C7BB4B /* HorizontalGradientButton.swift */,
+				4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */,
+				4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -987,8 +990,9 @@
 				4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */,
 				4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */,
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
+				4E7DF3A01F54B6C900C1A180 /* HorizontalGradientButton.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
-				4E7D94E51F23852800C7BB4B /* HorizontalGradientButton.swift in Sources */,
+				4E7D94E51F23852800C7BB4B /* HorizontalCircleGradientButton.swift in Sources */,
 				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,

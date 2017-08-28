@@ -8,61 +8,50 @@
 
 import UIKit
 
-class ServicesOrderViewController: HampCollectionViewController {
+class ServicesOrderViewController: HampViewController {
+    
+    //MARK: IB Properties
+    @IBOutlet weak var amountContainerView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var amountPriceLabel: UILabel!
+    @IBOutlet weak var payButton: HorizontalGradientButton!
     
     //MARK: Properties
     public var orderManager: OrderManager!
     public var services: [OrderableService]!
     private var padding: CGFloat = 20
-    private var floatButtonSize: CGFloat = 40
-    private var payButton: VerticalGradientButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         services = orderManager.servicesHired()
         collectionView?.registerReusableCell(ServicesOrderCollectionViewCell.self)
-        collectionView?.contentInset = UIEdgeInsetsMake(0, 0, padding + floatButtonSize, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(0, 0, padding + amountContainerView.frame.height, 0)
+        updateUI()
+    }
+    
+    //MARK: Actions
+    @IBAction func payWasPressed(_ sender: HorizontalGradientButton) {
+        performSegue(withIdentifier: "showPaymentViewController", sender: nil)
         
-        setupFloatButton()
     }
 }
 
 private extension ServicesOrderViewController {
     //MARK: Private
-    func setupFloatButton() {
-        payButton = VerticalGradientButton.init(type: .system)
-        payButton.backgroundColor = UIColor.darkPink
-        payButton.roundCorners(with: floatButtonSize/2)
-        payButton.translatesAutoresizingMaskIntoConstraints = false
-        payButton.setImage(UIImage.init(named: "credit-card")?.scaled(withScale: 0.6), for: .normal)
-        payButton.addTarget(self, action: #selector(payWasPressed(_:)), for: .touchUpInside)
-        payButton.tintColor = .white
-        view.addSubview(payButton)
-        
-        NSLayoutConstraint.activate([
-            payButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -padding),
-            payButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -padding),
-            payButton.widthAnchor.constraint(equalToConstant: floatButtonSize),
-            payButton.heightAnchor.constraint(equalToConstant: floatButtonSize)
-        ])
+    func updateUI() {
+        amountPriceLabel.text = "€ \(orderManager.amountServicesHired())"
+        payButton.isEnabled = orderManager.amountServicesHired() > 0
     }
 }
 
-extension ServicesOrderViewController {
-    //MARK: Actions
-    @objc func payWasPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "showPaymentViewController", sender: nil)
-    }
-}
-
-extension ServicesOrderViewController {
+extension ServicesOrderViewController: UICollectionViewDataSource{
     
     //MARK: DataSource
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return services.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesOrderCollectionViewCell
         cell.orderableService = services[indexPath.row]
         cell.delegate = self
@@ -90,6 +79,7 @@ extension ServicesOrderViewController: ServicesOrderCellDelegate {
         var o = service
         o.amount += 1
         cell.needsUpdateUI()
+        updateUI()
     }
     
     func removeWasPressed(on cell: ServicesOrderCollectionViewCell, service: Service) {
@@ -97,6 +87,7 @@ extension ServicesOrderViewController: ServicesOrderCellDelegate {
         var o = service
         o.amount -= 1
         cell.needsUpdateUI()
+        updateUI()
     }
     
 }

@@ -17,10 +17,6 @@ class MainTabBarViewController: UITabBarController {
             viewControllers?.first?.present(vc, animated: true, completion: nil)
             FirstTimeActionsManager.changeFirstTimeState(to: .presentNewCreditCard, executeNextTime: false)
         }
-        
-      let vc = UIStoryboard.init(name: "TabBar", bundle: Bundle.main).instantiateViewController(withIdentifier: "ratingViewController")
-        
-        present(vc, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
