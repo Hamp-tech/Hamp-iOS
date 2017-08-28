@@ -36,7 +36,7 @@ class RestorePasswordViewController: LogoTitleBaseViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func restoreWasPressed(_ sender: HorizontalGradientButton) {
+    @IBAction func restoreWasPressed(_ sender: HorizontalCircleGradientButton) {
         validationManager.validate(onSuccess: {
             print("OK")
             self.dismiss(animated: true, completion: nil)

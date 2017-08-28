@@ -299,7 +299,7 @@
                     <navigationItem key="navigationItem" title="Services" id="6MW-15-P1g"/>
                     <connections>
                         <segue destination="kbI-2l-i6U" kind="show" identifier="showOrderServicesDetail" id="ScU-xi-Mg3"/>
-                        <segue destination="SlI-MD-TMQ" kind="show" identifier="showOrderViewController" id="HHD-Xa-tYm"/>
+                        <segue destination="X0R-2E-i3V" kind="show" identifier="showOrderViewController" id="wA1-Oz-yJy"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXs-7F-qGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,41 +387,119 @@ Lorem Ipsum.</string>
             <point key="canvasLocation" x="5046" y="564"/>
         </scene>
         <!--Order-->
-        <scene sceneID="fgo-73-FZH">
+        <scene sceneID="Va9-QE-DnO">
             <objects>
-                <collectionViewController title="Order" hidesBottomBarWhenPushed="YES" id="SlI-MD-TMQ" customClass="ServicesOrderViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sVy-rU-cZG">
+                <viewController title="Order" hidesBottomBarWhenPushed="YES" id="X0R-2E-i3V" customClass="ServicesOrderViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JsI-kc-rd1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wqy-yi-t8Q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oIR-EG-u7Z">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cpk-xm-Dy3">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="X0R-2E-i3V" id="uHU-Hy-GNT"/>
+                                    <outlet property="delegate" destination="X0R-2E-i3V" id="Jxu-Y5-Uv2"/>
+                                </connections>
+                            </collectionView>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-yB-2Wb">
+                                <rect key="frame" x="0.0" y="526" width="375" height="141"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOy-Q3-ex0" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="76" width="375" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="BOu-Kx-thT"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="credit-card"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="payWasPressed:" destination="X0R-2E-i3V" eventType="touchUpInside" id="VSH-Gr-nZh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHl-la-fKP">
+                                        <rect key="frame" x="35" y="24" width="74" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="N9v-TB-Bpn"/>
+                                            <constraint firstAttribute="width" constant="74" id="S7N-Nv-tkB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="18"/>
+                                        <color key="textColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h6S-kG-JgK">
+                                        <rect key="frame" x="288" y="24" width="51" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="51" id="qap-Fb-KTV"/>
+                                            <constraint firstAttribute="height" constant="21" id="wbG-ze-H2r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="25"/>
+                                        <color key="textColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OOy-Q3-ex0" secondAttribute="trailing" id="1hU-ag-Elj"/>
+                                    <constraint firstAttribute="bottom" secondItem="OOy-Q3-ex0" secondAttribute="bottom" id="JJZ-or-d1G"/>
+                                    <constraint firstItem="zHl-la-fKP" firstAttribute="leading" secondItem="eOI-yB-2Wb" secondAttribute="leading" constant="35" id="Qqi-MZ-DAo"/>
+                                    <constraint firstItem="h6S-kG-JgK" firstAttribute="top" secondItem="eOI-yB-2Wb" secondAttribute="top" constant="24" id="UEO-B9-pnP"/>
+                                    <constraint firstAttribute="height" constant="141" id="Xt8-I3-n87"/>
+                                    <constraint firstItem="OOy-Q3-ex0" firstAttribute="leading" secondItem="eOI-yB-2Wb" secondAttribute="leading" id="hsa-v2-ygy"/>
+                                    <constraint firstItem="zHl-la-fKP" firstAttribute="top" secondItem="eOI-yB-2Wb" secondAttribute="top" constant="24" id="uGi-1v-CbW"/>
+                                    <constraint firstAttribute="trailing" secondItem="h6S-kG-JgK" secondAttribute="trailing" constant="36" id="yEX-zP-ers"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ktZ-3k-TcG">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rP3-fe-5gd">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="SlI-MD-TMQ" id="9Kw-0X-5TF"/>
-                            <outlet property="delegate" destination="SlI-MD-TMQ" id="zVl-cC-ZTX"/>
-                        </connections>
-                    </collectionView>
+                        <constraints>
+                            <constraint firstItem="Wqy-yi-t8Q" firstAttribute="trailing" secondItem="FHq-sX-SLt" secondAttribute="trailing" id="09c-b2-Bij"/>
+                            <constraint firstItem="eOI-yB-2Wb" firstAttribute="bottom" secondItem="FHq-sX-SLt" secondAttribute="bottom" id="0BS-vs-2m0"/>
+                            <constraint firstItem="eOI-yB-2Wb" firstAttribute="trailing" secondItem="FHq-sX-SLt" secondAttribute="trailing" id="CbZ-mB-hgU"/>
+                            <constraint firstItem="Wqy-yi-t8Q" firstAttribute="leading" secondItem="FHq-sX-SLt" secondAttribute="leading" id="RRW-Yv-Wbq"/>
+                            <constraint firstItem="Wqy-yi-t8Q" firstAttribute="top" secondItem="FHq-sX-SLt" secondAttribute="top" id="XWK-lC-i1k"/>
+                            <constraint firstItem="Wqy-yi-t8Q" firstAttribute="bottom" secondItem="FHq-sX-SLt" secondAttribute="bottom" id="Y9L-X2-E2Z"/>
+                            <constraint firstItem="eOI-yB-2Wb" firstAttribute="leading" secondItem="FHq-sX-SLt" secondAttribute="leading" id="diK-r0-2kB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FHq-sX-SLt"/>
+                    </view>
                     <connections>
-                        <segue destination="Xhe-H1-p2k" kind="show" identifier="showPaymentViewController" id="37s-lR-yW2"/>
+                        <outlet property="amountContainerView" destination="eOI-yB-2Wb" id="SRJ-YC-Hf1"/>
+                        <outlet property="amountPriceLabel" destination="h6S-kG-JgK" id="Nhx-ha-eyI"/>
+                        <outlet property="collectionView" destination="Wqy-yi-t8Q" id="JmA-8I-kce"/>
+                        <outlet property="payButton" destination="OOy-Q3-ex0" id="ShB-wH-60h"/>
+                        <segue destination="Xhe-H1-p2k" kind="show" identifier="showPaymentViewController" id="IzG-uz-YH1"/>
                     </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PDV-Kw-FXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jR-WU-bYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5046" y="1259"/>
+            <point key="canvasLocation" x="5045.6000000000004" y="1320.9895052473764"/>
         </scene>
         <!--Payment method-->
         <scene sceneID="j3O-u5-UCK">
@@ -431,7 +509,7 @@ Lorem Ipsum.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-6r-qOE" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-6r-qOE" customClass="HorizontalCircleGradientButton" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="16" y="598" width="343" height="34"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -490,7 +568,7 @@ Lorem Ipsum.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApA-np-uyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5884" y="1258"/>
+            <point key="canvasLocation" x="5886" y="1321"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="FeT-W1-Odd">
@@ -521,7 +599,7 @@ Lorem Ipsum.</string>
                                         <color key="textColor" red="0.94117647059999998" green="0.50196078430000002" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAm-pU-FyY" customClass="HorizontalGradientButton" customModule="Hamp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAm-pU-FyY" customClass="HorizontalCircleGradientButton" customModule="Hamp" customModuleProvider="target">
                                         <rect key="frame" x="18" y="253.5" width="311" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="H1f-cX-VR0"/>
@@ -700,6 +778,7 @@ Lorem Ipsum.</string>
         <image name="bag-filled" width="25" height="32"/>
         <image name="clock-empty" width="31" height="31"/>
         <image name="clock-filled" width="29" height="29"/>
+        <image name="credit-card" width="40" height="28"/>
         <image name="profile-empty" width="24" height="31"/>
         <image name="profile-filled" width="24" height="30"/>
         <image name="small-bag" width="162" height="181"/>

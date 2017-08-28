@@ -25,7 +25,7 @@ class TutorialViewController: HampViewController {
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var startButton: HorizontalGradientButton!
+    @IBOutlet weak var startButton: HorizontalCircleGradientButton!
     //MARK: Properties
     private var currentPageNumber: Int = 0
     private var contents:[TutorialContent]!
@@ -42,7 +42,7 @@ class TutorialViewController: HampViewController {
         scrollView.delegate = self
     }
     
-    @IBAction func startWasPressed(_ sender: HorizontalGradientButton) {
+    @IBAction func startWasPressed(_ sender: HorizontalCircleGradientButton) {
         dismiss(animated: true, completion: nil)
     }
 }

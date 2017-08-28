@@ -28,7 +28,7 @@ class RatingViewController: HampViewController {
         }
     }
     
-    @IBAction func ratingWasPressed(_ sender: HorizontalGradientButton) {
+    @IBAction func ratingWasPressed(_ sender: HorizontalCircleGradientButton) {
         dismiss(animated: true, completion: nil)
     }
     

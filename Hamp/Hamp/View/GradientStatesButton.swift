@@ -23,7 +23,7 @@ public class GradientStatesButtonActionContent {
     }
 }
 
-class GradientStatesButton: HorizontalGradientButton {
+class GradientStatesButton: HorizontalCircleGradientButton {
     
     private var contents = [String: GradientStatesButtonActionContent]()
     private var currentContent: GradientStatesButtonActionContent?

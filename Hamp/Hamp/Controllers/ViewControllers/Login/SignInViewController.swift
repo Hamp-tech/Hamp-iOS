@@ -20,7 +20,7 @@ class SignInViewController: LogoTitleBaseViewController {
     @IBOutlet weak private var passwordTextField: InputTextField!
     @IBOutlet weak private var optionsToolbar: SignInToolbar!
     @IBOutlet weak var optionsToolbarBottomContraint: NSLayoutConstraint!
-    @IBOutlet weak var loginButton: HorizontalGradientButton!
+    @IBOutlet weak var loginButton: HorizontalCircleGradientButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
