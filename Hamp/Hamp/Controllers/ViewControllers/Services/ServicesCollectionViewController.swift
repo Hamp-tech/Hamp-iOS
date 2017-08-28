@@ -112,7 +112,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         guard orderableService.service.amount >= 0 else { return }
         var o = orderableService
         o.service.amount += 1
-        orderManager.addIfNotExists(service: o.service)
+        orderManager.addIfNotExists(service: o)
         cell.needsUpdateUI()
     }
     
@@ -120,7 +120,7 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
         guard orderableService.service.amount > 0 else { return }
         var o = orderableService
         o.service.amount -= 1
-        orderManager.deleteServiceIfAmountZero(service: o.service)
+        orderManager.deleteServiceIfAmountZero(service: o)
         cell.needsUpdateUI()
     }
     

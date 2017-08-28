@@ -12,7 +12,7 @@ class ServicesOrderViewController: HampCollectionViewController {
     
     //MARK: Properties
     public var orderManager: OrderManager!
-    public var services: [Service]!
+    public var services: [OrderableService]!
     private var padding: CGFloat = 20
     private var floatButtonSize: CGFloat = 40
     private var payButton: VerticalGradientButton!
@@ -20,7 +20,6 @@ class ServicesOrderViewController: HampCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         services = orderManager.servicesHired()
-        
         collectionView?.registerReusableCell(ServicesOrderCollectionViewCell.self)
         collectionView?.contentInset = UIEdgeInsetsMake(0, 0, padding + floatButtonSize, 0)
         
@@ -65,7 +64,7 @@ extension ServicesOrderViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesOrderCollectionViewCell
-        cell.service = services[indexPath.row]
+        cell.orderableService = services[indexPath.row]
         cell.delegate = self
         return cell
     }

@@ -21,7 +21,7 @@ class ServicesOrderCollectionViewCell: ReusableCollectionViewCell {
     @IBOutlet weak private var priceLabel: UILabel!
     
     //MARK: Properties
-    var service: Service!
+    var orderableService: OrderableService!
     var active = true {
         didSet(newValue) {
             if active != newValue { reloadViewsColor() }
@@ -35,25 +35,25 @@ class ServicesOrderCollectionViewCell: ReusableCollectionViewCell {
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        nameLabel.text = service.name
+        nameLabel.text = orderableService.service.name
         needsUpdateUI()
     }
     
     @IBAction func addWasPressed(_ sender: UIButton) {
-        delegate?.addWasPressed(on: self, service: service)
+        delegate?.addWasPressed(on: self, service: orderableService.service)
     }
     
     @IBAction func removeWasPressed(_ sender: UIButton) {
-        delegate?.removeWasPressed(on: self, service: service)
+        delegate?.removeWasPressed(on: self, service: orderableService.service)
     }
 }
 
 extension ServicesOrderCollectionViewCell {
     //MARK: Public
     func needsUpdateUI() {
-        amountLabel.text = String.init(service.amount)
-        priceLabel.text = "\(service.amount*service.price) €"
-        active = service.amount > 0
+        amountLabel.text = String.init(orderableService.service.amount)
+        priceLabel.text = "\(orderableService.service.amount*orderableService.service.price) €"
+        active = orderableService.service.amount > 0
     }
 }
 

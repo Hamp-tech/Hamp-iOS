@@ -10,15 +10,15 @@ import Foundation
 
 class Order {
     //MARK: Properties
-    private var _services = [Service]()
+    private var _orderableServices = [OrderableService]()
     public var count: Int {
-        return _services.count
+        return _orderableServices.count
     }
     public var totalAmount: Int {
-        return _services
-            .filter { $0.amount > 0 }
-            .reduce(0) {(initial, service) in
-                initial + service.amount*service.price
+        return _orderableServices
+            .filter { $0.service.amount > 0 }
+            .reduce(0) {(initial, orderable) in
+                initial + orderable.service.amount*orderable.service.price
         }
     }
 }
@@ -29,17 +29,17 @@ extension Order {
     /// Add a service to order if services doesn't contains the service
     ///
     /// - Parameter service: service to add
-    func add(service: Service) {
-        guard _services.index(where: {$0.identifier == service.identifier}) == nil else { return }
-        _services.append(service)
+    func add(service: OrderableService) {
+        guard _orderableServices.index(where: {$0.service.identifier == service.service.identifier}) == nil else { return }
+        _orderableServices.append(service)
     }
     
     /// Remove a services from order if contains the service
     ///
     /// - Parameter service: service to remove
-    func remove(service: Service) {
-        if let idx = _services.index(where: {$0.identifier == service.identifier}) {
-            _services.remove(at: idx)
+    func remove(service: OrderableService) {
+        if let idx = _orderableServices.index(where: {$0.service.identifier == service.service.identifier}) {
+            _orderableServices.remove(at: idx)
         }
     }
     
@@ -47,19 +47,23 @@ extension Order {
     ///
     /// - Parameter service: service to check
     /// - Returns: True = exists, false otherwise
-    func contains(service: Service) -> Bool {
-        return _services.index(where: {$0.identifier == service.identifier}) != nil
+    func contains(service: OrderableService) -> Bool {
+        return _orderableServices.index(where: {$0.service.identifier == service.service.identifier}) != nil
     }
     
     /// Services hired
     ///
     /// - Returns: services
+    func orderableServices() -> [OrderableService] {
+        return _orderableServices
+    }
+    
     func services() -> [Service] {
-        return _services
+        return _orderableServices.map{$0.service}
     }
 
     /// Remove services with amount = 0
     func removeEmptyServices() {
-        _services = _services.filter { $0.amount > 0 }
+        _orderableServices = _orderableServices.filter { $0.service.amount > 0 }
     }
 }

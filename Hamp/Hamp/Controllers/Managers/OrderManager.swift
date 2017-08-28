@@ -23,8 +23,8 @@ extension OrderManager {
     /// Add service to order if not exists
     ///
     /// - Parameter service: service to add
-    func addIfNotExists(service: Service) {
-        if !order.contains(service: service), service.amount > 0 {
+    func addIfNotExists(service: OrderableService) {
+        if !order.contains(service: service), service.service.amount > 0 {
             order.add(service: service)
         }
         
@@ -35,8 +35,8 @@ extension OrderManager {
     /// Remove service from order if exists
     ///
     /// - Parameter service: service to remove
-    func deleteServiceIfAmountZero(service: Service) {
-        if order.contains(service: service), service.amount == 0 {
+    func deleteServiceIfAmountZero(service: OrderableService) {
+        if order.contains(service: service), service.service.amount == 0 {
              order.remove(service: service)
         }
         
@@ -61,8 +61,8 @@ extension OrderManager {
     /// Differents services hired
     ///
     /// - Returns: services hired
-    func servicesHired() -> [Service] {
-        return order.services()
+    func servicesHired() -> [OrderableService] {
+        return order.orderableServices()
     }
 }
 

@@ -52,7 +52,7 @@ extension ServiceDetailViewController: AmountSelectionViewDelegate {
         view.updateAmount(with: orderService.service.amount)
         updatePriceLabel()
         
-        orderManager.deleteServiceIfAmountZero(service: orderService.service)
+        orderManager.deleteServiceIfAmountZero(service: orderService)
     }
     
     func addWasPressed(on view: AmountSelectionView) {
@@ -61,7 +61,7 @@ extension ServiceDetailViewController: AmountSelectionViewDelegate {
         view.updateAmount(with: orderService.service.amount)
         updatePriceLabel()
         
-        orderManager.addIfNotExists(service: orderService.service)
+        orderManager.addIfNotExists(service: orderService)
     }
     
     func initialAmount() -> Int {
