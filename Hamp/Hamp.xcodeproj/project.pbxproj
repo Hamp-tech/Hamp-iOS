@@ -15,7 +15,6 @@
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
-		4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */; };
 		4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */; };
 		4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
@@ -33,7 +32,6 @@
 		4E4496561F45EDEC00C5EE99 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496551F45EDEC00C5EE99 /* OrderManager.swift */; };
 		4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */; };
 		4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */; };
-		4E46C8B81F44CED40051BF84 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B71F44CED40051BF84 /* BasketButton.swift */; };
 		4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */; };
 		4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */; };
 		4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */; };
@@ -52,11 +50,14 @@
 		4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */; };
 		4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */; };
 		4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535F1F37D982006382B4 /* SignUpContentable.swift */; };
-		4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
-		4E7D94E51F23852800C7BB4B /* HorizontalCircleGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
-		4E7DF3A01F54B6C900C1A180 /* HorizontalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */; };
+		4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */; };
+		4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */; };
+		4E7DF3C61F54C93800C1A180 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C21F54C8ED00C1A180 /* GradientStatesButton.swift */; };
+		4E7DF3C71F54C93800C1A180 /* HorizontalCircleGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3BF1F54C8ED00C1A180 /* HorizontalCircleGradientButton.swift */; };
+		4E7DF3C81F54C93800C1A180 /* HorizontalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C01F54C8ED00C1A180 /* HorizontalGradientButton.swift */; };
+		4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C11F54C8ED00C1A180 /* VerticalGradientButton.swift */; };
 		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
 		4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */; };
@@ -75,7 +76,6 @@
 		4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */; };
 		4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */; };
 		4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAD5C51F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift */; };
-		4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */; };
 		4EC0BD2C1F4C3EBB0077DD92 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0BD2A1F4C3EBB0077DD92 /* Tutorial.storyboard */; };
 		4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0BD2E1F4C443A0077DD92 /* TutorialViewController.swift */; };
 		4EC0BD311F4C69830077DD92 /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0BD301F4C69830077DD92 /* ClosedRange+Clamp.swift */; };
@@ -137,7 +137,6 @@
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
-		4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientButton.swift; sourceTree = "<group>"; };
 		4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingBarButtonItem.swift; sourceTree = "<group>"; };
 		4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
@@ -156,7 +155,6 @@
 		4E4496551F45EDEC00C5EE99 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderViewController.swift; sourceTree = "<group>"; };
 		4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LargeTitlesRightBarButton.swift"; sourceTree = "<group>"; };
-		4E46C8B71F44CED40051BF84 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
 		4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarRightButtonsFactory.swift; sourceTree = "<group>"; };
 		4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRoundLabel.swift; sourceTree = "<group>"; };
 		4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
@@ -179,11 +177,14 @@
 		4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBaseTableViewCell.swift; sourceTree = "<group>"; };
 		4E72535D1F37D535006382B4 /* SignUpCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellFactory.swift; sourceTree = "<group>"; };
 		4E72535F1F37D982006382B4 /* SignUpContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContentable.swift; sourceTree = "<group>"; };
-		4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCircleGradientButton.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
+		4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
+		4E7DF3BF1F54C8ED00C1A180 /* HorizontalCircleGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCircleGradientButton.swift; sourceTree = "<group>"; };
+		4E7DF3C01F54C8ED00C1A180 /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
+		4E7DF3C11F54C8ED00C1A180 /* VerticalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientButton.swift; sourceTree = "<group>"; };
+		4E7DF3C21F54C8ED00C1A180 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
+		4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
 		4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTableViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +203,6 @@
 		4EBAD5C11F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailPaymentSectionView.swift; sourceTree = "<group>"; };
 		4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerView.swift; sourceTree = "<group>"; };
 		4EBAD5C51F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailDeliveryCodeSectionView.swift; sourceTree = "<group>"; };
-		4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStatesButton.swift; sourceTree = "<group>"; };
 		4EC0BD2B1F4C3EBB0077DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tutorial.storyboard; sourceTree = "<group>"; };
 		4EC0BD2E1F4C443A0077DD92 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		4EC0BD301F4C69830077DD92 /* ClosedRange+Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Clamp.swift"; sourceTree = "<group>"; };
@@ -467,6 +467,19 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4E7DF3B71F54C8BE00C1A180 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */,
+				4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */,
+				4E7DF3C21F54C8ED00C1A180 /* GradientStatesButton.swift */,
+				4E7DF3BF1F54C8ED00C1A180 /* HorizontalCircleGradientButton.swift */,
+				4E7DF3C01F54C8ED00C1A180 /* HorizontalGradientButton.swift */,
+				4E7DF3C11F54C8ED00C1A180 /* VerticalGradientButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		4E7E32F01F41F1F8009C0099 /* TabBar Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,19 +528,6 @@
 				4EC0BD2E1F4C443A0077DD92 /* TutorialViewController.swift */,
 			);
 			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		4EC2CE7D1F478F0E002439CD /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				4EBCA5DD1F3C0D5E00F854E2 /* GradientStatesButton.swift */,
-				4E46C8B71F44CED40051BF84 /* BasketButton.swift */,
-				4E7253611F37DBB8006382B4 /* CheckBoxButton.swift */,
-				4E19086B1F47029B0036EC87 /* VerticalGradientButton.swift */,
-				4E7D94E41F23852800C7BB4B /* HorizontalCircleGradientButton.swift */,
-				4E7DF39F1F54B6C900C1A180 /* HorizontalGradientButton.swift */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		4EC2CE7E1F478F30002439CD /* Layers */ = {
@@ -659,9 +659,9 @@
 		4EDF10051F236E21007E15E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E7DF3B71F54C8BE00C1A180 /* Buttons */,
 				4E6A08811F251B170044570C /* IB */,
 				4EC2CE7E1F478F30002439CD /* Layers */,
-				4EC2CE7D1F478F0E002439CD /* Buttons */,
 				4EC2CE7F1F478F44002439CD /* Textfields */,
 				4EC2CE801F478F66002439CD /* UIViews */,
 				4EC2CE851F478FAC002439CD /* Toolbars */,
@@ -933,6 +933,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */,
+				4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */,
+				4E7DF3C61F54C93800C1A180 /* GradientStatesButton.swift in Sources */,
+				4E7DF3C71F54C93800C1A180 /* HorizontalCircleGradientButton.swift in Sources */,
+				4E7DF3C81F54C93800C1A180 /* HorizontalGradientButton.swift in Sources */,
+				4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */,
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
@@ -952,7 +958,6 @@
 				4EC0BD311F4C69830077DD92 /* ClosedRange+Clamp.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
-				4E19086C1F47029B0036EC87 /* VerticalGradientButton.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
@@ -964,7 +969,6 @@
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
-				4E46C8B81F44CED40051BF84 /* BasketButton.swift in Sources */,
 				4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */,
@@ -988,12 +992,8 @@
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
 				4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */,
-				4EBCA5DE1F3C0D5E00F854E2 /* GradientStatesButton.swift in Sources */,
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
-				4E7DF3A01F54B6C900C1A180 /* HorizontalGradientButton.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
-				4E7D94E51F23852800C7BB4B /* HorizontalCircleGradientButton.swift in Sources */,
-				4E7253621F37DBB9006382B4 /* CheckBoxButton.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
