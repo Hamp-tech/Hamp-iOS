@@ -19,6 +19,7 @@ class ServicesOrderCollectionViewCell: ReusableCollectionViewCell {
     @IBOutlet weak private var amountLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var priceLabel: UILabel!
+    @IBOutlet weak var serviceImageView: UIImageView!
     
     //MARK: Properties
     var orderableService: OrderableService!
@@ -36,6 +37,7 @@ class ServicesOrderCollectionViewCell: ReusableCollectionViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         nameLabel.text = orderableService.service.name
+        serviceImageView.image = UIImage.init(named: orderableService.imageName)
         needsUpdateUI()
     }
     
