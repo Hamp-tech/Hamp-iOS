@@ -134,6 +134,7 @@
                 <outlet property="amountLabel" destination="V0E-vw-2e7" id="dNb-nQ-P07"/>
                 <outlet property="nameLabel" destination="RNp-wi-aD0" id="OK3-p7-E3G"/>
                 <outlet property="priceLabel" destination="Xi2-Oy-gAF" id="xMV-lQ-nyF"/>
+                <outlet property="serviceImageView" destination="p0T-y9-LVP" id="Cuk-R6-bye"/>
             </connections>
             <point key="canvasLocation" x="66.5" y="11.5"/>
         </collectionViewCell>
