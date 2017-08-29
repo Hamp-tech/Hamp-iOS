@@ -193,6 +193,12 @@
 		4E871D171F4AF8D50028DA0D /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		4E88B6E91F4AE9930005838F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIGraphManager.swift; sourceTree = "<group>"; };
+		4E8EE2451F55E39C00B5F06C /* DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
+		4E8EE2471F55E39C00B5F06C /* DynamicDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDataSource.swift; sourceTree = "<group>"; };
+		4E8EE2481F55E39C00B5F06C /* DynamicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicRow.swift; sourceTree = "<group>"; };
+		4E8EE2491F55E39C00B5F06C /* DynamicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewController.swift; sourceTree = "<group>"; };
+		4E8EE24A1F55E39C00B5F06C /* DynamicSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSection.swift; sourceTree = "<group>"; };
+		4E8EE24C1F55E39C00B5F06C /* DynamicRowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicRowable.swift; sourceTree = "<group>"; };
 		4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesOrderCollectionViewCell.xib; sourceTree = "<group>"; };
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -513,6 +519,7 @@
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4E8EE23A1F55E2F600B5F06C /* Dynamic tableview */,
 				4E47866D1F30DA67007ABE00 /* Validation */,
 				4ECFFAA11F30BDF70043D4B5 /* Localization */,
 				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
@@ -520,6 +527,44 @@
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4E8EE23A1F55E2F600B5F06C /* Dynamic tableview */ = {
+			isa = PBXGroup;
+			children = (
+				4E8EE2461F55E39C00B5F06C /* Classes */,
+				4E8EE24B1F55E39C00B5F06C /* Protocols */,
+				4E8EE2441F55E39C00B5F06C /* Types */,
+			);
+			path = "Dynamic tableview";
+			sourceTree = "<group>";
+		};
+		4E8EE2441F55E39C00B5F06C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4E8EE2451F55E39C00B5F06C /* DynamicType.swift */,
+			);
+			name = Types;
+			path = ../../../../../../Dev/iOS/DynamicTableViewController/DynamicTableViewController/Source/Types;
+			sourceTree = "<group>";
+		};
+		4E8EE2461F55E39C00B5F06C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E8EE2471F55E39C00B5F06C /* DynamicDataSource.swift */,
+				4E8EE2481F55E39C00B5F06C /* DynamicRow.swift */,
+				4E8EE2491F55E39C00B5F06C /* DynamicTableViewController.swift */,
+				4E8EE24A1F55E39C00B5F06C /* DynamicSection.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4E8EE24B1F55E39C00B5F06C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4E8EE24C1F55E39C00B5F06C /* DynamicRowable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4EC0BD2D1F4C3F330077DD92 /* Tutorial */ = {

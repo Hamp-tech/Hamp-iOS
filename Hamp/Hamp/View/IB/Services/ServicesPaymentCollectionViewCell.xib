@@ -22,6 +22,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="9VO-TN-w3F">
                         <rect key="frame" x="20" y="17" width="39" height="27"/>
+                        <color key="tintColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="39" id="fJx-7f-O4v"/>
                             <constraint firstAttribute="height" constant="27" id="gET-YE-EnN"/>
