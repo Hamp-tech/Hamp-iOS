@@ -11,7 +11,7 @@ import UIKit
 class HistoryViewController: HampTableViewController {
 
     let history = 1
-    let rowHeight: CGFloat = 87
+    let rowHeight: CGFloat = 89
     
     //MARK: Life cycle
     override func viewDidLoad() {
