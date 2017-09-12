@@ -43,15 +43,15 @@
                         <rect key="frame" x="39" y="8" width="265" height="137.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/1900" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab9-3K-E1B">
-                                <rect key="frame" x="29" y="11" width="179" height="24"/>
+                                <rect key="frame" x="29" y="11" width="165" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC3-p3-IEm">
-                                <rect key="frame" x="211" y="11" width="40" height="24"/>
+                                <rect key="frame" x="204" y="11" width="47" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="gwQ-fb-0oq"/>
+                                    <constraint firstAttribute="width" constant="47" id="gwQ-fb-0oq"/>
                                     <constraint firstAttribute="height" constant="24" id="wxu-AI-cJ4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="18"/>
@@ -70,7 +70,7 @@
                             <constraint firstAttribute="trailing" secondItem="tQQ-yb-Yzw" secondAttribute="trailing" constant="14" id="9ZY-dr-6m4"/>
                             <constraint firstItem="tQQ-yb-Yzw" firstAttribute="leading" secondItem="HPd-g0-8Aa" secondAttribute="leading" constant="29" id="Msv-Kd-rEP"/>
                             <constraint firstItem="ab9-3K-E1B" firstAttribute="top" secondItem="HPd-g0-8Aa" secondAttribute="top" constant="11" id="U98-o1-j4i"/>
-                            <constraint firstItem="qC3-p3-IEm" firstAttribute="leading" secondItem="ab9-3K-E1B" secondAttribute="trailing" constant="3" id="Zeh-Mp-Xha"/>
+                            <constraint firstItem="qC3-p3-IEm" firstAttribute="leading" secondItem="ab9-3K-E1B" secondAttribute="trailing" constant="10" id="Zeh-Mp-Xha"/>
                             <constraint firstItem="tQQ-yb-Yzw" firstAttribute="top" secondItem="ab9-3K-E1B" secondAttribute="bottom" constant="11" id="l79-Xt-Rzm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

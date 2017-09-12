@@ -30,7 +30,8 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        //TODO: Add date and order amount to transaction
+        dateLabel.text = booking.transaction?.date
+        priceLabel.text = "\(booking.transaction!.payment!)€"
         
         setupLeftSeparator()
         createServicesHiredSubviews()
