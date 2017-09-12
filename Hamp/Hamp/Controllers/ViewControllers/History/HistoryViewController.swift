@@ -10,15 +10,18 @@ import UIKit
 
 class HistoryViewController: HampTableViewController {
 
-    let rowHeight: CGFloat = 89
+    // MARK : - Properties
     var dataProvider: HistoryProvider!
+    private var cellSizeCalculator: HistoryCellSizeCalculator!
+    
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         precondition(dataProvider != nil, "Provide a data provider")
-        
+        cellSizeCalculator = HistoryCellSizeCalculator.init(topMargin: 8, bottomMargin: 8)
+
         setupTableView()
     }
     
@@ -34,18 +37,18 @@ private extension HistoryViewController {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView.init()
         tableView.registerReusableCell(HistoryTableViewCell.self)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44
         tableView.showsVerticalScrollIndicator = false
-//        tableView.alwaysBounceVertical = false //Has a ui problem when rows count = 5
+        tableView.alwaysBounceVertical = false //Has a ui problem when rows count = 5
         
         let bottomInfiniteLine = UIView.init()
         bottomInfiniteLine.backgroundColor = UIColor.darkPink
         bottomInfiniteLine.translatesAutoresizingMaskIntoConstraints = false
-        tableView.addSubview(bottomInfiniteLine)
+        view.insertSubview(bottomInfiniteLine, at: 0)
+        
+        let topAnchorMargin =  dataProvider.bookings.reduce(0) {(initial, next) in return initial + cellSizeCalculator.height(by: next)}
         
         NSLayoutConstraint.activate([
-            bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: rowHeight*CGFloat.init(dataProvider.bookings.count)),
+            bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: topAnchorMargin),
             bottomInfiniteLine.widthAnchor.constraint(equalToConstant: 2),
             bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  1000),
             bottomInfiniteLine.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 20)
@@ -69,5 +72,9 @@ extension HistoryViewController {
 extension HistoryViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showHistoryDetail", sender: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellSizeCalculator.height(by: dataProvider.bookings[indexPath.row])
     }
 }

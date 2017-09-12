@@ -17,6 +17,7 @@
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
 		4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC581F67CB050096659F /* DataProvider.swift */; };
 		4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */; };
+		4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */; };
 		4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */; };
 		4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
@@ -143,6 +144,7 @@
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
 		4E1DFC581F67CB050096659F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersManager.swift; sourceTree = "<group>"; };
+		4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellSizeCalculator.swift; sourceTree = "<group>"; };
 		4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingBarButtonItem.swift; sourceTree = "<group>"; };
 		4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
@@ -286,6 +288,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1DFC5C1F67E9430096659F /* SizeCalculators */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */,
+			);
+			path = SizeCalculators;
+			sourceTree = "<group>";
+		};
+		4E1DFC5D1F67E9670096659F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DFC5C1F67E9430096659F /* SizeCalculators */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		4E22CF671F38F74900EEC314 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +409,7 @@
 			children = (
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
 				4EC6361D1F43ACEA0045520F /* Controllers */,
+				4E1DFC5D1F67E9670096659F /* Layout */,
 				4E632E271F26508000CDE02D /* Factories */,
 				4EE5F1161F4AD5D70056AA2C /* Providers */,
 				4EDF102C1F237E03007E15E9 /* Model */,
@@ -1081,6 +1100,7 @@
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
 				4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
+				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
 				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
 			);
