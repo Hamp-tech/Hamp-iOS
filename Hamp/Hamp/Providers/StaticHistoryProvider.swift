@@ -12,7 +12,7 @@ import HampKit
 class StaticHistoryProvider: HistoryProvider {
     
     // MARK: - Properties
-    var bookings: [HampBooking]?
+    var bookings: [HampBooking] = []
     
     // MARK: - API
     func download() {
@@ -31,8 +31,7 @@ class StaticHistoryProvider: HistoryProvider {
             deliveryLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "1111"),
             collectionLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "2222"))
         
-
-        bookings = [b1, b2, b3]
+        bookings.append(contentsOf: [b1, b2, b3])
     }
     
     
