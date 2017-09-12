@@ -65,6 +65,7 @@ extension HistoryViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
+        cell.booking = dataProvider.bookings[indexPath.row]
         return cell
     }
 }

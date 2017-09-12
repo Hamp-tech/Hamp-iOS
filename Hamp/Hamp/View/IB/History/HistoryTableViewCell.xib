@@ -58,13 +58,20 @@
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tQQ-yb-Yzw">
+                                <rect key="frame" x="29" y="46" width="222" height="80.5"/>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="qC3-p3-IEm" firstAttribute="top" secondItem="HPd-g0-8Aa" secondAttribute="top" constant="11" id="4aY-hM-usM"/>
+                            <constraint firstAttribute="bottom" secondItem="tQQ-yb-Yzw" secondAttribute="bottom" constant="11" id="7hy-4H-JeV"/>
                             <constraint firstAttribute="trailing" secondItem="qC3-p3-IEm" secondAttribute="trailing" constant="14" id="8Lr-ax-IJ4"/>
                             <constraint firstItem="ab9-3K-E1B" firstAttribute="leading" secondItem="HPd-g0-8Aa" secondAttribute="leading" constant="29" id="8re-4g-aua"/>
+                            <constraint firstAttribute="trailing" secondItem="tQQ-yb-Yzw" secondAttribute="trailing" constant="14" id="9ZY-dr-6m4"/>
+                            <constraint firstItem="tQQ-yb-Yzw" firstAttribute="leading" secondItem="HPd-g0-8Aa" secondAttribute="leading" constant="29" id="Msv-Kd-rEP"/>
                             <constraint firstItem="ab9-3K-E1B" firstAttribute="top" secondItem="HPd-g0-8Aa" secondAttribute="top" constant="11" id="U98-o1-j4i"/>
                             <constraint firstItem="qC3-p3-IEm" firstAttribute="leading" secondItem="ab9-3K-E1B" secondAttribute="trailing" constant="3" id="Zeh-Mp-Xha"/>
+                            <constraint firstItem="tQQ-yb-Yzw" firstAttribute="top" secondItem="ab9-3K-E1B" secondAttribute="bottom" constant="11" id="l79-Xt-Rzm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -93,6 +100,7 @@
                 <outlet property="dateLabel" destination="ab9-3K-E1B" id="8dd-U8-iW7"/>
                 <outlet property="labelView" destination="HPd-g0-8Aa" id="Ceh-fB-hTn"/>
                 <outlet property="priceLabel" destination="qC3-p3-IEm" id="gZ6-kO-wW9"/>
+                <outlet property="servicesHiredStackView" destination="tQQ-yb-Yzw" id="LQn-5P-1FZ"/>
             </connections>
             <point key="canvasLocation" x="39" y="-1"/>
         </tableViewCell>
