@@ -10,12 +10,15 @@ import UIKit
 
 class HistoryViewController: HampTableViewController {
 
-    let history = 1
     let rowHeight: CGFloat = 89
+    var dataProvider: HistoryProvider!
     
     //MARK: Life cycle
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
+        
+        precondition(dataProvider != nil, "Provide a data provider")
+        
         setupTableView()
     }
 }
@@ -26,9 +29,10 @@ private extension HistoryViewController {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView.init()
         tableView.registerReusableCell(HistoryTableViewCell.self)
-        tableView.rowHeight = rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
         tableView.showsVerticalScrollIndicator = false
-        tableView.alwaysBounceVertical = false //Has a ui problem when rows count = 5
+//        tableView.alwaysBounceVertical = false //Has a ui problem when rows count = 5
         
         let bottomInfiniteLine = UIView.init()
         bottomInfiniteLine.backgroundColor = UIColor.darkPink
@@ -36,7 +40,7 @@ private extension HistoryViewController {
         tableView.addSubview(bottomInfiniteLine)
         
         NSLayoutConstraint.activate([
-            bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: rowHeight*CGFloat.init(history)),
+            bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: rowHeight*CGFloat.init(dataProvider.bookings.count)),
             bottomInfiniteLine.widthAnchor.constraint(equalToConstant: 2),
             bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  1000),
             bottomInfiniteLine.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 20)
@@ -48,7 +52,7 @@ extension HistoryViewController {
    
     //MARK: TableView datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return history
+        return dataProvider.bookings.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
