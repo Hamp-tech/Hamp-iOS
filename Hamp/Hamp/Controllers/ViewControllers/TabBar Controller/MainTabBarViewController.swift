@@ -10,6 +10,11 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        injectPropertiesToViewControllers()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if FirstTimeActionsManager.needsExecuteAction(by: .presentNewCreditCard) {
@@ -22,5 +27,12 @@ class MainTabBarViewController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         selectedIndex = 1
+    }
+}
+
+private extension MainTabBarViewController {
+    func injectPropertiesToViewControllers() {
+        let historyViewController = ((viewControllers?.first as! UINavigationController).topViewController as! HistoryViewController)
+        historyViewController.dataProvider = ProvidersManager.sharedInstance.historyProvider
     }
 }
