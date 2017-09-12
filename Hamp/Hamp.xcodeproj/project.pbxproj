@@ -16,6 +16,7 @@
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
 		4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC581F67CB050096659F /* DataProvider.swift */; };
+		4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */; };
 		4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */; };
 		4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
@@ -141,6 +142,7 @@
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
 		4E1DFC581F67CB050096659F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersManager.swift; sourceTree = "<group>"; };
 		4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingBarButtonItem.swift; sourceTree = "<group>"; };
 		4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 			children = (
 				4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */,
 				4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */,
+				4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1078,6 +1081,7 @@
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
 				4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
+				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

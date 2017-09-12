@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FabricManager.configure()
         
+        ProvidersManager.sharedInstance.downloadProvidersData()
+        
         self.showMainViewController()
         
         return true
