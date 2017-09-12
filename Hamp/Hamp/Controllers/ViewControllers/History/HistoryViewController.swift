@@ -14,12 +14,17 @@ class HistoryViewController: HampTableViewController {
     var dataProvider: HistoryProvider!
     
     //MARK: Life cycle
-    override func viewDidLoad() { 
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         precondition(dataProvider != nil, "Provide a data provider")
         
         setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 }
 
