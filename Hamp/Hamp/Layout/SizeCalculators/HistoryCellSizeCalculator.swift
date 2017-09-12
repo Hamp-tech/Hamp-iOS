@@ -13,8 +13,16 @@ struct HistoryCellSizeCalculator {
     
     var topMargin: CGFloat
     var bottomMargin: CGFloat
+    private var staticLabelsHeight: CGFloat = 35
+    
+    init(topMargin: CGFloat, bottomMargin: CGFloat) {
+        self.topMargin = topMargin
+        self.bottomMargin = bottomMargin
+    }
     
     func height(by booking: HampBooking) -> CGFloat {
-        return topMargin + 89 + bottomMargin
+        let servicesHired = booking.transaction?.order?.servicesHired()
+        let orderServicesSizeAmount = staticLabelsHeight*CGFloat.init(servicesHired!)
+        return topMargin + staticLabelsHeight + orderServicesSizeAmount + bottomMargin
     }
 }
