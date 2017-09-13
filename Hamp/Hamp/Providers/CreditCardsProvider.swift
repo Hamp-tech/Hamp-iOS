@@ -19,7 +19,7 @@ class CreditCardsProvider {
 private extension CreditCardsProvider {
     static func fetchCreditCards() -> [HampCreditCard] {
         var cards = [HampCreditCard]()
-        cards.append(HampCreditCard.init(identifier: "123456789", number: "4242424242424242", name: "Joan Molinas Ramon", month: "12", year: "21", cvv: "123"))
+        cards.append(try! HampCreditCard.init(identifier: "123456789", number: "4242424242424242", name: "Joan Molinas Ramon", month: "12", year: "21", cvv: "123"))
         return cards
     }
 }

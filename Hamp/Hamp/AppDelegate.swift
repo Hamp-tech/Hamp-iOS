@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FabricManager.configure()
         
+        ProvidersManager.sharedInstance.downloadProvidersData()
+        
         self.showMainViewController()
         
         return true
@@ -32,14 +34,14 @@ private extension AppDelegate {
         var identifier: String
         var storyboardName: String
         
-        if let _ = Hamp.Auth.user() {
+//        if let _ = Hamp.Auth.user() {
             identifier = tabBarNavigationViewControllerIdentifier
             storyboardName = "TabBar"
-        } else {
-            identifier = loginViewControllerIdentifier
-            storyboardName = "Login"
-        }
-    
+//        } else {
+//            identifier = loginViewControllerIdentifier
+//            storyboardName = "Login"
+//        }
+
         let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
         

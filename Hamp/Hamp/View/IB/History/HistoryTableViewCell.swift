@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import HampKit
 
 class HistoryTableViewCell: UITableViewCell, Reusable {
 
     
-    //MARK: Properties
-    @IBOutlet weak var labelView: UIView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    // MARK: - IB Properties
+    @IBOutlet private weak var labelView: UIView!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var servicesHiredStackView: UIStackView!
     
-    //MARK: Life cycle
+    // MARK: - Properties
+    var booking: HampBooking!
+    
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
@@ -24,12 +29,17 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        
+        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: booking.transaction!.date!)
+        priceLabel.text = "\(Int.init(booking.transaction!.payment!))€"
+        
         setupLeftSeparator()
+        createServicesHiredSubviews()
     }
 }
 
 private extension HistoryTableViewCell {
-    //MARK: Private
+    // MARK: - Private
     func setupLeftSeparator() {
         let auxiliarViewToShowLeftSeparator = UIView.init(frame: labelView.bounds)
         auxiliarViewToShowLeftSeparator.cornerRadius = 9
@@ -41,5 +51,20 @@ private extension HistoryTableViewCell {
         separator.backgroundColor = UIColor.darkPink
         separator.layer.masksToBounds = true
         auxiliarViewToShowLeftSeparator.addSubview(separator)
+    }
+    
+    func createServicesHiredSubviews() {
+        guard let order = booking.transaction?.order else { return }
+        order.servicesHired().forEach {
+            let label = stackServicesDefaultLabel()
+            label.text = "\($0)"
+            servicesHiredStackView.addArrangedSubview(label)
+        }
+    }
+    
+    func stackServicesDefaultLabel() -> UILabel {
+        let label = UILabel.init()
+        label.textColor = UIColor.lightGray
+        return label
     }
 }

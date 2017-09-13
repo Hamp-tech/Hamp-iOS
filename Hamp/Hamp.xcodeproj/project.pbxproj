@@ -15,6 +15,9 @@
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
+		4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC581F67CB050096659F /* DataProvider.swift */; };
+		4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */; };
+		4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */; };
 		4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */; };
 		4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */; };
 		4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */; };
@@ -68,6 +71,9 @@
 		4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */; };
 		4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */; };
 		4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */; };
+		4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */; };
+		4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA501F671810003DAA28 /* HistoryProvider.swift */; };
+		4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E965C391F690AC600AF61E8 /* DateConverter.swift */; };
 		4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DA1F45C271006F3BA7 /* Service.swift */; };
 		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
@@ -137,6 +143,9 @@
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
+		4E1DFC581F67CB050096659F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersManager.swift; sourceTree = "<group>"; };
+		4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellSizeCalculator.swift; sourceTree = "<group>"; };
 		4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingBarButtonItem.swift; sourceTree = "<group>"; };
 		4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParentViewController.swift"; sourceTree = "<group>"; };
 		4E22CF591F3886D100EEC314 /* UIAlertController+AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertAction.swift"; sourceTree = "<group>"; };
@@ -201,6 +210,9 @@
 		4E8EE24C1F55E39C00B5F06C /* DynamicRowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicRowable.swift; sourceTree = "<group>"; };
 		4E901D2A1F461A490079696D /* ServicesOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesOrderCollectionViewCell.xib; sourceTree = "<group>"; };
+		4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHistoryProvider.swift; sourceTree = "<group>"; };
+		4E90CA501F671810003DAA28 /* HistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProvider.swift; sourceTree = "<group>"; };
+		4E965C391F690AC600AF61E8 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
@@ -278,6 +290,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1DFC5C1F67E9430096659F /* SizeCalculators */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */,
+			);
+			path = SizeCalculators;
+			sourceTree = "<group>";
+		};
+		4E1DFC5D1F67E9670096659F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DFC5C1F67E9430096659F /* SizeCalculators */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		4E22CF671F38F74900EEC314 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +342,8 @@
 				4E72535F1F37D982006382B4 /* SignUpContentable.swift */,
 				4ECA351B1F4498640031580B /* OrderableService.swift */,
 				4EB242DA1F45C271006F3BA7 /* Service.swift */,
+				4E90CA501F671810003DAA28 /* HistoryProvider.swift */,
+				4E1DFC581F67CB050096659F /* DataProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -381,6 +411,7 @@
 			children = (
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
 				4EC6361D1F43ACEA0045520F /* Controllers */,
+				4E1DFC5D1F67E9670096659F /* Layout */,
 				4E632E271F26508000CDE02D /* Factories */,
 				4EE5F1161F4AD5D70056AA2C /* Providers */,
 				4EDF102C1F237E03007E15E9 /* Model */,
@@ -525,6 +556,7 @@
 				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
 				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
+				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -633,6 +665,7 @@
 			children = (
 				4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */,
 				4EDF250B1F45E67F00CC29A0 /* OrderManager.swift */,
+				4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -739,6 +772,7 @@
 			children = (
 				4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */,
 				4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */,
+				4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -984,8 +1018,10 @@
 				4E7DF3C71F54C93800C1A180 /* HorizontalCircleGradientButton.swift in Sources */,
 				4E7DF3C81F54C93800C1A180 /* HorizontalGradientButton.swift in Sources */,
 				4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */,
+				4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */,
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
+				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
@@ -1009,6 +1045,7 @@
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
 				4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */,
+				4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */,
 				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
@@ -1040,6 +1077,7 @@
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
+				4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
@@ -1066,6 +1104,8 @@
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
 				4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
+				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
+				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
