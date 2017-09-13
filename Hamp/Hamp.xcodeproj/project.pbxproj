@@ -73,6 +73,7 @@
 		4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */; };
 		4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */; };
 		4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA501F671810003DAA28 /* HistoryProvider.swift */; };
+		4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E965C391F690AC600AF61E8 /* DateConverter.swift */; };
 		4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DA1F45C271006F3BA7 /* Service.swift */; };
 		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
@@ -211,6 +212,7 @@
 		4E901D2B1F461A490079696D /* ServicesOrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesOrderCollectionViewCell.xib; sourceTree = "<group>"; };
 		4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHistoryProvider.swift; sourceTree = "<group>"; };
 		4E90CA501F671810003DAA28 /* HistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProvider.swift; sourceTree = "<group>"; };
+		4E965C391F690AC600AF61E8 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
 				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
+				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 				4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */,
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
+				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,

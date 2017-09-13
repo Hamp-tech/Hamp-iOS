@@ -30,8 +30,8 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        dateLabel.text = booking.transaction?.date
-        priceLabel.text = "\(booking.transaction!.payment!)€"
+        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: booking.transaction!.date!)
+        priceLabel.text = "\(Int.init(booking.transaction!.payment!))€"
         
         setupLeftSeparator()
         createServicesHiredSubviews()
