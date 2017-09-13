@@ -57,7 +57,7 @@ private extension HistoryTableViewCell {
         guard let order = booking.transaction?.order else { return }
         order.servicesHired().forEach {
             let label = stackServicesDefaultLabel()
-            label.text = "- \($0)"
+            label.text = "\($0)"
             servicesHiredStackView.addArrangedSubview(label)
         }
     }
