@@ -42,7 +42,6 @@ public class PulleyViewController: HampViewController {
     // Internal
     private let primaryContentContainer: UIView = UIView()
     private let drawerContentContainer: UIView = UIView()
-    private let drawerShadowView: UIView = UIView()
     private let drawerScrollView: PulleyPassthroughScrollView = PulleyPassthroughScrollView()
     
     private var lastDragTargetContentOffset: CGPoint = CGPoint.zero
@@ -132,7 +131,6 @@ public class PulleyViewController: HampViewController {
             
             if let drawerBackgroundVisualEffectView = drawerBackgroundVisualEffectView, self.isViewLoaded
             {
-                drawerScrollView.insertSubview(drawerBackgroundVisualEffectView, aboveSubview: drawerShadowView)
                 drawerBackgroundVisualEffectView.clipsToBounds = true
                 drawerBackgroundVisualEffectView.layer.cornerRadius = drawerCornerRadius
             }
@@ -266,15 +264,9 @@ public class PulleyViewController: HampViewController {
         drawerScrollView.scrollsToTop = false
         drawerScrollView.touchDelegate = self
         
-        drawerShadowView.layer.shadowOpacity = shadowOpacity
-        drawerShadowView.layer.shadowRadius = shadowRadius
-        drawerShadowView.backgroundColor = UIColor.clear
-        
         drawerContentContainer.backgroundColor = UIColor.clear
         
         drawerBackgroundVisualEffectView?.clipsToBounds = true
-        
-        drawerScrollView.addSubview(drawerShadowView)
         
         if let drawerBackgroundVisualEffectView = drawerBackgroundVisualEffectView
         {
@@ -369,7 +361,6 @@ public class PulleyViewController: HampViewController {
         
         drawerContentContainer.frame = CGRect(x: 0, y: drawerScrollView.bounds.height - lowestStop, width: drawerScrollView.bounds.width, height: drawerScrollView.bounds.height + bounceOverflowMargin)
         drawerBackgroundVisualEffectView?.frame = drawerContentContainer.frame
-        drawerShadowView.frame = drawerContentContainer.frame
         drawerScrollView.contentSize = CGSize(width: drawerScrollView.bounds.width, height: (drawerScrollView.bounds.height - lowestStop) + drawerScrollView.bounds.height)
         
         // Update rounding mask and shadows
@@ -381,7 +372,6 @@ public class PulleyViewController: HampViewController {
         cardMaskLayer.fillColor = UIColor.white.cgColor
         cardMaskLayer.backgroundColor = UIColor.clear.cgColor
         drawerContentContainer.layer.mask = cardMaskLayer
-        drawerShadowView.layer.shadowPath = borderPath
         
         // Make VC views match frames
         primaryContentViewController?.view.frame = primaryContentContainer.bounds
