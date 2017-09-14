@@ -14,12 +14,12 @@ public class PulleyViewController: HampViewController {
     
     // MARK: - IB Properties
     @IBOutlet public var primaryContentContainerView: UIView!
-    @IBOutlet public var drawerContentContainerView: UIView!
+    @IBOutlet public var draggableContentContainerView: UIView!
     
     // MARK: - Properties
     private let primaryContentContainer: UIView = UIView()
-    private let drawerContentContainer: UIView = UIView()
-    private let drawerScrollView: PulleyPassthroughScrollView = PulleyPassthroughScrollView()
+    private let draggableContentContainer: UIView = UIView()
+    private let draggableScrollView: PulleyPassthroughScrollView = PulleyPassthroughScrollView()
     private var lastDragTargetContentOffset: CGPoint = CGPoint.zero
     public private(set) var primaryContentViewController: UIViewController! {
         willSet {
@@ -42,14 +42,14 @@ public class PulleyViewController: HampViewController {
             
             if self.isViewLoaded {
                 self.view.setNeedsLayout()
-                self.setNeedsSupportedDrawerPositionsUpdate()
+                self.setNeedsSupporteddraggablePositionsUpdate()
             }
         }
     }
     
-    public private(set) var drawerContentViewController: UIViewController! {
+    public private(set) var draggableContentViewController: UIViewController! {
         willSet {
-            guard let controller = drawerContentViewController else { return }
+            guard let controller = draggableContentViewController else { return }
             
             controller.view.removeFromSuperview()
             controller.willMove(toParentViewController: nil)
@@ -57,22 +57,22 @@ public class PulleyViewController: HampViewController {
         }
         
         didSet {
-            guard let controller = drawerContentViewController else { return }
+            guard let controller = draggableContentViewController else { return }
             
             controller.view.translatesAutoresizingMaskIntoConstraints = true
             
-            self.drawerContentContainer.addSubview(controller.view)
+            self.draggableContentContainer.addSubview(controller.view)
             self.addChildViewController(controller)
             controller.didMove(toParentViewController: self)
             
             if self.isViewLoaded {
                 self.view.setNeedsLayout()
-                self.setNeedsSupportedDrawerPositionsUpdate()
+                self.setNeedsSupporteddraggablePositionsUpdate()
             }
         }
     }
     
-    public private(set) var drawerPosition: PulleyPosition = .collapsed {
+    public private(set) var draggablePosition: PulleyPosition = .collapsed {
         didSet {
             setNeedsStatusBarAppearanceUpdate()
         }
@@ -86,39 +86,39 @@ public class PulleyViewController: HampViewController {
         }
     }
     
-    public var initialDrawerPosition: PulleyPosition = .collapsed
-    private var supportedDrawerPositions: [PulleyPosition] = PulleyPosition.all {
+    public var initialdraggablePosition: PulleyPosition = .collapsed
+    private var supporteddraggablePositions: [PulleyPosition] = PulleyPosition.all {
         didSet {
             
             guard self.isViewLoaded else { return }
             
-            guard supportedDrawerPositions.count > 0 else {
-                supportedDrawerPositions = PulleyPosition.all
+            guard supporteddraggablePositions.count > 0 else {
+                supporteddraggablePositions = PulleyPosition.all
                 return
             }
             
             self.view.setNeedsLayout()
             
-            if supportedDrawerPositions.contains(drawerPosition) {
-                setDrawerPosition(position: drawerPosition)
+            if supporteddraggablePositions.contains(draggablePosition) {
+                setdraggablePosition(position: draggablePosition)
             }
             else {
-                let lowestDrawerState: PulleyPosition = supportedDrawerPositions.min { (pos1, pos2) -> Bool in
+                let lowestdraggableState: PulleyPosition = supporteddraggablePositions.min { (pos1, pos2) -> Bool in
                     return pos1.rawValue < pos2.rawValue
                     } ?? .collapsed
                 
-                setDrawerPosition(position: lowestDrawerState, animated: false)
+                setdraggablePosition(position: lowestdraggableState, animated: false)
             }
             
-            drawerScrollView.isScrollEnabled = supportedDrawerPositions.count > 1
+            draggableScrollView.isScrollEnabled = supporteddraggablePositions.count > 1
         }
     }
     
     // MARK: - Life cycle
-    required public init(contentViewController: UIViewController, drawerViewController: UIViewController) {
+    required public init(contentViewController: UIViewController, draggableViewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         self.primaryContentViewController = contentViewController
-        self.drawerContentViewController = drawerViewController
+        self.draggableContentViewController = draggableViewController
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -130,34 +130,34 @@ public class PulleyViewController: HampViewController {
     
         if primaryContentContainerView != nil { primaryContentContainerView.removeFromSuperview() }
         
-        if drawerContentContainerView != nil { drawerContentContainerView.removeFromSuperview() }
+        if draggableContentContainerView != nil { draggableContentContainerView.removeFromSuperview() }
         
         primaryContentContainer.backgroundColor = UIColor.white
         
         definesPresentationContext = true
         
-        drawerScrollView.bounces = false
-        drawerScrollView.delegate = self
-        drawerScrollView.clipsToBounds = false
-        drawerScrollView.showsVerticalScrollIndicator = false
-        drawerScrollView.showsHorizontalScrollIndicator = false
-        drawerScrollView.delaysContentTouches = true
-        drawerScrollView.canCancelContentTouches = true
-        drawerScrollView.backgroundColor = UIColor.clear
-        drawerScrollView.decelerationRate = UIScrollViewDecelerationRateFast
-        drawerScrollView.scrollsToTop = false
-        drawerScrollView.touchDelegate = self
+        draggableScrollView.bounces = false
+        draggableScrollView.delegate = self
+        draggableScrollView.clipsToBounds = false
+        draggableScrollView.showsVerticalScrollIndicator = false
+        draggableScrollView.showsHorizontalScrollIndicator = false
+        draggableScrollView.delaysContentTouches = true
+        draggableScrollView.canCancelContentTouches = true
+        draggableScrollView.backgroundColor = UIColor.clear
+        draggableScrollView.decelerationRate = UIScrollViewDecelerationRateFast
+        draggableScrollView.scrollsToTop = false
+        draggableScrollView.touchDelegate = self
         
-        drawerContentContainer.backgroundColor = UIColor.clear
+        draggableContentContainer.backgroundColor = UIColor.clear
         
-        drawerScrollView.addSubview(drawerContentContainer)
+        draggableScrollView.addSubview(draggableContentContainer)
         
         primaryContentContainer.backgroundColor = UIColor.white
         
         self.view.backgroundColor = UIColor.white
         
         self.view.addSubview(primaryContentContainer)
-        self.view.addSubview(drawerScrollView)
+        self.view.addSubview(draggableScrollView)
     }
     
     override open func viewDidLoad() {
@@ -165,25 +165,25 @@ public class PulleyViewController: HampViewController {
         
         navigationController!.transaparentBar()
         
-        drawerContentContainerView.backgroundColor = UIColor.green
-        if primaryContentViewController == nil || drawerContentViewController == nil {
+        draggableContentContainerView.backgroundColor = UIColor.green
+        if primaryContentViewController == nil || draggableContentViewController == nil {
             for child in self.childViewControllers {
                 if child.view == primaryContentContainerView.subviews.first {
                     primaryContentViewController = child
                 }
                 
-                if child.view == drawerContentContainerView.subviews.first {
-                    drawerContentViewController = child
+                if child.view == draggableContentContainerView.subviews.first {
+                    draggableContentViewController = child
                 }
             }
         }
-        setDrawerPosition(position: initialDrawerPosition, animated: false)
+        setdraggablePosition(position: initialdraggablePosition, animated: false)
         
     }
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setNeedsSupportedDrawerPositionsUpdate()
+        setNeedsSupporteddraggablePositionsUpdate()
     }
     
     override open func viewDidLayoutSubviews() {
@@ -195,33 +195,33 @@ public class PulleyViewController: HampViewController {
         
         let lowestStop = [(self.view.bounds.size.height - topInset), collapsedHeight].min() ?? 0
         
-        if supportedDrawerPositions.contains(.open) {
-            drawerScrollView.frame = CGRect(x: 0, y: topInset, width: self.view.bounds.width, height: self.view.bounds.height - topInset)
+        if supporteddraggablePositions.contains(.open) {
+            draggableScrollView.frame = CGRect(x: 0, y: topInset, width: self.view.bounds.width, height: self.view.bounds.height - topInset)
 
         }
         
-        if drawerContentViewController != nil {
-           drawerContentContainer.frame = CGRect(x: (drawerScrollView.bounds.width-drawerContentViewController.view.bounds.size.width)/2, y: drawerScrollView.bounds.height - lowestStop, width: drawerContentViewController.view.bounds.width, height: drawerScrollView.bounds.height)
+        if draggableContentViewController != nil {
+           draggableContentContainer.frame = CGRect(x: (draggableScrollView.bounds.width-draggableContentViewController.view.bounds.size.width)/2, y: draggableScrollView.bounds.height - lowestStop, width: draggableContentViewController.view.bounds.width, height: draggableScrollView.bounds.height)
         }
         
-        drawerScrollView.contentSize = CGSize(width: drawerScrollView.bounds.width, height: (drawerScrollView.bounds.height - lowestStop) + drawerScrollView.bounds.height)
+        draggableScrollView.contentSize = CGSize(width: draggableScrollView.bounds.width, height: (draggableScrollView.bounds.height - lowestStop) + draggableScrollView.bounds.height)
         
         
         primaryContentViewController?.view.frame = primaryContentContainer.bounds
-        drawerContentViewController?.view.frame = CGRect(x: drawerContentContainer.bounds.minX, y: drawerContentContainer.bounds.minY, width: drawerContentContainer.bounds.width, height: drawerContentContainer.bounds.height)
+        draggableContentViewController?.view.frame = CGRect(x: draggableContentContainer.bounds.minX, y: draggableContentContainer.bounds.minY, width: draggableContentContainer.bounds.width, height: draggableContentContainer.bounds.height)
         
-        setDrawerPosition(position: drawerPosition, animated: false)
+        setdraggablePosition(position: draggablePosition, animated: false)
     }
     
     // MARK: Configuration Updates
-    public func setDrawerPosition(position: PulleyPosition, animated: Bool = true) {
+    public func setdraggablePosition(position: PulleyPosition, animated: Bool = true) {
         
-        drawerPosition = position
+        draggablePosition = position
         
         let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         let stopToMoveTo: CGFloat
         
-        switch drawerPosition {
+        switch draggablePosition {
 
         case .collapsed:
             stopToMoveTo = collapsedHeight
@@ -229,21 +229,21 @@ public class PulleyViewController: HampViewController {
             stopToMoveTo = (self.view.bounds.size.height - topInset)
         }
         
-        let drawerStops = [(self.view.bounds.size.height - topInset), collapsedHeight]
-        let lowestStop = drawerStops.min() ?? 0
+        let draggableStops = [(self.view.bounds.size.height - topInset), collapsedHeight]
+        let lowestStop = draggableStops.min() ?? 0
         
         if animated {
             UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: { [weak self] () -> Void in
                 
-                self?.drawerScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
+                self?.draggableScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
                 
-                if let drawer = self {
-                    drawer.view.layoutIfNeeded()
+                if let draggable = self {
+                    draggable.view.layoutIfNeeded()
                 }
                 
                 }, completion: nil)
         } else {
-            drawerScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
+            draggableScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
         }
     }
 
@@ -260,36 +260,36 @@ public class PulleyViewController: HampViewController {
         }
     }
     
-    public func setDrawerContentViewController(controller: UIViewController, animated: Bool = true) {
+    public func setdraggableContentViewController(controller: UIViewController, animated: Bool = true) {
         if animated {
-            UIView.transition(with: drawerContentContainer, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [weak self] () -> Void in
+            UIView.transition(with: draggableContentContainer, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [weak self] () -> Void in
                 
-                self?.drawerContentViewController = controller
-                self?.setDrawerPosition(position: self?.drawerPosition ?? .collapsed, animated: false)
+                self?.draggableContentViewController = controller
+                self?.setdraggablePosition(position: self?.draggablePosition ?? .collapsed, animated: false)
                 
                 }, completion: nil)
         }
         else {
-            drawerContentViewController = controller
-            setDrawerPosition(position: drawerPosition, animated: false)
+            draggableContentViewController = controller
+            setdraggablePosition(position: draggablePosition, animated: false)
         }
     }
     
-    public func setNeedsSupportedDrawerPositionsUpdate() {
-        supportedDrawerPositions = PulleyPosition.all
+    public func setNeedsSupporteddraggablePositionsUpdate() {
+        supporteddraggablePositions = PulleyPosition.all
     }
     
-    // MARK: - Propogate child view controller style / status bar presentation based on drawer state
+    // MARK: - Propogate child view controller style / status bar presentation based on draggable state
     
     override open var childViewControllerForStatusBarStyle: UIViewController? {
         get {
-           return drawerPosition == .open ? drawerContentViewController : primaryContentViewController
+           return draggablePosition == .open ? draggableContentViewController : primaryContentViewController
         }
     }
     
     override open var childViewControllerForStatusBarHidden: UIViewController? {
         get {
-            return drawerPosition == .open ? drawerContentViewController : primaryContentViewController
+            return draggablePosition == .open ? draggableContentViewController : primaryContentViewController
         }
     }
 }
@@ -297,8 +297,8 @@ public class PulleyViewController: HampViewController {
 extension PulleyViewController: PulleyPassthroughScrollViewDelegate {
     
     func shouldTouchPassthroughScrollView(scrollView: PulleyPassthroughScrollView, point: CGPoint) -> Bool {
-        let contentDrawerLocation = drawerContentContainer.frame.origin.y
-        return point.y < contentDrawerLocation
+        let contentdraggableLocation = draggableContentContainer.frame.origin.y
+        return point.y < contentdraggableLocation
     }
     
     func viewToReceiveTouch(scrollView: PulleyPassthroughScrollView) -> UIView {
@@ -310,40 +310,40 @@ extension PulleyViewController: UIScrollViewDelegate {
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
-        if scrollView == drawerScrollView {
+        if scrollView == draggableScrollView {
             let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
             
-            var drawerStops: [CGFloat] = [CGFloat]()
+            var draggableStops: [CGFloat] = [CGFloat]()
             
-            if supportedDrawerPositions.contains(.open) {
-                drawerStops.append((self.view.bounds.size.height - topInset))
+            if supporteddraggablePositions.contains(.open) {
+                draggableStops.append((self.view.bounds.size.height - topInset))
             }
             
-            if supportedDrawerPositions.contains(.collapsed) {
-                drawerStops.append(collapsedHeight)
+            if supporteddraggablePositions.contains(.collapsed) {
+                draggableStops.append(collapsedHeight)
             }
             
-            let lowestStop = drawerStops.min() ?? 0
+            let lowestStop = draggableStops.min() ?? 0
             let distanceFromBottomOfView = lowestStop + lastDragTargetContentOffset.y
             var currentClosestStop = lowestStop
             
-            for currentStop in drawerStops {
+            for currentStop in draggableStops {
                 if abs(currentStop - distanceFromBottomOfView) < abs(currentClosestStop - distanceFromBottomOfView) {
                     currentClosestStop = currentStop
                 }
             }
             
-            if abs(Float(currentClosestStop - (self.view.bounds.size.height - topInset))) <= Float.ulpOfOne && supportedDrawerPositions.contains(.open) {
-                setDrawerPosition(position: .open, animated: true)
-            } else if abs(Float(currentClosestStop - collapsedHeight)) <= Float.ulpOfOne && supportedDrawerPositions.contains(.collapsed) {
-                setDrawerPosition(position: .collapsed, animated: true)
+            if abs(Float(currentClosestStop - (self.view.bounds.size.height - topInset))) <= Float.ulpOfOne && supporteddraggablePositions.contains(.open) {
+                setdraggablePosition(position: .open, animated: true)
+            } else if abs(Float(currentClosestStop - collapsedHeight)) <= Float.ulpOfOne && supporteddraggablePositions.contains(.collapsed) {
+                setdraggablePosition(position: .collapsed, animated: true)
             }
         }
     }
     
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-        if scrollView == drawerScrollView {
+        if scrollView == draggableScrollView {
             lastDragTargetContentOffset = targetContentOffset.pointee
             targetContentOffset.pointee = scrollView.contentOffset
         }
