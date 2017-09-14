@@ -286,14 +286,13 @@ public class PulleyViewController: HampViewController {
         super.viewDidLayoutSubviews()
         
         // Layout main content
-        primaryContentContainer.frame = self.view.bounds
+        primaryContentContainer.frame = self.primaryContentViewController.view.frame
         
         // Layout container
         var collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         var partialRevealHeight:CGFloat = kPulleyDefaultPartialRevealHeight
         
-        if let drawerVCCompliant = drawerContentViewController as? PulleyDrawerViewControllerDelegate
-        {
+        if let drawerVCCompliant = drawerContentViewController as? PulleyDrawerViewControllerDelegate {
             collapsedHeight = drawerVCCompliant.collapsedDrawerHeight()
             partialRevealHeight = drawerVCCompliant.partialRevealDrawerHeight()
         }
