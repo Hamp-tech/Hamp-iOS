@@ -45,6 +45,8 @@
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
 		4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E201F264A8900CDE02D /* SignUpViewController.swift */; };
 		4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6A08841F251D240044570C /* SignInToolbar.swift */; };
+		4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AB6701F6AC6F400B750EF /* PulleyViewController.swift */; };
+		4E6AB6731F6AC8A900B750EF /* PulleyPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AB6721F6AC8A900B750EF /* PulleyPosition.swift */; };
 		4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D58311F4CAC3700113636 /* RatingViewController.swift */; };
 		4E7253541F37BC8E006382B4 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7253521F37BC8E006382B4 /* TabBar.storyboard */; };
 		4E7253561F37BE4B006382B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7253551F37BE4B006382B4 /* Constants.swift */; };
@@ -181,6 +183,8 @@
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E632E201F264A8900CDE02D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4E6A08841F251D240044570C /* SignInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInToolbar.swift; sourceTree = "<group>"; };
+		4E6AB6701F6AC6F400B750EF /* PulleyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
+		4E6AB6721F6AC8A900B750EF /* PulleyPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyPosition.swift; sourceTree = "<group>"; };
 		4E6D58311F4CAC3700113636 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		4E7253531F37BC8E006382B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		4E7253551F37BE4B006382B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -368,7 +372,7 @@
 		4E2E2F511F3A87040063E466 /* UI Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E9B1EBB1F6AC24900BFA88C /* History */,
+				4E9B1EBB1F6AC24900BFA88C /* Pulley */,
 				4E22CF691F38F9BF00EEC314 /* Credit Card */,
 			);
 			path = "UI Controllers";
@@ -607,11 +611,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		4E9B1EBB1F6AC24900BFA88C /* History */ = {
+		4E9B1EBB1F6AC24900BFA88C /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
+				4E6AB6701F6AC6F400B750EF /* PulleyViewController.swift */,
+				4E6AB6721F6AC8A900B750EF /* PulleyPosition.swift */,
 			);
-			path = History;
+			path = Pulley;
 			sourceTree = "<group>";
 		};
 		4E9B1EBC1F6AC26C00BFA88C /* UIScrollView */ = {
@@ -1075,6 +1081,7 @@
 				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
+				4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
 				4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */,
@@ -1107,6 +1114,7 @@
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
+				4E6AB6731F6AC8A900B750EF /* PulleyPosition.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,

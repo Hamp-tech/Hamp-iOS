@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="4058" y="-335"/>
         </scene>
-        <!--History Booking Detail View Controller-->
+        <!--Pulley View Controller-->
         <scene sceneID="IuZ-BN-SEX">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="pwa-98-0Tu" customClass="HistoryBookingDetailViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="pwa-98-0Tu" customClass="PulleyViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="56r-FM-bx7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,10 +215,14 @@
                         <viewLayoutGuide key="safeArea" id="mRb-va-DxF"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zpk-1O-zKy"/>
+                    <connections>
+                        <outlet property="drawerContentContainerView" destination="641-zV-ggP" id="WMo-Dm-SE7"/>
+                        <outlet property="primaryContentContainerView" destination="uCq-6L-1iB" id="20F-zX-PFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFs-wB-KKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4959.375" y="-479.57746478873241"/>
+            <point key="canvasLocation" x="4931" y="-335"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">
@@ -753,6 +757,7 @@ Lorem Ipsum.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="edd-NF-1bQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgf-q9-KH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -827,6 +832,7 @@ Lorem Ipsum.</string>
                             <constraint firstItem="nqT-BI-wmb" firstAttribute="leading" secondItem="dlc-CN-20h" secondAttribute="leading" id="iLQ-hJ-pDK"/>
                             <constraint firstItem="UNX-IC-A2q" firstAttribute="top" secondItem="nqT-BI-wmb" secondAttribute="bottom" id="oAA-6H-CzP"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBV-be-v4b"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                         </userDefinedRuntimeAttributes>
