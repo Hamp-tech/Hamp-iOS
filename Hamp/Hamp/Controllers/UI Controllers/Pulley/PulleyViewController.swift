@@ -122,21 +122,6 @@ public class PulleyViewController: HampViewController {
         }
     }
     
-    /// The background visual effect layer for the drawer. By default this is the extraLight effect. You can change this if you want, or assign nil to remove it.
-    public var drawerBackgroundVisualEffectView: UIVisualEffectView? = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight)) {
-        willSet {
-            drawerBackgroundVisualEffectView?.removeFromSuperview()
-        }
-        didSet {
-            
-            if let drawerBackgroundVisualEffectView = drawerBackgroundVisualEffectView, self.isViewLoaded
-            {
-                drawerBackgroundVisualEffectView.clipsToBounds = true
-                drawerBackgroundVisualEffectView.layer.cornerRadius = drawerCornerRadius
-            }
-        }
-    }
-    
     /// The inset from the top of the view controller when fully open.
     @IBInspectable public var topInset: CGFloat = 50.0 {
         didSet {
@@ -153,30 +138,10 @@ public class PulleyViewController: HampViewController {
             if self.isViewLoaded
             {
                 self.view.setNeedsLayout()
-                drawerBackgroundVisualEffectView?.layer.cornerRadius = drawerCornerRadius
             }
         }
     }
     
-    /// The opacity of the drawer shadow.
-    @IBInspectable public var shadowOpacity: Float = 0.1 {
-        didSet {
-            if self.isViewLoaded
-            {
-                self.view.setNeedsLayout()
-            }
-        }
-    }
-    
-    /// The radius of the drawer shadow.
-    @IBInspectable public var shadowRadius: CGFloat = 3.0 {
-        didSet {
-            if self.isViewLoaded
-            {
-                self.view.setNeedsLayout()
-            }
-        }
-    }
     
     /// The starting position for the drawer when it first loads
     public var initialDrawerPosition: PulleyPosition = .collapsed
@@ -222,11 +187,8 @@ public class PulleyViewController: HampViewController {
     
     required public init(contentViewController: UIViewController, drawerViewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
-        
-        ({
-            self.primaryContentViewController = contentViewController
-            self.drawerContentViewController = drawerViewController
-        })()
+        self.primaryContentViewController = contentViewController
+        self.drawerContentViewController = drawerViewController
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -265,14 +227,6 @@ public class PulleyViewController: HampViewController {
         drawerScrollView.touchDelegate = self
         
         drawerContentContainer.backgroundColor = UIColor.clear
-        
-        drawerBackgroundVisualEffectView?.clipsToBounds = true
-        
-        if let drawerBackgroundVisualEffectView = drawerBackgroundVisualEffectView
-        {
-            drawerScrollView.addSubview(drawerBackgroundVisualEffectView)
-            drawerBackgroundVisualEffectView.layer.cornerRadius = drawerCornerRadius
-        }
         
         drawerScrollView.addSubview(drawerContentContainer)
         
@@ -360,7 +314,6 @@ public class PulleyViewController: HampViewController {
         }
         
         drawerContentContainer.frame = CGRect(x: 0, y: drawerScrollView.bounds.height - lowestStop, width: drawerScrollView.bounds.width, height: drawerScrollView.bounds.height + bounceOverflowMargin)
-        drawerBackgroundVisualEffectView?.frame = drawerContentContainer.frame
         drawerScrollView.contentSize = CGSize(width: drawerScrollView.bounds.width, height: (drawerScrollView.bounds.height - lowestStop) + drawerScrollView.bounds.height)
         
         // Update rounding mask and shadows
