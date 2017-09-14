@@ -42,7 +42,7 @@ public class PulleyViewController: HampViewController {
             
             if self.isViewLoaded {
                 self.view.setNeedsLayout()
-                self.setNeedsSupporteddraggablePositionsUpdate()
+                self.setNeedsSupportedDraggablePositionsUpdate()
             }
         }
     }
@@ -67,7 +67,7 @@ public class PulleyViewController: HampViewController {
             
             if self.isViewLoaded {
                 self.view.setNeedsLayout()
-                self.setNeedsSupporteddraggablePositionsUpdate()
+                self.setNeedsSupportedDraggablePositionsUpdate()
             }
         }
     }
@@ -87,30 +87,30 @@ public class PulleyViewController: HampViewController {
     }
     
     public var initialdraggablePosition: PulleyPosition = .collapsed
-    private var supporteddraggablePositions: [PulleyPosition] = PulleyPosition.all {
+    private var supportedDraggablePositions: [PulleyPosition] = PulleyPosition.all {
         didSet {
             
             guard self.isViewLoaded else { return }
             
-            guard supporteddraggablePositions.count > 0 else {
-                supporteddraggablePositions = PulleyPosition.all
+            guard supportedDraggablePositions.count > 0 else {
+                supportedDraggablePositions = PulleyPosition.all
                 return
             }
             
             self.view.setNeedsLayout()
             
-            if supporteddraggablePositions.contains(draggablePosition) {
-                setdraggablePosition(position: draggablePosition)
+            if supportedDraggablePositions.contains(draggablePosition) {
+                setDraggablePosition(position: draggablePosition)
             }
             else {
-                let lowestdraggableState: PulleyPosition = supporteddraggablePositions.min { (pos1, pos2) -> Bool in
+                let lowestdraggableState: PulleyPosition = supportedDraggablePositions.min { (pos1, pos2) -> Bool in
                     return pos1.rawValue < pos2.rawValue
                     } ?? .collapsed
                 
-                setdraggablePosition(position: lowestdraggableState, animated: false)
+                setDraggablePosition(position: lowestdraggableState, animated: false)
             }
             
-            draggableScrollView.isScrollEnabled = supporteddraggablePositions.count > 1
+            draggableScrollView.isScrollEnabled = supportedDraggablePositions.count > 1
         }
     }
     
@@ -177,13 +177,13 @@ public class PulleyViewController: HampViewController {
                 }
             }
         }
-        setdraggablePosition(position: initialdraggablePosition, animated: false)
+        setDraggablePosition(position: initialdraggablePosition, animated: false)
         
     }
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setNeedsSupporteddraggablePositionsUpdate()
+        setNeedsSupportedDraggablePositionsUpdate()
     }
     
     override open func viewDidLayoutSubviews() {
@@ -195,7 +195,7 @@ public class PulleyViewController: HampViewController {
         
         let lowestStop = [(self.view.bounds.size.height - topInset), collapsedHeight].min() ?? 0
         
-        if supporteddraggablePositions.contains(.open) {
+        if supportedDraggablePositions.contains(.open) {
             draggableScrollView.frame = CGRect(x: 0, y: topInset, width: self.view.bounds.width, height: self.view.bounds.height - topInset)
 
         }
@@ -210,11 +210,11 @@ public class PulleyViewController: HampViewController {
         primaryContentViewController?.view.frame = primaryContentContainer.bounds
         draggableContentViewController?.view.frame = CGRect(x: draggableContentContainer.bounds.minX, y: draggableContentContainer.bounds.minY, width: draggableContentContainer.bounds.width, height: draggableContentContainer.bounds.height)
         
-        setdraggablePosition(position: draggablePosition, animated: false)
+        setDraggablePosition(position: draggablePosition, animated: false)
     }
     
     // MARK: Configuration Updates
-    public func setdraggablePosition(position: PulleyPosition, animated: Bool = true) {
+    public func setDraggablePosition(position: PulleyPosition, animated: Bool = true) {
         
         draggablePosition = position
         
@@ -260,23 +260,23 @@ public class PulleyViewController: HampViewController {
         }
     }
     
-    public func setdraggableContentViewController(controller: UIViewController, animated: Bool = true) {
+    public func setDraggableContentViewController(controller: UIViewController, animated: Bool = true) {
         if animated {
             UIView.transition(with: draggableContentContainer, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [weak self] () -> Void in
                 
                 self?.draggableContentViewController = controller
-                self?.setdraggablePosition(position: self?.draggablePosition ?? .collapsed, animated: false)
+                self?.setDraggablePosition(position: self?.draggablePosition ?? .collapsed, animated: false)
                 
                 }, completion: nil)
         }
         else {
             draggableContentViewController = controller
-            setdraggablePosition(position: draggablePosition, animated: false)
+            setDraggablePosition(position: draggablePosition, animated: false)
         }
     }
     
-    public func setNeedsSupporteddraggablePositionsUpdate() {
-        supporteddraggablePositions = PulleyPosition.all
+    public func setNeedsSupportedDraggablePositionsUpdate() {
+        supportedDraggablePositions = PulleyPosition.all
     }
     
     // MARK: - Propogate child view controller style / status bar presentation based on draggable state
@@ -315,11 +315,11 @@ extension PulleyViewController: UIScrollViewDelegate {
             
             var draggableStops: [CGFloat] = [CGFloat]()
             
-            if supporteddraggablePositions.contains(.open) {
+            if supportedDraggablePositions.contains(.open) {
                 draggableStops.append((self.view.bounds.size.height - topInset))
             }
             
-            if supporteddraggablePositions.contains(.collapsed) {
+            if supportedDraggablePositions.contains(.collapsed) {
                 draggableStops.append(collapsedHeight)
             }
             
@@ -333,10 +333,10 @@ extension PulleyViewController: UIScrollViewDelegate {
                 }
             }
             
-            if abs(Float(currentClosestStop - (self.view.bounds.size.height - topInset))) <= Float.ulpOfOne && supporteddraggablePositions.contains(.open) {
-                setdraggablePosition(position: .open, animated: true)
-            } else if abs(Float(currentClosestStop - collapsedHeight)) <= Float.ulpOfOne && supporteddraggablePositions.contains(.collapsed) {
-                setdraggablePosition(position: .collapsed, animated: true)
+            if abs(Float(currentClosestStop - (self.view.bounds.size.height - topInset))) <= Float.ulpOfOne && supportedDraggablePositions.contains(.open) {
+                setDraggablePosition(position: .open, animated: true)
+            } else if abs(Float(currentClosestStop - collapsedHeight)) <= Float.ulpOfOne && supportedDraggablePositions.contains(.collapsed) {
+                setDraggablePosition(position: .collapsed, animated: true)
             }
         }
     }
