@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HampViewController: UIViewController {
+public class HampViewController: UIViewController {
 
     //MARK: Life cycle
     

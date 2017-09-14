@@ -89,7 +89,7 @@ public enum PulleyPosition: Int {
 private let kPulleyDefaultCollapsedHeight: CGFloat = 68.0
 private let kPulleyDefaultPartialRevealHeight: CGFloat = 264.0
 
-open class PulleyViewController: HampViewController {
+public class PulleyViewController: HampViewController {
     
     // Interface Builder
     
