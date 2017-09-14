@@ -19,42 +19,11 @@ import Foundation
 public enum PulleyPosition: Int {
     
     case collapsed = 0
-    case partiallyRevealed = 1
-    case open = 2
-    case closed = 3
+    case open = 1
     
     public static let all: [PulleyPosition] = [
         .collapsed,
-        .partiallyRevealed,
         .open,
-        .closed
     ]
-    
-    public static func positionFor(string: String?) -> PulleyPosition {
-        
-        guard let positionString = string?.lowercased() else {
-            
-            return .collapsed
-        }
-        
-        switch positionString {
-            
-        case "collapsed":
-            return .collapsed
-            
-        case "partiallyrevealed":
-            return .partiallyRevealed
-            
-        case "open":
-            return .open
-            
-        case "closed":
-            return .closed
-            
-        default:
-            print("PulleyViewController: Position for string '\(positionString)' not found. Available values are: collapsed, partiallyRevealed, open, and closed. Defaulting to collapsed.")
-            return .collapsed
-        }
-    }
 }
 
