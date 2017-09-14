@@ -74,6 +74,9 @@
 		4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */; };
 		4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90CA501F671810003DAA28 /* HistoryProvider.swift */; };
 		4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E965C391F690AC600AF61E8 /* DateConverter.swift */; };
+		4E965C3C1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E965C3B1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift */; };
+		4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */; };
+		4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B1EBD1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift */; };
 		4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DA1F45C271006F3BA7 /* Service.swift */; };
 		4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */; };
 		4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB242DE1F45C372006F3BA7 /* LaundryService.swift */; };
@@ -213,6 +216,9 @@
 		4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHistoryProvider.swift; sourceTree = "<group>"; };
 		4E90CA501F671810003DAA28 /* HistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProvider.swift; sourceTree = "<group>"; };
 		4E965C391F690AC600AF61E8 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		4E965C3B1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBookingDetailViewController.swift; sourceTree = "<group>"; };
+		4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+transparentBar.swift"; sourceTree = "<group>"; };
+		4E9B1EBD1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
 		4EB242DA1F45C271006F3BA7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryServicesFactory.swift; sourceTree = "<group>"; };
 		4EB242DE1F45C372006F3BA7 /* LaundryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryService.swift; sourceTree = "<group>"; };
@@ -362,6 +368,7 @@
 		4E2E2F511F3A87040063E466 /* UI Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E9B1EBB1F6AC24900BFA88C /* History */,
 				4E22CF691F38F9BF00EEC314 /* Credit Card */,
 			);
 			path = "UI Controllers";
@@ -543,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				4E88B6E91F4AE9930005838F /* HistoryViewController.swift */,
+				4E965C3B1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -597,6 +605,21 @@
 				4E8EE24C1F55E39C00B5F06C /* DynamicRowable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4E9B1EBB1F6AC24900BFA88C /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		4E9B1EBC1F6AC26C00BFA88C /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4E9B1EBD1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		4EC0BD2D1F4C3F330077DD92 /* Tutorial */ = {
@@ -737,6 +760,7 @@
 		4EDF10051F236E21007E15E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E9B1EBC1F6AC26C00BFA88C /* UIScrollView */,
 				4E7DF3B71F54C8BE00C1A180 /* Buttons */,
 				4E6A08811F251B170044570C /* IB */,
 				4EC2CE7E1F478F30002439CD /* Layers */,
@@ -795,6 +819,7 @@
 				4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */,
 				4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */,
 				4EC0BD301F4C69830077DD92 /* ClosedRange+Clamp.swift */,
+				4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1037,6 +1062,7 @@
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
 				4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */,
 				4EC0BD311F4C69830077DD92 /* ClosedRange+Clamp.swift in Sources */,
+				4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
@@ -1090,8 +1116,10 @@
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
+				4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
+				4E965C3C1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4E871D181F4AF8D50028DA0D /* CircleView.swift in Sources */,
