@@ -165,47 +165,48 @@ public class PulleyViewController: HampViewController {
         
         navigationController!.transaparentBar()
         
-        // IB Support
+        drawerContentContainerView.backgroundColor = UIColor.green
         if primaryContentViewController == nil || drawerContentViewController == nil {
-            // Locate main content VC
             for child in self.childViewControllers {
                 if child.view == primaryContentContainerView.subviews.first {
                     primaryContentViewController = child
-                } else if child.view == drawerContentContainerView.subviews.first {
+                }
+                
+                if child.view == drawerContentContainerView.subviews.first {
                     drawerContentViewController = child
                 }
             }
         }
-        
         setDrawerPosition(position: initialDrawerPosition, animated: false)
         
     }
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         setNeedsSupportedDrawerPositionsUpdate()
     }
     
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        primaryContentContainer.frame = self.primaryContentViewController.view.frame
+        primaryContentContainer.frame = primaryContentViewController.view.frame
         
         let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         
         let lowestStop = [(self.view.bounds.size.height - topInset), collapsedHeight].min() ?? 0
-        let bounceOverflowMargin: CGFloat = 20.0
         
         if supportedDrawerPositions.contains(.open) {
             drawerScrollView.frame = CGRect(x: 0, y: topInset, width: self.view.bounds.width, height: self.view.bounds.height - topInset)
+
         }
         
-        drawerContentContainer.frame = CGRect(x: 0, y: drawerScrollView.bounds.height - lowestStop, width: drawerScrollView.bounds.width, height: drawerScrollView.bounds.height + bounceOverflowMargin)
+        if drawerContentViewController != nil {
+           drawerContentContainer.frame = CGRect(x: (drawerScrollView.bounds.width-drawerContentViewController.view.bounds.size.width)/2, y: drawerScrollView.bounds.height - lowestStop, width: drawerContentViewController.view.bounds.width, height: drawerScrollView.bounds.height)
+        }
+        
         drawerScrollView.contentSize = CGSize(width: drawerScrollView.bounds.width, height: (drawerScrollView.bounds.height - lowestStop) + drawerScrollView.bounds.height)
         
         
-        // Make VC views match frames
         primaryContentViewController?.view.frame = primaryContentContainer.bounds
         drawerContentViewController?.view.frame = CGRect(x: drawerContentContainer.bounds.minX, y: drawerContentContainer.bounds.minY, width: drawerContentContainer.bounds.width, height: drawerContentContainer.bounds.height)
         
@@ -214,10 +215,6 @@ public class PulleyViewController: HampViewController {
     
     // MARK: Configuration Updates
     public func setDrawerPosition(position: PulleyPosition, animated: Bool = true) {
-        guard supportedDrawerPositions.contains(position) else {
-            print("PulleyViewController: You can't set the drawer position to something not supported by the current view controller contained in the drawer. If you haven't already, you may need to implement the PulleyDrawerViewControllerDelegate.")
-            return
-        }
         
         drawerPosition = position
         

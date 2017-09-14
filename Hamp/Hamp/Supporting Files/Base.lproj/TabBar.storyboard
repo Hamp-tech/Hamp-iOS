@@ -216,7 +216,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zpk-1O-zKy"/>
                     <connections>
-                        <outlet property="drawerContentContainerView" destination="641-zV-ggP" id="WMo-Dm-SE7"/>
+                        <outlet property="drawerContentContainerView" destination="641-zV-ggP" id="qUl-O4-Kod"/>
                         <outlet property="primaryContentContainerView" destination="uCq-6L-1iB" id="20F-zX-PFW"/>
                     </connections>
                 </viewController>
