@@ -117,8 +117,11 @@ public class PulleyViewController: HampViewController {
     // MARK: - Life cycle
     required public init(contentViewController: UIViewController, draggableViewController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
-        self.primaryContentViewController = contentViewController
-        self.draggableContentViewController = draggableViewController
+        ({
+            self.primaryContentViewController = contentViewController
+            self.draggableContentViewController = draggableViewController
+        })()
+
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -164,8 +167,7 @@ public class PulleyViewController: HampViewController {
         super.viewDidLoad()
         
         navigationController!.transaparentBar()
-        
-        draggableContentContainerView.backgroundColor = UIColor.green
+
         if primaryContentViewController == nil || draggableContentViewController == nil {
             for child in self.childViewControllers {
                 if child.view == primaryContentContainerView.subviews.first {
@@ -244,34 +246,6 @@ public class PulleyViewController: HampViewController {
                 }, completion: nil)
         } else {
             draggableScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
-        }
-    }
-
-    public func setPrimaryContentViewController(controller: UIViewController, animated: Bool = true) {
-        if animated {
-            UIView.transition(with: primaryContentContainer, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [weak self] () -> Void in
-                
-                self?.primaryContentViewController = controller
-                
-                }, completion: nil)
-        }
-        else {
-            primaryContentViewController = controller
-        }
-    }
-    
-    public func setDraggableContentViewController(controller: UIViewController, animated: Bool = true) {
-        if animated {
-            UIView.transition(with: draggableContentContainer, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [weak self] () -> Void in
-                
-                self?.draggableContentViewController = controller
-                self?.setDraggablePosition(position: self?.draggablePosition ?? .collapsed, animated: false)
-                
-                }, completion: nil)
-        }
-        else {
-            draggableContentViewController = controller
-            setDraggablePosition(position: draggablePosition, animated: false)
         }
     }
     

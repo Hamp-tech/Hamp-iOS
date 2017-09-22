@@ -13,6 +13,8 @@ class HistoryBookingDetailViewController: PulleyViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.transaparentBar()
+        
     }
 }
 

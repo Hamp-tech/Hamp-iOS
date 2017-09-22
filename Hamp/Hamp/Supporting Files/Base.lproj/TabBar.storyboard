@@ -135,7 +135,7 @@
                     <tabBarItem key="tabBarItem" title="" image="clock-empty" selectedImage="clock-filled" id="5cH-FE-0v5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SYT-Ta-lKJ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -172,9 +172,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="4cD-Vx-aBg"/>
-                    <connections>
-                        <segue destination="pwa-98-0Tu" kind="push" identifier="showHistoryDetail" id="OZO-eR-iYE"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sx-jK-kOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +180,7 @@
         <!--Pulley View Controller-->
         <scene sceneID="IuZ-BN-SEX">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="pwa-98-0Tu" customClass="PulleyViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailViewController" hidesBottomBarWhenPushed="YES" id="pwa-98-0Tu" customClass="PulleyViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="56r-FM-bx7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +228,7 @@
                     <tabBarItem key="tabBarItem" title="" image="bag-empty" selectedImage="bag-filled" id="hGn-LL-Fk7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aM5-Yg-gk1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.90588235294117647" green="0.18431372549019609" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -737,7 +734,7 @@ Lorem Ipsum.</string>
                     <tabBarItem key="tabBarItem" title="" image="profile-empty" selectedImage="profile-filled" id="Jd8-Os-HnM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bgv-eC-Ffc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -752,7 +749,7 @@ Lorem Ipsum.</string>
         <!--View Controller-->
         <scene sceneID="Qen-JE-KfY">
             <objects>
-                <viewController id="Y4S-Nu-tNc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y4S-Nu-tNc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahx-yr-q7Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,12 +764,12 @@ Lorem Ipsum.</string>
         <!--View Controller-->
         <scene sceneID="f7W-zM-Sml">
             <objects>
-                <viewController id="Cg0-sq-pS6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailInvoiceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cg0-sq-pS6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dlc-CN-20h">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="262"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqT-BI-wmb">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqT-BI-wmb">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/05/1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60c-6a-3zX">

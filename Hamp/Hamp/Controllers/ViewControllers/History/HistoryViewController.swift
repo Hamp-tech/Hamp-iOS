@@ -72,7 +72,12 @@ extension HistoryViewController {
 
 extension HistoryViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showHistoryDetail", sender: nil)
+        let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController")
+        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailInvoiceViewController")
+    
+        let historyDetailViewController = HistoryBookingDetailViewController.init(contentViewController: mapVC, draggableViewController: invoiceVC)
+        historyDetailViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(historyDetailViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
