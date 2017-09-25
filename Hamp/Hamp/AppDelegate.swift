@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
-        try? Hamp.connect()
+//        Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
+//        try? Hamp.connect()
         
-        FabricManager.configure()
+//        FabricManager.configure()
         
         ProvidersManager.sharedInstance.downloadProvidersData()
         
