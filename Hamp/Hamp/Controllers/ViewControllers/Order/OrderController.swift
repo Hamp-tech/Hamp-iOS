@@ -24,7 +24,6 @@ class OrderController: PulleyChildViewController {
         collectionView.dataSource = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .white
-        collectionView.contentInset = UIEdgeInsets (top: -50, left: 0, bottom: 0, right: 0)
     }
     
     func registerCollectionViewCells () {
@@ -35,6 +34,7 @@ class OrderController: PulleyChildViewController {
     
     override func childDidChangePosition(position: PulleyPosition) {
         collectionView.isScrollEnabled = position == .open
+        collectionView.isUserInteractionEnabled = position == .open
     }
     
 }

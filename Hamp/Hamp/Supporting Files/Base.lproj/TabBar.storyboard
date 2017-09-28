@@ -190,7 +190,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sx-jK-kOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4058" y="-335"/>
+            <point key="canvasLocation" x="4236" y="-335"/>
         </scene>
         <!--Pulley View Controller-->
         <scene sceneID="IuZ-BN-SEX">
@@ -226,6 +226,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mRb-va-DxF"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zpk-1O-zKy"/>
                     <connections>
                         <outlet property="draggableContentContainerView" destination="641-zV-ggP" id="qUl-O4-Kod"/>
@@ -234,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFs-wB-KKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4931" y="-335"/>
+            <point key="canvasLocation" x="5044" y="-335"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">

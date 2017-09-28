@@ -191,7 +191,8 @@ class PulleyViewController: HampViewController {
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        primaryContentContainer.frame = primaryContentViewController.view.frame
+        primaryContentContainer.frame = primaryContentViewController.view.bounds
+        primaryContentContainer.frame.origin.y = -(navigationController?.navigationBar.frame.height)! - UIApplication.shared.statusBarFrame.height
         
         let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         
