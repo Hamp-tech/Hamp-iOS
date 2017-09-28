@@ -6,9 +6,9 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - Crashlytics (3.8.5):
+  - Crashlytics (3.8.6):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.12)
+  - Fabric (1.6.13)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.21)
@@ -17,23 +17,23 @@ PODS:
     - FacebookCore (~> 0.2)
     - FBSDKCoreKit (~> 4.21)
     - FBSDKLoginKit (~> 4.21)
-  - FBSDKCoreKit (4.25.0):
+  - FBSDKCoreKit (4.27.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.25.0):
+  - FBSDKLoginKit (4.27.0):
     - FBSDKCoreKit
-  - FirebaseCommunity (0.1.1):
-    - FirebaseCommunity/Root (= 0.1.1)
-  - FirebaseCommunity/Auth (0.1.1):
+  - FirebaseCommunity (0.1.2):
+    - FirebaseCommunity/Root (= 0.1.2)
+  - FirebaseCommunity/Auth (0.1.2):
     - FirebaseCommunity/Core
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCommunity/Core (0.1.1):
+  - FirebaseCommunity/Core (0.1.2):
     - FirebaseCommunity/Root
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCommunity/Database (0.1.1):
+  - FirebaseCommunity/Database (0.1.2):
     - FirebaseCommunity/Core
     - leveldb-library
-  - FirebaseCommunity/Root (0.1.1)
+  - FirebaseCommunity/Root (0.1.2)
   - GoogleToolboxForMac/DebugUtils (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
@@ -44,7 +44,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GTMSessionFetcher/Core (1.1.11)
+  - GTMSessionFetcher/Core (1.1.12)
   - HampKit (0.3):
     - Alamofire
     - FirebaseCommunity
@@ -84,19 +84,19 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
-  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
   FacebookCore: b1dfb5bba65380aba6dbe5c545ce02d03d0b59b2
   FacebookLogin: da4d16833831769a6827a4ddfcf439d673949f12
-  FBSDKCoreKit: 53e3f4bfb64e80c5f229dd30ae33ff57fbbbd2d1
-  FBSDKLoginKit: f628c09684dae9c17f071cf90b014e886f5093ea
-  FirebaseCommunity: 40ca91b515daf7d9092ed44dfd4798c15b099777
+  FBSDKCoreKit: ebc6c5f5b3f0e72396041050e2266781a38ac587
+  FBSDKLoginKit: 887be4b7452e1c5a3cc4485ce152529965a0c41e
+  FirebaseCommunity: 2184a60d443b1f2e4bf9e26b07876bba89e4fdfc
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   HampKit: bb0030f3da8313adcc6136ad3b1e591c28dae940
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
 PODFILE CHECKSUM: ff3a08c98d02b8fbfacdbf800ceee959dfb3e91b
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.1

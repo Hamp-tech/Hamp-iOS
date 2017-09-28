@@ -10,7 +10,7 @@ import UIKit
 
 private let kPulleyDefaultCollapsedHeight: CGFloat = 264.0
 
-public class PulleyViewController: HampViewController {
+class PulleyViewController: HampViewController {
     
     // MARK: - IB Properties
     @IBOutlet public var primaryContentContainerView: UIView!
@@ -21,7 +21,7 @@ public class PulleyViewController: HampViewController {
     private let draggableContentContainer: UIView = UIView()
     private let draggableScrollView: PulleyPassthroughScrollView = PulleyPassthroughScrollView()
     private var lastDragTargetContentOffset: CGPoint = CGPoint.zero
-    public private(set) var primaryContentViewController: UIViewController! {
+    private(set) var primaryContentViewController: PulleyChildViewController! {
         willSet {
             guard let controller = primaryContentViewController else { return }
             
@@ -47,7 +47,7 @@ public class PulleyViewController: HampViewController {
         }
     }
     
-    public private(set) var draggableContentViewController: UIViewController! {
+    private(set) var draggableContentViewController: PulleyChildViewController! {
         willSet {
             guard let controller = draggableContentViewController else { return }
             
@@ -115,7 +115,7 @@ public class PulleyViewController: HampViewController {
     }
     
     // MARK: - Life cycle
-    required public init(contentViewController: UIViewController, draggableViewController: UIViewController) {
+    required public init(contentViewController: PulleyChildViewController, draggableViewController: PulleyChildViewController) {
         super.init(nibName: nil, bundle: nil)
         ({
             self.primaryContentViewController = contentViewController
@@ -171,11 +171,11 @@ public class PulleyViewController: HampViewController {
         if primaryContentViewController == nil || draggableContentViewController == nil {
             for child in self.childViewControllers {
                 if child.view == primaryContentContainerView.subviews.first {
-                    primaryContentViewController = child
+                    primaryContentViewController = child as! PulleyChildViewController
                 }
                 
                 if child.view == draggableContentContainerView.subviews.first {
-                    draggableContentViewController = child
+                    draggableContentViewController = child as! PulleyChildViewController
                 }
             }
         }
@@ -219,6 +219,8 @@ public class PulleyViewController: HampViewController {
     public func setDraggablePosition(position: PulleyPosition, animated: Bool = true) {
         
         draggablePosition = position
+        primaryContentViewController.childDidChangePosition(position: draggablePosition)
+        draggableContentViewController.childDidChangePosition(position: draggablePosition)
         
         let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         let stopToMoveTo: CGFloat
@@ -255,13 +257,13 @@ public class PulleyViewController: HampViewController {
     
     // MARK: - Propogate child view controller style / status bar presentation based on draggable state
     
-    override open var childViewControllerForStatusBarStyle: UIViewController? {
+    override open var childViewControllerForStatusBarStyle: PulleyChildViewController? {
         get {
            return draggablePosition == .open ? draggableContentViewController : primaryContentViewController
         }
     }
     
-    override open var childViewControllerForStatusBarHidden: UIViewController? {
+    override open var childViewControllerForStatusBarHidden: PulleyChildViewController? {
         get {
             return draggablePosition == .open ? draggableContentViewController : primaryContentViewController
         }

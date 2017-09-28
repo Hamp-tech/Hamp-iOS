@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderController: HampViewController {
+class OrderController: PulleyChildViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -16,6 +16,7 @@ class OrderController: HampViewController {
         super.viewDidLoad()
         configureController ()
         registerCollectionViewCells()
+        collectionView.isScrollEnabled = false;
     }
     
     func configureController () {
@@ -31,6 +32,11 @@ class OrderController: HampViewController {
         collectionView.register(OrderInfoCell.self, forCellWithReuseIdentifier: OrderCellsID.info)
         collectionView.register(OrderPaymentCell.self, forCellWithReuseIdentifier: OrderCellsID.payment)
     }
+    
+    override func childDidChangePosition(position: PulleyPosition) {
+        collectionView.isScrollEnabled = position == .open
+    }
+    
 }
 
 //MARK: CollectionViewDataSource

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapController: HampViewController {
+class MapController: PulleyChildViewController {
     
     @IBOutlet weak var mapView: CustomMapView!
     
