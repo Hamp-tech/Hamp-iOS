@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
+		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
+		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
+		19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */; };
+		19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */; };
+		19C8EF831F7A91FD00D70A07 /* ProfileCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */; };
+		19C8EF851F7A958700D70A07 /* ProfileTextfieldInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */; };
+		19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */; };
+		19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8A1F7BA60100D70A07 /* OrderController.swift */; };
+		19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */; };
+		19C8EF901F7BB23300D70A07 /* OrderDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8F1F7BB23200D70A07 /* OrderDescriptionCell.swift */; };
+		19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */; };
+		19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */; };
+		19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF951F7C405300D70A07 /* OrderCellsID.swift */; };
+		19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E594791F7A5D4600371FD3 /* ProfileController.swift */; };
+		19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */; };
+		19E5947E1F7A63CF00371FD3 /* ProfileDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */; };
+		19EA7E251F7D0A9400AB7B8A /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E241F7D0A9400AB7B8A /* CustomMapView.swift */; };
+		19EA7E281F7D0C2900AB7B8A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E271F7D0C2900AB7B8A /* MapController.swift */; };
+		19EA7E2A1F7D0DD000AB7B8A /* MapArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */; };
+		19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E2B1F7D138900AB7B8A /* UIView+Anchor.swift */; };
 		4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */; };
 		4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */; };
 		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
@@ -138,6 +159,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
+		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
+		19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitchCell.swift; sourceTree = "<group>"; };
+		19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSimpleCell.swift; sourceTree = "<group>"; };
+		19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellsID.swift; sourceTree = "<group>"; };
+		19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextfieldInfo.swift; sourceTree = "<group>"; };
+		19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseInfoCell.swift; sourceTree = "<group>"; };
+		19C8EF8A1F7BA60100D70A07 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPaymentCell.swift; sourceTree = "<group>"; };
+		19C8EF8F1F7BB23200D70A07 /* OrderDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDescriptionCell.swift; sourceTree = "<group>"; };
+		19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageCell.swift; sourceTree = "<group>"; };
+		19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
+		19C8EF951F7C405300D70A07 /* OrderCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellsID.swift; sourceTree = "<group>"; };
+		19E594791F7A5D4600371FD3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldCell.swift; sourceTree = "<group>"; };
+		19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDateCell.swift; sourceTree = "<group>"; };
+		19EA7E241F7D0A9400AB7B8A /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
+		19EA7E271F7D0C2900AB7B8A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArtWork.swift; sourceTree = "<group>"; };
+		19EA7E2B1F7D138900AB7B8A /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
@@ -300,6 +342,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C8EF8C1F7BA8C600D70A07 /* ProfileCells */ = {
+			isa = PBXGroup;
+			children = (
+				19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */,
+				19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */,
+				19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */,
+				19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */,
+				19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */,
+				19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */,
+				19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */,
+			);
+			path = ProfileCells;
+			sourceTree = "<group>";
+		};
+		19EA7E211F7CEEB800AB7B8A /* OrderCells */ = {
+			isa = PBXGroup;
+			children = (
+				19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */,
+				19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */,
+				19C8EF8F1F7BB23200D70A07 /* OrderDescriptionCell.swift */,
+				19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */,
+			);
+			path = OrderCells;
+			sourceTree = "<group>";
+		};
+		19EA7E221F7CEEC600AB7B8A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				19E594791F7A5D4600371FD3 /* ProfileController.swift */,
+				19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		19EA7E231F7CEED800AB7B8A /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				19C8EF951F7C405300D70A07 /* OrderCellsID.swift */,
+				19C8EF8A1F7BA60100D70A07 /* OrderController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		19EA7E261F7D0C1600AB7B8A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				19EA7E271F7D0C2900AB7B8A /* MapController.swift */,
+				19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		4E1DFC5C1F67E9430096659F /* SizeCalculators */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +586,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				19EA7E261F7D0C1600AB7B8A /* Map */,
 				4E6D58301F4CAC2600113636 /* Rating */,
 				4EC0BD2D1F4C3F330077DD92 /* Tutorial */,
 				4E88B6E81F4AE8FA0005838F /* History */,
@@ -500,6 +595,8 @@
 				4E22CF671F38F74900EEC314 /* Credit Card */,
 				4ECA40681F24B8AF003F51EA /* Base View Controllers */,
 				4E7D94E11F2384D900C7BB4B /* Login */,
+				19EA7E221F7CEEC600AB7B8A /* Profile */,
+				19EA7E231F7CEED800AB7B8A /* Order */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -660,6 +757,8 @@
 				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
 				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
 				4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */,
+				19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */,
+				19EA7E241F7D0A9400AB7B8A /* CustomMapView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -677,6 +776,8 @@
 			children = (
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */,
+				19C8EF8C1F7BA8C600D70A07 /* ProfileCells */,
+				19EA7E211F7CEEB800AB7B8A /* OrderCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -784,6 +885,7 @@
 			children = (
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
+				19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -824,6 +926,7 @@
 				4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */,
 				4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */,
 				4E22CC1A1F475F13004F3203 /* UIView+ParentViewController.swift */,
+				19EA7E2B1F7D138900AB7B8A /* UIView+Anchor.swift */,
 				4EC0BD301F4C69830077DD92 /* ClosedRange+Clamp.swift */,
 				4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */,
 			);
@@ -974,9 +1077,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hamp/Pods-Hamp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCommunity/FirebaseCommunity.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HampKit/HampKit.framework",
+				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCommunity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HampKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1018,13 +1146,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hamp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1064,23 +1195,28 @@
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
+				19C8EF851F7A958700D70A07 /* ProfileTextfieldInfo.swift in Sources */,
+				19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
 				4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */,
 				4EC0BD311F4C69830077DD92 /* ClosedRange+Clamp.swift in Sources */,
 				4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
+				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
+				19EA7E2A1F7D0DD000AB7B8A /* MapArtWork.swift in Sources */,
 				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
 				4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */,
 				4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */,
 				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
+				19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */,
 				4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
@@ -1088,10 +1224,12 @@
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */,
 				4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */,
+				19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
+				19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */,
 				4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
@@ -1100,25 +1238,33 @@
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
 				4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */,
+				19E5947E1F7A63CF00371FD3 /* ProfileDateCell.swift in Sources */,
 				4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
+				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
+				19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */,
 				4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */,
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
 				4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
+				19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E6AB6731F6AC8A900B750EF /* PulleyPosition.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
+				19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */,
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
+				19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */,
+				19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
+				19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */,
 				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
@@ -1126,11 +1272,14 @@
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
 				4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
+				19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */,
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
 				4E965C3C1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift in Sources */,
+				19EA7E281F7D0C2900AB7B8A /* MapController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4E871D181F4AF8D50028DA0D /* CircleView.swift in Sources */,
+				19C8EF901F7BB23300D70A07 /* OrderDescriptionCell.swift in Sources */,
 				4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */,
 				4EC2CE881F479199002439CD /* ServicesPaymentFooterView.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
@@ -1142,7 +1291,10 @@
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
 				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
+				19EA7E251F7D0A9400AB7B8A /* CustomMapView.swift in Sources */,
+				19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
+				19C8EF831F7A91FD00D70A07 /* ProfileCellsID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,9 +1352,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
+				DEVELOPMENT_TEAM = BNJFZH68S8;
 				INFOPLIST_FILE = HampTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp..HampTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1218,9 +1370,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
+				DEVELOPMENT_TEAM = BNJFZH68S8;
 				INFOPLIST_FILE = HampTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp..HampTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1348,7 +1500,7 @@
 			baseConfigurationReference = 614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
+				DEVELOPMENT_TEAM = BNJFZH68S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
@@ -1372,7 +1524,7 @@
 			baseConfigurationReference = D020784CAB42E211144BDAFA /* Pods-Hamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9QF88MGC2;
+				DEVELOPMENT_TEAM = BNJFZH68S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",

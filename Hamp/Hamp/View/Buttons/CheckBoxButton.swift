@@ -15,11 +15,19 @@ class CheckBoxButton: UIButton {
     private let deselectedColor = UIColor.white
     
     //MARK: Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        self.tintColor = UIColor.clear
+//        self.setBackgroundImage(UIImage.from(color: selectedColor), for: .selected)
+//        self.setBackgroundImage(UIImage.from(color: deselectedColor), for: .normal)
+//    }
+    
+    override func updateConstraints() {
         self.tintColor = UIColor.clear
         self.setBackgroundImage(UIImage.from(color: selectedColor), for: .selected)
         self.setBackgroundImage(UIImage.from(color: deselectedColor), for: .normal)
+        
+        super.updateConstraints()
     }
     
     override func draw(_ rect: CGRect) {

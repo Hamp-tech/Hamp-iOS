@@ -84,23 +84,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4H-me-tcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6413" y="1320"/>
+            <point key="canvasLocation" x="6649" y="1320"/>
         </scene>
         <!--Profile-->
         <scene sceneID="RNB-ED-gn1">
             <objects>
-                <viewController id="LFG-OQ-zzn" sceneMemberID="viewController">
+                <viewController id="LFG-OQ-zzn" customClass="ProfileController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0h-Dl-HeK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="up5-iz-Mtj">
+                                <rect key="frame" x="0.0" y="88" width="320" height="431"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="up5-iz-Mtj" firstAttribute="leading" secondItem="wse-Ky-i8X" secondAttribute="leading" id="1yn-6Q-dfT"/>
+                            <constraint firstItem="up5-iz-Mtj" firstAttribute="bottom" secondItem="wse-Ky-i8X" secondAttribute="bottom" id="36p-lS-qAw"/>
+                            <constraint firstItem="up5-iz-Mtj" firstAttribute="top" secondItem="wse-Ky-i8X" secondAttribute="top" constant="24" id="Yb4-a1-97Y"/>
+                            <constraint firstItem="up5-iz-Mtj" firstAttribute="trailing" secondItem="wse-Ky-i8X" secondAttribute="trailing" id="yjc-2P-kSa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wse-Ky-i8X"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="always" id="kUO-hn-wil"/>
+                    <connections>
+                        <outlet property="tableView" destination="up5-iz-Mtj" id="Gwc-YE-ViP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZb-qH-VDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3992" y="2067"/>
+            <point key="canvasLocation" x="3991.875" y="2066.1971830985917"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yv6-QR-zeN">
@@ -322,7 +337,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="35"/>
+                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -746,25 +761,39 @@ Lorem Ipsum.</string>
             </objects>
             <point key="canvasLocation" x="3204" y="2067"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Controller-->
         <scene sceneID="Qen-JE-KfY">
             <objects>
-                <viewController storyboardIdentifier="HistoryDetailMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y4S-Nu-tNc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y4S-Nu-tNc" customClass="MapController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahx-yr-q7Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-BL-sUa" customClass="CustomMapView" customModule="Hamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dnW-BL-sUa" firstAttribute="leading" secondItem="edd-NF-1bQ" secondAttribute="leading" id="FCb-UC-slA"/>
+                            <constraint firstItem="dnW-BL-sUa" firstAttribute="bottom" secondItem="edd-NF-1bQ" secondAttribute="bottom" id="Fd2-EL-ElI"/>
+                            <constraint firstItem="dnW-BL-sUa" firstAttribute="trailing" secondItem="edd-NF-1bQ" secondAttribute="trailing" id="cBV-hW-yh6"/>
+                            <constraint firstItem="dnW-BL-sUa" firstAttribute="top" secondItem="edd-NF-1bQ" secondAttribute="top" id="yPV-gO-H68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="edd-NF-1bQ"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="dnW-BL-sUa" id="QFO-PP-QaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgf-q9-KH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5843" y="-794"/>
+            <point key="canvasLocation" x="5842.5" y="-794.36619718309862"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Controller-->
         <scene sceneID="f7W-zM-Sml">
             <objects>
-                <viewController storyboardIdentifier="HistoryDetailInvoiceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cg0-sq-pS6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryDetailInvoiceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cg0-sq-pS6" customClass="OrderController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dlc-CN-20h">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="262"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -800,7 +829,7 @@ Lorem Ipsum.</string>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-IC-A2q">
                                 <rect key="frame" x="0.0" y="60" width="288" height="202"/>
-                                <color key="backgroundColor" red="0.86574218749999998" green="0.86574218749999998" blue="0.86574218749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V3P-so-g0S">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -834,10 +863,13 @@ Lorem Ipsum.</string>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="UNX-IC-A2q" id="AHC-Qf-gBg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVp-hF-8uQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5843" y="-148"/>
+            <point key="canvasLocation" x="5842.5" y="-148.94366197183098"/>
         </scene>
     </scenes>
     <resources>
