@@ -193,6 +193,7 @@ class PulleyViewController: HampViewController {
         
         primaryContentContainer.frame = primaryContentViewController.view.bounds
         primaryContentContainer.frame.origin.y = -(navigationController?.navigationBar.frame.height)! - UIApplication.shared.statusBarFrame.height
+        primaryContentContainer.frame.origin.y -= (primaryContentContainer.frame.height / 2) * CGFloat(mapOffsetPercentage)
         
         let collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
         

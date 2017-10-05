@@ -13,7 +13,7 @@ class ProfileSwitchCell: UITableViewCell {
     var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
-        label.text = "Fecha de nacimiento"
+        label.text = "Recogida"
         return label
     } ()
     

@@ -160,7 +160,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
 		19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitchCell.swift; sourceTree = "<group>"; };
@@ -748,6 +748,7 @@
 		4EC2CE7F1F478F44002439CD /* Textfields */ = {
 			isa = PBXGroup;
 			children = (
+				19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */,
 				4ECA40711F24C0DA003F51EA /* HampTextField.swift */,
 				4ECA40731F24D4E4003F51EA /* InputTextField.swift */,
 			);
@@ -760,7 +761,6 @@
 				4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */,
 				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
 				4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */,
-				19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */,
 				19EA7E241F7D0A9400AB7B8A /* CustomMapView.swift */,
 			);
 			path = UIViews;
@@ -1158,7 +1158,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

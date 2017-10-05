@@ -57,12 +57,15 @@ extension OrderController: UICollectionViewDataSource {
             cell.backgroundColor = .white
             return cell
         case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath) as! OrderInfoCell
             cell.backgroundColor = .white
+            cell.title = "Entrega"
+            cell.infoText = ["13", "1 2 3 4", "Tarde"]
             return cell
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath) as! OrderInfoCell
             cell.backgroundColor = .white
+            cell.title = "Recogida"
             return cell
         }
     }

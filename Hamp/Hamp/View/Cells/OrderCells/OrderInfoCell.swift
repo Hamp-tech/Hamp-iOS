@@ -12,21 +12,38 @@ class OrderInfoCell: UICollectionViewCell {
     
     let doorImageView: UIImageView = {
         let imageView = UIImageView ()
-        imageView.backgroundColor = UIColor.darkPink
+        imageView.image = #imageLiteral(resourceName: "locker").withRenderingMode(.alwaysOriginal)
+        imageView.contentMode = .scaleAspectFit
         return imageView
     } ()
     
     let padlockImageView: UIImageView = {
         let imageView = UIImageView ()
-        imageView.backgroundColor = UIColor.darkPink
+        imageView.image = #imageLiteral(resourceName: "locker").withRenderingMode(.alwaysOriginal)
+        imageView.contentMode = .scaleAspectFit
         return imageView
     } ()
     
     let clockImageView: UIImageView = {
         let imageView = UIImageView ()
-        imageView.backgroundColor = UIColor.darkPink
+        imageView.image = #imageLiteral(resourceName: "clock-empty").withRenderingMode(.alwaysOriginal)
+        imageView.contentMode = .scaleAspectFit
         return imageView
     } ()
+    
+    var title: String? {
+        didSet {
+            captionLabel.text = title
+        }
+    }
+    
+    var infoText: [String]? {
+        didSet {
+            doorLabel.text = infoText? [0] ?? "?"
+            padlockLabel.text = infoText? [1] ?? "?"
+            clockLabel.text = infoText? [2] ?? "?"
+        }
+    }
     
     private let captionLabel: UILabel = {
         let label = UILabel ()
@@ -44,21 +61,21 @@ class OrderInfoCell: UICollectionViewCell {
     private let doorLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helvetica(withSize: 18)
-        label.text = "1234"
+        label.text = "?"
         return label
     } ()
     
     private let padlockLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helvetica(withSize: 18)
-        label.text = "1234"
+        label.text = "?"
         return label
     } ()
     
     private let clockLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helvetica(withSize: 18)
-        label.text = "1234"
+        label.text = "?"
         return label
     } ()
     
