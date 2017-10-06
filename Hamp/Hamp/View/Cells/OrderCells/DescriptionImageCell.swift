@@ -10,19 +10,33 @@ import UIKit
 
 class DescriptionImageCell: UICollectionViewCell {
     
-    let imageView: UIImageView = {
+    var image: UIImage? {
+        didSet {
+            guard let image = image else {return}
+            imageView.image = image
+        }
+    }
+    
+    var numberOfItems: Int = 0 {
+        didSet {
+            roundedLabel.text = String (numberOfItems)
+        }
+    }
+    
+    private let imageView: UIImageView = {
         let iv = UIImageView ()
-        iv.backgroundColor = UIColor.yellow
+        iv.backgroundColor = UIColor.white
+        iv.contentMode = .scaleAspectFit
         return iv
     } ()
     
-    let roundedLabel: BasketRoundLabel = {
+    private let roundedLabel: BasketRoundLabel = {
         let label = BasketRoundLabel ()
         label.text = "1"
         return label
     } ()
     
-    let roundedLabelContainerView: UIView = {
+    private let roundedLabelContainerView: UIView = {
         let view = UIView ()
         view.backgroundColor = .white
         return view
@@ -36,7 +50,7 @@ class DescriptionImageCell: UICollectionViewCell {
         roundedLabelContainerView.addSubview(roundedLabel)
         
         imageView.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        roundedLabelContainerView.anchor(top: nil, left: nil, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 3, paddingRight: 3, width: roundedViewWidth, height: roundedViewWidth)
+        roundedLabelContainerView.anchor(top: nil, left: nil, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 3, paddingRight: 15, width: roundedViewWidth, height: roundedViewWidth)
         roundedLabel.anchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: roundedViewWidth * 0.9, height: roundedViewWidth * 0.9)
         roundedLabel.centerXAnchor.constraint(equalTo: roundedLabelContainerView.centerXAnchor).isActive = true
         roundedLabel.centerYAnchor.constraint(equalTo: roundedLabelContainerView.centerYAnchor).isActive = true

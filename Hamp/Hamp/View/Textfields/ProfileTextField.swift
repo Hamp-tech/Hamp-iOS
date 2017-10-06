@@ -26,6 +26,7 @@ class ProfileTextField: UIView {
     override init(frame: CGRect = CGRect.zero) {
         super.init(frame: frame)
         self.backgroundColor = .clear
+        self.textField.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,6 +39,13 @@ class ProfileTextField: UIView {
         
         separatorLine.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1.5)
         textField.anchor(top: nil, left: leftAnchor, bottom: separatorLine.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 22, paddingBottom: 1, paddingRight: 0, width: 0, height: 22)
+    }
+}
+
+extension ProfileTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
     }
 }
 

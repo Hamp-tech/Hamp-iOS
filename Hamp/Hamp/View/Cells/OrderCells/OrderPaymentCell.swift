@@ -35,7 +35,8 @@ class OrderPaymentCell: UICollectionViewCell {
     
     let paymentImageView: UIImageView = {
         let imageView = UIImageView ()
-        imageView.backgroundColor = UIColor.darkPink
+        imageView.image = #imageLiteral(resourceName: "credit-card").withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = UIColor.init(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
         return imageView
     } ()
     

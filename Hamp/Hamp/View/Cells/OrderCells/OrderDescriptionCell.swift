@@ -25,6 +25,12 @@ class OrderDescriptionCell: UICollectionViewCell {
     
     var collectionView: UICollectionView!
     
+    var productImages: [UIImage]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCollectionView ()
@@ -41,7 +47,7 @@ class OrderDescriptionCell: UICollectionViewCell {
         
         captionLabel.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 20, paddingBottom: 0, paddingRight: 53, width: 0, height: 24)
         separationView.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1.5)
-        collectionView.anchor(top: separationView.bottomAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 75)
+        collectionView.anchor(top: separationView.bottomAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 15, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 75)
     }
     
     fileprivate func configureCollectionView () {
@@ -51,7 +57,7 @@ class OrderDescriptionCell: UICollectionViewCell {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(DescriptionImageCell.self, forCellWithReuseIdentifier: "ProductCellID")
@@ -60,12 +66,14 @@ class OrderDescriptionCell: UICollectionViewCell {
 
 extension OrderDescriptionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return productImages?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath) as! DescriptionImageCell
         cell.backgroundColor = UIColor.darkPink
+        cell.image = productImages? [indexPath.row]
+        // Podria passarli un model que de Producte que tingues la imatge i la quantiat
         return cell
     }
     

@@ -53,8 +53,9 @@ extension OrderController: UICollectionViewDataSource {
             cell.backgroundColor = .white
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.description, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.description, for: indexPath) as! OrderDescriptionCell
             cell.backgroundColor = .white
+            cell.productImages = [#imageLiteral(resourceName: "blanket"),#imageLiteral(resourceName: "cushion"),#imageLiteral(resourceName: "curtain"),#imageLiteral(resourceName: "big-bag")]
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath) as! OrderInfoCell
@@ -80,7 +81,7 @@ extension OrderController: UICollectionViewDelegateFlowLayout {
         case 1:
             return CGSize (width: collectionView.frame.width, height: 150)
         default:
-            return CGSize (width: collectionView.frame.width, height: 230)
+            return CGSize (width: collectionView.frame.width, height: 190)
         }
     }
 }

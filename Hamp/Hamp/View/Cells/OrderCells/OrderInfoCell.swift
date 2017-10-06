@@ -79,9 +79,9 @@ class OrderInfoCell: UICollectionViewCell {
         return label
     } ()
     
-    let imagesWidth:CGFloat = 40
-    let imagesHeight:CGFloat = 45
-    let imagesPadding:CGFloat = 5
+    let imagesWidth:CGFloat = 25
+    let imagesHeight:CGFloat = 30
+    let imagesPadding:CGFloat = 10
     
     override func draw(_ rect: CGRect) {
         let imagesStackView = UIStackView (arrangedSubviews: [doorImageView, padlockImageView, clockImageView])
@@ -98,10 +98,11 @@ class OrderInfoCell: UICollectionViewCell {
         
         labelsStackView.axis = .vertical
         labelsStackView.distribution = .fillEqually
+        labelsStackView.spacing = imagesPadding
         
         captionLabel.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 20, paddingBottom: 0, paddingRight: 53, width: 0, height: 24)
         separationView.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1.5)
-        imagesStackView.anchor(top: separationView.topAnchor, left: separationView.leftAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: imagesWidth, height: 3 * imagesHeight + 2 * imagesPadding)
+        imagesStackView.anchor(top: separationView.topAnchor, left: separationView.leftAnchor, bottom: nil, right: nil, paddingTop: 15, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: imagesWidth, height: 3 * imagesHeight + 2 * imagesPadding)
         labelsStackView.anchor(top: imagesStackView.topAnchor, left: imagesStackView.rightAnchor, bottom: imagesStackView.bottomAnchor, right: separationView.rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 5, width: 0, height: 0)
     }
     
