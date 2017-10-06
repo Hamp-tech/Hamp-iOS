@@ -21,6 +21,9 @@
 		19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */; };
 		19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */; };
 		19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF951F7C405300D70A07 /* OrderCellsID.swift */; };
+		19DFE0221F87E7ED0091CC24 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */; };
+		19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */; };
+		19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */; };
 		19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E594791F7A5D4600371FD3 /* ProfileController.swift */; };
 		19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */; };
 		19E5947E1F7A63CF00371FD3 /* ProfileDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */; };
@@ -174,6 +177,9 @@
 		19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageCell.swift; sourceTree = "<group>"; };
 		19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF951F7C405300D70A07 /* OrderCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellsID.swift; sourceTree = "<group>"; };
+		19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
+		19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		19E594791F7A5D4600371FD3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldCell.swift; sourceTree = "<group>"; };
 		19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDateCell.swift; sourceTree = "<group>"; };
@@ -356,6 +362,15 @@
 				19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */,
 			);
 			path = ProfileCells;
+			sourceTree = "<group>";
+		};
+		19DFE0231F87E9520091CC24 /* StoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */,
+				19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */,
+			);
+			path = StoreCell;
 			sourceTree = "<group>";
 		};
 		19EA7E211F7CEEB800AB7B8A /* OrderCells */ = {
@@ -777,6 +792,7 @@
 		4EC2CE821F478F7F002439CD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				19DFE0231F87E9520091CC24 /* StoreCell */,
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */,
 				19C8EF8C1F7BA8C600D70A07 /* ProfileCells */,
@@ -809,6 +825,7 @@
 				4EC6361C1F43AC830045520F /* Managers */,
 				4E2E2F511F3A87040063E466 /* UI Controllers */,
 				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
+				19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1060,6 +1077,7 @@
 				4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */,
 				4EC2CE891F479199002439CD /* ServicesPaymentFooterView.xib in Resources */,
 				4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */,
+				19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E72535A1F37CE89006382B4 /* SignUpGenderTableViewCell.xib in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
@@ -1192,6 +1210,7 @@
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */,
+				19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */,
 				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
@@ -1233,6 +1252,7 @@
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
+				19DFE0221F87E7ED0091CC24 /* StoresViewController.swift in Sources */,
 				19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */,
 				4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,

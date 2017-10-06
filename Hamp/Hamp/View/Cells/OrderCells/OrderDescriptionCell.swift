@@ -73,7 +73,6 @@ extension OrderDescriptionCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath) as! DescriptionImageCell
         cell.backgroundColor = UIColor.darkPink
         cell.image = productImages? [indexPath.row]
-        // Podria passarli un model que de Producte que tingues la imatge i la quantiat
         return cell
     }
     
@@ -84,6 +83,6 @@ extension OrderDescriptionCell: UICollectionViewDataSource {
 
 extension OrderDescriptionCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize (width: collectionView.frame.width/3, height: self.collectionView.frame.height)
+        return CGSize (width: collectionView.frame.width/3.5, height: self.collectionView.frame.height)
     }
 }

@@ -17,5 +17,3 @@ let gradientStatesButtonCompletedContentIdentifier = "com.Hamp.Hamp.NewCreditCar
 
 let presentNewCreditCardViewControllerOnFirstTime = "com.Hamp.Hamp.TabBarViewController.presentNewCreditCardViewController"
 let presentTutorialOnFirstTime = "com.Hamp.Hamp.presentTutorial"
-
-let mapOffsetPercentage = 0.4

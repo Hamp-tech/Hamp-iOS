@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFs-wB-KKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5044" y="-335"/>
+            <point key="canvasLocation" x="5046" y="-373"/>
         </scene>
         <!--Tab Bar Large Titles Navigation View Controller-->
         <scene sceneID="6fg-br-rB1">
@@ -870,7 +870,47 @@ Lorem Ipsum.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVp-hF-8uQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5842.5" y="-148.94366197183098"/>
+            <point key="canvasLocation" x="5856" y="-192"/>
+        </scene>
+        <!--Stores View Controller-->
+        <scene sceneID="HUm-ca-s55">
+            <objects>
+                <viewController id="k6o-FR-qv8" customClass="StoresViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l1f-Dp-34G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZQh-9r-QWC">
+                                <rect key="frame" x="16" y="20" width="288" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SP8-Pi-rg6">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SP8-Pi-rg6" id="dfs-RG-ASJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZQh-9r-QWC" firstAttribute="top" secondItem="0uJ-8h-u0O" secondAttribute="top" id="ALi-d4-oIZ"/>
+                            <constraint firstItem="0uJ-8h-u0O" firstAttribute="bottom" secondItem="ZQh-9r-QWC" secondAttribute="bottom" constant="20" id="EKt-md-ukS"/>
+                            <constraint firstItem="0uJ-8h-u0O" firstAttribute="trailing" secondItem="ZQh-9r-QWC" secondAttribute="trailing" constant="16" id="lbY-6Y-9Za"/>
+                            <constraint firstItem="ZQh-9r-QWC" firstAttribute="leading" secondItem="0uJ-8h-u0O" secondAttribute="leading" constant="16" id="pZe-rR-Dfm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0uJ-8h-u0O"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ZQh-9r-QWC" id="Vwz-yR-wd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xym-SV-evC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6776.25" y="-229.22535211267606"/>
         </scene>
     </scenes>
     <resources>
