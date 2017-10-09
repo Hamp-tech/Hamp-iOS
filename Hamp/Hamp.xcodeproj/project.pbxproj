@@ -69,6 +69,10 @@
 		4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4786701F30DAB1007ABE00 /* Validation.swift */; };
 		4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */; };
 		4E4CB7251F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */; };
+		4E4CB7271F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */; };
+		4E4CB7281F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */; };
+		4E4CB72A1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */; };
+		4E4CB72B1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */; };
 		4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
@@ -233,6 +237,8 @@
 		4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		4E4786701F30DAB1007ABE00 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampPoint.swift; sourceTree = "<group>"; };
+		4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampPointsProvider.swift; sourceTree = "<group>"; };
+		4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPointsProvider.swift; sourceTree = "<group>"; };
 		4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTextFieldFactory.swift; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +492,7 @@
 				4EB242DA1F45C271006F3BA7 /* Service.swift */,
 				4E90CA501F671810003DAA28 /* HistoryProvider.swift */,
 				4E1DFC581F67CB050096659F /* DataProvider.swift */,
+				4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -949,6 +956,7 @@
 				4ECA351D1F449B530031580B /* LaundryServicesProvider.swift */,
 				4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */,
 				4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */,
+				4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -1211,6 +1219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4496561F45EDEC00C5EE99 /* OrderManager.swift in Sources */,
+				4E4CB72B1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */,
+				4E4CB7281F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */,
 				4E4CB7251F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EDF25091F45D36000CC29A0 /* OrderTests.swift in Sources */,
 			);
@@ -1256,6 +1266,7 @@
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
+				4E4CB72A1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */,
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				19EA7E2A1F7D0DD000AB7B8A /* MapArtWork.swift in Sources */,
@@ -1317,6 +1328,7 @@
 				19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */,
 				19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
+				4E4CB7271F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */,
 				19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */,
 				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,

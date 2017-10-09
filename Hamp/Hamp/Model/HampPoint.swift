@@ -10,8 +10,8 @@ import Foundation
 import MapKit
 
 struct HampPoint {
-    let identifier: String
-    let name: String
-    let localization: CLLocationCoordinate2D
-    let postalCode: String
+    var identifier: String
+    var name: String
+    var localization: CLLocationCoordinate2D
+    var postalCode: String
 }
