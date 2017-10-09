@@ -44,7 +44,7 @@ private extension AppDelegate {
 
         let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
-        
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
@@ -24,6 +25,9 @@
 		19DFE0221F87E7ED0091CC24 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */; };
 		19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */; };
 		19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */; };
+		19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0281F8913CE0091CC24 /* HampSearchBarView.swift */; };
+		19DFE02B1F89155D0091CC24 /* HampSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */; };
+		19DFE02D1F8916F40091CC24 /* SearchBarFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */; };
 		19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E594791F7A5D4600371FD3 /* ProfileController.swift */; };
 		19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */; };
 		19E5947E1F7A63CF00371FD3 /* ProfileDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */; };
@@ -163,6 +167,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
@@ -180,6 +185,9 @@
 		19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
+		19DFE0281F8913CE0091CC24 /* HampSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampSearchBarView.swift; sourceTree = "<group>"; };
+		19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampSearchBarDelegate.swift; sourceTree = "<group>"; };
+		19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarFiltre.swift; sourceTree = "<group>"; };
 		19E594791F7A5D4600371FD3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldCell.swift; sourceTree = "<group>"; };
 		19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDateCell.swift; sourceTree = "<group>"; };
@@ -350,6 +358,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		192542741F8BC8760098CE79 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */,
+				192542751F8BC8920098CE79 /* StoreMapController.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		19C8EF8C1F7BA8C600D70A07 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +620,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				192542741F8BC8760098CE79 /* Stores */,
 				19EA7E261F7D0C1600AB7B8A /* Map */,
 				4E6D58301F4CAC2600113636 /* Rating */,
 				4EC0BD2D1F4C3F330077DD92 /* Tutorial */,
@@ -683,6 +701,7 @@
 				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
+				19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -777,6 +796,7 @@
 				4E22CC181F474B08004F3203 /* TrailingBarButtonItem.swift */,
 				4EBAD5C31F4B97E10070CEE9 /* LockerView.swift */,
 				19EA7E241F7D0A9400AB7B8A /* CustomMapView.swift */,
+				19DFE0281F8913CE0091CC24 /* HampSearchBarView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -792,9 +812,9 @@
 		4EC2CE821F478F7F002439CD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				19DFE0231F87E9520091CC24 /* StoreCell */,
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */,
+				19DFE0231F87E9520091CC24 /* StoreCell */,
 				19C8EF8C1F7BA8C600D70A07 /* ProfileCells */,
 				19EA7E211F7CEEB800AB7B8A /* OrderCells */,
 			);
@@ -822,10 +842,10 @@
 		4EC6361D1F43ACEA0045520F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */,
 				4EC6361C1F43AC830045520F /* Managers */,
 				4E2E2F511F3A87040063E466 /* UI Controllers */,
 				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
-				19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1240,6 +1260,7 @@
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
 				19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */,
+				19DFE02B1F89155D0091CC24 /* HampSearchBarDelegate.swift in Sources */,
 				4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
@@ -1260,6 +1281,7 @@
 				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
+				192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
 				4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */,
 				19E5947E1F7A63CF00371FD3 /* ProfileDateCell.swift in Sources */,
@@ -1268,6 +1290,7 @@
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
+				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
 				19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */,
@@ -1311,6 +1334,7 @@
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,
 				4EDF250C1F45E67F00CC29A0 /* OrderManager.swift in Sources */,
 				4E22CF661F38EAB700EEC314 /* FabricManager.swift in Sources */,
+				19DFE02D1F8916F40091CC24 /* SearchBarFiltre.swift in Sources */,
 				4EBAD5C21F4B90030070CEE9 /* HistoryDetailPaymentSectionView.swift in Sources */,
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
@@ -1534,7 +1558,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1558,7 +1582,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Hamp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

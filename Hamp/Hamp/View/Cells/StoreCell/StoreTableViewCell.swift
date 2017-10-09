@@ -10,37 +10,15 @@ import UIKit
 
 class StoreTableViewCell: UITableViewCell {
 
-    let locationNameLabel: UILabel = {
-        let label = UILabel ()
-        label.font = UIFont.helveticaBold(withSize: 20)
-        label.backgroundColor = .red
-        label.textAlignment = .left
-        return label
-    } ()
+    @IBOutlet weak var locationNameLabel: UILabel!
     
-//    let starImageView: UIImageView = {
-//        let imageView = UIImageView ()
-//        imageView.backgroundColor = .pink
-//        return imageView
-//    } ()
+    @IBOutlet weak var streetLabel: UILabel!
     
-    let streetLabel: UILabel = {
-        let label = UILabel ()
-        label.font = UIFont.helvetica(withSize: 16)
-        label.backgroundColor = .green
-        label.textAlignment = .left
-        return label
-    } ()
+    @IBOutlet weak var distanceLabel: UILabel!
     
-//    let distanceLabel = UILabel = {
-//        let label = UILabel ()
-//        label.font = UIFont.hel
-//    } ()
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var arrowImageView: UIImageView!
+    override func awakeFromNib() {
+        
     }
     
 }
