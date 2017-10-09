@@ -67,6 +67,8 @@
 		4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */; };
 		4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */; };
 		4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4786701F30DAB1007ABE00 /* Validation.swift */; };
+		4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */; };
+		4E4CB7251F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */; };
 		4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
@@ -230,6 +232,7 @@
 		4E46C8BB1F44E9600051BF84 /* BasketRoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRoundLabel.swift; sourceTree = "<group>"; };
 		4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		4E4786701F30DAB1007ABE00 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampPoint.swift; sourceTree = "<group>"; };
 		4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTextFieldFactory.swift; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -475,6 +478,7 @@
 		4E2304F81F2F9803000AB18C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */,
 				4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */,
 				4E2304FD1F2F9FB2000AB18C /* Reusable.swift */,
 				4E72535F1F37D982006382B4 /* SignUpContentable.swift */,
@@ -842,7 +846,6 @@
 		4EC6361D1F43ACEA0045520F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */,
 				4EC6361C1F43AC830045520F /* Managers */,
 				4E2E2F511F3A87040063E466 /* UI Controllers */,
 				4E7D94E01F2384CE00C7BB4B /* ViewControllers */,
@@ -926,6 +929,7 @@
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
 				19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */,
+				4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1196,7 +1200,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1207,6 +1211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4496561F45EDEC00C5EE99 /* OrderManager.swift in Sources */,
+				4E4CB7251F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EDF25091F45D36000CC29A0 /* OrderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1234,6 +1239,7 @@
 				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
+				4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
