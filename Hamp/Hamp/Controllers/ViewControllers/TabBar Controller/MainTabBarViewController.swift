@@ -12,7 +12,7 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        injectPropertiesToViewControllers()
+        injectDependencesToViewControllers()
         foo()
     }
     
@@ -37,7 +37,7 @@ class MainTabBarViewController: UITabBarController {
 }
 
 private extension MainTabBarViewController {
-    func injectPropertiesToViewControllers() {
+    func injectDependencesToViewControllers() {
         let historyViewController = ((viewControllers?.first as! UINavigationController).topViewController as! HistoryViewController)
         historyViewController.dataProvider = ProvidersManager.sharedInstance.historyProvider
     }
