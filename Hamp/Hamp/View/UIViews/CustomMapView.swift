@@ -11,7 +11,7 @@ import MapKit
 
 class CustomMapView: MKMapView {    
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-    let regionRadius: CLLocationDistance = 300
+    let regionRadius: CLLocationDistance = 2000
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)

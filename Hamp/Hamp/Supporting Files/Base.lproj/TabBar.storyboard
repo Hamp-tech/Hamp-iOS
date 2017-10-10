@@ -910,15 +910,15 @@ Lorem Ipsum.</string>
             </objects>
             <point key="canvasLocation" x="4119" y="2996"/>
         </scene>
-        <!--Map Controller-->
+        <!--Store Map Controller-->
         <scene sceneID="Qo9-Jg-iDt">
             <objects>
-                <viewController storyboardIdentifier="StoreMapController" id="r8K-pp-4tt" customClass="MapController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreMapController" id="r8K-pp-4tt" customClass="StoreMapController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5OV-Wd-2nA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6oX-sj-5fR">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6oX-sj-5fR" customClass="CustomMapView" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                             </mapView>
                         </subviews>
@@ -932,7 +932,7 @@ Lorem Ipsum.</string>
                         <viewLayoutGuide key="safeArea" id="YOA-uV-Rh9"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="6oX-sj-5fR" id="Jxa-sF-zxi"/>
+                        <outlet property="mapView" destination="6oX-sj-5fR" id="yQZ-Io-uU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5m-kp-kaz" userLabel="First Responder" sceneMemberID="firstResponder"/>

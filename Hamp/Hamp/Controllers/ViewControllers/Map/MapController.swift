@@ -15,7 +15,7 @@ class MapController: PulleyChildViewController {
     
     override func viewDidLoad() {
         loadMapLocation (location: CLLocation(latitude: 41.215590, longitude: 1.527245), pinTitle: "HampOffice", locationName: "El Vendrell", discipline: "Office")
-        
+
         setupMapView ()
     }
     
@@ -29,14 +29,5 @@ class MapController: PulleyChildViewController {
         mapView.addAnnotation(artwork)
     }
     
-    func addMapLocation (location: CLLocation, pinTitle: String, locationName: String, discipline: String) {
-        let artwork = MapArtWork(title: pinTitle, locationName: locationName, discipline: discipline, coordinate: location.coordinate)
-        mapView.addAnnotation(artwork)
-    }
     
-//    func centerUserLocation () {
-//        guard let currentLocation = MapLocation.getCurrentLocation () else {return}
-//        let locationo = CLLocation (
-////        mapView.centerMapOnLocation(location: currentLocation)
-//    }
 }
