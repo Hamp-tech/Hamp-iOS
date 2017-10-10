@@ -90,9 +90,9 @@ extension ServicesCollectionViewController {
     
     @objc func showMap(_ sender: UIButton) {
         
-        let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController") as! MapController
+        let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "StoreMapController") as! StoreMapController
         
-        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailInvoiceViewController") as! OrderController
+        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: "StoresListViewController") as! StoresListViewController
         
         let vc = StoresViewController(contentViewController: mapVC, draggableViewController: invoiceVC)
         let nav = UINavigationController(rootViewController: vc)

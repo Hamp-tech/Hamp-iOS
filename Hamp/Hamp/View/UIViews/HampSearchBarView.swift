@@ -10,22 +10,32 @@ import UIKit
 
 class HampSearchBarView: UIView {
     
-    lazy var searchBarView: UISearchBar = {
-        let sbv = UISearchBar ()
-        sbv.placeholder = "Ciudad, calle, codigo postal..."
-        sbv.delegate = self
-        return sbv
+    var delegate: HampSearchBarDelegate! {
+        didSet {
+            initialSearchElements = delegate.searchBarSetInitialElements()
+            SearchBarFiltre.filteredSearchElements = initialSearchElements
+        }
+    }
+    
+    private var initialSearchElements: [HampPoint]!
+    
+    lazy var searchTextField: ProfileTextField = {
+        let tf = ProfileTextField ()
+        tf.textField.placeholder = "Ciudad, calle, codigo postal..."
+        tf.textField.addTarget(self, action: #selector (textFieldDidChange), for: .editingChanged)
+        tf.contentMode = .redraw
+        tf.textField.returnKeyType = .search
+        return tf
     } ()
     
     override func draw(_ rect: CGRect) {
-        addSubview(searchBarView)
-        searchBarView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10, width: 0, height: 0)
+        addSubview(searchTextField)
+        searchTextField.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
     }
     
-}
-
-extension HampSearchBarView: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+    @objc func textFieldDidChange () {
+        SearchBarFiltre.filterSearch(searchText: searchTextField.textField.text ?? "", searchElements: self.initialSearchElements)
+        delegate.searchBarDidUpdateSearchElements(elements: SearchBarFiltre.filteredSearchElements)
     }
+    
 }
