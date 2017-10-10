@@ -8,13 +8,6 @@
 
 import UIKit
 
-class PulleyChildViewController: HampViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
+class PulleyChildViewController: HampViewController {    
     func childDidChangePosition(position: PulleyPosition) {}
 }

@@ -31,8 +31,6 @@ class MainTabBarViewController: UITabBarController {
     }
     
     private func foo () {
-        let vc = UIStoryboard.init(name: "TabBar", bundle: Bundle.main).instantiateViewController(withIdentifier: "storesViewController")
-        viewControllers?.first?.present(vc, animated: true, completion: nil)
     }
 }
 

@@ -22,7 +22,7 @@
 		19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */; };
 		19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */; };
 		19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF951F7C405300D70A07 /* OrderCellsID.swift */; };
-		19DFE0221F87E7ED0091CC24 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */; };
+		19DFE0221F87E7ED0091CC24 /* StoresListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0211F87E7ED0091CC24 /* StoresListViewController.swift */; };
 		19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */; };
 		19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */; };
 		19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0281F8913CE0091CC24 /* HampSearchBarView.swift */; };
@@ -150,6 +150,7 @@
 		4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */; };
 		4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */; };
 		4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */; };
+		4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDED5451F8CB7D50073DD74 /* StoresViewController.swift */; };
 		4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */; };
 		4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */; };
 		4EDF25091F45D36000CC29A0 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF25081F45D36000CC29A0 /* OrderTests.swift */; };
@@ -188,7 +189,7 @@
 		19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageCell.swift; sourceTree = "<group>"; };
 		19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF951F7C405300D70A07 /* OrderCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellsID.swift; sourceTree = "<group>"; };
-		19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
+		19DFE0211F87E7ED0091CC24 /* StoresListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresListViewController.swift; sourceTree = "<group>"; };
 		19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		19DFE0281F8913CE0091CC24 /* HampSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampSearchBarView.swift; sourceTree = "<group>"; };
@@ -329,6 +330,7 @@
 		4EDCFCF71F45150300EAE4E4 /* HampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampCollectionViewController.swift; sourceTree = "<group>"; };
 		4EDCFCF91F45176800EAE4E4 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		4EDCFCFB1F451E9300EAE4E4 /* AmountSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountSelectionView.swift; sourceTree = "<group>"; };
+		4EDED5451F8CB7D50073DD74 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		4EDF10031F236A84007E15E9 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		4EDF102A1F237D4E007E15E9 /* HorizontalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientLayer.swift; sourceTree = "<group>"; };
 		4EDF25081F45D36000CC29A0 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
@@ -370,8 +372,9 @@
 		192542741F8BC8760098CE79 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				19DFE0211F87E7ED0091CC24 /* StoresViewController.swift */,
+				19DFE0211F87E7ED0091CC24 /* StoresListViewController.swift */,
 				192542751F8BC8920098CE79 /* StoreMapController.swift */,
+				4EDED5451F8CB7D50073DD74 /* StoresViewController.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -1290,7 +1293,7 @@
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
-				19DFE0221F87E7ED0091CC24 /* StoresViewController.swift in Sources */,
+				19DFE0221F87E7ED0091CC24 /* StoresListViewController.swift in Sources */,
 				19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */,
 				4E88B6EA1F4AE9930005838F /* HistoryViewController.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
@@ -1298,6 +1301,7 @@
 				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
+				4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */,
 				192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
 				4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */,

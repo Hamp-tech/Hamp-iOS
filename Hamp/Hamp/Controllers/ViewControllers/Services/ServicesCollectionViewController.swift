@@ -30,6 +30,7 @@ class ServicesCollectionViewController: HampCollectionViewController {
         addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: basketButton))
         
         videoTutorialButton = BarRightButtonsFactory.videoTutorialButton()
+        videoTutorialButton.addTarget(self, action: #selector(showMap(_:)), for: .touchUpInside)
         addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: videoTutorialButton))
         
     }
@@ -85,6 +86,18 @@ extension ServicesCollectionViewController {
     //MARK: Actions
     @objc func hireServices(_ sender: UIButton) {
         performSegue(withIdentifier: "showOrderViewController", sender: nil)
+    }
+    
+    @objc func showMap(_ sender: UIButton) {
+        
+        let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController") as! MapController
+        
+        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailInvoiceViewController") as! OrderController
+        
+        let vc = StoresViewController(contentViewController: mapVC, draggableViewController: invoiceVC)
+        let nav = UINavigationController(rootViewController: vc)
+        
+        present(nav, animated: true, completion: nil)
     }
 }
 
