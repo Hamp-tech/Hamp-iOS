@@ -36,7 +36,6 @@ class OrderController: PulleyChildViewController {
         collectionView.isScrollEnabled = position == .open
         collectionView.isUserInteractionEnabled = position == .open
     }
-    
 }
 
 //MARK: CollectionViewDataSource

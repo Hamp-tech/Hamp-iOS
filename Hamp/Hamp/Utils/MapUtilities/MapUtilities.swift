@@ -40,12 +40,15 @@ class MapUtilities: NSObject {
         let location = CLLocation.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
         return userLocation.distance(from: location)
     }
+    
+    
 }
 
 extension MapUtilities: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first, !locationWasGived {
             mapDelegate?.getUserLocation(location: location)
+            userLocation = location
             locationWasGived = true
         }
     }

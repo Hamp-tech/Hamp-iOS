@@ -15,14 +15,6 @@ class StoresListViewController: PulleyChildViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let cellHeight:CGFloat = 100
-    
-    //Aixo de qui perque no ho inicialitza?
-//    lazy var mapUtilities: MapUtilities = {
-//        let mapUtil = MapUtilities ()
-//        mapUtil.mapDelegate = self
-//        return mapUtil
-//    } ()
-    
     var mapUtilities: MapUtilities!
     
     var userCoordinate: CLLocationCoordinate2D? {
@@ -65,7 +57,12 @@ class StoresListViewController: PulleyChildViewController {
         tableView.register(nib, forCellReuseIdentifier: "StoreTableViewCell")
     }
     
-    
+    private func setupPulleyScroll () {
+//        let numberOfCells = tableView.numberOfRows(inSection: 0)
+//        if numberOfCells * self.cellHeight <= tableView.frame.height {
+//
+//        }
+    }
 }
 
 extension StoresListViewController: UITableViewDataSource {
@@ -76,7 +73,9 @@ extension StoresListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell") as! StoreTableViewCell
-        cell.locationNameLabel.text = filtredHampPoints! [indexPath.row].name
+        cell.locationName = filtredHampPoints! [indexPath.row].name
+        let distance = mapUtilities.getUserDistanceTo(coordinate: filtredHampPoints! [indexPath.row].localization)
+        cell.distance = Float (distance)/1000
         return cell
     }
     

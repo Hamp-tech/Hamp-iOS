@@ -11,12 +11,23 @@ import UIKit
 class StoreTableViewCell: UITableViewCell {
 
     @IBOutlet weak var locationNameLabel: UILabel!
-    
     @IBOutlet weak var streetLabel: UILabel!
-    
     @IBOutlet weak var distanceLabel: UILabel!
-    
     @IBOutlet weak var arrowImageView: UIImageView!
+    
+    var distance: Float? {
+        didSet {
+            let distanceText = String.init(format: "%.2f", distance ?? 0)
+            distanceLabel.text = distanceText + " km"
+        }
+    }
+    
+    var locationName: String? {
+        didSet {
+            locationNameLabel.text = locationName
+        }
+    }
+    
     override func awakeFromNib() {
         
     }
