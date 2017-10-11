@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1904C6A91F8CF9E1005144E3 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6A81F8CF9E1005144E3 /* MapLocation.swift */; };
+		1904C6A91F8CF9E1005144E3 /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */; };
 		1904C6AB1F8CFB51005144E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */; };
+		1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
@@ -176,8 +177,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1904C6A81F8CF9E1005144E3 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
+		1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
 		1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilitiesDelegate.swift; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
@@ -374,6 +376,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1904C6CD1F8E1C77005144E3 /* MapUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */,
+				1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */,
+			);
+			path = MapUtilities;
+			sourceTree = "<group>";
+		};
 		192542741F8BC8760098CE79 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,7 +732,7 @@
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
 				19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */,
-				1904C6A81F8CF9E1005144E3 /* MapLocation.swift */,
+				1904C6CD1F8E1C77005144E3 /* MapUtilities */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1248,6 +1259,7 @@
 				4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */,
 				4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */,
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
+				1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */,
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
 				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
@@ -1277,7 +1289,7 @@
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4E4CB72A1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */,
-				1904C6A91F8CF9E1005144E3 /* MapLocation.swift in Sources */,
+				1904C6A91F8CF9E1005144E3 /* MapUtilities.swift in Sources */,
 				4EB242DF1F45C372006F3BA7 /* LaundryService.swift in Sources */,
 				4E7253591F37CE89006382B4 /* SignUpGenderTableViewCell.swift in Sources */,
 				19EA7E2A1F7D0DD000AB7B8A /* MapArtWork.swift in Sources */,

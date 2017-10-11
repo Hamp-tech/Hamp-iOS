@@ -16,7 +16,7 @@ struct SearchBarFiltre {
         if searchText.characters.isEmpty {
             filteredSearchElements = searchElements
         } else {
-            self.filteredSearchElements = filteredSearchElements.filter({ (hampPoint) -> Bool in
+            self.filteredSearchElements = searchElements.filter({ (hampPoint) -> Bool in
                 return didContainsElements(hampPoint: hampPoint, searchText: searchText)
             })
         }

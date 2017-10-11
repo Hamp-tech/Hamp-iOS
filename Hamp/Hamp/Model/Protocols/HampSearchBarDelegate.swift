@@ -9,6 +9,5 @@
 import Foundation
 
 protocol HampSearchBarDelegate {
-    func searchBarSetInitialElements () -> [HampPoint]
     func searchBarDidUpdateSearchElements (elements: [HampPoint])
 }

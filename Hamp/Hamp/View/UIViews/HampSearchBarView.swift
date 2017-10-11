@@ -10,14 +10,13 @@ import UIKit
 
 class HampSearchBarView: UIView {
     
-    var delegate: HampSearchBarDelegate! {
+    var delegate: HampSearchBarDelegate!
+    var initialSearchElements: [HampPoint]? {
         didSet {
-            initialSearchElements = delegate.searchBarSetInitialElements()
+            guard let initialSearchElements = initialSearchElements else {return}
             SearchBarFiltre.filteredSearchElements = initialSearchElements
         }
     }
-    
-    private var initialSearchElements: [HampPoint]!
     
     lazy var searchTextField: ProfileTextField = {
         let tf = ProfileTextField ()
@@ -34,7 +33,8 @@ class HampSearchBarView: UIView {
     }
     
     @objc func textFieldDidChange () {
-        SearchBarFiltre.filterSearch(searchText: searchTextField.textField.text ?? "", searchElements: self.initialSearchElements)
+        guard let initialSearchElements = self.initialSearchElements else {return}
+        SearchBarFiltre.filterSearch(searchText: searchTextField.textField.text ?? "", searchElements: initialSearchElements)
         delegate.searchBarDidUpdateSearchElements(elements: SearchBarFiltre.filteredSearchElements)
     }
     
