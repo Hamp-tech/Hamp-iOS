@@ -26,7 +26,7 @@ class MapUtilities: NSObject {
     }
     
     private func setupLocationManager () {
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self

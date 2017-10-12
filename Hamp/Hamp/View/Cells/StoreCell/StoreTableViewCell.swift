@@ -27,9 +27,4 @@ class StoreTableViewCell: UITableViewCell {
             locationNameLabel.text = locationName
         }
     }
-    
-    override func awakeFromNib() {
-        
-    }
-    
 }
