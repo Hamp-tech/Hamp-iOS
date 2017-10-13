@@ -9,10 +9,15 @@
 import UIKit
 import CoreLocation
 
+protocol StoresListViewControllerDelegate: class {
+    func storesList(storesList: StoresListViewController, didBeginEditing: UITextField)
+}
+
 class StoresListViewController: PulleyChildViewController {
     
-    @IBOutlet weak var searchBarView: HampSearchBarView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchBarView: HampSearchBarView!
+    @IBOutlet private weak var tableView: UITableView!
+    weak var delegate: StoresListViewControllerDelegate?
     
     let cellHeight:CGFloat = 100
     var mapUtilities: MapUtilities!
@@ -41,6 +46,8 @@ class StoresListViewController: PulleyChildViewController {
         configureTableView ()
         view.backgroundColor = .white
         searchBarView.delegate = self
+        searchBarView.searchTextField.textField.delegate = self
+        
     }
     
     private func setupMapUtilities () {
@@ -84,6 +91,12 @@ extension StoresListViewController: UITableViewDataSource {
 extension StoresListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+}
+
+extension StoresListViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.storesList(storesList: self, didBeginEditing: textField)
     }
 }
 

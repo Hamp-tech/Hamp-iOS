@@ -12,7 +12,13 @@ class StoresViewController: PulleyViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        (draggableContentViewController as! StoresListViewController).delegate = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension StoresViewController: StoresListViewControllerDelegate {
+    func storesList(storesList: StoresListViewController, didBeginEditing: UITextField) {
+        guard draggablePosition != .open else { return  }
+        setDraggablePosition(position: .open, animated: true)
     }
 }
