@@ -21,4 +21,10 @@ extension StoresViewController: StoresListViewControllerDelegate {
         guard draggablePosition != .open else { return  }
         setDraggablePosition(position: .open, animated: true)
     }
+    
+    func storesList(storesList: StoresListViewController, didEndEditing: UITextField) {
+        guard draggablePosition != .collapsed else {return}
+        setDraggablePosition(position: .collapsed, animated: true)
+    }
+
 }

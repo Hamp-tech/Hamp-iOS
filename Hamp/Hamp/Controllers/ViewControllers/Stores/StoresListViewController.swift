@@ -11,6 +11,7 @@ import CoreLocation
 
 protocol StoresListViewControllerDelegate: class {
     func storesList(storesList: StoresListViewController, didBeginEditing: UITextField)
+    func storesList(storesList: StoresListViewController, didEndEditing: UITextField)
 }
 
 class StoresListViewController: PulleyChildViewController {
@@ -64,12 +65,6 @@ class StoresListViewController: PulleyChildViewController {
         tableView.register(nib, forCellReuseIdentifier: "StoreTableViewCell")
     }
     
-    private func setupPulleyScroll () {
-//        let numberOfCells = tableView.numberOfRows(inSection: 0)
-//        if numberOfCells * self.cellHeight <= tableView.frame.height {
-//
-//        }
-    }
 }
 
 extension StoresListViewController: UITableViewDataSource {
@@ -97,6 +92,12 @@ extension StoresListViewController: UITableViewDelegate {
 extension StoresListViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         delegate?.storesList(storesList: self, didBeginEditing: textField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        delegate?.storesList(storesList: self, didEndEditing: textField)
+        return false
     }
 }
 

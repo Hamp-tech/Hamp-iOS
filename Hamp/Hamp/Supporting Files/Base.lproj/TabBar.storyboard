@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="up5-iz-Mtj">
-                                <rect key="frame" x="0.0" y="92" width="320" height="427"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -337,7 +337,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="35"/>
+                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -874,60 +874,24 @@ Lorem Ipsum.</string>
             </objects>
             <point key="canvasLocation" x="5856" y="-192"/>
         </scene>
-        <!--Stores List View Controller-->
-        <scene sceneID="HUm-ca-s55">
-            <objects>
-                <viewController id="k6o-FR-qv8" customClass="StoresListViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l1f-Dp-34G">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcQ-tb-HBZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="r8K-pp-4tt" kind="embed" id="7o7-AA-3Xn"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABu-QZ-vcF">
-                                <rect key="frame" x="16" y="306" width="288" height="262"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="5ir-UR-XPZ" kind="embed" id="azl-DP-2YN"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="0uJ-8h-u0O"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jUQ-l2-c6F"/>
-                    <connections>
-                        <outlet property="draggableContentContainerView" destination="ABu-QZ-vcF" id="ZxW-Ld-aNY"/>
-                        <outlet property="primaryContentContainerView" destination="zcQ-tb-HBZ" id="Knz-Gs-8sY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xym-SV-evC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4119" y="2996"/>
-        </scene>
         <!--Store Map Controller-->
         <scene sceneID="Qo9-Jg-iDt">
             <objects>
                 <viewController storyboardIdentifier="StoreMapController" id="r8K-pp-4tt" customClass="StoreMapController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5OV-Wd-2nA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6oX-sj-5fR" customClass="CustomMapView" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6oX-sj-5fR" firstAttribute="top" secondItem="YOA-uV-Rh9" secondAttribute="top" id="PUd-F1-4OT"/>
-                            <constraint firstItem="6oX-sj-5fR" firstAttribute="bottom" secondItem="YOA-uV-Rh9" secondAttribute="bottom" id="UUT-pS-qxd"/>
-                            <constraint firstItem="6oX-sj-5fR" firstAttribute="leading" secondItem="YOA-uV-Rh9" secondAttribute="leading" id="hig-gq-ADu"/>
-                            <constraint firstItem="6oX-sj-5fR" firstAttribute="trailing" secondItem="YOA-uV-Rh9" secondAttribute="trailing" id="qk9-Ko-4ll"/>
+                            <constraint firstItem="6oX-sj-5fR" firstAttribute="trailing" secondItem="YOA-uV-Rh9" secondAttribute="trailing" id="iaA-o6-JFf"/>
+                            <constraint firstItem="6oX-sj-5fR" firstAttribute="bottom" secondItem="YOA-uV-Rh9" secondAttribute="bottom" id="jQb-i3-qh2"/>
+                            <constraint firstItem="6oX-sj-5fR" firstAttribute="leading" secondItem="YOA-uV-Rh9" secondAttribute="leading" id="pXV-Ox-RDE"/>
+                            <constraint firstItem="6oX-sj-5fR" firstAttribute="top" secondItem="5OV-Wd-2nA" secondAttribute="top" id="q5k-35-pbV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YOA-uV-Rh9"/>
                     </view>
@@ -937,37 +901,37 @@ Lorem Ipsum.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5m-kp-kaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5044" y="2848"/>
+            <point key="canvasLocation" x="6909.375" y="-823.94366197183103"/>
         </scene>
         <!--Stores List View Controller-->
         <scene sceneID="vLn-Gt-uU5">
             <objects>
                 <viewController storyboardIdentifier="StoresListViewController" id="5ir-UR-XPZ" customClass="StoresListViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2n4-BT-fm6">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="262"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3w-a0-vMQ" customClass="HampSearchBarView" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7Cu-CB-f8f"/>
+                                    <constraint firstAttribute="height" constant="56" id="wQ2-VS-5gb"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-yS-XkN">
-                                <rect key="frame" x="0.0" y="50" width="288" height="212"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IDe-yS-XkN" firstAttribute="trailing" secondItem="vvt-JR-0lD" secondAttribute="trailing" id="I5t-JX-0ci"/>
-                            <constraint firstItem="IDe-yS-XkN" firstAttribute="bottom" secondItem="vvt-JR-0lD" secondAttribute="bottom" id="I8P-bV-n8O"/>
-                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="leading" secondItem="vvt-JR-0lD" secondAttribute="leading" id="K7D-2l-APK"/>
-                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="top" secondItem="vvt-JR-0lD" secondAttribute="top" id="Xfo-Yy-hmn"/>
-                            <constraint firstItem="IDe-yS-XkN" firstAttribute="leading" secondItem="vvt-JR-0lD" secondAttribute="leading" id="ecE-Oc-ztV"/>
-                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="trailing" secondItem="vvt-JR-0lD" secondAttribute="trailing" id="h89-sE-fJi"/>
-                            <constraint firstItem="IDe-yS-XkN" firstAttribute="top" secondItem="g3w-a0-vMQ" secondAttribute="bottom" id="kvI-Nw-LAD"/>
+                            <constraint firstItem="IDe-yS-XkN" firstAttribute="top" secondItem="g3w-a0-vMQ" secondAttribute="bottom" id="IXm-U5-D2E"/>
+                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="trailing" secondItem="vvt-JR-0lD" secondAttribute="trailing" id="Xd2-ZN-l3P"/>
+                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="top" secondItem="2n4-BT-fm6" secondAttribute="top" id="XfY-Rp-9i2"/>
+                            <constraint firstItem="g3w-a0-vMQ" firstAttribute="leading" secondItem="vvt-JR-0lD" secondAttribute="leading" id="eYe-bm-gRo"/>
+                            <constraint firstItem="IDe-yS-XkN" firstAttribute="bottom" secondItem="vvt-JR-0lD" secondAttribute="bottom" id="id3-p4-Gy3"/>
+                            <constraint firstItem="IDe-yS-XkN" firstAttribute="trailing" secondItem="vvt-JR-0lD" secondAttribute="trailing" id="pPf-xD-zbz"/>
+                            <constraint firstItem="IDe-yS-XkN" firstAttribute="leading" secondItem="vvt-JR-0lD" secondAttribute="leading" id="zCC-ux-DlA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vvt-JR-0lD"/>
                     </view>
@@ -978,7 +942,7 @@ Lorem Ipsum.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MX4-NX-Zee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5010" y="3301.0563380281692"/>
+            <point key="canvasLocation" x="6911.25" y="-137.32394366197184"/>
         </scene>
     </scenes>
     <resources>
