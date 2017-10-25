@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ProfileSimpleCell: UITableViewCell {
+class ProfileSimpleCell: ProfileCell {
     
-    var captionButton: UIButton = {
+    override var content: UserContent? {
+        didSet {
+            guard let content = content else {return}
+            self.captionButton.setTitle(content.labelText, for: .normal)
+        }
+    }
+    
+    private var captionButton: UIButton = {
         let button = UIButton (type: .system)
         let attributedText = NSAttributedString (string: "Cerrar sesión", attributes: [NSAttributedStringKey.font:UIFont.helveticaBold(withSize: 20)])
         button.setAttributedTitle(attributedText, for: .normal)

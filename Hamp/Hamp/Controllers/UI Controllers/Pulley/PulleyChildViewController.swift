@@ -10,5 +10,4 @@ import UIKit
 
 class PulleyChildViewController: HampViewController {    
     func childDidChangePosition(position: PulleyPosition) {}
-    
 }

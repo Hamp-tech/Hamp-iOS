@@ -10,14 +10,13 @@
 		1904C6A91F8CF9E1005144E3 /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */; };
 		1904C6AB1F8CFB51005144E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */; };
 		1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */; };
+		191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
 		19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */; };
 		19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */; };
-		19C8EF831F7A91FD00D70A07 /* ProfileCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */; };
-		19C8EF851F7A958700D70A07 /* ProfileTextfieldInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */; };
 		19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */; };
 		19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8A1F7BA60100D70A07 /* OrderController.swift */; };
 		19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */; };
@@ -25,6 +24,13 @@
 		19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */; };
 		19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */; };
 		19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF951F7C405300D70A07 /* OrderCellsID.swift */; };
+		19DB938F1F9D1B2700742168 /* UserContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB938E1F9D1B2700742168 /* UserContent.swift */; };
+		19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */; };
+		19DB93931F9D1EB700742168 /* ProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93921F9D1EB700742168 /* ProfileContent.swift */; };
+		19DB93951F9D216900742168 /* ProfileTableVIewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */; };
+		19DB93971F9E42A000742168 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93961F9E42A000742168 /* ProfileCell.swift */; };
+		19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */; };
+		19DB939B1F9F071900742168 /* ProfileCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB939A1F9F071800742168 /* ProfileCellsID.swift */; };
 		19DFE0221F87E7ED0091CC24 /* StoresListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0211F87E7ED0091CC24 /* StoresListViewController.swift */; };
 		19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */; };
 		19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */; };
@@ -180,14 +186,13 @@
 		1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
 		1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilitiesDelegate.swift; sourceTree = "<group>"; };
+		191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoProvider.swift; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
 		19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitchCell.swift; sourceTree = "<group>"; };
 		19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSimpleCell.swift; sourceTree = "<group>"; };
-		19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellsID.swift; sourceTree = "<group>"; };
-		19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextfieldInfo.swift; sourceTree = "<group>"; };
 		19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF8A1F7BA60100D70A07 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPaymentCell.swift; sourceTree = "<group>"; };
@@ -195,6 +200,13 @@
 		19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageCell.swift; sourceTree = "<group>"; };
 		19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF951F7C405300D70A07 /* OrderCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellsID.swift; sourceTree = "<group>"; };
+		19DB938E1F9D1B2700742168 /* UserContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContent.swift; sourceTree = "<group>"; };
+		19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableProvider.swift; sourceTree = "<group>"; };
+		19DB93921F9D1EB700742168 /* ProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContent.swift; sourceTree = "<group>"; };
+		19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableVIewDataSource.swift; sourceTree = "<group>"; };
+		19DB93961F9E42A000742168 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewDelegate.swift; sourceTree = "<group>"; };
+		19DB939A1F9F071800742168 /* ProfileCellsID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellsID.swift; sourceTree = "<group>"; };
 		19DFE0211F87E7ED0091CC24 /* StoresListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresListViewController.swift; sourceTree = "<group>"; };
 		19DFE0241F87E9650091CC24 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		19DFE0251F87E9650091CC24 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
@@ -398,6 +410,7 @@
 		19C8EF8C1F7BA8C600D70A07 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
+				19DB93961F9E42A000742168 /* ProfileCell.swift */,
 				19E5947B1F7A603300371FD3 /* ProfileTextFieldCell.swift */,
 				19E5947D1F7A63CF00371FD3 /* ProfileDateCell.swift */,
 				19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */,
@@ -432,8 +445,10 @@
 		19EA7E221F7CEEC600AB7B8A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				19DB939A1F9F071800742168 /* ProfileCellsID.swift */,
 				19E594791F7A5D4600371FD3 /* ProfileController.swift */,
-				19C8EF821F7A91FD00D70A07 /* ProfileCellsID.swift */,
+				19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */,
+				19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -512,6 +527,8 @@
 				4E90CA501F671810003DAA28 /* HistoryProvider.swift */,
 				4E1DFC581F67CB050096659F /* DataProvider.swift */,
 				4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */,
+				19DB938E1F9D1B2700742168 /* UserContent.swift */,
+				19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -523,6 +540,7 @@
 				4ECA351F1F449C230031580B /* OrderService.swift */,
 				4EB242DE1F45C372006F3BA7 /* LaundryService.swift */,
 				4E3309191F45CF6D00A43B25 /* Order.swift */,
+				19DB93921F9D1EB700742168 /* ProfileContent.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -955,7 +973,6 @@
 			children = (
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
-				19C8EF841F7A958700D70A07 /* ProfileTextfieldInfo.swift */,
 				4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */,
 			);
 			path = Model;
@@ -977,6 +994,7 @@
 				4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */,
 				4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */,
 				4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */,
+				191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -1255,6 +1273,7 @@
 				4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */,
 				4E7DF3C61F54C93800C1A180 /* GradientStatesButton.swift in Sources */,
 				4E7DF3C71F54C93800C1A180 /* HorizontalCircleGradientButton.swift in Sources */,
+				19DB93971F9E42A000742168 /* ProfileCell.swift in Sources */,
 				4E7DF3C81F54C93800C1A180 /* HorizontalGradientButton.swift in Sources */,
 				4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */,
 				4E90CA511F671810003DAA28 /* HistoryProvider.swift in Sources */,
@@ -1263,11 +1282,14 @@
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
 				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
+				19DB93951F9D216900742168 /* ProfileTableVIewDataSource.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */,
 				19DFE0261F87E9650091CC24 /* StoreTableViewCell.swift in Sources */,
+				19DB93931F9D1EB700742168 /* ProfileContent.swift in Sources */,
+				19DB938F1F9D1B2700742168 /* UserContent.swift in Sources */,
 				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
@@ -1276,7 +1298,6 @@
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
-				19C8EF851F7A958700D70A07 /* ProfileTextfieldInfo.swift in Sources */,
 				19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
@@ -1346,6 +1367,7 @@
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
 				4E6AB6731F6AC8A900B750EF /* PulleyPosition.swift in Sources */,
 				4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */,
+				191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */,
 				19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */,
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
@@ -1357,7 +1379,9 @@
 				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
+				19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
+				19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
 				4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
@@ -1381,10 +1405,10 @@
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
 				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
+				19DB939B1F9F071900742168 /* ProfileCellsID.swift in Sources */,
 				19EA7E251F7D0A9400AB7B8A /* CustomMapView.swift in Sources */,
 				19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
-				19C8EF831F7A91FD00D70A07 /* ProfileCellsID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,16 +8,24 @@
 
 import UIKit
 
-class ProfileSwitchCell: UITableViewCell {
+class ProfileSwitchCell: ProfileCell {
     
-    var captionLabel: UILabel = {
+    override var content: UserContent? {
+        didSet {
+            guard let content = content else {return}
+            captionLabel.text = content.labelText
+            switchView.isOn = content.firstOption == .rightOption
+        }
+    }
+    
+    private var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
         label.text = "Recogida"
         return label
     } ()
     
-    lazy var switchView: UISwitch = {
+    private lazy var switchView: UISwitch = {
         let sv = UISwitch ()
         sv.tintColor = UIColor.darkPink
         sv.addTarget(self, action: #selector (handleOptionSelection), for: .valueChanged)

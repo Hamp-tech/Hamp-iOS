@@ -8,30 +8,40 @@
 
 import UIKit
 
-class ProfileGenderCell: UITableViewCell {
+class ProfileGenderCell: ProfileCell {
 
-    var firstOptionLabel: UILabel = {
+    override var content: UserContent? {
+        didSet {
+            guard let content = content else {return}
+            firstOptionLabel.text = content.firstOptionText
+            secondOptionLabel.text = content.secondOptionText
+            firstCheckBoxButton.isSelected = content.firstOption == .leftOption
+            secondCheckBoxButton.isSelected = content.firstOption == .rightOption
+        }
+    }
+    
+    private var firstOptionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
         label.text = "Hombre"
         return label
     } ()
     
-    var secondOptionLabel: UILabel = {
+    private var secondOptionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
         label.text = "Mujer"
         return label
     } ()
     
-    lazy var firstCheckBoxButton: CheckBoxButton = {
+    private lazy var firstCheckBoxButton: CheckBoxButton = {
         let button = CheckBoxButton ()
         button.contentMode = .redraw
         button.addTarget(self, action: #selector (handleFirstChecking (sender:)), for: .touchDown)
         return button
     } ()
     
-    lazy var secondCheckBoxButton: CheckBoxButton = {
+    private lazy var secondCheckBoxButton: CheckBoxButton = {
         let button = CheckBoxButton ()
         button.contentMode = .redraw
         button.addTarget(self, action: #selector (handleSecondChecking (sender:)), for: .touchUpInside)

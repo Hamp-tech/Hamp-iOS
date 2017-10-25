@@ -12,7 +12,6 @@ import MapKit
 class StoreMapController: PulleyChildViewController {
     
     @IBOutlet weak var mapView: CustomMapView!
-    
     var mapUtilities: MapUtilities!
     
     var userCoordinate: CLLocationCoordinate2D? {

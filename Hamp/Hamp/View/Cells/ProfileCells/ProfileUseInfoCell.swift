@@ -8,15 +8,22 @@
 
 import UIKit
 
-class ProfileUseInfoCell: UITableViewCell {
+class ProfileUseInfoCell: ProfileCell {
     
-    var clickImageView: UIImageView = {
+    override var content: UserContent? {
+        didSet {
+            guard let content = content else {return}
+            conditionsButton.setTitle(content.labelText, for: .normal)
+        }
+    }
+    
+    private var clickImageView: UIImageView = {
         let imageView = UIImageView ()
         imageView.backgroundColor = UIColor.darkPink
         return imageView
     } ()
     
-    lazy var conditionsButton: UIButton = {
+    private lazy var conditionsButton: UIButton = {
         let button = UIButton (type: .system)
         let attributedText = NSMutableAttributedString (string: "Ver ", attributes: [NSAttributedStringKey.foregroundColor: UIColor.init(red: 155/255, green: 155/255, blue: 155/255, alpha: 1), NSAttributedStringKey.font: UIFont.helvetica(withSize: 14)])
         attributedText.append(createUnderlinedAttributedString(text: "condiciones"))

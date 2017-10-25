@@ -8,16 +8,24 @@
 
 import UIKit
 
-class ProfilePickUpCell: UITableViewCell {
+class ProfilePickUpCell: ProfileCell {
     
-    var captionLabel: UILabel = {
+    override var content: UserContent? {
+        didSet {
+            guard let content = content else {return}
+            captionLabel.text = content.labelText
+            timeTablePicker.selectedSegmentIndex = content.firstOption == .leftOption ? 0 : 1
+        }
+    }
+    
+    private var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
         label.text = "Fecha de nacimiento"
         return label
     } ()
     
-    lazy var timeTablePicker: UISegmentedControl = {
+    private lazy var timeTablePicker: UISegmentedControl = {
         let segmentedControll = UISegmentedControl (items: ["Mañana", "Tarde"])
         segmentedControll.tintColor = UIColor.darkPink
         segmentedControll.addTarget(self, action: #selector (handleTimeSelector), for: .valueChanged)

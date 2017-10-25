@@ -12,24 +12,50 @@ class ProfileController: HampViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let textFieldCellsInfo = [
-        ProfileTextFieldInfo (captionTitle: "Nombre", textFieldText: "Judith"),
-        ProfileTextFieldInfo (captionTitle: "Apellido", textFieldText: "Moreno Navarro"),
-        ProfileTextFieldInfo (captionTitle: "E-mail", textFieldText: "judithmoreno@gmail.com"),
-        ProfileTextFieldInfo (captionTitle: "Teléfono", textFieldText: "690690690")
-    ]
-    
     let numbersOfOthersCells = 7
+    private(set) var provider: ProfileTableProvider
+    private(set) var dataSource: UITableViewDataSource
+    private(set) var delegate: UITableViewDelegate
+    
+    init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+        self.provider = contentProvider
+        self.dataSource = dataSource
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.provider = ProfileInfoProvider ()
+        self.dataSource = ProfileTableViewDataSource.init(contentProvider: provider)
+        self.delegate = ProfileTableViewDelegate.init(provider: provider)
+        super.init (coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView ()
         registerTableViewCells ()
+        addSaveButton()
+    }
+    
+    private func addSaveButton () {
+        let saveButton = UIButton (type: .system)
+        saveButton.setTitle("Save", for: .normal)
+        saveButton.backgroundColor = .yellow
+        saveButton.frame = CGRect (x: 0, y: 0, width: 59, height: 24)
+        saveButton.addTarget(self, action: #selector (editProfile), for: .touchUpInside)
+        
+        let trailingButton = TrailingBarButtonItem (with: saveButton)
+        addRightBarButtonWhenLargeTitles(rightButton: trailingButton)
+    }
+    
+    @objc func editProfile () {
+        print ("HEI")
     }
     
     fileprivate func setupTableView () {
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
         tableView.backgroundColor = .white
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
@@ -46,61 +72,3 @@ class ProfileController: HampViewController {
     }
 }
 
-//MARK: TableViewDataSource
-
-extension ProfileController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numbersOfOthersCells + textFieldCellsInfo.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row < textFieldCellsInfo.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.textFieldCell, for: indexPath) as! ProfileTextFieldCell
-            cell.backgroundColor = .white
-            cell.info = textFieldCellsInfo [indexPath.row]
-            return cell
-        } else {
-            
-            switch indexPath.row {
-            case 4:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.dateCell, for: indexPath) as! ProfileDateCell
-                    cell.dateTextField.text = "22/33/4444"
-                    return cell
-            case 5:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.genderCell, for: indexPath)
-                return cell
-            case 6:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.pickUpCell, for: indexPath)
-                return cell
-            case 7:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.switchCell, for: indexPath) as! ProfileSwitchCell
-                cell.captionLabel.text = "Valorar Hamp"
-                return cell
-            case 8:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.switchCell, for: indexPath) as! ProfileSwitchCell
-                cell.captionLabel.text = "Notificaciones activadas"
-                return cell
-            case 9:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.simpleCell, for: indexPath) as! ProfileSimpleCell
-                return cell
-            default:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCellId.infoCell, for: indexPath)
-                return cell
-            }
-        }
-    }
-}
-
-//MARK: TableViewDelegate
-extension ProfileController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row < textFieldCellsInfo.count {
-            return 100
-        } else if indexPath.row < textFieldCellsInfo.count + 3 {
-            return 80
-        } else {
-            return 50
-        }
-    }
-}

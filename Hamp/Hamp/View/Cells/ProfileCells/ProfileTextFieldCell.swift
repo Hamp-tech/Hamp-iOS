@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProfileTextFieldCell: UITableViewCell {
+class ProfileTextFieldCell: ProfileCell {
     
-    var info: ProfileTextFieldInfo? {
+    override var content: UserContent? {
         didSet {
-            captionLabel.text = info?.captionTitle
-            textField.textField.text = info?.textFieldText
+            captionLabel.text = content?.labelText
+            textField.textField.text = content?.textFieldText
         }
     }
     
@@ -35,7 +35,7 @@ class ProfileTextFieldCell: UITableViewCell {
         contentView.addSubview(textField)
         
         captionLabel.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 5, paddingLeft: 20, paddingBottom: 0, paddingRight: 72, width: 0, height: 24)
-        textField.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        textField.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
     }
     
