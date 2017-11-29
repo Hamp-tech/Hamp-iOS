@@ -71,7 +71,7 @@ extension OrderDescriptionCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath) as! DescriptionImageCell
-        cell.backgroundColor = UIColor.darkPink
+        cell.backgroundColor = UIColor.white
         cell.image = productImages? [indexPath.row]
         return cell
     }

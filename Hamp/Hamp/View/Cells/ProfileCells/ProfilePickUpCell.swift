@@ -21,7 +21,6 @@ class ProfilePickUpCell: ProfileCell {
     private var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
-        label.text = "Fecha de nacimiento"
         return label
     } ()
     

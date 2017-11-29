@@ -19,7 +19,21 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var servicesHiredStackView: UIStackView!
     
     // MARK: - Properties
-    var booking: HampBooking!
+    var booking: HampBooking! {
+        didSet {
+            guard let order = booking.transaction?.order else {return}
+            guard let oldOrder = self.lastOrder else {
+                createServicesHiredSubviews()
+                self.lastOrder = order
+                return
+            }
+            if (!order.equal(order: oldOrder)) {
+                createServicesHiredSubviews()
+                self.lastOrder = order
+            }
+        }
+    }
+    var lastOrder: HampOrder?
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -34,7 +48,6 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
         priceLabel.text = "\(Int.init(booking.transaction!.payment!))€"
         
         setupLeftSeparator()
-        createServicesHiredSubviews()
     }
 }
 
