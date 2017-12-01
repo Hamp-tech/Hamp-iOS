@@ -7,26 +7,23 @@
 //
 
 import UIKit
+import HampKit
 
 class ProfileController: HampViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     let numbersOfOthersCells = 7
     private(set) var provider: ProfileTableProvider
-    private(set) var dataSource: UITableViewDataSource
     private(set) var delegate: UITableViewDelegate
     
     init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.provider = contentProvider
-        self.dataSource = dataSource
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.provider = ProfileInfoProvider ()
-        self.dataSource = ProfileTableViewDataSource.init(contentProvider: provider)
+        self.provider = ProfileInfoProvider (user: Hamp.Auth.user()!)
         self.delegate = ProfileTableViewDelegate.init(provider: provider)
         super.init (coder: aDecoder)
     }
@@ -54,7 +51,7 @@ class ProfileController: HampViewController {
     }
     
     fileprivate func setupTableView () {
-        tableView.dataSource = dataSource
+        tableView.dataSource = self
         tableView.delegate = delegate
         tableView.backgroundColor = .white
         tableView.allowsSelection = false
@@ -71,4 +68,5 @@ class ProfileController: HampViewController {
         tableView.register(ProfileUseInfoCell.self, forCellReuseIdentifier: ProfileCellId.infoCell)
     }
 }
+
 

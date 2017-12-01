@@ -35,7 +35,7 @@ class ProfileSimpleCell: ProfileCell {
     }
     
     @objc func cerrarSession () {
-        print ("Cerrar Session")
+        buttonDelegate?.signOut()
     }
     
 }

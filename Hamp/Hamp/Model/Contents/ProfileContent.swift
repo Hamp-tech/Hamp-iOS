@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import HampKit
 
 struct ProfileContent: UserContent {
     var cellID: String
     var labelText: String
     var textFieldText: String
     var firstOptionText: String
-    var secondOptionText: String
+    var secondOptionText: String = ""
     var firstOption: UserOption
+    
+    
+    
+
 }

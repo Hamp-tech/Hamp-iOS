@@ -10,4 +10,5 @@ import UIKit
 
 class ProfileCell: UITableViewCell {
     var content: UserContent?
+    var buttonDelegate: ProfileCellButtonDelegate?
 }

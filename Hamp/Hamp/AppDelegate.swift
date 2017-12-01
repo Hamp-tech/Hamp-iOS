@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
-//        try? Hamp.connect()
+        Hamp.environtment = try? HampEnvirontmentsProvider.productionEnvirontment()
+        try? Hamp.connect()
         
-//        FabricManager.configure()
+        FabricManager.configure()
         
         ProvidersManager.sharedInstance.downloadProvidersData()
         
@@ -34,13 +34,14 @@ private extension AppDelegate {
         var identifier: String
         var storyboardName: String
         
-//        if let _ = Hamp.Auth.user() {
+        if let user = Hamp.Auth.user() {
+            HampUserCache.setUser(user: user)
             identifier = tabBarNavigationViewControllerIdentifier
             storyboardName = "TabBar"
-//        } else {
-//            identifier = loginViewControllerIdentifier
-//            storyboardName = "Login"
-//        }
+        } else {
+            identifier = loginViewControllerIdentifier
+            storyboardName = "Login"
+        }
 
         let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier)

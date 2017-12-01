@@ -59,6 +59,7 @@ class SignUpViewController: LogoTitleBaseViewController {
                 let gender = contents.filter{ $0.inputType == .gender }.first?.text
                 
                 let user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, phone: phone!, birthday: birthday!, gender: gender, tokenFCM: nil, language: nil, OS: "iOS", signupDate: nil)
+                HampUserCache.setUser(user: user)
                 Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
                     self.showTabBarViewController()
                 }, onError: { (error) in

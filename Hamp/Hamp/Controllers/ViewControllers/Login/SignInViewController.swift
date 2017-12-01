@@ -92,6 +92,7 @@ class SignInViewController: LogoTitleBaseViewController {
                     user: user,
                     onSuccess: { (response) in
                     self.showTabBarViewController()
+                    HampUserCache.setUser(user: Hamp.Auth.user()!)
                 },  onError: {(error) in
                     self.showAlertError(with: "Facebook error", message: error.description)
                 })
@@ -110,6 +111,7 @@ class SignInViewController: LogoTitleBaseViewController {
                 password: passwordTextField.text!,
                 onSuccess: { (response) in
                    self.showTabBarViewController()
+//                    HampUserCache.setUser(user: Hamp.Auth.user()!)
             },  onError: { (error) in
                 self.showAlertError(with: "Sign in error", message: error.description)
             })

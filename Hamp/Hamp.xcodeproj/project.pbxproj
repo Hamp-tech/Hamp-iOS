@@ -10,6 +10,8 @@
 		1904C6A91F8CF9E1005144E3 /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */; };
 		1904C6AB1F8CFB51005144E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */; };
 		1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */; };
+		190EE6BE1FD02B0300E6E24C /* ProfileInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EE6BD1FD02B0300E6E24C /* ProfileInfoFactory.swift */; };
+		190EE6C01FD0311200E6E24C /* HampUserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EE6BF1FD0311200E6E24C /* HampUserCache.swift */; };
 		191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
@@ -44,6 +46,7 @@
 		19EA7E281F7D0C2900AB7B8A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E271F7D0C2900AB7B8A /* MapController.swift */; };
 		19EA7E2A1F7D0DD000AB7B8A /* MapArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */; };
 		19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA7E2B1F7D138900AB7B8A /* UIView+Anchor.swift */; };
+		19F5905A1FCECAE40083BA65 /* ProfileCellButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F590591FCECAE40083BA65 /* ProfileCellButtonDelegate.swift */; };
 		4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */; };
 		4E0855E11F3B68BA0086CB76 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0855E01F3B68BA0086CB76 /* UIView+Shake.swift */; };
 		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
@@ -186,6 +189,8 @@
 		1904C6A81F8CF9E1005144E3 /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
 		1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilitiesDelegate.swift; sourceTree = "<group>"; };
+		190EE6BD1FD02B0300E6E24C /* ProfileInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoFactory.swift; sourceTree = "<group>"; };
+		190EE6BF1FD0311200E6E24C /* HampUserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUserCache.swift; sourceTree = "<group>"; };
 		191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoProvider.swift; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
@@ -220,6 +225,7 @@
 		19EA7E271F7D0C2900AB7B8A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapArtWork.swift; sourceTree = "<group>"; };
 		19EA7E2B1F7D138900AB7B8A /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		19F590591FCECAE40083BA65 /* ProfileCellButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellButtonDelegate.swift; sourceTree = "<group>"; };
 		206A3DD2C6B0943389014710 /* Pods-HampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampTests/Pods-HampTests.release.xcconfig"; sourceTree = "<group>"; };
 		2250B602B6AA5890F7C32682 /* Pods-HampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HampUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HampUITests/Pods-HampUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E05933E1F37E1E9008A3B46 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
@@ -529,6 +535,7 @@
 				4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */,
 				19DB938E1F9D1B2700742168 /* UserContent.swift */,
 				19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */,
+				19F590591FCECAE40083BA65 /* ProfileCellButtonDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -622,8 +629,8 @@
 		4E5B08B41F04733900236A9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EC0BD2A1F4C3EBB0077DD92 /* Tutorial.storyboard */,
 				4E7253521F37BC8E006382B4 /* TabBar.storyboard */,
+				4EC0BD2A1F4C3EBB0077DD92 /* Tutorial.storyboard */,
 				4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */,
 				4ECFFAA41F30BE790043D4B5 /* Login.storyboard */,
 				4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */,
@@ -643,6 +650,7 @@
 				4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */,
 				4E46C8B91F44D55A0051BF84 /* BarRightButtonsFactory.swift */,
 				4EB242DC1F45C2CC006F3BA7 /* LaundryServicesFactory.swift */,
+				190EE6BD1FD02B0300E6E24C /* ProfileInfoFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -995,6 +1003,7 @@
 				4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */,
 				4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */,
 				191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */,
+				190EE6BF1FD0311200E6E24C /* HampUserCache.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -1293,8 +1302,10 @@
 				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
+				190EE6C01FD0311200E6E24C /* HampUserCache.swift in Sources */,
 				4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */,
+				19F5905A1FCECAE40083BA65 /* ProfileCellButtonDelegate.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
@@ -1372,6 +1383,7 @@
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */,
+				190EE6BE1FD02B0300E6E24C /* ProfileInfoFactory.swift in Sources */,
 				19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
 				4E4CB7271F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */,
