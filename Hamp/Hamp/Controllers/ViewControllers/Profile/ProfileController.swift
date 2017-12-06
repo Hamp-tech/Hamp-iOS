@@ -86,39 +86,16 @@ extension ProfileController: UITableViewDataSource {
         let cellContent = provider.content(at: indexPath)!
         let cell = tableView.dequeueReusableCell(withIdentifier: cellContent.cellID, for: indexPath) as! ProfileCell
         cell.content = cellContent
-//        cell.buttonDelegate = self
         return cell
-    }
-}
-
-
-
-extension ProfileController: ProfileCellButtonDelegate {
-    func signOut() {
-        Hamp.Auth.signOut(onSucced: {
-            let window = (UIApplication.shared.delegate as! AppDelegate).window
-            let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
-            let viewController = storyboard.instantiateViewController(withIdentifier: loginViewControllerIdentifier)
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
-        }) { (error) in
-            
-        }
-    }
-    
-    func setupInfoController() {
-        let url = URL (string: "https://www.google.es")
-        let safariController = SFSafariViewController (url: url!)
-        present (safariController, animated: true, completion: nil)
     }
 }
 
 extension ProfileController: GMDatePickerDelegate {
     func gmDatePicker(_ gmDatePicker: GMDatePicker, didSelect date: Date) {
-        
-    }
-    
-    func gmDatePickerDidCancelSelection(_ gmDatePicker: GMDatePicker) {
+//        let indexPath = IndexPath(row: 4, section: 0)
+//        var content = provider.content(at: indexPath)
+//        content?.textFieldText = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: date.debugDescription)
+//        tableView.reloadData()
         
     }
 }

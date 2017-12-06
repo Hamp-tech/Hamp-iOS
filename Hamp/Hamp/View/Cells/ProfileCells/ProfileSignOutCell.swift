@@ -35,9 +35,6 @@ class ProfileSignOutCell: ProfileCell {
     }
     
     @objc func cerrarSession () {
-  
-        
-           
         content?.actionBlock?()
     }
     

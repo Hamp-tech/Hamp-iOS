@@ -8,9 +8,10 @@
 
 import Foundation
 import HampKit
+import SafariServices
 
 struct ProfileInfoFactory {
-    static func createProfileInfo (user: HampUser, parent: UIViewController? = nil) -> [[UserContent]] {
+    static func createProfileInfo<T: UIViewController>(user: HampUser, parent: T) -> [[UserContent]] where T: GMDatePickerDelegate {
         let gender = user.gender ?? "X"
         let birthday = user.birthday ?? "DD/MM/YYYY"
         return [
@@ -22,7 +23,7 @@ struct ProfileInfoFactory {
                 ProfileContent.init(cellID: ProfileCellId.dateCell, labelText: "Fecha de nacimiento", textFieldText: birthday, actionBlock: {
                     let datePicker: GMDatePicker = {
                         let picker = GMDatePicker()
-//                        picker.delegate = self
+                        picker.delegate = parent
                         picker.config.startDate = Date()
                         picker.config.animationDuration = 0.5
                         picker.config.cancelButtonTitle = "Cancel"
@@ -34,9 +35,9 @@ struct ProfileInfoFactory {
                         return picker
                     }()
                     
-                    datePicker.show(inVC: parent!)
+                    datePicker.show(inVC: parent)
                 }),
-                ProfileContent.init(cellID: ProfileCellId.genderCell, firstOptionText: "Hombre", secondOptionText: "Mujer", firstOption: UserOption.getOptionWith(gender: "F")),
+                ProfileContent.init(cellID: ProfileCellId.genderCell, firstOptionText: "Hombre", secondOptionText: "Mujer", firstOption: UserOption.getOptionWith(gender: gender)),
                 ProfileContent.init(cellID: ProfileCellId.pickUpCell, labelText: "Recogida", firstOptionText: "Mañana", secondOptionText: "Tarde", firstOption: .rightOption),
                 ProfileContent.init(cellID: ProfileCellId.switchCell, labelText: "Valorar Hamp", firstOption: .leftOption),
                 ProfileContent.init(cellID: ProfileCellId.switchCell, labelText: "Notificaciones activadas", firstOption: .leftOption),
@@ -52,7 +53,11 @@ struct ProfileInfoFactory {
                         
                     }
                 }),
-                ProfileContent.init(cellID: ProfileCellId.infoCell, labelText: "Info")
+                ProfileContent.init(cellID: ProfileCellId.infoCell, labelText: "Info", actionBlock: {
+                    let url = URL (string: "https://www.google.es")
+                    let safariController = SFSafariViewController (url: url!)
+                    parent.present (safariController, animated: true, completion: nil)
+                })
             ]
         ]
     }

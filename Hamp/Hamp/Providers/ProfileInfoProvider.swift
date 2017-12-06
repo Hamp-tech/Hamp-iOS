@@ -13,7 +13,7 @@ struct ProfileInfoProvider: ProfileTableProvider {
     
     private var content: [[UserContent]]!
     
-    init (user: HampUser, parent: UIViewController) {
+    init<T: UIViewController>(user: HampUser, parent: T) where T: GMDatePickerDelegate {
         content = ProfileInfoFactory.createProfileInfo(user: user, parent: parent)
     }
     

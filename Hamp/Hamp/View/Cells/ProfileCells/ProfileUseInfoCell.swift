@@ -44,7 +44,7 @@ class ProfileUseInfoCell: ProfileCell {
     }
     
     @objc func handleConditions () {
-       buttonDelegate?.setupInfoController()
+       content?.actionBlock?()
     }
     
     private func createUnderlinedAttributedString (text: String) -> NSAttributedString {
