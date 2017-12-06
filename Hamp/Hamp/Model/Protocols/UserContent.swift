@@ -19,4 +19,7 @@ protocol UserContent {
     var firstOptionText: String {get set}
     var secondOptionText: String {get set}
     var firstOption: UserOption {get set}
+    var actionBlock: (()->())? {get set}
+    
+    init(cellID: String, labelText: String, textFieldText: String, firstOptionText: String, secondOptionText: String, firstOption: UserOption, actionBlock: (()->())?)
 }

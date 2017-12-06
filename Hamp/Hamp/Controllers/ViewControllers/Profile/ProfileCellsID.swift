@@ -14,6 +14,6 @@ struct ProfileCellId {
     static let genderCell = "ProfileGenderCell"
     static let pickUpCell = "ProfilePickUpCell"
     static let switchCell = "ProfileSwitchCell"
-    static let simpleCell = "ProfileSimpleCell"
+    static let simpleCell = "ProfileSignOutCell"
     static let infoCell = "ProfileUseInfoCell"
 }

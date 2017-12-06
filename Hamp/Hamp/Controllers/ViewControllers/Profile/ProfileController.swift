@@ -8,6 +8,7 @@
 
 import UIKit
 import HampKit
+import SafariServices
 
 class ProfileController: HampViewController {
     
@@ -34,6 +35,8 @@ class ProfileController: HampViewController {
         registerTableViewCells ()
         addSaveButton()
     }
+
+
     
     private func addSaveButton () {
         let saveButton = UIButton (type: .system)
@@ -47,14 +50,13 @@ class ProfileController: HampViewController {
     }
     
     @objc func editProfile () {
-        print ("HEI")
+        print ("No se rick, parece falso")
     }
     
     fileprivate func setupTableView () {
         tableView.dataSource = self
         tableView.delegate = delegate
         tableView.backgroundColor = .white
-        tableView.allowsSelection = false
         tableView.separatorStyle = .none
     }
     
@@ -64,8 +66,47 @@ class ProfileController: HampViewController {
         tableView.register(ProfileGenderCell.self, forCellReuseIdentifier: ProfileCellId.genderCell)
         tableView.register(ProfilePickUpCell.self, forCellReuseIdentifier: ProfileCellId.pickUpCell)
         tableView.register(ProfileSwitchCell.self, forCellReuseIdentifier: ProfileCellId.switchCell)
-        tableView.register(ProfileSimpleCell.self, forCellReuseIdentifier: ProfileCellId.simpleCell)
+        tableView.register(ProfileSignOutCell.self, forCellReuseIdentifier: ProfileCellId.simpleCell)
         tableView.register(ProfileUseInfoCell.self, forCellReuseIdentifier: ProfileCellId.infoCell)
+    }
+}
+
+extension ProfileController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return provider.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return provider.numberOfItems(at: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellContent = provider.content(at: indexPath)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellContent.cellID, for: indexPath) as! ProfileCell
+        cell.content = cellContent
+//        cell.buttonDelegate = self
+        return cell
+    }
+}
+
+extension ProfileController: ProfileCellButtonDelegate {
+    func signOut() {
+        Hamp.Auth.signOut(onSucced: {
+            let window = (UIApplication.shared.delegate as! AppDelegate).window
+            let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
+            let viewController = storyboard.instantiateViewController(withIdentifier: loginViewControllerIdentifier)
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+        }) { (error) in
+            
+        }
+    }
+    
+    func setupInfoController() {
+        let url = URL (string: "https://www.google.es")
+        let safariController = SFSafariViewController (url: url!)
+        present (safariController, animated: true, completion: nil)
     }
 }
 

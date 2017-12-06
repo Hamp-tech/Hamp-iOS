@@ -18,7 +18,7 @@
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
 		19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */; };
-		19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */; };
+		19C8EF811F7A90A600D70A07 /* ProfileSignOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF801F7A90A600D70A07 /* ProfileSignOutCell.swift */; };
 		19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */; };
 		19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8A1F7BA60100D70A07 /* OrderController.swift */; };
 		19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */; };
@@ -197,7 +197,7 @@
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
 		19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitchCell.swift; sourceTree = "<group>"; };
-		19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSimpleCell.swift; sourceTree = "<group>"; };
+		19C8EF801F7A90A600D70A07 /* ProfileSignOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSignOutCell.swift; sourceTree = "<group>"; };
 		19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF8A1F7BA60100D70A07 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		19C8EF8D1F7BA8E900D70A07 /* OrderPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPaymentCell.swift; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 				19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */,
 				19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */,
 				19C8EF7E1F7A8DA600D70A07 /* ProfileSwitchCell.swift */,
-				19C8EF801F7A90A600D70A07 /* ProfileSimpleCell.swift */,
+				19C8EF801F7A90A600D70A07 /* ProfileSignOutCell.swift */,
 				19C8EF861F7A9E0000D70A07 /* ProfileUseInfoCell.swift */,
 			);
 			path = ProfileCells;
@@ -1256,7 +1256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1387,7 +1387,7 @@
 				19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */,
 				4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */,
 				4E4CB7271F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */,
-				19C8EF811F7A90A600D70A07 /* ProfileSimpleCell.swift in Sources */,
+				19C8EF811F7A90A600D70A07 /* ProfileSignOutCell.swift in Sources */,
 				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,

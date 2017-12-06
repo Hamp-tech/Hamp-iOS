@@ -9,6 +9,15 @@
 import UIKit
 
 class ProfileCell: UITableViewCell {
+    
+    // MARK: - Properties
     var content: UserContent?
     var buttonDelegate: ProfileCellButtonDelegate?
+
+    // MARK: - Life cycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        selectionStyle = .none
+    }
+
 }

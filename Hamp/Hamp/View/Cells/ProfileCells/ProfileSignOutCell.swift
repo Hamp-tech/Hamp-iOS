@@ -1,5 +1,5 @@
 //
-//  ProfileSimpleCell.swift
+//  ProfileSignOutCell.swift
 //  Hamp
 //
 //  Created by Aleix Baggerman on 26/9/17.
@@ -9,7 +9,7 @@
 import UIKit
 import HampKit
 
-class ProfileSimpleCell: ProfileCell {
+class ProfileSignOutCell: ProfileCell {
     
     override var content: UserContent? {
         didSet {
@@ -20,8 +20,8 @@ class ProfileSimpleCell: ProfileCell {
     
     private lazy var captionButton: UIButton = {
         let button = UIButton (type: .system)
-        let attributedText = NSAttributedString (string: "Cerrar sesión", attributes: [NSAttributedStringKey.font:UIFont.helveticaBold(withSize: 20)])
-        button.setAttributedTitle(attributedText, for: .normal)
+        button.setTitle("Cerrar sesión", for: .normal)
+        button.titleLabel?.font = UIFont.helveticaBold(withSize: 20)
         button.tintColor = .black
         button.addTarget(self, action: #selector (cerrarSession), for: .touchUpInside)
         return button
@@ -35,7 +35,10 @@ class ProfileSimpleCell: ProfileCell {
     }
     
     @objc func cerrarSession () {
-        buttonDelegate?.signOut()
+  
+        
+           
+        content?.actionBlock?()
     }
     
 }

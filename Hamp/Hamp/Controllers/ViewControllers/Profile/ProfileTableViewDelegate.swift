@@ -10,13 +10,16 @@ import UIKit
 
 class ProfileTableViewDelegate: NSObject, UITableViewDelegate {
 
+    // MARK: - Properties
     var contentProvider: ProfileTableProvider?
     
+    // MARK: - Life cycle
     init(provider: ProfileTableProvider) {
         super.init()
         self.contentProvider = provider
     }
     
+    // MARK: - Table view delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let cell = tableView.cellForRow(at: indexPath)
         
@@ -26,7 +29,4 @@ class ProfileTableViewDelegate: NSObject, UITableViewDelegate {
             return 70
         }
     }
-    
-    
-    
 }

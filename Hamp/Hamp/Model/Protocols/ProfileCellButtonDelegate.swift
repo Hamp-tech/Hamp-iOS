@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProfileCellButtonDelegate {
+protocol ProfileCellButtonDelegate: class {
     func signOut () -> ()
     func setupInfoController () -> ()
 }
