@@ -24,10 +24,11 @@ class ProfileDateCell: ProfileCell {
         return label
     } ()
     
-    private let dateTextField: UITextField = {
+    private lazy var dateTextField: UITextField = {
         let tf = UITextField ()
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
+        tf.delegate = self
         tf.textColor = UIColor.init(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
         return tf
     } ()
@@ -40,4 +41,11 @@ class ProfileDateCell: ProfileCell {
         dateTextField.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 186, height: 37)
     }
     
+}
+
+extension ProfileDateCell: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        content?.actionBlock?()
+        return false
+    }
 }

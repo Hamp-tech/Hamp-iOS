@@ -11,11 +11,12 @@ import HampKit
 import SafariServices
 
 class ProfileController: HampViewController {
+
+    let numbersOfOthersCells = 7
     
     @IBOutlet weak var tableView: UITableView!
-    let numbersOfOthersCells = 7
-    private(set) var provider: ProfileTableProvider
-    private(set) var delegate: UITableViewDelegate
+    private(set) var provider: ProfileTableProvider!
+    private(set) var delegate: UITableViewDelegate!
     
     init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.provider = contentProvider
@@ -24,9 +25,9 @@ class ProfileController: HampViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.provider = ProfileInfoProvider (user: Hamp.Auth.user()!)
-        self.delegate = ProfileTableViewDelegate.init(provider: provider)
         super.init (coder: aDecoder)
+        self.provider = ProfileInfoProvider (user: Hamp.Auth.user()!, parent: self)
+        self.delegate = ProfileTableViewDelegate.init(provider: provider)
     }
     
     override func viewDidLoad() {
@@ -36,8 +37,6 @@ class ProfileController: HampViewController {
         addSaveButton()
     }
 
-
-    
     private func addSaveButton () {
         let saveButton = UIButton (type: .system)
         saveButton.setTitle("Save", for: .normal)
@@ -71,6 +70,8 @@ class ProfileController: HampViewController {
     }
 }
 
+
+
 extension ProfileController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,6 +90,8 @@ extension ProfileController: UITableViewDataSource {
         return cell
     }
 }
+
+
 
 extension ProfileController: ProfileCellButtonDelegate {
     func signOut() {
@@ -110,4 +113,13 @@ extension ProfileController: ProfileCellButtonDelegate {
     }
 }
 
+extension ProfileController: GMDatePickerDelegate {
+    func gmDatePicker(_ gmDatePicker: GMDatePicker, didSelect date: Date) {
+        
+    }
+    
+    func gmDatePickerDidCancelSelection(_ gmDatePicker: GMDatePicker) {
+        
+    }
+}
 

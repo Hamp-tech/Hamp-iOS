@@ -14,6 +14,8 @@
 		190EE6C01FD0311200E6E24C /* HampUserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EE6BF1FD0311200E6E24C /* HampUserCache.swift */; };
 		191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
+		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
+		19856FA01FD8010000F9949A /* GMPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9E1FD8010000F9949A /* GMPicker.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
@@ -29,7 +31,6 @@
 		19DB938F1F9D1B2700742168 /* UserContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB938E1F9D1B2700742168 /* UserContent.swift */; };
 		19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */; };
 		19DB93931F9D1EB700742168 /* ProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93921F9D1EB700742168 /* ProfileContent.swift */; };
-		19DB93951F9D216900742168 /* ProfileTableVIewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */; };
 		19DB93971F9E42A000742168 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93961F9E42A000742168 /* ProfileCell.swift */; };
 		19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */; };
 		19DB939B1F9F071900742168 /* ProfileCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB939A1F9F071800742168 /* ProfileCellsID.swift */; };
@@ -193,6 +194,8 @@
 		190EE6BF1FD0311200E6E24C /* HampUserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUserCache.swift; sourceTree = "<group>"; };
 		191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoProvider.swift; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
+		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
+		19856F9E1FD8010000F9949A /* GMPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMPicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMPicker.swift"; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
@@ -208,7 +211,6 @@
 		19DB938E1F9D1B2700742168 /* UserContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContent.swift; sourceTree = "<group>"; };
 		19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableProvider.swift; sourceTree = "<group>"; };
 		19DB93921F9D1EB700742168 /* ProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContent.swift; sourceTree = "<group>"; };
-		19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableVIewDataSource.swift; sourceTree = "<group>"; };
 		19DB93961F9E42A000742168 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewDelegate.swift; sourceTree = "<group>"; };
 		19DB939A1F9F071800742168 /* ProfileCellsID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellsID.swift; sourceTree = "<group>"; };
@@ -413,6 +415,15 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
+		19856F9C1FD800EB00F9949A /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				19856F9D1FD8010000F9949A /* GMDatePicker.swift */,
+				19856F9E1FD8010000F9949A /* GMPicker.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
 		19C8EF8C1F7BA8C600D70A07 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,7 +464,6 @@
 			children = (
 				19DB939A1F9F071800742168 /* ProfileCellsID.swift */,
 				19E594791F7A5D4600371FD3 /* ProfileController.swift */,
-				19DB93941F9D216900742168 /* ProfileTableVIewDataSource.swift */,
 				19DB93981F9E83FA00742168 /* ProfileTableViewDelegate.swift */,
 			);
 			path = Profile;
@@ -604,6 +614,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
+				19856F9C1FD800EB00F9949A /* ThirdParty */,
 				4EC6361D1F43ACEA0045520F /* Controllers */,
 				4E1DFC5D1F67E9670096659F /* Layout */,
 				4E632E271F26508000CDE02D /* Factories */,
@@ -1256,7 +1267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1291,7 +1302,6 @@
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
 				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
-				19DB93951F9D216900742168 /* ProfileTableVIewDataSource.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
@@ -1352,6 +1362,7 @@
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
 				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
+				19856FA01FD8010000F9949A /* GMPicker.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */,
 				192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */,
@@ -1371,6 +1382,7 @@
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
+				19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */,
 				4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */,

@@ -13,8 +13,8 @@ struct ProfileInfoProvider: ProfileTableProvider {
     
     private var content: [[UserContent]]!
     
-    init (user: HampUser) {
-        content = ProfileInfoFactory.createProfileInfo(user: user)
+    init (user: HampUser, parent: UIViewController) {
+        content = ProfileInfoFactory.createProfileInfo(user: user, parent: parent)
     }
     
     func numberOfSections() -> Int {

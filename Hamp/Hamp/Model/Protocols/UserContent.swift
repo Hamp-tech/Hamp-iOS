@@ -10,6 +10,16 @@ import Foundation
 
 enum UserOption {
     case leftOption, rightOption, none
+    
+    static func getOptionWith (gender: String) -> UserOption {
+        if gender == "M" {
+            return .leftOption
+        } else if gender == "F" {
+            return .rightOption
+        } else {
+            return .none
+        }
+    }
 }
 
 protocol UserContent {
