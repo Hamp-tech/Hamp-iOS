@@ -14,6 +14,7 @@ class SignInViewController: LogoTitleBaseViewController {
 
     //MARK: Private properties
     private var validationsManager = ValidationManager()
+    private let loadingScreen = LoadingView ()
     
     //MARK: Public Properties
     @IBOutlet weak private var mailTextField: InputTextField!
@@ -110,14 +111,15 @@ class SignInViewController: LogoTitleBaseViewController {
                 mail: mailTextField.text!,
                 password: passwordTextField.text!,
                 onSuccess: { (response) in
-                   self.showTabBarViewController()
-//                    HampUserCache.setUser(user: Hamp.Auth.user()!)
+                    self.loadingScreen.presentedVC = self.showTabBarViewController()
+                    NotificationCenter.default.post(name: self.loadingScreen.notificationName, object: nil)
             },  onError: { (error) in
                 self.showAlertError(with: "Sign in error", message: error.description)
             })
         }, onError: {
             print("Not correct fields")
         })
+        present(loadingScreen, animated: true, completion: nil)
         
     }
     
@@ -140,11 +142,13 @@ private extension SignInViewController {
     }
     
     /// Show tab bar view controller
-    func showTabBarViewController() {
+    func showTabBarViewController() -> UIViewController {
         let identifier = tabBarNavigationViewControllerIdentifier
         let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: identifier)
-        self.navigationController?.present(navigationController, animated: true, completion:nil)
+//        self.navigationController?.present(navigationController, animated: true, completion:nil)
+        return navigationController
+        
     }
     
     /// Show alert error controller

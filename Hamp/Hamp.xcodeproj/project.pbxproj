@@ -16,6 +16,8 @@
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
 		19856FA01FD8010000F9949A /* GMPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9E1FD8010000F9949A /* GMPicker.swift */; };
+		19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA21FD95AAD00F9949A /* FrasesProvider.swift */; };
+		19856FA51FD95AAD00F9949A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA31FD95AAD00F9949A /* LoadingView.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
@@ -195,6 +197,8 @@
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
 		19856F9E1FD8010000F9949A /* GMPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMPicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMPicker.swift"; sourceTree = "<group>"; };
+		19856FA21FD95AAD00F9949A /* FrasesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrasesProvider.swift; path = ../../../../../LoadingScreen/LoadingScreen/FrasesProvider.swift; sourceTree = "<group>"; };
+		19856FA31FD95AAD00F9949A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = ../../../../../LoadingScreen/LoadingScreen/LoadingView.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
@@ -420,6 +424,15 @@
 				19856F9E1FD8010000F9949A /* GMPicker.swift */,
 			);
 			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		19856FA11FD95A6E00F9949A /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				19856FA21FD95AAD00F9949A /* FrasesProvider.swift */,
+				19856FA31FD95AAD00F9949A /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		19C8EF8C1F7BA8C600D70A07 /* ProfileCells */ = {
@@ -971,6 +984,7 @@
 		4EDF10051F236E21007E15E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19856FA11FD95A6E00F9949A /* LoadingView */,
 				4E9B1EBC1F6AC26C00BFA88C /* UIScrollView */,
 				4E7DF3B71F54C8BE00C1A180 /* Buttons */,
 				4E6A08811F251B170044570C /* IB */,
@@ -1316,6 +1330,7 @@
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
 				19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */,
+				19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
 				4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */,
@@ -1368,6 +1383,7 @@
 				4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
+				19856FA51FD95AAD00F9949A /* LoadingView.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
