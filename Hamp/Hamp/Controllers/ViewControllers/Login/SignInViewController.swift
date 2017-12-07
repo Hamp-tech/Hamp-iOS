@@ -14,7 +14,7 @@ class SignInViewController: LogoTitleBaseViewController {
 
     //MARK: Private properties
     private var validationsManager = ValidationManager()
-    private let loadingScreen = LoadingView ()
+    private let loadingScreen = LoadingViewController ()
     
     //MARK: Public Properties
     @IBOutlet weak private var mailTextField: InputTextField!
@@ -120,10 +120,10 @@ class SignInViewController: LogoTitleBaseViewController {
                 self.showAlertError(with: "Sign in error", message: error.description)
                 NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
             })
+            present(loadingScreen, animated: true, completion: nil)
         }, onError: {
             print("Not correct fields")
         })
-        present(loadingScreen, animated: true, completion: nil)
         
     }
     

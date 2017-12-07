@@ -16,7 +16,7 @@
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
 		19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA21FD95AAD00F9949A /* FrasesProvider.swift */; };
-		19856FA51FD95AAD00F9949A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA31FD95AAD00F9949A /* LoadingView.swift */; };
+		19856FA51FD95AAD00F9949A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA31FD95AAD00F9949A /* LoadingViewController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
@@ -196,7 +196,7 @@
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
 		19856FA21FD95AAD00F9949A /* FrasesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrasesProvider.swift; path = ../../../../../LoadingScreen/LoadingScreen/FrasesProvider.swift; sourceTree = "<group>"; };
-		19856FA31FD95AAD00F9949A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = ../../../../../LoadingScreen/LoadingScreen/LoadingView.swift; sourceTree = "<group>"; };
+		19856FA31FD95AAD00F9949A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = ../../../../../LoadingScreen/LoadingScreen/LoadingViewController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
@@ -427,7 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				19856FA21FD95AAD00F9949A /* FrasesProvider.swift */,
-				19856FA31FD95AAD00F9949A /* LoadingView.swift */,
+				19856FA31FD95AAD00F9949A /* LoadingViewController.swift */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -1379,7 +1379,7 @@
 				4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
-				19856FA51FD95AAD00F9949A /* LoadingView.swift in Sources */,
+				19856FA51FD95AAD00F9949A /* LoadingViewController.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
