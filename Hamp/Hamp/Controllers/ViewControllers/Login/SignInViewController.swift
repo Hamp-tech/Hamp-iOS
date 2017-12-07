@@ -92,17 +92,16 @@ class SignInViewController: LogoTitleBaseViewController {
                     with: accessToken.authenticationToken,
                     user: user,
                     onSuccess: { (response) in
-                    self.loadingScreen.presentedVC = self.showTabBarViewController()
-                    NotificationCenter.default.post(name: self.loadingScreen.notificationPresentName, object: nil)
+                    self.loadingScreen.dismissViewController()
+                    self.showTabBarViewController()
                 },  onError: {(error) in
                     self.showAlertError(with: "Facebook error", message: error.description)
-                    NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
                 })
         },  onError: { (error) in
                 self.showAlertError(with: "Facebook error", message: error.localizedDescription)
-                NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
+                self.loadingScreen.dismissViewController()
         })
-        present(loadingScreen, animated: true, completion: nil)
+        present(loadingScreen, animated: false, completion: nil)
     }
     
     /// Check if information is correct, if it is, log in, show error otherwise
@@ -114,17 +113,16 @@ class SignInViewController: LogoTitleBaseViewController {
                 mail: mailTextField.text!,
                 password: passwordTextField.text!,
                 onSuccess: { (response) in
-                    self.loadingScreen.presentedVC = self.showTabBarViewController()
-                    NotificationCenter.default.post(name: self.loadingScreen.notificationPresentName, object: nil)
+                    self.loadingScreen.dismissViewController()
+                    self.showTabBarViewController()
             },  onError: { (error) in
                 self.showAlertError(with: "Sign in error", message: error.description)
-                NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
+                self.loadingScreen.dismissViewController()
             })
-            present(loadingScreen, animated: true, completion: nil)
+            present(loadingScreen, animated: false, completion: nil)
         }, onError: {
             print("Not correct fields")
         })
-        
     }
     
 }
@@ -146,13 +144,11 @@ private extension SignInViewController {
     }
     
     /// Show tab bar view controller
-    func showTabBarViewController() -> UIViewController {
+    func showTabBarViewController() {
         let identifier = tabBarNavigationViewControllerIdentifier
         let navigationController = UIStoryboard.init(name: "TabBar", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: identifier)
-//        self.navigationController?.present(navigationController, animated: true, completion:nil)
-        return navigationController
-        
+        self.navigationController?.present(navigationController, animated: true, completion:nil)
     }
     
     /// Show alert error controller

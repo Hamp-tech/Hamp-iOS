@@ -52,7 +52,7 @@ class AmountSelectionView: UIView {
         s.distribution = .fillEqually
         s.alignment = .fill
         s.spacing = 0
-        s.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        s.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         s.addArrangedSubview(self.minusButton)
         s.addArrangedSubview(self.amountLabel)
