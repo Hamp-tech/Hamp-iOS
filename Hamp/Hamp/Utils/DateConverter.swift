@@ -16,4 +16,11 @@ struct DateConverter {
         formatter.dateFormat = "dd/MM/yyyy"
         return formatter.string(from: date!)
     }
+    
+    static func convertDateToString (date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
 }

@@ -39,8 +39,6 @@ struct ProfileInfoFactory {
                 }),
                 ProfileContent.init(cellID: ProfileCellId.genderCell, firstOptionText: "Hombre", secondOptionText: "Mujer", firstOption: UserOption.getOptionWith(gender: gender)),
                 ProfileContent.init(cellID: ProfileCellId.pickUpCell, labelText: "Recogida", firstOptionText: "Mañana", secondOptionText: "Tarde", firstOption: .rightOption),
-                ProfileContent.init(cellID: ProfileCellId.switchCell, labelText: "Valorar Hamp", firstOption: .leftOption),
-                ProfileContent.init(cellID: ProfileCellId.switchCell, labelText: "Notificaciones activadas", firstOption: .leftOption),
                 ProfileContent.init(cellID: ProfileCellId.simpleCell, labelText: "Cerrar sesión", actionBlock: {
                     Hamp.Auth.signOut(onSucced: {
                         let window = (UIApplication.shared.delegate as! AppDelegate).window

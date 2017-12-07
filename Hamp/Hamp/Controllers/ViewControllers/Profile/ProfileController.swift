@@ -68,7 +68,6 @@ class ProfileController: HampViewController {
         tableView.register(ProfileDateCell.self, forCellReuseIdentifier: ProfileCellId.dateCell)
         tableView.register(ProfileGenderCell.self, forCellReuseIdentifier: ProfileCellId.genderCell)
         tableView.register(ProfilePickUpCell.self, forCellReuseIdentifier: ProfileCellId.pickUpCell)
-        tableView.register(ProfileSwitchCell.self, forCellReuseIdentifier: ProfileCellId.switchCell)
         tableView.register(ProfileSignOutCell.self, forCellReuseIdentifier: ProfileCellId.simpleCell)
         tableView.register(ProfileUseInfoCell.self, forCellReuseIdentifier: ProfileCellId.infoCell)
     }
@@ -99,7 +98,7 @@ extension ProfileController: GMDatePickerDelegate {
     func gmDatePicker(_ gmDatePicker: GMDatePicker, didSelect date: Date) {
         let indexPath = IndexPath(row: 4, section: 0)
         var content = provider.content(at: indexPath)
-        content?.textFieldText = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: String.init(describing: date))
+        content?.textFieldText = DateConverter.convertDateToString(date: date)
         tableView.reloadData()
     }
 }
