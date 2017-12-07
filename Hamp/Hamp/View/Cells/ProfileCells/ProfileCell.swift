@@ -12,7 +12,8 @@ class ProfileCell: UITableViewCell {
     
     // MARK: - Properties
     var content: UserContent?
-
+    var isEnabled: Bool?
+    
     // MARK: - Life cycle
     override func layoutSubviews() {
         super.layoutSubviews()

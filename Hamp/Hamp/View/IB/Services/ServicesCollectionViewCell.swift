@@ -63,6 +63,4 @@ extension ServicesCollectionViewCell: AmountSelectionViewDelegate {
     func initialAmount() -> Int {
         return orderableService.service.amount
     }
-    
-    
 }

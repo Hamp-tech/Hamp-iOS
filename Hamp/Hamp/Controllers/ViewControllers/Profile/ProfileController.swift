@@ -17,6 +17,8 @@ class ProfileController: HampViewController {
     @IBOutlet weak var tableView: UITableView!
     private(set) var provider: ProfileTableProvider!
     private(set) var delegate: UITableViewDelegate!
+    let saveEditButton = UIButton (type: .system)
+
     
     init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.provider = contentProvider
@@ -38,18 +40,20 @@ class ProfileController: HampViewController {
     }
 
     private func addSaveButton () {
-        let saveButton = UIButton (type: .system)
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.backgroundColor = .yellow
-        saveButton.frame = CGRect (x: 0, y: 0, width: 59, height: 24)
-        saveButton.addTarget(self, action: #selector (editProfile), for: .touchUpInside)
+        saveEditButton.setTitle("Edit", for: .normal)
+        saveEditButton.backgroundColor = .yellow
+        saveEditButton.frame = CGRect (x: 0, y: 0, width: 59, height: 24)
+        saveEditButton.addTarget(self, action: #selector (editProfile), for: .touchUpInside)
         
-        let trailingButton = TrailingBarButtonItem (with: saveButton)
+        let trailingButton = TrailingBarButtonItem (with: saveEditButton)
         addRightBarButtonWhenLargeTitles(rightButton: trailingButton)
     }
     
     @objc func editProfile () {
-        print ("No se rick, parece falso")
+        provider.setCellsEnabled(enabled: !provider.areCellsEnabled())
+        let title = provider.areCellsEnabled() ? "Save" : "Edit"
+        saveEditButton.setTitle(title, for: .normal)
+        self.tableView.reloadData()
     }
     
     fileprivate func setupTableView () {
@@ -86,17 +90,17 @@ extension ProfileController: UITableViewDataSource {
         let cellContent = provider.content(at: indexPath)!
         let cell = tableView.dequeueReusableCell(withIdentifier: cellContent.cellID, for: indexPath) as! ProfileCell
         cell.content = cellContent
+        cell.isEnabled = provider.areCellsEnabled()
         return cell
     }
 }
 
 extension ProfileController: GMDatePickerDelegate {
     func gmDatePicker(_ gmDatePicker: GMDatePicker, didSelect date: Date) {
-//        let indexPath = IndexPath(row: 4, section: 0)
-//        var content = provider.content(at: indexPath)
-//        content?.textFieldText = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: date.debugDescription)
-//        tableView.reloadData()
-        
+        let indexPath = IndexPath(row: 4, section: 0)
+        var content = provider.content(at: indexPath)
+        content?.textFieldText = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: String.init(describing: date))
+        tableView.reloadData()
     }
 }
 

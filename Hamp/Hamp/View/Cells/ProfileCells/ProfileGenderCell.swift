@@ -20,6 +20,14 @@ class ProfileGenderCell: ProfileCell {
         }
     }
     
+    override var isEnabled: Bool? {
+        didSet {
+            let enabled = isEnabled ?? true
+            firstCheckBoxButton.isUserInteractionEnabled = enabled
+            secondCheckBoxButton.isUserInteractionEnabled = enabled
+        }
+    }
+    
     private var firstOptionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)

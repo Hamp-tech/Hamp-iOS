@@ -9,9 +9,10 @@
 import Foundation
 import HampKit
 
-struct ProfileInfoProvider: ProfileTableProvider {
+class ProfileInfoProvider: ProfileTableProvider {
     
     private var content: [[UserContent]]!
+    private var isCellEnabled:Bool = false
     
     init<T: UIViewController>(user: HampUser, parent: T) where T: GMDatePickerDelegate {
         content = ProfileInfoFactory.createProfileInfo(user: user, parent: parent)
@@ -28,4 +29,13 @@ struct ProfileInfoProvider: ProfileTableProvider {
     func content(at indexPath: IndexPath) -> UserContent? {
         return content [indexPath.section][indexPath.row]
     }
+    
+    func setCellsEnabled (enabled: Bool) {
+        isCellEnabled = enabled
+    }
+    
+    func areCellsEnabled () -> Bool {
+        return isCellEnabled
+    }
+    
 }

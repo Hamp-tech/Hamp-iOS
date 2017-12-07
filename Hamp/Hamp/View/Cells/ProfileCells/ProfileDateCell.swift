@@ -17,6 +17,13 @@ class ProfileDateCell: ProfileCell {
         }
     }
     
+    override var isEnabled: Bool? {
+        didSet {
+            let enabled = isEnabled ?? true
+            dateTextField.isEnabled = enabled
+        }
+    }
+    
     private var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)

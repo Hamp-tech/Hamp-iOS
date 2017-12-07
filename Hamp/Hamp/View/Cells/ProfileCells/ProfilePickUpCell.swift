@@ -18,6 +18,13 @@ class ProfilePickUpCell: ProfileCell {
         }
     }
     
+    override var isEnabled: Bool? {
+        didSet {
+            let enabled = isEnabled ?? true
+            timeTablePicker.isEnabled = enabled
+        }
+    }
+    
     private var captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
