@@ -21,7 +21,13 @@ class ServicesCollectionViewCell: ReusableCollectionViewCell {
     @IBOutlet private weak var amountSelectionView: AmountSelectionView!
     
     //MARK: Properties
-    var orderableService: OrderableService!
+    var orderableService: OrderableService! {
+        didSet {
+            serviceImageView.image = UIImage.init(named: orderableService.imageName)
+            titleLabel.text = orderableService.service.name
+            amountSelectionView.updateAmount(with: orderableService.service.amount)
+        }
+    }
     weak var delegate: ServicesCollectionViewCellDelegate?
     
     //MARK: Life cycle
@@ -32,9 +38,7 @@ class ServicesCollectionViewCell: ReusableCollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        serviceImageView.image = UIImage.init(named: orderableService.imageName)
-        titleLabel.text = orderableService.service.name
-        amountSelectionView.updateAmount(with: orderableService.service.amount)
+
     }
     
     override func prepareForReuse() {

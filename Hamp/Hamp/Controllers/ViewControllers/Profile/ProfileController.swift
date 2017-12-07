@@ -67,7 +67,6 @@ class ProfileController: HampViewController {
         tableView.register(ProfileTextFieldCell.self, forCellReuseIdentifier: ProfileCellId.textFieldCell)
         tableView.register(ProfileDateCell.self, forCellReuseIdentifier: ProfileCellId.dateCell)
         tableView.register(ProfileGenderCell.self, forCellReuseIdentifier: ProfileCellId.genderCell)
-        tableView.register(ProfilePickUpCell.self, forCellReuseIdentifier: ProfileCellId.pickUpCell)
         tableView.register(ProfileSignOutCell.self, forCellReuseIdentifier: ProfileCellId.simpleCell)
         tableView.register(ProfileUseInfoCell.self, forCellReuseIdentifier: ProfileCellId.infoCell)
     }
