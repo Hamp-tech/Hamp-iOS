@@ -101,5 +101,10 @@ extension ProfileController: GMDatePickerDelegate {
         content?.textFieldText = DateConverter.convertDateToString(date: date)
         tableView.reloadData()
     }
+    
+    func gmDatePickerSetMaxDate(_ gmDatePicker: GMDatePicker) -> Date {
+        let maxYear = DateConverter.getActualYear() - 15
+        return DateConverter.getMaxDateFromYear(year: maxYear)
+    }
 }
 

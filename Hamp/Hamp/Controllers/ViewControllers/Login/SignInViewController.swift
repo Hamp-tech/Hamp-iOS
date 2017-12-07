@@ -92,14 +92,17 @@ class SignInViewController: LogoTitleBaseViewController {
                     with: accessToken.authenticationToken,
                     user: user,
                     onSuccess: { (response) in
-                    self.showTabBarViewController()
-                    HampUserCache.setUser(user: Hamp.Auth.user()!)
+                    self.loadingScreen.presentedVC = self.showTabBarViewController()
+                    NotificationCenter.default.post(name: self.loadingScreen.notificationPresentName, object: nil)
                 },  onError: {(error) in
                     self.showAlertError(with: "Facebook error", message: error.description)
+                    NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
                 })
         },  onError: { (error) in
                 self.showAlertError(with: "Facebook error", message: error.localizedDescription)
+                NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
         })
+        present(loadingScreen, animated: true, completion: nil)
     }
     
     /// Check if information is correct, if it is, log in, show error otherwise
@@ -112,9 +115,10 @@ class SignInViewController: LogoTitleBaseViewController {
                 password: passwordTextField.text!,
                 onSuccess: { (response) in
                     self.loadingScreen.presentedVC = self.showTabBarViewController()
-                    NotificationCenter.default.post(name: self.loadingScreen.notificationName, object: nil)
+                    NotificationCenter.default.post(name: self.loadingScreen.notificationPresentName, object: nil)
             },  onError: { (error) in
                 self.showAlertError(with: "Sign in error", message: error.description)
+                NotificationCenter.default.post(name: self.loadingScreen.notificationCancelName, object: nil)
             })
         }, onError: {
             print("Not correct fields")

@@ -23,4 +23,18 @@ struct DateConverter {
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
+    
+    static func getMaxDateFromYear (year: Int) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        return formatter.date(from: String(year) + "/01/01") ?? Date ()
+    }
+    
+    static func getActualYear () -> Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY"
+        let year = dateFormatter.string(from: Date())
+        return Int(year) ?? 0
+    }
+
 }
