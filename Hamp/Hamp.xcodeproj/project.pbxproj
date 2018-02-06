@@ -11,8 +11,10 @@
 		1904C6AB1F8CFB51005144E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */; };
 		1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */; };
 		190EE6BE1FD02B0300E6E24C /* ProfileInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EE6BD1FD02B0300E6E24C /* ProfileInfoFactory.swift */; };
-		190EE6C01FD0311200E6E24C /* HampUserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EE6BF1FD0311200E6E24C /* HampUserCache.swift */; };
 		191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */; };
+		1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920E7992021DD920070AF63 /* RemoveCardTableViewController.swift */; };
+		1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */; };
+		1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
 		19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA21FD95AAD00F9949A /* FrasesProvider.swift */; };
@@ -191,8 +193,10 @@
 		1904C6AA1F8CFB51005144E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1904C6CE1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilitiesDelegate.swift; sourceTree = "<group>"; };
 		190EE6BD1FD02B0300E6E24C /* ProfileInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoFactory.swift; sourceTree = "<group>"; };
-		190EE6BF1FD0311200E6E24C /* HampUserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUserCache.swift; sourceTree = "<group>"; };
 		191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoProvider.swift; sourceTree = "<group>"; };
+		1920E7992021DD920070AF63 /* RemoveCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardTableViewController.swift; sourceTree = "<group>"; };
+		1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
+		1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardTableViewCell.xib; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
 		19856FA21FD95AAD00F9949A /* FrasesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrasesProvider.swift; path = ../../../../../LoadingScreen/LoadingScreen/FrasesProvider.swift; sourceTree = "<group>"; };
@@ -405,6 +409,15 @@
 			path = MapUtilities;
 			sourceTree = "<group>";
 		};
+		1920E79B2021DF120070AF63 /* CreditCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */,
+				1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */,
+			);
+			path = CreditCardCell;
+			sourceTree = "<group>";
+		};
 		192542741F8BC8760098CE79 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				4E22CF701F38FF5400EEC314 /* NewCreditCardViewController.swift */,
+				1920E7992021DD920070AF63 /* RemoveCardTableViewController.swift */,
 			);
 			path = "Credit Card";
 			sourceTree = "<group>";
@@ -887,6 +901,7 @@
 		4EC2CE821F478F7F002439CD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1920E79B2021DF120070AF63 /* CreditCardCell */,
 				4E72535B1F37CF33006382B4 /* SignUpBaseTableViewCell.swift */,
 				4EC2CE831F478F91002439CD /* ReusableCollectionViewCell.swift */,
 				19DFE0231F87E9520091CC24 /* StoreCell */,
@@ -1022,7 +1037,6 @@
 				4E90CA4E1F6717E5003DAA28 /* StaticHistoryProvider.swift */,
 				4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */,
 				191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */,
-				190EE6BF1FD0311200E6E24C /* HampUserCache.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -1181,6 +1195,7 @@
 				4E72535A1F37CE89006382B4 /* SignUpGenderTableViewCell.xib in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EC0BD2C1F4C3EBB0077DD92 /* Tutorial.storyboard in Resources */,
+				1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
 				4E871D161F4AF3230028DA0D /* HistoryTableViewCell.xib in Resources */,
@@ -1320,7 +1335,6 @@
 				4ECA35151F44645F0031580B /* UICollectionView+Reusable.swift in Sources */,
 				4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */,
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
-				190EE6C01FD0311200E6E24C /* HampUserCache.swift in Sources */,
 				4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
@@ -1335,6 +1349,7 @@
 				4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
 				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
+				1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
@@ -1415,6 +1430,7 @@
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
 				19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
+				1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */,
 				4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
 				19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */,

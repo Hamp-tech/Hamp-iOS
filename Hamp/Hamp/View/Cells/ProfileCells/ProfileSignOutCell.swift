@@ -20,7 +20,7 @@ class ProfileSignOutCell: ProfileCell {
     
     private lazy var captionButton: UIButton = {
         let button = UIButton (type: .system)
-        button.setTitle("Cerrar sesión", for: .normal)
+        button.contentHorizontalAlignment = .left
         button.titleLabel?.font = UIFont.helveticaBold(withSize: 20)
         button.tintColor = .black
         button.addTarget(self, action: #selector (cerrarSession), for: .touchUpInside)
@@ -30,7 +30,7 @@ class ProfileSignOutCell: ProfileCell {
     override func draw(_ rect: CGRect) {
         contentView.addSubview(captionButton)
         
-        captionButton.anchor(top: nil, left: contentView.leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 20, paddingBottom: 0, paddingRight: 0, width: 128, height: 24)
+        captionButton.anchor(top: nil, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 20, paddingBottom: 0, paddingRight: 0, width: 0, height: 24)
         captionButton.centerYAnchor.constraint (equalTo: contentView.centerYAnchor).isActive = true
     }
     

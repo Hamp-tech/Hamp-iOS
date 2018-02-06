@@ -23,7 +23,7 @@ public struct FacebookAPIManager {
     ///   - onError: called if an error occurred
     static func logIn(onViewController viewController: UIViewController,
                       onSuccess: ((HampUser, AccessToken) -> ())? = nil,
-                      onError: ((Error) -> ())? = nil) {
+                      onError: ((Error) -> ())? = nil, cancelled: (()->())?) {
         
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.publicProfile, .email, .userBirthday],
@@ -32,7 +32,7 @@ public struct FacebookAPIManager {
             case .failed(let error):
                 onError?(error)
             case .cancelled:
-                print("User cancelled login.")
+                cancelled? ()
             case .success(_, _, let accessToken):
                 self.retrieveHampUserFromFacebookInformation(with: accessToken, onSuccess: { (user) in
                     onSuccess?(user, accessToken)
@@ -77,7 +77,7 @@ public struct FacebookAPIManager {
             gender = (g == "male" ? "M" : "F")
         }
         
-        let user = try! HampUser(identifier: nil, name: name, surname: surname, mail: mail, phone: phone, birthday: birthday, gender: gender, tokenFCM: "123", language: "ca-ES", OS: "iOS", signupDate: nil)
+        let user = try! HampUser(identifier: nil, name: name, surname: surname, mail: mail, password: "iOS", phone: phone, birthday: birthday, gender: gender, signupDate: nil, tokenFCM: "123", language: "ca-ES")
         return user
     }
 }

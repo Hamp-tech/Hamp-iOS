@@ -17,6 +17,12 @@ struct DateConverter {
         return formatter.string(from: date!)
     }
     
+    static func getDateFromString (iso8601Date: String) -> Date? {
+        let dateFormatter = DateFormatter ()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        return dateFormatter.date(from: iso8601Date)
+    }
+    
     static func convertDateToString (date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"

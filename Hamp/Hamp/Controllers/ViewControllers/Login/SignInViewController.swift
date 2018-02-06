@@ -96,10 +96,13 @@ class SignInViewController: LogoTitleBaseViewController {
                     self.showTabBarViewController()
                 },  onError: {(error) in
                     self.showAlertError(with: "Facebook error", message: error.description)
+                    self.loadingScreen.dismissViewController()
                 })
         },  onError: { (error) in
                 self.showAlertError(with: "Facebook error", message: error.localizedDescription)
                 self.loadingScreen.dismissViewController()
+        }, cancelled: {
+            self.loadingScreen.dismissViewController()
         })
         present(loadingScreen, animated: false, completion: nil)
     }

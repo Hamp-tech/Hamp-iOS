@@ -14,6 +14,10 @@ class CreditCardsProvider {
     static var creditCards: [HampCreditCard] = {
        return fetchCreditCards()
     }()
+    
+    static func deleteCreditCardAt (index: Int) {
+        creditCards.remove(at: index)
+    }
 }
 
 private extension CreditCardsProvider {

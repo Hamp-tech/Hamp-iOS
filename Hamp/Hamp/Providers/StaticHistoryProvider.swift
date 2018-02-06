@@ -16,23 +16,10 @@ class StaticHistoryProvider: HistoryProvider {
     
     // MARK: - API
     func download() {
-        
-        let b1 = HampBooking.init(
-            transaction: try! HampTransaction.init(identifier: "1234", userID: "123", cardID: "123", order: HampOrder.init(smallBag: 1, bigBag: 1, curtain: 1, cushion: 0, quilt: 0, sofaCover: 0, blanket: 0), date: "1994-11-05T13:15:30Z", payment: 10.0),
-            deliveryLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "1111"),
-            collectionLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "2222"))
-        
-        let b2 = HampBooking.init(
-            transaction: try! HampTransaction.init(identifier: "1234", userID: "123", cardID: "123", order: HampOrder.init(smallBag: 1, bigBag: 0, curtain: 1, cushion: 0, quilt: 0, sofaCover: 0, blanket: 0), date: "1994-11-06T13:15:30Z", payment: 7.0),
-            deliveryLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "1111"),
-            collectionLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "2222"))
-        
-        let b3 = HampBooking.init(
-            transaction: try! HampTransaction.init(identifier: "1234", userID: "123", cardID: "123", order: HampOrder.init(smallBag: 1, bigBag: 0, curtain: 0, cushion: 0, quilt: 0, sofaCover: 0, blanket: 0), date: "1994-11-07T13:15:30Z", payment: 5.0),
-            deliveryLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "1111"),
-            collectionLocker: try! HampLocker.init(identifier: "1234", booked: false, lockerID: "1", secretKey: "2222"))
+        let b11 = try! HampBooking.init(transaction: HampTransaction.init(cardID: "1234", order: HampOrder.init(identifier: "1234", userID: "ID", basket: [], price: "31.44", pickUpTime: "1994-11-07T13:15:30Z", deliveryLocker: HampLocker.init(identifier: "1234", number: 12, key: 12, available: true, capacity: "A lot"), pickUpLocker: HampLocker.init(identifier: "1234", number: 2, key: 2, available: false, capacity: "asda"), location: HampLocation.init(latitude: 31, longitude: 13, name: "El VEndrell")), date: "1994-11-07T13:15:30Z"), deliveryLocker: HampLocker.init(identifier: "asd", number: 2, key: 2, available: true, capacity: "asd"), collectionLocker: HampLocker.init(identifier: "asd", number: 1, key: 2, available: true, capacity: "asf"))
 
-        bookings.append(contentsOf: [b1, b2, b3])
+        bookings.append(contentsOf: [b11, b11])
+    
     }
     
     

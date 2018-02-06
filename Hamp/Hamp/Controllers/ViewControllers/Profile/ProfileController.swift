@@ -17,7 +17,6 @@ class ProfileController: HampViewController {
     @IBOutlet weak var tableView: UITableView!
     private(set) var provider: ProfileTableProvider!
     private(set) var delegate: UITableViewDelegate!
-    let saveEditButton = UIButton (type: .system)
 
     
     init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
@@ -28,7 +27,7 @@ class ProfileController: HampViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init (coder: aDecoder)
-        self.provider = ProfileInfoProvider (user: Hamp.Auth.user()!, parent: self)
+        self.provider = ProfileInfoProvider (user: Hamp.Auth.user(), parent: self)
         self.delegate = ProfileTableViewDelegate.init(provider: provider)
     }
     
@@ -40,19 +39,13 @@ class ProfileController: HampViewController {
     }
 
     private func addSaveButton () {
-        saveEditButton.setTitle("Edit", for: .normal)
-        saveEditButton.backgroundColor = .yellow
-        saveEditButton.frame = CGRect (x: 0, y: 0, width: 59, height: 24)
-        saveEditButton.addTarget(self, action: #selector (editProfile), for: .touchUpInside)
-        
-        let trailingButton = TrailingBarButtonItem (with: saveEditButton)
-        addRightBarButtonWhenLargeTitles(rightButton: trailingButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Edit", style: .plain, target: self, action: #selector (editProfile))
     }
     
     @objc func editProfile () {
         provider.setCellsEnabled(enabled: !provider.areCellsEnabled())
         let title = provider.areCellsEnabled() ? "Save" : "Edit"
-        saveEditButton.setTitle(title, for: .normal)
+        self.navigationItem.rightBarButtonItem?.title = title
         self.tableView.reloadData()
     }
     
@@ -98,7 +91,14 @@ extension ProfileController: GMDatePickerDelegate {
         let indexPath = IndexPath(row: 4, section: 0)
         var content = provider.content(at: indexPath)
         content?.textFieldText = DateConverter.convertDateToString(date: date)
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
         tableView.reloadData()
+    }
+    
+    func gmDatePickerWillAppear(_ gmDatePicker: GMDatePicker) {
+        let userBirthday = DateConverter.getDateFromString(iso8601Date: Hamp.Auth.user()?.birthday ?? "1994-11-07T13:15:30Z") 
+        gmDatePicker.config.startDate = userBirthday
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     func gmDatePickerSetMaxDate(_ gmDatePicker: GMDatePicker) -> Date {

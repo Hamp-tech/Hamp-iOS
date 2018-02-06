@@ -32,6 +32,7 @@ class CreditCardUIController: UIView {
     private var nameTextField: UITextField!
     private var dateTextField: UITextField!
     private var textFields = [UITextField]()
+    private var errorLabel: UILabel!
     private var hampCreditCard: HampCreditCard!
     private var inputMaskManager: CreditCardInputTextFieldMaskManager!
     lazy var separatorYMargin = {
@@ -99,21 +100,40 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
         
         do {
             try hampCreditCard.validate()
+            hideErrorLabel()
             delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
         } catch HampCreditCard.CreditCardError.invalidNumber {
             creditNumberTextField.shake()
+            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidNumber.description)
         } catch HampCreditCard.CreditCardError.invalidMonth {
             dateTextField.shake()
+            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidMonth.description)
         } catch HampCreditCard.CreditCardError.invalidYear {
             dateTextField.shake()
+            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidYear.description)
         } catch HampCreditCard.CreditCardError.invalidCVV {
             cvvTextField.shake()
+            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidCVV.description)
         } catch HampCreditCard.CreditCardError.invalidName {
             nameTextField.shake()
+            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidName.description)
         } catch {}
         
         guard nextValue < textFields.count else { return }
         textFields[nextValue].becomeFirstResponder()
+    }
+    
+    func showErrorLabel (errorText: String) {
+        errorLabel.text = "* Error: " + errorText
+        UIView.animate(withDuration: 0.5) {
+            self.errorLabel.alpha = 1
+        }
+    }
+    
+    func hideErrorLabel () {
+        UIView.animate(withDuration: 0.5) {
+            self.errorLabel.alpha = 0
+        }
     }
     
     func textFieldAreNotFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type) {
@@ -139,6 +159,7 @@ private extension CreditCardUIController {
         setupDateTextField()
         setupCVVTextfield()
         setupNameTextfield()
+        setupErrorLabel ()
     }
     
     //MARK: UI Elements
@@ -268,5 +289,16 @@ private extension CreditCardUIController {
             nameTextField.heightAnchor.constraint(equalToConstant: height)
             ])
         
+    }
+    
+    func setupErrorLabel () {
+        errorLabel = UILabel.init()
+        errorLabel.text = "* Error, some data is incorrect."
+        errorLabel.font = UIFont.helvetica(withSize: 14)
+        errorLabel.alpha = 0
+        errorLabel.textColor = .red
+        self.addSubview(errorLabel)
+        errorLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([errorLabel.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 0), errorLabel.rightAnchor.constraint(equalTo: cardView.rightAnchor, constant: 0), errorLabel.leftAnchor.constraint(equalTo: cardView.leftAnchor, constant: 0), errorLabel.heightAnchor.constraint(equalToConstant: 50)])
     }
 }

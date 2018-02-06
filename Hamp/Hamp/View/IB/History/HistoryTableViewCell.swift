@@ -27,7 +27,7 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
                 self.lastOrder = order
                 return
             }
-            if (!order.equal(order: oldOrder)) {
+            if !order.equals(order: oldOrder) {
                 createServicesHiredSubviews()
                 self.lastOrder = order
             }
@@ -45,7 +45,7 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
         super.draw(rect)
         
         dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: booking.transaction!.date!)
-        priceLabel.text = "\(Int.init(booking.transaction!.payment!))€"
+        priceLabel.text = "\(Int.init(booking.transaction!.order!.price))€"
         
         setupLeftSeparator()
     }
@@ -68,7 +68,8 @@ private extension HistoryTableViewCell {
     
     func createServicesHiredSubviews() {
         guard let order = booking.transaction?.order else { return }
-        order.servicesHired().forEach {
+        let servicesHired = order.basket
+        servicesHired.forEach {
             let label = stackServicesDefaultLabel()
             label.text = "\($0)"
             servicesHiredStackView.addArrangedSubview(label)

@@ -13,7 +13,7 @@ class NewCreditCardViewController: HampViewController {
     @IBOutlet weak var creditCardView: CreditCardUIController!
     
     @IBOutlet weak var statesGradientButton: GradientStatesButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         creditCardView.delegate = self

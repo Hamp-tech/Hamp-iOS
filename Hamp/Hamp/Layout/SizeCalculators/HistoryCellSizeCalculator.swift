@@ -25,8 +25,8 @@ struct HistoryCellSizeCalculator {
     }
     
     func height(by booking: HampBooking) -> CGFloat {
-        let servicesHired = booking.transaction?.order?.numberOfServicesHired()
-        let orderServicesSizeAmount = stackViewElementHeight*CGFloat.init(servicesHired!)
+        let servicesHired = booking.transaction?.order?.basket.count ?? 0
+        let orderServicesSizeAmount = stackViewElementHeight*CGFloat.init(servicesHired)
         return topMargin + staticLabelsHeight + stackViewTopMargin + orderServicesSizeAmount + stackViewBottomMargin + bottomMargin
     }
 }

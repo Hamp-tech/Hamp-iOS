@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (4.6.0)
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
+  - Bolts/Tasks (1.9.0)
   - Crashlytics (3.9.3):
     - Fabric (~> 1.7.2)
   - Fabric (1.7.2)
@@ -17,9 +17,9 @@ PODS:
     - FacebookCore (~> 0.2)
     - FBSDKCoreKit (~> 4.21)
     - FBSDKLoginKit (~> 4.21)
-  - FBSDKCoreKit (4.29.0):
+  - FBSDKCoreKit (4.30.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.29.0):
+  - FBSDKLoginKit (4.30.0):
     - FBSDKCoreKit
   - FirebaseCommunity (0.1.6):
     - FirebaseCommunity/Root (= 0.1.6)
@@ -44,7 +44,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.3)
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
-  - GTMSessionFetcher/Core (1.1.12)
+  - GTMSessionFetcher/Core (1.1.13)
   - HampKit (0.3):
     - Alamofire
     - FirebaseCommunity
@@ -78,24 +78,24 @@ CHECKOUT OPTIONS:
     :commit: d038f93bb92725cc8610228c6a7181076cf2b6fc
     :git: https://github.com/ulidev/facebook-sdk-swift.git
   HampKit:
-    :commit: 2751902d120c0bd0ab74bd042097a4a832afe37a
+    :commit: 86d3ac108c0c7f3dc0f1976cd5291d88d26a7a13
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
   FacebookCore: b1dfb5bba65380aba6dbe5c545ce02d03d0b59b2
   FacebookLogin: da4d16833831769a6827a4ddfcf439d673949f12
-  FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
-  FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
+  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
+  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
   FirebaseCommunity: 1f9a0e48654316b4ffe4c830db0ce72b9e2d2c9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
   HampKit: bb0030f3da8313adcc6136ad3b1e591c28dae940
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
-  leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
 
 PODFILE CHECKSUM: ff3a08c98d02b8fbfacdbf800ceee959dfb3e91b
 
