@@ -91,10 +91,11 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
         let nextValue = type.rawValue + 1
 
         hampCreditCard.number = creditNumberTextField.text?.replacingOccurrences(of: " ", with: "")
-        if let dtf = dateTextField.text, dtf.count > 0 {
+        if let dtf = dateTextField.text, dtf.count == 5 {
             hampCreditCard.month = dtf.substring(with: 0..<2)
             hampCreditCard.year = dtf.substring(with: 3..<5)
         }
+        
         hampCreditCard.cvv = cvvTextField.text
         hampCreditCard.name = nameTextField.text
         
@@ -117,6 +118,8 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
         } catch HampCreditCard.CreditCardError.invalidName {
             nameTextField.shake()
             showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidName.description)
+        } catch HampFirebaseObjectError.missingProperties {
+            showErrorLabel(errorText: HampFirebaseObjectError.missingProperties.description)
         } catch {}
         
         guard nextValue < textFields.count else { return }

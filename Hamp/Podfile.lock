@@ -78,7 +78,7 @@ CHECKOUT OPTIONS:
     :commit: d038f93bb92725cc8610228c6a7181076cf2b6fc
     :git: https://github.com/ulidev/facebook-sdk-swift.git
   HampKit:
-    :commit: 86d3ac108c0c7f3dc0f1976cd5291d88d26a7a13
+    :commit: b68b2d31a9c0d810e4f68c4e1fd2debc01a910f9
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 SPEC CHECKSUMS:

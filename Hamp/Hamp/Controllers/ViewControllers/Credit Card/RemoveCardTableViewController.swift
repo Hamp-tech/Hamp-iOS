@@ -33,6 +33,7 @@ class RemoveCardTableViewController: HampTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cardCellID, for: indexPath) as! CreditCardTableViewCell
         cell.creditCard = CreditCardsProvider.creditCards[indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     
