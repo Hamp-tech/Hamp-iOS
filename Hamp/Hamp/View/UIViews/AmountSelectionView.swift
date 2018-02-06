@@ -52,8 +52,7 @@ class AmountSelectionView: UIView {
         s.distribution = .fillEqually
         s.alignment = .fill
         s.spacing = 0
-//        s.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+
         s.addArrangedSubview(self.minusButton)
         s.addArrangedSubview(self.amountLabel)
         s.addArrangedSubview(self.addButton)
@@ -63,9 +62,6 @@ class AmountSelectionView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        addSubview(minusButton)
-        addSubview(addButton)
-        addSubview(amountLabel)
         addSubview(stack)
     }
 }
