@@ -101,6 +101,10 @@ extension ProfileController: GMDatePickerDelegate {
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
+    func gmDatePickerDidCancelSelection(_ gmDatePicker: GMDatePicker) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+    
     func gmDatePickerSetMaxDate(_ gmDatePicker: GMDatePicker) -> Date {
         let maxYear = DateConverter.getActualYear() - 15
         return DateConverter.getMaxDateFromYear(year: maxYear)
