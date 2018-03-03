@@ -13,9 +13,12 @@ class NewCreditCardViewController: HampViewController {
     @IBOutlet weak var creditCardView: CreditCardUIController!
     
     @IBOutlet weak var statesGradientButton: GradientStatesButton!
-        
+    private var creditCardProvider: CreditCardsProvider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        creditCardProvider = CreditCardsProvider.init()
         creditCardView.delegate = self
         let notCompletedCreditCardContent = createContent(
             action: {
@@ -26,7 +29,7 @@ class NewCreditCardViewController: HampViewController {
         
         let completedCreditCardContent = createContent(
             action: {
-                print("bbb")
+                self.creditCardProvider.addCreditCard(creditCard: self.creditCardView.getCreditCard())
                 self.dismiss(animated: true, completion: nil)
         },  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
             identifier: gradientStatesButtonCompletedContentIdentifier)
@@ -53,12 +56,12 @@ private extension NewCreditCardViewController {
 }
 
 extension NewCreditCardViewController: CreditCardDelegate {
-    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard) {
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: CreditCard) {
         statesGradientButton.changeContent(to: gradientStatesButtonCompletedContentIdentifier)
         _ = creditCardUI.resignFirstResponder()
     }
     
-    func creditCardWasIncompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard) {
+    func creditCardWasIncompleted(_ creditCardUI: CreditCardUIController, creditCard: CreditCard) {
         statesGradientButton.changeContent(to: gradientStatesButtonNotCompletedContentIdentifier)
     }
 }

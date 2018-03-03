@@ -31,8 +31,16 @@ class ServicesOrderViewController: HampViewController {
     
     //MARK: Actions
     @IBAction func payWasPressed(_ sender: HorizontalGradientButton) {
-        performSegue(withIdentifier: "showPaymentViewController", sender: nil)
+        performSegue(withIdentifier: "showPaymentViewController", sender: orderManager)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPaymentViewController" {
+            if let segueDestinationController = segue.destination as? ServicesPaymentViewController {
+                segueDestinationController.ordersManager = orderManager
+            }
+        }
     }
 }
 

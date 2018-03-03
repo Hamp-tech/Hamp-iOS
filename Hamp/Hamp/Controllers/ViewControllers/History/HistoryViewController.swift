@@ -45,7 +45,9 @@ private extension HistoryViewController {
         bottomInfiniteLine.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(bottomInfiniteLine, at: 0)
         
-        let topAnchorMargin =  dataProvider.bookings.reduce(0) {(initial, next) in return initial + cellSizeCalculator.height(by: next)}
+        let topAnchorMargin = dataProvider.transactions.reduce(0) { (initial, next) in
+            return initial + cellSizeCalculator.height(by: next.booking!)
+        }
         
         NSLayoutConstraint.activate([
             bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: topAnchorMargin),
@@ -60,12 +62,12 @@ extension HistoryViewController {
    
     //MARK: TableView datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider.bookings.count
+        return dataProvider.transactions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
-        cell.booking = dataProvider.bookings[indexPath.row]
+        cell.transaction = dataProvider.transactions[indexPath.row]
         return cell
     }
 }
@@ -82,6 +84,6 @@ extension HistoryViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellSizeCalculator.height(by: dataProvider.bookings[indexPath.row])
+        return cellSizeCalculator.height(by: dataProvider.transactions[indexPath.row].booking!)
     }
 }

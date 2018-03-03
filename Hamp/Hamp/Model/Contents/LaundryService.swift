@@ -13,13 +13,13 @@ class LaundryService: Service {
     //MARK: Properties
     var identifier: String
     var amount: Int
-    var price: Int
+    var price: Float
     var name: String
     
     /// Create a new Service
     ///
     /// - Parameter identifier: service identifier
-    init(identifier: String, price: Int, name: String, amount: Int = 0) {
+    init(identifier: String, price: Float, name: String, amount: Int = 0) {
         self.identifier = identifier
         self.price = price
         self.name = name

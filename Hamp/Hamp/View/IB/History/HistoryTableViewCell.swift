@@ -19,21 +19,17 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var servicesHiredStackView: UIStackView!
     
     // MARK: - Properties
-    var booking: HampBooking! {
+    var transaction: Transaction! {
         didSet {
-            guard let order = booking.transaction?.order else {return}
-            guard let oldOrder = self.lastOrder else {
-                createServicesHiredSubviews()
-                self.lastOrder = order
-                return
-            }
-            if !order.equals(order: oldOrder) {
-                createServicesHiredSubviews()
-                self.lastOrder = order
-            }
+            booking = transaction.booking!
         }
     }
-    var lastOrder: HampOrder?
+    
+    private var booking: Booking! {
+        didSet {
+            createServicesHiredSubviews()
+        }
+    }
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -44,8 +40,8 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: booking.transaction!.date!)
-        priceLabel.text = "\(Int.init(booking.transaction!.order!.price))€"
+        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate!)
+        priceLabel.text = "\(Int.init(booking.price!))€"
         
         setupLeftSeparator()
     }
@@ -67,8 +63,8 @@ private extension HistoryTableViewCell {
     }
     
     func createServicesHiredSubviews() {
-        guard let order = booking.transaction?.order else { return }
-        let servicesHired = order.basket
+        guard let servicesHired = booking.basket else { return }
+        
         servicesHired.forEach {
             let label = stackServicesDefaultLabel()
             label.text = "\($0)"

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import HampKit
 
 protocol ProfileTableProvider {
     func numberOfSections () -> Int
     func numberOfItems (at section: Int) -> Int
     func content (at indexPath: IndexPath) -> UserContent?
+    func user () -> User
     func setCellsEnabled (enabled: Bool)
     func areCellsEnabled ()->Bool
 }

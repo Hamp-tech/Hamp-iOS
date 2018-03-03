@@ -11,8 +11,8 @@ import InputMask
 import HampKit
 
 protocol CreditCardDelegate: class {
-    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard)
-    func creditCardWasIncompleted(_ creditCardUI: CreditCardUIController, creditCard: HampCreditCard)
+    func creditCardWasCompleted(_ creditCardUI: CreditCardUIController, creditCard: CreditCard)
+    func creditCardWasIncompleted(_ creditCardUI: CreditCardUIController, creditCard: CreditCard)
 }
 
 class CreditCardUIController: UIView {
@@ -33,7 +33,7 @@ class CreditCardUIController: UIView {
     private var dateTextField: UITextField!
     private var textFields = [UITextField]()
     private var errorLabel: UILabel!
-    private var hampCreditCard: HampCreditCard!
+    private var hampCreditCard: CreditCard!
     private var inputMaskManager: CreditCardInputTextFieldMaskManager!
     lazy var separatorYMargin = {
         return self.bounds.height/3.0
@@ -69,13 +69,18 @@ class CreditCardUIController: UIView {
         super.draw(rect)
         createUI()
     }
-    
 }
 
 private extension CreditCardUIController {
     //MARK: HampKit
     func setupHampCreditCard() {
-        hampCreditCard = HampCreditCard.init()
+        hampCreditCard = CreditCard.init()
+    }
+}
+
+extension CreditCardUIController {
+    func getCreditCard () -> CreditCard {
+        return self.hampCreditCard
     }
 }
 
@@ -89,37 +94,42 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
     
     func textfieldWasFilled(_ textField: UITextField, type: CreditCardTextFieldFactory.type, text: String) {
         let nextValue = type.rawValue + 1
-
-        hampCreditCard.number = creditNumberTextField.text?.replacingOccurrences(of: " ", with: "")
+        var expYear: UInt8?
+        var expMonth: UInt8?
+        
         if let dtf = dateTextField.text, dtf.count == 5 {
-            hampCreditCard.month = dtf.substring(with: 0..<2)
-            hampCreditCard.year = dtf.substring(with: 3..<5)
+            expYear = UInt8(dtf.substring(with: 3..<5))
+            expMonth = UInt8(dtf.substring(with: 0..<2))
         }
         
-        hampCreditCard.cvv = cvvTextField.text
-        hampCreditCard.name = nameTextField.text
+        hampCreditCard = CreditCard.init(name: nameTextField.text, number: creditNumberTextField.text, expMonth: expMonth , expYear: expYear, cvc: cvvTextField.text)
         
         do {
             try hampCreditCard.validate()
             hideErrorLabel()
             delegate?.creditCardWasCompleted(self, creditCard: hampCreditCard)
-        } catch HampCreditCard.CreditCardError.invalidNumber {
+        } catch CreditCardError.numberFormatError {
             creditNumberTextField.shake()
-            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidNumber.description)
-        } catch HampCreditCard.CreditCardError.invalidMonth {
+            showErrorLabel(errorText: CreditCardError.numberFormatError.description)
+        } catch CreditCardError.invalidMonth {
             dateTextField.shake()
-            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidMonth.description)
-        } catch HampCreditCard.CreditCardError.invalidYear {
+            showErrorLabel(errorText: CreditCardError.invalidMonth.description)
+        } catch CreditCardError.invalidYear {
             dateTextField.shake()
-            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidYear.description)
-        } catch HampCreditCard.CreditCardError.invalidCVV {
+            showErrorLabel(errorText: CreditCardError.invalidYear.description)
+        } catch CreditCardError.invalidCVV {
             cvvTextField.shake()
-            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidCVV.description)
-        } catch HampCreditCard.CreditCardError.invalidName {
-            nameTextField.shake()
-            showErrorLabel(errorText: HampCreditCard.CreditCardError.invalidName.description)
-        } catch HampFirebaseObjectError.missingProperties {
-            showErrorLabel(errorText: HampFirebaseObjectError.missingProperties.description)
+            showErrorLabel(errorText: CreditCardError.invalidCVV.description)
+        } catch CreditCardError.missingParameter("name") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("name").description)
+        } catch CreditCardError.missingParameter("number") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("number").description)
+        } catch CreditCardError.missingParameter("expMonth") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("expMonth").description)
+        } catch CreditCardError.missingParameter("expYear") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("expYear").description)
+        } catch CreditCardError.missingParameter("CVV") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("CVV").description)
         } catch {}
         
         guard nextValue < textFields.count else { return }

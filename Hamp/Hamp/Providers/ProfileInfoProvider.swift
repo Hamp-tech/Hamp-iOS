@@ -14,7 +14,7 @@ class ProfileInfoProvider: ProfileTableProvider {
     private var content: [[UserContent]]!
     private var isCellEnabled:Bool = false
     
-    init<T: UIViewController>(user: HampUser?, parent: T) where T: GMDatePickerDelegate {
+    init<T: UIViewController>(user: User?, parent: T) where T: GMDatePickerDelegate {
         content = ProfileInfoFactory.createProfileInfo(user: user, parent: parent)
     }
     
@@ -32,6 +32,17 @@ class ProfileInfoProvider: ProfileTableProvider {
     
     func setCellsEnabled (enabled: Bool) {
         isCellEnabled = enabled
+    }
+    
+    func user() -> User {
+        let name = content(at: IndexPath.init(row: 0, section: 0))?.textFieldText ?? ""
+        let surname = content(at: IndexPath.init(row: 1, section: 0))?.textFieldText ?? ""
+        let email = content(at: IndexPath.init(row: 2, section: 0))?.textFieldText ?? ""
+        let phone = content(at: IndexPath.init(row: 3, section: 0))?.textFieldText ?? ""
+        let birthday = content(at: IndexPath.init(row: 4, section: 0))?.textFieldText ?? ""
+        let gender = (content(at: IndexPath.init(row: 5, section: 0))?.firstOption ?? .leftOption) == .leftOption ? "M":"F"
+        
+        return User.init(name: name, surname: surname, email: email, phone: phone, birthday: birthday, gender: gender)
     }
     
     func areCellsEnabled () -> Bool {

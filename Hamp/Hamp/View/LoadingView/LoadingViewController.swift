@@ -44,7 +44,9 @@ class LoadingViewController: HampViewController {
     }
     
     func dismissViewController () {
-        self.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func setupTimer (timeInterval: TimeInterval) {

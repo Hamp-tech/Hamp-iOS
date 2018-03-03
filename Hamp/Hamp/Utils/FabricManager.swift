@@ -17,9 +17,9 @@ public struct FabricManager {
     }
     
     static func logUser() {
-        guard let user = Hamp.Auth.user() else { return }
+        guard let user = Hamp.Auth.user else { return }
         Crashlytics.sharedInstance().setUserName("\(user.name) \(user.surname)")
-        Crashlytics.sharedInstance().setUserEmail(user.mail)
+        Crashlytics.sharedInstance().setUserEmail(user.email)
         Crashlytics.sharedInstance().setUserIdentifier(user.identifier)
     }
 }

@@ -26,7 +26,7 @@ class RestorePasswordViewController: LogoTitleBaseViewController {
         
         let validation = Validation.init(validationBlock: { () -> (Bool) in
             guard let text = self.mailTextfield.text, text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
-            return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
+            return try! Regex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
         }, validatedBlock: {(_, _) in })
         validationManager.add(by: validation)
     }

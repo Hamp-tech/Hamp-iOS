@@ -14,7 +14,10 @@ class SignUpViewController: LogoTitleBaseViewController {
     //MARK: Properties
     @IBOutlet weak private var tableView: UITableView!
     
+    private let loadingScreen = LoadingViewController ()
+    
     let contentTypes = SignUpCellContentFactory.contentTypes
+
     var contents: [SignUpCellContent]!
     var validationsManager = ValidationManager()
     
@@ -47,28 +50,37 @@ class SignUpViewController: LogoTitleBaseViewController {
             let cell = tableView.cellForRow(at: IndexPath.init(row: i, section: 0))
             cell?.resignFirstResponder()
         }
+        validationsManager.validate(onSuccess: {
+            let name = self.contents.filter{ $0.inputType == .name }.first?.text
+            let surname = self.contents.filter{ $0.inputType == .surname }.first?.text
+            let email = self.contents.filter{ $0.inputType == .mail }.first?.text
+            let phone = self.contents.filter{ $0.inputType == .phone }.first?.text
+            let password = self.contents.filter{ $0.inputType == .password }.first?.text
+            let birthday = self.contents.filter{ $0.inputType == .birthday }.first?.text
+            let gender = self.contents.filter{ $0.inputType == .gender }.first?.text
+            
+            let user = User.init(name: name, surname: surname, email: email, password: password, phone: phone, birthday: birthday, gender: gender)
+            
+            do {
+                try user.validate()
         
-        validationsManager.validate(
-            onSuccess: {
-                let name = contents.filter{ $0.inputType == .name }.first?.text
-                let surname = contents.filter{ $0.inputType == .surname }.first?.text
-                let mail = contents.filter{ $0.inputType == .mail }.first?.text
-                let phone = contents.filter{ $0.inputType == .phone }.first?.text
-                let password = contents.filter{ $0.inputType == .password }.first?.text
-                let birthday = contents.filter{ $0.inputType == .birthday }.first?.text
-                let gender = contents.filter{ $0.inputType == .gender }.first?.text
-                
-                let user = try! HampUser.init(identifier: nil, name: name!, surname: surname!, mail: mail!, password: "iOS", phone: phone!, birthday: birthday!, gender: gender, signupDate: nil, tokenFCM: nil, language: nil)
-
-                Hamp.Auth.signUp(with: user, password: password!, onSuccess: { (response) in
-                    self.showTabBarViewController()
-                }, onError: { (error) in
-                    self.showAlertError(with: "Sign up error", message: error.description)
+                Hamp.Auth.signUp(user: user, onResponse: { (response) in
+                    if response.code == .ok {
+                        self.loadingScreen.dismissViewController()
+                        self.showTabBarViewController()
+                    } else {
+                        self.loadingScreen.dismissViewController()
+                        self.showAlertError(with: "Sign Up error", message: response.message)
+                    }
                 })
-        },  onError: { () in
-                print("Incorrect")
-        })
-
+            } catch let error {
+                let userError = error as! UserError
+                self.showAlertError(with: "Sign Up error", message: userError.description)
+            }
+        }) {
+            self.showAlertError(with: "Sign Up Error", message: "Ups... Something go wrong.")
+        }
+        present (loadingScreen, animated: true, completion: nil)
     }
 }
 
@@ -157,13 +169,13 @@ private extension SignUpViewController {
         case .mail:
             return {
                 self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
-                    return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
+                    return try! Regex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
                 })
             }
         case .phone:
             return {
                 self.ensureCellTextIfCorrect(text: content.text, block: { (text) -> (Bool) in
-                    return try! HampRegex.init(pattern: "^[9|6|7][0-9]{8}$").parse(input: text)
+                    return try! Regex.init(pattern: "^[9|6|7][0-9]{8}$").parse(input: text)
                 })
             }
         case .birthday:

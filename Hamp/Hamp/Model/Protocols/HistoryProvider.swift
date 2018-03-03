@@ -10,6 +10,6 @@ import Foundation
 import HampKit
 
 protocol HistoryProvider: DataProvider {
-    var bookings: [HampBooking] { get }
+    var transactions: [Transaction] { get }
     
 }

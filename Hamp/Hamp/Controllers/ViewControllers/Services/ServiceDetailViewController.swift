@@ -40,7 +40,7 @@ private extension ServiceDetailViewController {
     }
     
     func updatePriceLabel() {
-        priceLabel.text = "\(orderService.service.amount * orderService.service.price)€"
+        priceLabel.text = "\(Float(orderService.service.amount) * orderService.service.price)€"
     }
 }
 

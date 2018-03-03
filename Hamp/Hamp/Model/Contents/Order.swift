@@ -14,14 +14,14 @@ class Order {
     public var count: Int {
         return _orderableServices.count
     }
-    public var totalAmount: Int {
+    public var totalAmount: Float {
         return _orderableServices
-            .filter { $0.service.amount > 0 }
-            .reduce(0) {(initial, orderable) in
-                initial + orderable.service.amount*orderable.service.price
-        }
+            .filter { $0.service.amount > 0 }.reduce(Float(0.0), { (result, orderableService) in
+                return result + Float(orderableService.service.amount) * orderableService.service.price
+            })
     }
 }
+
 
 extension Order {
     //MARK: Public

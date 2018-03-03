@@ -12,11 +12,13 @@ import HampKit
 class RemoveCardTableViewController: HampTableViewController {
     
     private let cardCellID = "CreditCardTableViewCell"
-
+    private var creditCardProvider: CreditCardsProvider!
+    
     override func viewDidLoad() {
         self.title = "Cards"
         self.navigationItem.rightBarButtonItem = nil
         registerCells ()
+        creditCardProvider = CreditCardsProvider.init()
     }
     
     func registerCells () {
@@ -27,12 +29,12 @@ class RemoveCardTableViewController: HampTableViewController {
     //MARK: TableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CreditCardsProvider.creditCards.count
+        return creditCardProvider.numberOfCreditCards()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cardCellID, for: indexPath) as! CreditCardTableViewCell
-        cell.creditCard = CreditCardsProvider.creditCards[indexPath.row]
+        cell.creditCard = creditCardProvider.getCreditCardAt(index: indexPath.row)!
         cell.selectionStyle = .none
         return cell
     }
@@ -44,7 +46,7 @@ class RemoveCardTableViewController: HampTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            CreditCardsProvider.deleteCreditCardAt(index: indexPath.row)
+            creditCardProvider.deleteCreditCardAt(index: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }

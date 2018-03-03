@@ -54,7 +54,7 @@ extension ServicesOrderCollectionViewCell {
     //MARK: Public
     func needsUpdateUI() {
         amountLabel.text = String.init(orderableService.service.amount)
-        priceLabel.text = "\(orderableService.service.amount*orderableService.service.price) €"
+        priceLabel.text = "\(Float(orderableService.service.amount)*orderableService.service.price) €"
         active = orderableService.service.amount > 0
     }
 }

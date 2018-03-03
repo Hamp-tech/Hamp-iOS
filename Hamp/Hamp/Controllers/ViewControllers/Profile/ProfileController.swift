@@ -10,6 +10,10 @@ import UIKit
 import HampKit
 import SafariServices
 
+enum SaveButtonState {
+    case saving, editing
+}
+
 class ProfileController: HampViewController {
 
     let numbersOfOthersCells = 7
@@ -17,17 +21,20 @@ class ProfileController: HampViewController {
     @IBOutlet weak var tableView: UITableView!
     private(set) var provider: ProfileTableProvider!
     private(set) var delegate: UITableViewDelegate!
+    private var saveButtonState: SaveButtonState
 
     
     init (contentProvider: ProfileTableProvider, dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.provider = contentProvider
         self.delegate = delegate
+        saveButtonState = .saving
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
+        saveButtonState = .saving
         super.init (coder: aDecoder)
-        self.provider = ProfileInfoProvider (user: Hamp.Auth.user(), parent: self)
+        self.provider = ProfileInfoProvider (user: Hamp.Auth.user, parent: self)
         self.delegate = ProfileTableViewDelegate.init(provider: provider)
     }
     
@@ -45,8 +52,28 @@ class ProfileController: HampViewController {
     @objc func editProfile () {
         provider.setCellsEnabled(enabled: !provider.areCellsEnabled())
         let title = provider.areCellsEnabled() ? "Save" : "Edit"
+        saveButtonState = saveButtonState == .saving ? .editing : .saving
         self.navigationItem.rightBarButtonItem?.title = title
+        if (saveButtonState == .saving) {
+            saveEditedUser ()
+        }
         self.tableView.reloadData()
+    }
+    
+    func saveEditedUser () {
+        let user = provider.user()
+
+        do {
+            try user.validate()
+            Hamp.Users.update(user: user) { (response) in
+                if response.code != .ok {
+                    print ("ANOTHER ERROR", response.code)
+                }
+            }
+        } catch let error {
+            let userError = error as! UserError
+            print ("ERROR: ", userError.description)
+        }
     }
     
     fileprivate func setupTableView () {
@@ -96,7 +123,7 @@ extension ProfileController: GMDatePickerDelegate {
     }
     
     func gmDatePickerWillAppear(_ gmDatePicker: GMDatePicker) {
-        let userBirthday = DateConverter.getDateFromString(iso8601Date: Hamp.Auth.user()?.birthday ?? "1994-11-07T13:15:30Z") 
+        let userBirthday = DateConverter.getDateFromString(iso8601Date: Hamp.Auth.user?.birthday ?? "1994-11-07T13:15:30Z") 
         gmDatePicker.config.startDate = userBirthday
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }

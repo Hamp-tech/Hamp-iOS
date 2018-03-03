@@ -11,9 +11,9 @@ import HampKit
 import SafariServices
 
 struct ProfileInfoFactory {
-    static func createProfileInfo<T: UIViewController>(user: HampUser?, parent: T) -> [[UserContent]] where T: GMDatePickerDelegate {
+    static func createProfileInfo<T: UIViewController>(user: User?, parent: T) -> [[UserContent]] where T: GMDatePickerDelegate {
         
-        let dummyUser = try! HampUser.init(identifier: nil, name: "Aleix", surname: "Diaz", mail: "aleix.diaz@gmail.com", password: "123123", phone: "666666666", birthday: nil, gender: "M", signupDate: nil, tokenFCM: nil, os: nil, language: nil, lastActivity: nil, unsubscribed: nil, stripeID: nil)
+        let dummyUser = User.init(name: "Elon", surname: "Musk", email: "elon@gmail.com", password: "123123", phone: "666666666", gender: "M")
     
         let user = user ?? dummyUser
         
@@ -22,10 +22,10 @@ struct ProfileInfoFactory {
         
         return [
             [
-                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Nombre", textFieldText: user.name),
-                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Apellido", textFieldText: user.surname),
-                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "E-mail", textFieldText: user.mail),
-                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Teléfono", textFieldText: user.phone),
+                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Nombre", textFieldText: user.name!),
+                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Apellido", textFieldText: user.surname!),
+                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "E-mail", textFieldText: user.email!),
+                ProfileContent.init(cellID: ProfileCellId.textFieldCell, labelText: "Teléfono", textFieldText: user.phone!),
                 ProfileContent.init(cellID: ProfileCellId.dateCell, labelText: "Fecha de nacimiento", textFieldText: birthday, actionBlock: {
                     let datePicker: GMDatePicker = {
                         let picker = GMDatePicker()
@@ -49,16 +49,14 @@ struct ProfileInfoFactory {
                     parent.navigationController?.pushViewController(removeCardVC, animated: true)
                 }),
                 ProfileContent.init(cellID: ProfileCellId.simpleCell, labelText: "Cerrar sesión", actionBlock: {
-                    Hamp.Auth.signOut(onSucced: {
-                        let window = (UIApplication.shared.delegate as! AppDelegate).window
-                        window?.rootViewController?.removeFromParentViewController()
-                        let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
-                        let viewController = storyboard.instantiateViewController(withIdentifier: loginViewControllerIdentifier)
-                        window?.rootViewController = viewController
-                        window?.makeKeyAndVisible()
-                    }) { (error) in
-                        print("Error login out: ", error)
-                    }
+                    Hamp.Auth.logout()
+                    
+                    let window = (UIApplication.shared.delegate as! AppDelegate).window
+                    window?.rootViewController?.removeFromParentViewController()
+                    let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)
+                    let viewController = storyboard.instantiateViewController(withIdentifier: loginViewControllerIdentifier)
+                    window?.rootViewController = viewController
+                    window?.makeKeyAndVisible()
                 }),
                 ProfileContent.init(cellID: ProfileCellId.infoCell, labelText: "Info", actionBlock: {
                     let url = URL (string: "https://www.google.es")

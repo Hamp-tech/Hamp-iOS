@@ -10,20 +10,41 @@ import Foundation
 import HampKit
 
 class CreditCardsProvider {
-    //MARK: Properties
-    static var creditCards: [HampCreditCard] = {
-       return fetchCreditCards()
-    }()
     
-    static func deleteCreditCardAt (index: Int) {
-        creditCards.remove(at: index)
+    private let user: User
+    
+    init() {
+        user = Hamp.Auth.user!
+    }
+    
+    func addCreditCard (creditCard: CreditCard) {
+        Hamp.Users.createCard(userID: user.identifier!, card: creditCard) { (response) in
+            if response.code != .ok {
+                print("ERROR ADDING CREDIT CARD TO USER", response.message)
+            }
+        }
+    }
+    
+    func getCreditCardAt (index: Int) -> CreditCard? {
+        return user.cards?[index]
+    }
+
+    func deleteCreditCardAt (index: Int) {
+        guard let creditCardID = user.cards?[index].identifier else {return}
+        Hamp.Users.deleteCard(userID: user.identifier!, cardID: creditCardID) { (response) in
+            if response.code != .ok {
+                print("ERROR DELETING CREDIT CARD TO USER", response.message)
+            }
+        }
+    }
+    
+    func fetchCreditCards() -> [CreditCard] {
+        return user.cards ?? []
+    }
+    
+    func numberOfCreditCards () -> Int {
+        return user.cards?.count ?? 0
     }
 }
 
-private extension CreditCardsProvider {
-    static func fetchCreditCards() -> [HampCreditCard] {
-        var cards = [HampCreditCard]()
-        cards.append(try! HampCreditCard.init(identifier: "123456789", number: "4242424242424242", name: "Joan Molinas Ramon", month: "12", year: "21", cvv: "123"))
-        return cards
-    }
-}
+

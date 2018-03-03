@@ -22,7 +22,7 @@ public struct FacebookAPIManager {
     ///   - onSuccess: called if all was successfully
     ///   - onError: called if an error occurred
     static func logIn(onViewController viewController: UIViewController,
-                      onSuccess: ((HampUser, AccessToken) -> ())? = nil,
+                      onSuccess: ((User, AccessToken) -> ())? = nil,
                       onError: ((Error) -> ())? = nil, cancelled: (()->())?) {
         
         let loginManager = LoginManager()
@@ -45,7 +45,7 @@ public struct FacebookAPIManager {
     ///
     /// - Parameter token: Facebook token got from sigin
     private static func retrieveHampUserFromFacebookInformation(with token: AccessToken,
-                                                                onSuccess: ((HampUser) -> ())? = nil,
+                                                                onSuccess: ((User) -> ())? = nil,
                                                                 onError: ((Error) -> ())? = nil) {
         let req = GraphRequest(graphPath: "me",
                                parameters: ["fields": "email, name, first_name, last_name, birthday, gender"],
@@ -66,7 +66,7 @@ public struct FacebookAPIManager {
     ///
     /// - Parameter dictionaryValue: facebook dictionary of values
     /// - Returns: User created from values of the dictionary
-    private static func user(byFacebookResponse dictionaryValue: [String: Any]?) -> HampUser {
+    private static func user(byFacebookResponse dictionaryValue: [String: Any]?) -> User {
         let name = (dictionaryValue?["first_name"] as? String) ?? ""
         let surname = dictionaryValue?["last_name"] as? String ?? ""
         let mail = dictionaryValue?["email"] as? String ?? ""
@@ -77,7 +77,7 @@ public struct FacebookAPIManager {
             gender = (g == "male" ? "M" : "F")
         }
         
-        let user = try! HampUser(identifier: nil, name: name, surname: surname, mail: mail, password: "iOS", phone: phone, birthday: birthday, gender: gender, signupDate: nil, tokenFCM: "123", language: "ca-ES")
+        let user = User.init(name: name, surname: surname, email: mail, password: "123123", phone: phone, birthday: birthday, gender: gender)
         return user
     }
 }

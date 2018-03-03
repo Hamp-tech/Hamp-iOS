@@ -14,10 +14,10 @@ class CreditCardTableViewCell: UITableViewCell {
     @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet weak var cardNumberLabel: UILabel!
     
-    var creditCard: HampCreditCard? {
+    var creditCard: CreditCard? {
         didSet {
             guard let creditCard = creditCard else {return}
-            let creditCardNumber = creditCard.number.substring(from: 12)
+            let creditCardNumber = creditCard.number?.substring(from: 12) ?? "????"
             cardNumberLabel.text = "XXXX XXXX XXXX " + creditCardNumber
         }
     }

@@ -40,7 +40,7 @@ class SignInViewController: LogoTitleBaseViewController {
         
         let mailValidation = Validation.init(with: "mail", validationBlock: { () -> (Bool) in
             guard let text = self.mailTextField.text, text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).count > 0 else { return false }
-            return try! HampRegex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
+            return try! Regex.init(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").parse(input: text)
         }, validatedBlock: { (key, validated) in
             if(!validated) {
                 self.mailTextField.textType = .error
@@ -85,42 +85,45 @@ class SignInViewController: LogoTitleBaseViewController {
     ///
     /// - Parameter sender: button pressed
     @IBAction func facebookLogin(_ sender: UIButton) {
-        FacebookAPIManager.logIn(
-            onViewController: self,
-            onSuccess: { (user, accessToken) in
-                Hamp.Auth.facebookLogIn(
-                    with: accessToken.authenticationToken,
-                    user: user,
-                    onSuccess: { (response) in
-                    self.loadingScreen.dismissViewController()
-                    self.showTabBarViewController()
-                },  onError: {(error) in
-                    self.showAlertError(with: "Facebook error", message: error.description)
-                    self.loadingScreen.dismissViewController()
-                })
-        },  onError: { (error) in
-                self.showAlertError(with: "Facebook error", message: error.localizedDescription)
-                self.loadingScreen.dismissViewController()
-        }, cancelled: {
-            self.loadingScreen.dismissViewController()
-        })
-        present(loadingScreen, animated: false, completion: nil)
+//        FacebookAPIManager.logIn(
+//            onViewController: self,
+//            onSuccess: { (user, accessToken) in
+//                Hamp.Auth.facebookLogIn(
+//                    with: accessToken.authenticationToken,
+//                    user: user,
+//                    onSuccess: { (response) in
+//                    self.loadingScreen.dismissViewController()
+//                    self.showTabBarViewController()
+//                },  onError: {(error) in
+//                    self.showAlertError(with: "Facebook error", message: error.description)
+//                    self.loadingScreen.dismissViewController()
+//                })
+//        },  onError: { (error) in
+//                self.showAlertError(with: "Facebook error", message: error.localizedDescription)
+//                self.loadingScreen.dismissViewController()
+//        }, cancelled: {
+//            self.loadingScreen.dismissViewController()
+//        })
+//        present(loadingScreen, animated: false, completion: nil)
     }
     
     /// Check if information is correct, if it is, log in, show error otherwise
     ///
     /// - Parameter sender: button pressed
     @IBAction func login(_ sender: UIButton) {
+        guard let email = mailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
         validationsManager.validate(onSuccess: {
-            Hamp.Auth.signIn(
-                mail: mailTextField.text!,
-                password: passwordTextField.text!,
-                onSuccess: { (response) in
+            Hamp.Auth.signIn(email: email, password: password, onResponse: { (response) in
+                if response.code == .ok {
                     self.loadingScreen.dismissViewController()
                     self.showTabBarViewController()
-            },  onError: { (error) in
-                self.showAlertError(with: "Sign in error", message: error.description)
-                self.loadingScreen.dismissViewController()
+                } else {
+                    self.loadingScreen.dismissViewController()
+                    self.showAlertError(with: "Sign in error", message: response.message)
+                }
+                
             })
             present(loadingScreen, animated: false, completion: nil)
         }, onError: {

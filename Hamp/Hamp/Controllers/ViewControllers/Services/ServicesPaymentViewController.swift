@@ -7,23 +7,44 @@
 //
 
 import UIKit
+import HampKit
 
 class ServicesPaymentViewController: HampViewController {
     
     //MARK: Properties
     @IBOutlet weak var collectionView: UICollectionView!
-    private let cardsProvider = CreditCardsProvider.creditCards
+    @IBOutlet weak var endOrderButton: HorizontalCircleGradientButton!
+
+    var ordersManager: OrderManager!
+
+    private var cardsProvider: CreditCardsProvider!
+    private var selectedCreditCard: CreditCard?
+    
+    let fakeCards = [CreditCard.init(identifier: "card_1Byi0kCiVhDLJHAG1ASL3qlg", name: "Aleix", number: "4444 4444 4444 4444"), CreditCard.init(identifier: "444", name: "Aleix", number: "4444 4444 3333 3333")]
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.registerReusableCell(ServicesPaymentCollectionViewCell.self)
         collectionView.registerReusableSupplementaryView(ServicesPaymentFooterView.self, kind: UICollectionElementKindSectionFooter)
-        
+        cardsProvider = CreditCardsProvider.init()
+        setEndOrderDisabled()
+    }
+    
+    func setEndOrderDisabled() {
+        endOrderButton.isEnabled = false
+        endOrderButton.alpha = 0.7
     }
     
     //MARK: Actions
     @IBAction func endOrderWasPressed(sender: UIButton) {
+//      TO-DO PAY TRANSACTION
+        let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCardID: selectedCreditCard!.identifier!)
+        Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
+            if response.code != .ok {
+                print("ERROR CREATING TRANSACTION", response.message)
+            }
+        }
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
@@ -31,12 +52,24 @@ class ServicesPaymentViewController: HampViewController {
 extension ServicesPaymentViewController: UICollectionViewDataSource {
     //MARK: DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardsProvider.count
+//        return cardsProvider.numberOfCreditCards()
+        return fakeCards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesPaymentCollectionViewCell
-        cell.creditCard = cardsProvider[indexPath.row]
+//        cell.creditCard = cardsProvider.getCreditCardAt(index: indexPath.row)
+        cell.creditCard = fakeCards[indexPath.row]
+        cell.cardSelectedDelegate = self
+        if let selectedCardID = selectedCreditCard?.identifier {
+//            if selectedCardID != cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier {
+//                cell.checkBox.isSelected = false
+//            }
+            if selectedCardID != fakeCards[indexPath.row].identifier {
+                cell.checkBox.isSelected = false
+            }
+        }
+    
         return cell
     }
     
@@ -44,6 +77,15 @@ extension ServicesPaymentViewController: UICollectionViewDataSource {
         let reusableView = collectionView.dequeReusableSupplementaryView(kind: kind, indexPath: indexPath) as ServicesPaymentFooterView
         reusableView.delegate = self
         return reusableView
+    }
+}
+
+extension ServicesPaymentViewController: CardSelectedDelegate {
+    func cardIsSelected(card: CreditCard) {
+        selectedCreditCard = card
+        collectionView.reloadData()
+        endOrderButton.isEnabled = true
+        endOrderButton.alpha = 1
     }
 }
 
