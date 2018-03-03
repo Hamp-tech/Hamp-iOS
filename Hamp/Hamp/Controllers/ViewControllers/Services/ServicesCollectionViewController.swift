@@ -14,7 +14,7 @@ class ServicesCollectionViewController: HampCollectionViewController {
     private var orderServices = LaundryServicesProvider.orderServices
     private var orderManager: OrderManager!
     private var basketButton: BasketButton!
-    private var videoTutorialButton: UIButton!
+//    private var videoTutorialButton: UIButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -29,9 +29,9 @@ class ServicesCollectionViewController: HampCollectionViewController {
         basketButton.addTarget(self, action: #selector(hireServices(_:)), for: .touchUpInside)
         addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: basketButton))
         
-        videoTutorialButton = BarRightButtonsFactory.videoTutorialButton()
-        videoTutorialButton.addTarget(self, action: #selector(showMap(_:)), for: .touchUpInside)
-        addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: videoTutorialButton))
+//        videoTutorialButton = BarRightButtonsFactory.videoTutorialButton()
+//        videoTutorialButton.addTarget(self, action: #selector(showMap(_:)), for: .touchUpInside)
+//        addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: videoTutorialButton))
         
     }
     

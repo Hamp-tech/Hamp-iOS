@@ -17,8 +17,8 @@
 		1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
 		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
-		19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA21FD95AAD00F9949A /* FrasesProvider.swift */; };
-		19856FA51FD95AAD00F9949A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856FA31FD95AAD00F9949A /* LoadingViewController.swift */; };
+		19BFC419204A85F20046B582 /* FrasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFC417204A85F20046B582 /* FrasesProvider.swift */; };
+		19BFC41A204A85F20046B582 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFC418204A85F20046B582 /* LoadingViewController.swift */; };
 		19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */; };
 		19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */; };
 		19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */; };
@@ -199,8 +199,8 @@
 		1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardTableViewCell.xib; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
 		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
-		19856FA21FD95AAD00F9949A /* FrasesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrasesProvider.swift; path = ../../../../../LoadingScreen/LoadingScreen/FrasesProvider.swift; sourceTree = "<group>"; };
-		19856FA31FD95AAD00F9949A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = ../../../../../LoadingScreen/LoadingScreen/LoadingViewController.swift; sourceTree = "<group>"; };
+		19BFC417204A85F20046B582 /* FrasesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrasesProvider.swift; sourceTree = "<group>"; };
+		19BFC418204A85F20046B582 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		19C8EF741F7A754B00D70A07 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTextField.swift; path = ../UIViews/ProfileTextField.swift; sourceTree = "<group>"; };
 		19C8EF781F7A83C500D70A07 /* ProfileGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenderCell.swift; sourceTree = "<group>"; };
 		19C8EF7C1F7A88A500D70A07 /* ProfilePickUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickUpCell.swift; sourceTree = "<group>"; };
@@ -439,8 +439,8 @@
 		19856FA11FD95A6E00F9949A /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				19856FA21FD95AAD00F9949A /* FrasesProvider.swift */,
-				19856FA31FD95AAD00F9949A /* LoadingViewController.swift */,
+				19BFC417204A85F20046B582 /* FrasesProvider.swift */,
+				19BFC418204A85F20046B582 /* LoadingViewController.swift */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -1341,9 +1341,10 @@
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,
 				19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */,
-				19856FA41FD95AAD00F9949A /* FrasesProvider.swift in Sources */,
 				4EC636211F43AF9D0045520F /* TabBarLargeTitlesNavigationViewController.swift in Sources */,
+				19BFC419204A85F20046B582 /* FrasesProvider.swift in Sources */,
 				4E2BB6731F3132B8002DD4EE /* SignUpCellContent.swift in Sources */,
+				19BFC41A204A85F20046B582 /* LoadingViewController.swift in Sources */,
 				4EC2CE841F478F91002439CD /* ReusableCollectionViewCell.swift in Sources */,
 				4EC0BD311F4C69830077DD92 /* ClosedRange+Clamp.swift in Sources */,
 				4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */,
@@ -1394,7 +1395,6 @@
 				4E901D2C1F461A490079696D /* ServicesOrderCollectionViewCell.swift in Sources */,
 				4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */,
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
-				19856FA51FD95AAD00F9949A /* LoadingViewController.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
