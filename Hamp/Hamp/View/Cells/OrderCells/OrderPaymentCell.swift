@@ -8,9 +8,16 @@
 
 import UIKit
 
-class OrderPaymentCell: UICollectionViewCell {
+class OrderPaymentCell: OrderCollectionViewCell {
     
-    var creditCardNumber: String? {
+    override var content: OrderHistoryContent? {
+        didSet {
+            captionLabel.text = content?.title
+            creditCardNumber = content?.creditCardNumber
+        }
+    }
+    
+    private var creditCardNumber: String? {
         didSet {
             guard let creditCardNumber = creditCardNumber, creditCardNumber.count == 19 else {
                 creditCardNumberLabel.text = "???? ???? ???? ????"
@@ -23,7 +30,6 @@ class OrderPaymentCell: UICollectionViewCell {
     private let captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
-        label.text = "Método de pago"
         return label
     } ()
     

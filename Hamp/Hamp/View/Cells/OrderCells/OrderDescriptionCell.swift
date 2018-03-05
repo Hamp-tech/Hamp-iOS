@@ -8,12 +8,17 @@
 
 import UIKit
 
-class OrderDescriptionCell: UICollectionViewCell {
+class OrderDescriptionCell: OrderCollectionViewCell {
+    
+    override var content: OrderHistoryContent? {
+        didSet {
+            captionLabel.text = content?.title
+        }
+    }
     
     private let captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
-        label.text = "Descripción"
         return label
     } ()
     
@@ -66,13 +71,14 @@ class OrderDescriptionCell: UICollectionViewCell {
 
 extension OrderDescriptionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productImages?.count ?? 0
+        return content?.services?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath) as! DescriptionImageCell
         cell.backgroundColor = UIColor.white
-        cell.image = productImages? [indexPath.row]
+        cell.image = UIImage.init(named: content!.services![indexPath.item].name)
+        cell.numberOfItems = content?.services?[indexPath.item].amount
         return cell
     }
     

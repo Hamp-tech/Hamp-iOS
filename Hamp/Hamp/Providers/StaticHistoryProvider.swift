@@ -8,18 +8,40 @@
 
 import Foundation
 import HampKit
+import RealmSwift
 
-class StaticHistoryProvider: HistoryProvider {
+class StaticHistoryProvider: DataProvider {
     
-    // MARK: - Properties
-    var transactions: [Transaction] = []
+    let hampDataManager: HampDataManager
     
-    // MARK: - API
-    func download() {
-        
-        transactions.append(contentsOf: [])
-    
+    init (hampDataManager: HampDataManager) {
+        self.hampDataManager = hampDataManager
     }
     
+    // MARK: - API
+    func download () {
+        let userID = Hamp.Auth.user!.identifier!
+        Hamp.Transactions.transactions(userID: userID) { (response) in
+            if response.code == .ok {
+                let transactions = response.data!
+                let dbTransactions = transactions.map({
+                    DBTransaction.init(transaction: $0, creditCardNumber: "4444 4444 4444 4444")
+                })
+
+                self.hampDataManager.addDataArray(objects: dbTransactions)
+
+            } else {
+                print("ERROR DOWNLOADING TRANSACTIONS", response.message)
+            }
+        }
+    }
+    
+    func getData () -> Results<Object> {
+        return hampDataManager.getDataFromDB(type: DBTransaction.self)
+    }
+    
+    func getDataWith(index: Int) -> Object {
+        return hampDataManager.getDataFromDB(type: DBTransaction.self) [index]
+    }
     
 }

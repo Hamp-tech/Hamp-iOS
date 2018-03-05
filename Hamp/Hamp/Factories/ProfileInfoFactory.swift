@@ -50,7 +50,7 @@ struct ProfileInfoFactory {
                 }),
                 ProfileContent.init(cellID: ProfileCellId.simpleCell, labelText: "Cerrar sesión", actionBlock: {
                     Hamp.Auth.logout()
-                    
+                    ProvidersManager.sharedInstance.hampDataManager.deleteAllFromDatabase()
                     let window = (UIApplication.shared.delegate as! AppDelegate).window
                     window?.rootViewController?.removeFromParentViewController()
                     let storyboard = UIStoryboard.init(name: "Login", bundle: Bundle.main)

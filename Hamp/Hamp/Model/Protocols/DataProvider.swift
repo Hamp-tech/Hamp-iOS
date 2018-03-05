@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol DataProvider {
     func download()
+    func getData () -> Results<Object>
+    func getDataWith (index: Int) -> Object
 }

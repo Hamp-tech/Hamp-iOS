@@ -24,8 +24,8 @@ struct HistoryCellSizeCalculator {
         self.bottomMargin = bottomMargin
     }
     
-    func height(by booking: Booking) -> CGFloat {
-        let servicesHired = booking.basket?.count ?? 0
+    func height(by booking: DBBooking) -> CGFloat {
+        let servicesHired = booking.services.count
         let orderServicesSizeAmount = stackViewElementHeight*CGFloat.init(servicesHired)
         return topMargin + staticLabelsHeight + stackViewTopMargin + orderServicesSizeAmount + stackViewBottomMargin + bottomMargin
     }

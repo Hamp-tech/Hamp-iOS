@@ -8,47 +8,23 @@
 
 import UIKit
 
-class OrderInfoCell: UICollectionViewCell {
+class OrderInfoCell: OrderCollectionViewCell {
     
-    let doorImageView: UIImageView = {
-        let imageView = UIImageView ()
-        imageView.image = #imageLiteral(resourceName: "locker").withRenderingMode(.alwaysOriginal)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    } ()
-    
-    let padlockImageView: UIImageView = {
-        let imageView = UIImageView ()
-        imageView.image = #imageLiteral(resourceName: "locker").withRenderingMode(.alwaysOriginal)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    } ()
-    
-    let clockImageView: UIImageView = {
-        let imageView = UIImageView ()
-        imageView.image = #imageLiteral(resourceName: "clock-empty").withRenderingMode(.alwaysOriginal)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    } ()
-    
-    var title: String? {
+    override var content: OrderHistoryContent? {
         didSet {
-            captionLabel.text = title
-        }
-    }
-    
-    var infoText: [String]? {
-        didSet {
-            doorLabel.text = infoText? [0] ?? "?"
-            padlockLabel.text = infoText? [1] ?? "?"
-            clockLabel.text = infoText? [2] ?? "?"
+            captionLabel.text = content?.title
+            
+            guard let lockerImage = content?.images?[0] else {return}
+            guard let padLockImage = content?.images?[1] else {return}
+            guard let clockImage = content?.images?[2] else {return}
+            
+
         }
     }
     
     private let captionLabel: UILabel = {
         let label = UILabel ()
         label.font = UIFont.helveticaBold(withSize: 20)
-        label.text = "Descripción"
         return label
     } ()
     
@@ -58,52 +34,70 @@ class OrderInfoCell: UICollectionViewCell {
         return view
     } ()
     
-    private let doorLabel: UILabel = {
-        let label = UILabel ()
-        label.font = UIFont.helvetica(withSize: 18)
-        label.text = "?"
-        return label
+    private lazy var tableView: UITableView = {
+        let tv = UITableView.init()
+        tv.dataSource = self
+        return tv
     } ()
-    
-    private let padlockLabel: UILabel = {
-        let label = UILabel ()
-        label.font = UIFont.helvetica(withSize: 18)
-        label.text = "?"
-        return label
-    } ()
-    
-    private let clockLabel: UILabel = {
-        let label = UILabel ()
-        label.font = UIFont.helvetica(withSize: 18)
-        label.text = "?"
-        return label
-    } ()
-    
-    let imagesWidth:CGFloat = 25
-    let imagesHeight:CGFloat = 30
-    let imagesPadding:CGFloat = 10
     
     override func draw(_ rect: CGRect) {
-        let imagesStackView = UIStackView (arrangedSubviews: [doorImageView, padlockImageView, clockImageView])
-        let labelsStackView = UIStackView (arrangedSubviews: [doorLabel, padlockLabel, clockLabel])
-
         contentView.addSubview (captionLabel)
         contentView.addSubview (separationView)
-        contentView.addSubview(imagesStackView)
-        contentView.addSubview(labelsStackView)
+        contentView.addSubview(tableView)
 
-        imagesStackView.axis = .vertical
-        imagesStackView.distribution = .fillEqually
-        imagesStackView.spacing = imagesPadding
-        
-        labelsStackView.axis = .vertical
-        labelsStackView.distribution = .fillEqually
-        labelsStackView.spacing = imagesPadding
-        
         captionLabel.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 20, paddingBottom: 0, paddingRight: 53, width: 0, height: 24)
         separationView.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1.5)
-        imagesStackView.anchor(top: separationView.topAnchor, left: separationView.leftAnchor, bottom: nil, right: nil, paddingTop: 15, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: imagesWidth, height: 3 * imagesHeight + 2 * imagesPadding)
-        labelsStackView.anchor(top: imagesStackView.topAnchor, left: imagesStackView.rightAnchor, bottom: imagesStackView.bottomAnchor, right: separationView.rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 5, width: 0, height: 0)
+        tableView.anchor(top: separationView.bottomAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        tableView.separatorStyle = .none
+        
+        registerCells()
     }
     
+    private func registerCells () {
+        let nib = UINib.init(nibName: "LockTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "LockTableViewCell")
+    }
 }
+
+//MARK: TableViewDataSource
+extension OrderInfoCell: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return content?.lockers?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LockTableViewCell", for: indexPath) as! LockTableViewCell
+        cell.images = content?.images
+        cell.locker = content?.lockers?[indexPath.row]
+        return cell
+    }
+}
+
+//MARK: TableViewDelegate
+extension OrderInfoCell: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

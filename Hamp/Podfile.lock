@@ -52,6 +52,11 @@ PODS:
     - FirebaseCommunity/Database
   - InputMask (2.2.6)
   - leveldb-library (1.20)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
 
 DEPENDENCIES:
   - Crashlytics
@@ -60,6 +65,7 @@ DEPENDENCIES:
   - FacebookLogin (from `https://github.com/ulidev/facebook-sdk-swift.git`)
   - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`, branch `features`)
   - InputMask
+  - RealmSwift
 
 EXTERNAL SOURCES:
   FacebookCore:
@@ -96,7 +102,9 @@ SPEC CHECKSUMS:
   HampKit: bb0030f3da8313adcc6136ad3b1e591c28dae940
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
 
-PODFILE CHECKSUM: ff3a08c98d02b8fbfacdbf800ceee959dfb3e91b
+PODFILE CHECKSUM: 82da10c564be50904eaaad316e1f97f0ca424e5f
 
 COCOAPODS: 1.4.0

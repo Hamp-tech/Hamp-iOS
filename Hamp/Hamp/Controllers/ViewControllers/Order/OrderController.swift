@@ -10,13 +10,23 @@ import UIKit
 
 class OrderController: PulleyChildViewController {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var contentProvider: OrderHistoryTableProvider!
+    
+    var transaction: DBTransaction?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureController ()
         registerCollectionViewCells()
         collectionView.isScrollEnabled = false;
+        contentProvider = OrderHistoryContentProvider.init(transaction: transaction!)
+        dateLabel.text = transaction?.deliveryDate
+        priceLabel.text = "\(transaction!.booking!.price)€"
     }
     
     func configureController () {
@@ -41,33 +51,15 @@ class OrderController: PulleyChildViewController {
 //MARK: CollectionViewDataSource
 extension OrderController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return contentProvider.numberOfItems(section: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        switch indexPath.item {
-        case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.payment, for: indexPath)
-            cell.backgroundColor = .white
-            return cell
-        case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.description, for: indexPath) as! OrderDescriptionCell
-            cell.backgroundColor = .white
-            cell.productImages = [#imageLiteral(resourceName: "blanket"),#imageLiteral(resourceName: "cushion"),#imageLiteral(resourceName: "curtain"),#imageLiteral(resourceName: "big-bag")]
-            return cell
-        case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath) as! OrderInfoCell
-            cell.backgroundColor = .white
-            cell.title = "Entrega"
-            cell.infoText = ["13", "1 2 3 4", "Tarde"]
-            return cell
-        default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCellsID.info, for: indexPath) as! OrderInfoCell
-            cell.backgroundColor = .white
-            cell.title = "Recogida"
-            return cell
-        }
+        let content = contentProvider.getContentWith(indexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: content.identifier, for: indexPath) as! OrderCollectionViewCell
+        cell.content = content
+        cell.backgroundColor = .white
+        return cell
     }
 }
 

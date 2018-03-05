@@ -38,10 +38,13 @@ class ServicesPaymentViewController: HampViewController {
     
     //MARK: Actions
     @IBAction func endOrderWasPressed(sender: UIButton) {
-//      TO-DO PAY TRANSACTION
         let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCardID: selectedCreditCard!.identifier!)
+        
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
-            if response.code != .ok {
+            if response.code == .ok {
+                let newTransaction = response.data!
+                ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction, creditCardNumber: self.selectedCreditCard!.number!))
+            } else {
                 print("ERROR CREATING TRANSACTION", response.message)
             }
         }
@@ -52,20 +55,17 @@ class ServicesPaymentViewController: HampViewController {
 extension ServicesPaymentViewController: UICollectionViewDataSource {
     //MARK: DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return cardsProvider.numberOfCreditCards()
-        return fakeCards.count
+        return cardsProvider.numberOfCreditCards()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesPaymentCollectionViewCell
-//        cell.creditCard = cardsProvider.getCreditCardAt(index: indexPath.row)
-        cell.creditCard = fakeCards[indexPath.row]
+
+        cell.creditCard = cardsProvider.getCreditCardAt(index: indexPath.row)
         cell.cardSelectedDelegate = self
+        
         if let selectedCardID = selectedCreditCard?.identifier {
-//            if selectedCardID != cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier {
-//                cell.checkBox.isSelected = false
-//            }
-            if selectedCardID != fakeCards[indexPath.row].identifier {
+            if selectedCardID != cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier {
                 cell.checkBox.isSelected = false
             }
         }

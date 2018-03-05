@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HampKit
 
 class HistoryTableViewCell: UITableViewCell, Reusable {
 
@@ -19,13 +18,19 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var servicesHiredStackView: UIStackView!
     
     // MARK: - Properties
-    var transaction: Transaction! {
+    var transaction: DBTransaction! {
         didSet {
-            booking = transaction.booking!
+            if let oldTransaction = oldValue {
+                if oldTransaction.identifier != transaction.identifier {
+                    booking = transaction.booking!
+                }
+            } else {
+                booking = transaction.booking!
+            }
         }
     }
     
-    private var booking: Booking! {
+    private var booking: DBBooking! {
         didSet {
             createServicesHiredSubviews()
         }
@@ -40,8 +45,9 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate!)
-        priceLabel.text = "\(Int.init(booking.price!))€"
+//        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate)
+        dateLabel.text = transaction.pickUpDate
+        priceLabel.text = "\(Int.init(booking.price))€"
         
         setupLeftSeparator()
     }
@@ -63,11 +69,11 @@ private extension HistoryTableViewCell {
     }
     
     func createServicesHiredSubviews() {
-        guard let servicesHired = booking.basket else { return }
+        let servicesHired = booking.services
         
-        servicesHired.forEach {
+        for i in 0..<servicesHired.count {
             let label = stackServicesDefaultLabel()
-            label.text = "\($0)"
+            label.text = servicesHired[i].name
             servicesHiredStackView.addArrangedSubview(label)
         }
     }

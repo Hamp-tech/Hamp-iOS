@@ -7,22 +7,37 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
+import HampKit
 
-class LaundryService: Service {
+class LaundryService: Object, Service {
     
     //MARK: Properties
-    var identifier: String
-    var amount: Int
-    var price: Float
-    var name: String
+    @objc var identifier: String = ""
+    @objc dynamic var amount: Int = 0
+    @objc var price: Float = 0.0
+    @objc dynamic var name: String = ""
     
     /// Create a new Service
     ///
     /// - Parameter identifier: service identifier
-    init(identifier: String, price: Float, name: String, amount: Int = 0) {
+    convenience init(identifier: String, price: Float, name: String, amount: Int = 0) {
+        self.init()
         self.identifier = identifier
         self.price = price
         self.name = name
         self.amount = amount
     }
+    
+    convenience init (hiredService: HiredService) {
+        self.init()
+        self.name = hiredService.service
+        self.amount = hiredService.amount
+    }   
+    
+    override static func ignoredProperties() -> [String] {
+        return ["identifier", "price"]
+    }
+
 }

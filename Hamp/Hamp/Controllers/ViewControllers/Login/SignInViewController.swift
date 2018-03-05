@@ -118,6 +118,7 @@ class SignInViewController: LogoTitleBaseViewController {
             Hamp.Auth.signIn(email: email, password: password, onResponse: { (response) in
                 if response.code == .ok {
                     self.loadingScreen.dismissViewController()
+                    ProvidersManager.sharedInstance.downloadProvidersData()
                     self.showTabBarViewController()
                 } else {
                     self.loadingScreen.dismissViewController()

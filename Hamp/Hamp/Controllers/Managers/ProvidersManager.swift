@@ -12,10 +12,16 @@ struct ProvidersManager {
     
     // MARK: - Properties
     static let sharedInstance = ProvidersManager.init()
-    let historyProvider: HistoryProvider = StaticHistoryProvider.init()
+    let hampDataManager: HampDataManager
+    let historyProvider: StaticHistoryProvider
+    
+    private init () {
+        hampDataManager = HampDataManager.init()
+        historyProvider = StaticHistoryProvider.init(hampDataManager: hampDataManager)
+    }
     
     // MARK: - Public API
     func downloadProvidersData() {
-        historyProvider.download()
+        self.historyProvider.download()
     }
 }

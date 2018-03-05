@@ -17,9 +17,10 @@ class DescriptionImageCell: UICollectionViewCell {
         }
     }
     
-    var numberOfItems: Int = 0 {
+    var numberOfItems: Int? = 0 {
         didSet {
-            roundedLabel.text = String (numberOfItems)
+            guard let numberOfItems = numberOfItems else {return}
+            roundedLabel.text = String (describing: numberOfItems)
         }
     }
     

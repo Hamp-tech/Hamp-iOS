@@ -11,7 +11,7 @@ import UIKit
 class HistoryViewController: HampTableViewController {
 
     // MARK : - Properties
-    var dataProvider: HistoryProvider!
+    var dataProvider: DataProvider!
     private var cellSizeCalculator: HistoryCellSizeCalculator!
     
     
@@ -21,8 +21,8 @@ class HistoryViewController: HampTableViewController {
         
         precondition(dataProvider != nil, "Provide a data provider")
         cellSizeCalculator = HistoryCellSizeCalculator.init(topMargin: 8, bottomMargin: 8)
-
         setupTableView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,8 +45,8 @@ private extension HistoryViewController {
         bottomInfiniteLine.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(bottomInfiniteLine, at: 0)
         
-        let topAnchorMargin = dataProvider.transactions.reduce(0) { (initial, next) in
-            return initial + cellSizeCalculator.height(by: next.booking!)
+        let topAnchorMargin = dataProvider.getData().reduce(0) { (initial, next) in
+            return initial + cellSizeCalculator.height(by: (next as! DBTransaction).booking!)
         }
         
         NSLayoutConstraint.activate([
@@ -62,28 +62,34 @@ extension HistoryViewController {
    
     //MARK: TableView datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider.transactions.count
+        return dataProvider.getData().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
-        cell.transaction = dataProvider.transactions[indexPath.row]
+        cell.transaction = dataProvider.getDataWith(index: indexPath.item) as! DBTransaction
         return cell
     }
 }
 
 extension HistoryViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! HistoryTableViewCell
+        
         let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController") as! MapController
         
-        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailInvoiceViewController") as! OrderController
-    
+        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: 
+            "HistoryDetailInvoiceViewController") as! OrderController
+        
+        invoiceVC.transaction = dataProvider.getDataWith(index: indexPath.item) as! DBTransaction
+        
         let historyDetailViewController = HistoryBookingDetailViewController.init(contentViewController: mapVC, draggableViewController: invoiceVC)
         historyDetailViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(historyDetailViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellSizeCalculator.height(by: dataProvider.transactions[indexPath.row].booking!)
+//        return cellSizeCalculator.height(by: dataProvider.transactions[indexPath.row].booking!)
+        return cellSizeCalculator.height(by: (dataProvider.getDataWith(index: indexPath.item) as! DBTransaction).booking!)
     }
 }
