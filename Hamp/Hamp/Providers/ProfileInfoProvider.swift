@@ -42,7 +42,9 @@ class ProfileInfoProvider: ProfileTableProvider {
         let birthday = content(at: IndexPath.init(row: 4, section: 0))?.textFieldText ?? ""
         let gender = (content(at: IndexPath.init(row: 5, section: 0))?.firstOption ?? .leftOption) == .leftOption ? "M":"F"
         
-        return User.init(name: name, surname: surname, email: email, phone: phone, birthday: birthday, gender: gender)
+        let userID = Hamp.Auth.user!.identifier
+        
+        return User.init(identifier: userID, name: name, surname: surname, email: email, password: nil, phone: phone, birthday: birthday, gender: gender)
     }
     
     func areCellsEnabled () -> Bool {

@@ -47,6 +47,7 @@ class ProfileController: HampViewController {
 
     private func addSaveButton () {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Edit", style: .plain, target: self, action: #selector (editProfile))
+        self.navigationItem.rightBarButtonItem?.tintColor = .darkPink
     }
     
     @objc func editProfile () {
@@ -56,6 +57,7 @@ class ProfileController: HampViewController {
         self.navigationItem.rightBarButtonItem?.title = title
         if (saveButtonState == .saving) {
             saveEditedUser ()
+            self.provider = ProfileInfoProvider (user: Hamp.Auth.user, parent: self)
         }
         self.tableView.reloadData()
     }

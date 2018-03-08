@@ -12,10 +12,14 @@ import MapKit
 class MapController: PulleyChildViewController {
     
     @IBOutlet weak var mapView: CustomMapView!
+    var point: DBPoint! {
+        didSet {
+            guard let location = point.location else {return}
+            loadMapLocation (location: CLLocation(latitude: location.latitude, longitude: location.longitude), pinTitle: location.name, locationName: point.city, discipline: point.address)
+        }
+    }
     
     override func viewDidLoad() {
-        loadMapLocation (location: CLLocation(latitude: 41.215590, longitude: 1.527245), pinTitle: "HampOffice", locationName: "El Vendrell", discipline: "Office")
-
         setupMapView ()
     }
     

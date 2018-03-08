@@ -43,7 +43,7 @@ class ServicesPaymentViewController: HampViewController {
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
             if response.code == .ok {
                 let newTransaction = response.data!
-                ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction, creditCardNumber: self.selectedCreditCard!.number!))
+                ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
             } else {
                 print("ERROR CREATING TRANSACTION", response.message)
             }

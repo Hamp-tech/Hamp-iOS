@@ -77,11 +77,12 @@ extension HistoryViewController {
         let cell = tableView.cellForRow(at: indexPath) as! HistoryTableViewCell
         
         let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController") as! MapController
+        mapVC.point = cell.transaction.booking!.point
         
         let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: 
             "HistoryDetailInvoiceViewController") as! OrderController
         
-        invoiceVC.transaction = dataProvider.getDataWith(index: indexPath.item) as! DBTransaction
+        invoiceVC.transaction = cell.transaction
         
         let historyDetailViewController = HistoryBookingDetailViewController.init(contentViewController: mapVC, draggableViewController: invoiceVC)
         historyDetailViewController.hidesBottomBarWhenPushed = true
@@ -89,7 +90,6 @@ extension HistoryViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return cellSizeCalculator.height(by: dataProvider.transactions[indexPath.row].booking!)
         return cellSizeCalculator.height(by: (dataProvider.getDataWith(index: indexPath.item) as! DBTransaction).booking!)
     }
 }

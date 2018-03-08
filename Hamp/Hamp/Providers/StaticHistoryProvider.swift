@@ -25,7 +25,7 @@ class StaticHistoryProvider: DataProvider {
             if response.code == .ok {
                 let transactions = response.data!
                 let dbTransactions = transactions.map({
-                    DBTransaction.init(transaction: $0, creditCardNumber: "4444 4444 4444 4444")
+                    DBTransaction.init(transaction: $0)
                 })
 
                 self.hampDataManager.addDataArray(objects: dbTransactions)

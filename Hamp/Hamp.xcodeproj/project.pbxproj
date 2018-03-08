@@ -45,6 +45,8 @@
 		19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */; };
 		19C8EF941F7C377000D70A07 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */; };
 		19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C8EF951F7C405300D70A07 /* OrderCellsID.swift */; };
+		19D35248204E968F0018F4DF /* DBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D35247204E968F0018F4DF /* DBLocation.swift */; };
+		19D3524A204E97600018F4DF /* DBPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D35249204E97600018F4DF /* DBPoint.swift */; };
 		19DB938F1F9D1B2700742168 /* UserContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB938E1F9D1B2700742168 /* UserContent.swift */; };
 		19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */; };
 		19DB93931F9D1EB700742168 /* ProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB93921F9D1EB700742168 /* ProfileContent.swift */; };
@@ -240,6 +242,8 @@
 		19C8EF911F7C2FB400D70A07 /* DescriptionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageCell.swift; sourceTree = "<group>"; };
 		19C8EF931F7C377000D70A07 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		19C8EF951F7C405300D70A07 /* OrderCellsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellsID.swift; sourceTree = "<group>"; };
+		19D35247204E968F0018F4DF /* DBLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLocation.swift; sourceTree = "<group>"; };
+		19D35249204E97600018F4DF /* DBPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPoint.swift; sourceTree = "<group>"; };
 		19DB938E1F9D1B2700742168 /* UserContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContent.swift; sourceTree = "<group>"; };
 		19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableProvider.swift; sourceTree = "<group>"; };
 		19DB93921F9D1EB700742168 /* ProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContent.swift; sourceTree = "<group>"; };
@@ -612,6 +616,8 @@
 				19B2C0BE204BDFC600066209 /* DBBooking.swift */,
 				19B2C0C0204BE04000066209 /* DBLocker.swift */,
 				19B2C0CE204D928D00066209 /* OrderHistoryCellContent.swift */,
+				19D35247204E968F0018F4DF /* DBLocation.swift */,
+				19D35249204E97600018F4DF /* DBPoint.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -1183,10 +1189,12 @@
 				TargetAttributes = {
 					4E33092E1F45D2D200A43B25 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 4E5B08811F04731C00236A9E;
 					};
 					4E5B08811F04731C00236A9E = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1371,6 +1379,7 @@
 				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				19B2C0D7204D9E1F00066209 /* OrderHistoryTableProvider.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
+				19D3524A204E97600018F4DF /* DBPoint.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
@@ -1482,6 +1491,7 @@
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
+				19D35248204E968F0018F4DF /* DBLocation.swift in Sources */,
 				19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,
 				1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */,
@@ -1570,12 +1580,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNJFZH68S8;
 				INFOPLIST_FILE = HampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp..HampTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hamp.app/Hamp";
@@ -1588,12 +1602,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNJFZH68S8;
 				INFOPLIST_FILE = HampTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp..HampTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hamp.app/Hamp";
@@ -1718,6 +1736,8 @@
 			baseConfigurationReference = 614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNJFZH68S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1732,6 +1752,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1742,6 +1763,8 @@
 			baseConfigurationReference = D020784CAB42E211144BDAFA /* Pods-Hamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNJFZH68S8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1756,6 +1779,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hamp.Hamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

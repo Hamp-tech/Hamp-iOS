@@ -13,7 +13,7 @@ import HampKit
 
 class DBBooking: Object {
     @objc dynamic var price: Float = 0.0
-    @objc dynamic var point: String = ""
+    @objc dynamic var point: DBPoint?
     @objc dynamic var pickUpTime: Int = 0
     var services = List<LaundryService>()
     let deliveryLockers = List <DBLocker>()
@@ -22,7 +22,7 @@ class DBBooking: Object {
     convenience init (booking: Booking) {
         self.init()
         self.price = booking.price!
-        self.point = booking.point!
+        self.point = DBPoint.init(point: booking.point!)
         self.pickUpTime = booking.pickUpTime!.hashValue
         self.pickUpLockers = convertLockersToList(lockers: booking.pickUpLockers!)
         convertServicesToList(hiredServices: booking.basket!)

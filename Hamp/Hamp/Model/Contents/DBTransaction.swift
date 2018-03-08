@@ -19,10 +19,10 @@ class DBTransaction: Object {
     @objc dynamic var deliveryDate: String = ""
     @objc dynamic var booking: DBBooking?
     
-    convenience init (transaction: Transaction, creditCardNumber: String) {
+    convenience init (transaction: Transaction) {
         self.init()
         self.identifier = transaction.identifier!
-        self.creditCardNumber = creditCardNumber
+        self.creditCardNumber = transaction.creditCard!.number!
         self.pickUpDate = transaction.pickUpDate!
         self.booking = DBBooking.init(booking: transaction.booking!)
     }

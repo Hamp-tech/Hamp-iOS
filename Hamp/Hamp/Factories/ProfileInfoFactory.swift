@@ -13,9 +13,7 @@ import SafariServices
 struct ProfileInfoFactory {
     static func createProfileInfo<T: UIViewController>(user: User?, parent: T) -> [[UserContent]] where T: GMDatePickerDelegate {
         
-        let dummyUser = User.init(name: "Elon", surname: "Musk", email: "elon@gmail.com", password: "123123", phone: "666666666", gender: "M")
-    
-        let user = user ?? dummyUser
+        let user = user!
         
         let gender = user.gender ?? "X"
         let birthday = user.birthday ?? "DD/MM/YYYY"
