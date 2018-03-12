@@ -9,6 +9,6 @@
 import Foundation
 import CoreLocation
 
-protocol MapUtilitiesDelegate {
+protocol MapUtilitiesDelegate: class {
     func getUserLocation (location: CLLocation)
 }

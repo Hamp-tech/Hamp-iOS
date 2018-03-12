@@ -10,7 +10,7 @@ import MapKit
 
 class MapUtilities: NSObject {
     
-    var mapDelegate: MapUtilitiesDelegate?
+    weak var mapDelegate: MapUtilitiesDelegate?
     var locationWasGived = false
     
     lazy var locationManager: CLLocationManager = {
