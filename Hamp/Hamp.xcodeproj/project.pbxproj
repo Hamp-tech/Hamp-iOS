@@ -124,7 +124,7 @@
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
 		4E7DD5CC2055ED81000C8F18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DD5CB2055ED81000C8F18 /* GoogleService-Info.plist */; };
-		4E7DD5CE2055EF1B000C8F18 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DD5CD2055EF1B000C8F18 /* FirebaseHandler.swift */; };
+		4E7DD5CE2055EF1B000C8F18 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */; };
 		4E7DD5D12055F2A1000C8F18 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DD5D02055F2A1000C8F18 /* Logger.swift */; };
 		4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */; };
 		4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */; };
@@ -330,7 +330,7 @@
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E7DD5CA2055ED31000C8F18 /* Hamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hamp.entitlements; sourceTree = "<group>"; };
 		4E7DD5CB2055ED81000C8F18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4E7DD5CD2055EF1B000C8F18 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
+		4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
 		4E7DD5D02055F2A1000C8F18 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
 		4E7DF3BF1F54C8ED00C1A180 /* HorizontalCircleGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCircleGradientButton.swift; sourceTree = "<group>"; };
@@ -790,7 +790,7 @@
 		4E7DD5CF2055EFA5000C8F18 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				4E7DD5CD2055EF1B000C8F18 /* FirebaseHandler.swift */,
+				4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -1455,7 +1455,7 @@
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
 				19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */,
-				4E7DD5CE2055EF1B000C8F18 /* FirebaseHandler.swift in Sources */,
+				4E7DD5CE2055EF1B000C8F18 /* RemoteNotificationsHandler.swift in Sources */,
 				19DFE02B1F89155D0091CC24 /* HampSearchBarDelegate.swift in Sources */,
 				4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */,
 				19B2C0C1204BE04000066209 /* DBLocker.swift in Sources */,
