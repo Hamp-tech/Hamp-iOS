@@ -30,6 +30,7 @@ class ServicesPaymentViewController: HampViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.collectionView.reloadData()
     }
     
@@ -67,9 +68,8 @@ extension ServicesPaymentViewController: UICollectionViewDataSource {
         cell.cardSelectedDelegate = self
         
         if let selectedCardID = selectedCreditCard?.identifier {
-            if selectedCardID != cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier {
-                cell.checkBox.isSelected = false
-            }
+            let iden = cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier
+            cell.checkBox.isSelected = selectedCardID == iden
         }
     
         return cell

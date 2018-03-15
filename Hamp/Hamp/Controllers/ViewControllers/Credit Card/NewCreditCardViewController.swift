@@ -22,7 +22,6 @@ class NewCreditCardViewController: HampViewController {
         creditCardView.delegate = self
         let notCompletedCreditCardContent = createContent(
             action: {
-                print("aaa")
                 self.dismiss(animated: true, completion: nil)
         },  title: Localization.localizableString(by: "new-credit-card.button.not-completed-text"),
             identifier: gradientStatesButtonNotCompletedContentIdentifier)

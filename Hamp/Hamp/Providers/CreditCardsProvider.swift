@@ -39,11 +39,11 @@ class CreditCardsProvider {
     }
     
     func fetchCreditCards() -> [CreditCard] {
-        return Hamp.Auth.user!.cards ?? []
+        return Hamp.Auth.user?.cards ?? []
     }
     
     func numberOfCreditCards () -> Int {
-        return Hamp.Auth.user!.cards?.count ?? 0
+        return fetchCreditCards().count
     }
 }
 

@@ -21,6 +21,6 @@ struct TransactionFactory {
         let point = Point.init(location: Location.init(name: "Hamp", latitude: 43.2, longitude: 43.2), CP: "43700", address: "C/Algo", city: "El Vendrell")
         let booking = Booking.init(basket: hiredServices, price: Float32(amount), point: point, pickUpTime: Booking.PickUpTime.afternoon)
         
-        return Transaction.init(booking: booking, creditCardIdentifier: creditCardID)
+        return Transaction.init(userID: Hamp.Auth.user!.identifier, booking: booking, creditCardIdentifier: creditCardID)
     }
 }
