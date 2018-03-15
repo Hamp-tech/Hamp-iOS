@@ -11,6 +11,8 @@ import RealmSwift
 
 extension List {
     func toArray<T>(ofType: T.Type) -> [T] {
-        return flatMap { $0 as? T }
+        return self.map({
+            $0 as! T
+        })
     }
 }

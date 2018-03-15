@@ -17,6 +17,7 @@ struct ProvidersManager {
     
     private init () {
         hampDataManager = HampDataManager.init()
+        hampDataManager.createDataBase()
         historyProvider = StaticHistoryProvider.init(hampDataManager: hampDataManager)
     }
     

@@ -26,7 +26,7 @@ class ServicesPaymentCollectionViewCell: ReusableCollectionViewCell {
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        let lastNumbers = creditCard.number?.substring(with: 12..<16) ?? "????"
+        let lastNumbers = creditCard.number!
         creditNumberLabel.text = "xxxx xxxx xxxx \(lastNumbers)"
         
     }

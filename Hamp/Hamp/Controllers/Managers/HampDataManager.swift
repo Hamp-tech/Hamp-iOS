@@ -10,30 +10,44 @@ import Foundation
 import RealmSwift
 
 class HampDataManager {
-    private var database: Realm
+    private var database: Realm!
+    private let realmThreadName = "com.hamp.realmThread"
+    private let realmQueue: DispatchQueue!
     
-    init () {
-        self.database = try! Realm ()
+    init() {
+        realmQueue = DispatchQueue.init(label: realmThreadName, attributes: .concurrent)
     }
     
-    func getDataFromDB (type: Object.Type) ->   Results<Object> {
-        let results: Results<Object> = database.objects(type)
-        return results
+    func createDataBase () {
+        realmQueue.sync {  [unowned self] in
+            self.database = try! Realm ()
+        }
     }
     
-    func getObjectFromDB (type: Object.Type, primaryKey: String) -> Object? {
-        return database.object(ofType: type, forPrimaryKey: primaryKey)
+    func getDataFromDB (type: Object.Type, onResponse: @escaping (Results<Object>)->()) {
+        realmQueue.sync { [unowned self] in
+            let results: Results<Object> = self.database.objects(type)
+            onResponse (results)
+        }
+    }
+    
+    func getObjectFromDB (type: Object.Type, primaryKey: String, onResponse: @escaping (Object?) -> ()) {
+        realmQueue.sync { [unowned self] in
+            onResponse(self.database.object(ofType: type, forPrimaryKey: primaryKey))
+        }
     }
     
     func addData(object: Object)   {
-        try! database.write {
-            database.add(object, update: true)
+        realmQueue.sync { [unowned self] in
+            try! self.database.write {
+                self.database.add(object, update: true)
+            }
         }
     }
     
     func addDataArray (objects: [Object]) {
-        let list = convertArrayToList(array: objects)
-        DispatchQueue.main.async {
+        realmQueue.sync { [unowned self] in
+            let list = self.convertArrayToList(array: objects)
             try! self.database.write {
                 for object in list {
                     self.database.add(object, update: true)
@@ -51,7 +65,7 @@ class HampDataManager {
     }
     
     func deleteAllFromDatabase()  {
-        DispatchQueue.main.async {
+        realmQueue.sync { [unowned self] in
             try! self.database.write {
                 self.database.deleteAll()
             }
@@ -59,7 +73,7 @@ class HampDataManager {
     }
     
     func deleteFromDb(object: Object)   {
-        DispatchQueue.main.async {
+        realmQueue.sync { [unowned self] in
             try! self.database.write {
                 self.database.delete(object)
             }

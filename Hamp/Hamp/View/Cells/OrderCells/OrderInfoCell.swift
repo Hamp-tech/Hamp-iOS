@@ -13,12 +13,6 @@ class OrderInfoCell: OrderCollectionViewCell {
     override var content: OrderHistoryContent? {
         didSet {
             captionLabel.text = content?.title
-            
-            guard let lockerImage = content?.images?[0] else {return}
-            guard let padLockImage = content?.images?[1] else {return}
-            guard let clockImage = content?.images?[2] else {return}
-            
-
         }
     }
     
@@ -49,6 +43,7 @@ class OrderInfoCell: OrderCollectionViewCell {
         separationView.anchor(top: captionLabel.bottomAnchor, left: captionLabel.leftAnchor, bottom: nil, right: captionLabel.rightAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1.5)
         tableView.anchor(top: separationView.bottomAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         
         registerCells()
     }

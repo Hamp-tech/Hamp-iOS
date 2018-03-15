@@ -11,6 +11,6 @@ import RealmSwift
 
 protocol DataProvider {
     func download()
-    func getData () -> Results<Object>
-    func getDataWith (index: Int) -> Object
+    func getData (onResponse: @escaping (Results<Object>)->())
+    func getDataWith (index: Int, onResponse: @escaping (Object)->())
 }

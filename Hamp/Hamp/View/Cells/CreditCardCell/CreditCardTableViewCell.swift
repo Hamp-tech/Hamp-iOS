@@ -17,8 +17,7 @@ class CreditCardTableViewCell: UITableViewCell {
     var creditCard: CreditCard? {
         didSet {
             guard let creditCard = creditCard else {return}
-            let creditCardNumber = creditCard.number?.substring(from: 12) ?? "????"
-            cardNumberLabel.text = "XXXX XXXX XXXX " + creditCardNumber
+            cardNumberLabel.text = "XXXX XXXX XXXX \(creditCard.number!)"
         }
     }
     

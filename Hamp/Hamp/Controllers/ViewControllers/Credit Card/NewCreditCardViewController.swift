@@ -29,8 +29,25 @@ class NewCreditCardViewController: HampViewController {
         
         let completedCreditCardContent = createContent(
             action: {
-                self.creditCardProvider.addCreditCard(creditCard: self.creditCardView.getCreditCard())
-                self.dismiss(animated: true, completion: nil)
+                let loadingSpinner = UIActivityIndicatorView.init()
+                loadingSpinner.frame.size = CGSize.init(width: 100, height: 100)
+                loadingSpinner.center = CGPoint.init(x: self.view.frame.width/2, y: self.view.frame.height/2)
+                self.view.addSubview(loadingSpinner)
+                loadingSpinner.hidesWhenStopped = true
+                loadingSpinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+                loadingSpinner.startAnimating()
+                
+                self.creditCardProvider.addCreditCard(creditCard: self.creditCardView.getCreditCard(), onSucced: {
+                    self.dismiss(animated: true, completion: nil)
+                    DispatchQueue.main.async {
+                        loadingSpinner.stopAnimating()
+                    }
+                }, onError: { (errorMessage) in
+                    self.dismiss(animated: true, completion: nil)
+                    DispatchQueue.main.async {
+                        loadingSpinner.stopAnimating()
+                    }
+                })
         },  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
             identifier: gradientStatesButtonCompletedContentIdentifier)
         

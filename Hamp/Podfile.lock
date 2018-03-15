@@ -17,9 +17,9 @@ PODS:
     - FacebookCore (~> 0.2)
     - FBSDKCoreKit (~> 4.21)
     - FBSDKLoginKit (~> 4.21)
-  - FBSDKCoreKit (4.31.0):
+  - FBSDKCoreKit (4.31.1):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.31.0):
+  - FBSDKLoginKit (4.31.1):
     - FBSDKCoreKit
   - FirebaseCommunity (0.1.6):
     - FirebaseCommunity/Root (= 0.1.6)
@@ -84,7 +84,7 @@ CHECKOUT OPTIONS:
     :commit: d038f93bb92725cc8610228c6a7181076cf2b6fc
     :git: https://github.com/ulidev/facebook-sdk-swift.git
   HampKit:
-    :commit: 21414874200e3b39a55049dc783074a3cc0bd53b
+    :commit: 9e37a50e17b4e43c3128f67c183893169b4409f7
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 SPEC CHECKSUMS:
@@ -94,8 +94,8 @@ SPEC CHECKSUMS:
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   FacebookCore: b1dfb5bba65380aba6dbe5c545ce02d03d0b59b2
   FacebookLogin: da4d16833831769a6827a4ddfcf439d673949f12
-  FBSDKCoreKit: 54db4c581123745d25a9f7c1608020b3aeabd118
-  FBSDKLoginKit: 95a252ddffd6919c0f132a02292f0824616d8709
+  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
+  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
   FirebaseCommunity: 1f9a0e48654316b4ffe4c830db0ce72b9e2d2c9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b

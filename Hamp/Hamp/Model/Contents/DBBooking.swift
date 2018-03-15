@@ -16,7 +16,7 @@ class DBBooking: Object {
     @objc dynamic var point: DBPoint?
     @objc dynamic var pickUpTime: Int = 0
     var services = List<LaundryService>()
-    let deliveryLockers = List <DBLocker>()
+    var deliveryLockers = List <DBLocker>()
     var pickUpLockers = List <DBLocker>()
 
     convenience init (booking: Booking) {
@@ -25,11 +25,14 @@ class DBBooking: Object {
         self.point = DBPoint.init(point: booking.point!)
         self.pickUpTime = booking.pickUpTime!.hashValue
         self.pickUpLockers = convertLockersToList(lockers: booking.pickUpLockers!)
+        self.deliveryLockers = convertLockersToList(lockers: booking.deliveryLockers)
         convertServicesToList(hiredServices: booking.basket!)
         
     }
 
-    private func convertLockersToList (lockers: [Locker]) -> List<DBLocker> {
+    private func convertLockersToList (lockers: [Locker]?) -> List<DBLocker> {
+        guard let lockers = lockers else {return List<DBLocker> ()}
+        
         let dbLockers = List<DBLocker>()
         for locker in lockers {
             dbLockers.append(DBLocker.init(locker: locker))

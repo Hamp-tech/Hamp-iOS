@@ -36,12 +36,16 @@ class StaticHistoryProvider: DataProvider {
         }
     }
     
-    func getData () -> Results<Object> {
-        return hampDataManager.getDataFromDB(type: DBTransaction.self)
+    func getData (onResponse: @escaping (Results<Object>)->()) {
+        hampDataManager.getDataFromDB(type: DBTransaction.self, onResponse: { (results) in
+            onResponse (results)
+        })
     }
     
-    func getDataWith(index: Int) -> Object {
-        return hampDataManager.getDataFromDB(type: DBTransaction.self) [index]
+    func getDataWith(index: Int, onResponse: @escaping (Object)->()) {
+        hampDataManager.getDataFromDB(type: DBTransaction.self) { (results) in
+            onResponse (results[index])
+        }
     }
     
 }

@@ -20,8 +20,6 @@ class ServicesPaymentViewController: HampViewController {
     private var cardsProvider: CreditCardsProvider!
     private var selectedCreditCard: CreditCard?
     
-    let fakeCards = [CreditCard.init(identifier: "card_1Byi0kCiVhDLJHAG1ASL3qlg", name: "Aleix", number: "4444 4444 4444 4444"), CreditCard.init(identifier: "444", name: "Aleix", number: "4444 4444 3333 3333")]
-    
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +27,10 @@ class ServicesPaymentViewController: HampViewController {
         collectionView.registerReusableSupplementaryView(ServicesPaymentFooterView.self, kind: UICollectionElementKindSectionFooter)
         cardsProvider = CreditCardsProvider.init()
         setEndOrderDisabled()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     func setEndOrderDisabled() {

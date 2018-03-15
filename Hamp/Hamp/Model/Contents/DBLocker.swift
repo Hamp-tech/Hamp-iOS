@@ -12,7 +12,6 @@ import Realm
 import HampKit
 
 class DBLocker: Object {
-    @objc dynamic var identifier: String = ""
     @objc dynamic var number: Int = 0
     @objc dynamic var code: String = ""
     @objc dynamic var capacity: Int = 0
@@ -22,10 +21,6 @@ class DBLocker: Object {
         self.number = locker.number!
         self.code = locker.code!
         self.capacity = locker.capacity!.hashValue
-    }
-    
-    override class func primaryKey () -> String? {
-        return "identifier"
     }
     
 }

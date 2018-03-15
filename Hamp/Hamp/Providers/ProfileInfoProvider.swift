@@ -14,8 +14,8 @@ class ProfileInfoProvider: ProfileTableProvider {
     private var content: [[UserContent]]!
     private var isCellEnabled:Bool = false
     
-    init<T: UIViewController>(user: User?, parent: T) where T: GMDatePickerDelegate {
-        content = ProfileInfoFactory.createProfileInfo(user: user, parent: parent)
+    init<T: UIViewController>(parent: T) where T: GMDatePickerDelegate {
+        content = ProfileInfoFactory.createProfileInfo(user: Hamp.Auth.user!, parent: parent)
     }
     
     func numberOfSections() -> Int {

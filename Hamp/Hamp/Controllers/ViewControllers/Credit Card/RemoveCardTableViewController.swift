@@ -12,13 +12,13 @@ import HampKit
 class RemoveCardTableViewController: HampTableViewController {
     
     private let cardCellID = "CreditCardTableViewCell"
-    private var creditCardProvider: CreditCardsProvider!
+    private var creditCardProvider: CreditCardsProvider = CreditCardsProvider()
     
     override func viewDidLoad() {
         self.title = "Cards"
         self.navigationItem.rightBarButtonItem = nil
+        self.navigationController?.navigationBar.tintColor = .darkPink
         registerCells ()
-        creditCardProvider = CreditCardsProvider.init()
     }
     
     func registerCells () {
@@ -46,8 +46,9 @@ class RemoveCardTableViewController: HampTableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            creditCardProvider.deleteCreditCardAt(index: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            creditCardProvider.deleteCreditCardAt(index: indexPath.row, onSucced: { [unowned self] in
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
         }
     }
 }

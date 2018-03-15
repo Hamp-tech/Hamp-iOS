@@ -29,12 +29,13 @@ class ProfileController: HampViewController {
         self.delegate = delegate
         saveButtonState = .saving
         super.init(nibName: nil, bundle: nil)
+        self.provider = ProfileInfoProvider (parent: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
         saveButtonState = .saving
         super.init (coder: aDecoder)
-        self.provider = ProfileInfoProvider (user: Hamp.Auth.user, parent: self)
+        self.provider = ProfileInfoProvider (parent: self)
         self.delegate = ProfileTableViewDelegate.init(provider: provider)
     }
     
@@ -57,7 +58,6 @@ class ProfileController: HampViewController {
         self.navigationItem.rightBarButtonItem?.title = title
         if (saveButtonState == .saving) {
             saveEditedUser ()
-            self.provider = ProfileInfoProvider (user: Hamp.Auth.user, parent: self)
         }
         self.tableView.reloadData()
     }
@@ -69,7 +69,7 @@ class ProfileController: HampViewController {
             try user.validate()
             Hamp.Users.update(user: user) { (response) in
                 if response.code != .ok {
-                    print ("ANOTHER ERROR", response.code)
+                    print ("ERROR: ", response.message)
                 }
             }
         } catch let error {

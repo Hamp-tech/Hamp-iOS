@@ -13,7 +13,7 @@ class HistoryViewController: HampTableViewController {
     // MARK : - Properties
     var dataProvider: DataProvider!
     private var cellSizeCalculator: HistoryCellSizeCalculator!
-    
+    private var transactions: [DBTransaction] = [DBTransaction] ()
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -21,13 +21,22 @@ class HistoryViewController: HampTableViewController {
         
         precondition(dataProvider != nil, "Provide a data provider")
         cellSizeCalculator = HistoryCellSizeCalculator.init(topMargin: 8, bottomMargin: 8)
-        setupTableView()
-        
+        getTransactionsFromProvider ()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
+    }
+    
+    private func getTransactionsFromProvider () {
+        dataProvider.getData { (results) in
+            for result in results {
+                self.transactions.append(result as! DBTransaction)
+            }
+            self.setupTableView()
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -45,16 +54,17 @@ private extension HistoryViewController {
         bottomInfiniteLine.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(bottomInfiniteLine, at: 0)
         
-        let topAnchorMargin = dataProvider.getData().reduce(0) { (initial, next) in
+        let topAnchorMargin = transactions.reduce(0) { (initial, next) in
             return initial + cellSizeCalculator.height(by: (next as! DBTransaction).booking!)
         }
-        
+            
         NSLayoutConstraint.activate([
             bottomInfiniteLine.topAnchor.constraint(equalTo: tableView.topAnchor, constant: topAnchorMargin),
             bottomInfiniteLine.widthAnchor.constraint(equalToConstant: 2),
             bottomInfiniteLine.heightAnchor.constraint(equalToConstant:  1000),
             bottomInfiniteLine.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 20)
-            ])
+        ])
+        
     }
 }
 
@@ -62,12 +72,12 @@ extension HistoryViewController {
    
     //MARK: TableView datasource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider.getData().count
+        return transactions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
-        cell.transaction = dataProvider.getDataWith(index: indexPath.item) as! DBTransaction
+        cell.transaction = transactions[indexPath.row]
         return cell
     }
 }
@@ -90,6 +100,6 @@ extension HistoryViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellSizeCalculator.height(by: (dataProvider.getDataWith(index: indexPath.item) as! DBTransaction).booking!)
+        return cellSizeCalculator.height(by: transactions [indexPath.row].booking!)
     }
 }
