@@ -24,7 +24,7 @@ class OrderController: PulleyChildViewController {
         registerCollectionViewCells()
         collectionView.isScrollEnabled = false;
         contentProvider = OrderHistoryContentProvider.init(transaction: transaction!)
-        dateLabel.text = transaction?.deliveryDate
+        dateLabel.text = transaction?.pickUpDate
         priceLabel.text = "\(transaction!.booking!.price)€"
     }
     

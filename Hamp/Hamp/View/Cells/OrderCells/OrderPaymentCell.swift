@@ -19,7 +19,7 @@ class OrderPaymentCell: OrderCollectionViewCell {
     
     private var creditCardNumber: String? {
         didSet {
-            guard let creditCardNumber = creditCardNumber, creditCardNumber.count == 19 else {
+            guard let creditCardNumber = creditCardNumber, creditCardNumber.count == 4 else {
                 creditCardNumberLabel.text = "???? ???? ???? ????"
                 return
             }
@@ -67,10 +67,7 @@ class OrderPaymentCell: OrderCollectionViewCell {
     }
     
     fileprivate func codifyCreditCardNumber (creditNumber: String) -> String {
-        let lastNumbers = creditNumber.substring(from: creditNumber.index(creditNumber.endIndex, offsetBy: -4))
-        let secretNumbers = "xxxx xxxx xxxx "
-        let finalNumber = secretNumbers + lastNumbers
-        return finalNumber
+        return "xxxx xxxx xxxx \(creditNumber)"
     }
     
 }
