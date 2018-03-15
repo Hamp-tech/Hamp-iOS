@@ -16,7 +16,6 @@
 		1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */; };
 		1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
-		19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19856F9D1FD8010000F9949A /* GMDatePicker.swift */; };
 		19B2C0BB204AF5B300066209 /* TransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BA204AF5B300066209 /* TransactionFactory.swift */; };
 		19B2C0BD204BDDD700066209 /* DBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BC204BDDD700066209 /* DBTransaction.swift */; };
 		19B2C0BF204BDFC600066209 /* DBBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BE204BDFC600066209 /* DBBooking.swift */; };
@@ -104,6 +103,8 @@
 		4E4CB7281F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */; };
 		4E4CB72A1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */; };
 		4E4CB72B1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */; };
+		4E4D70942055B530009EB415 /* GMDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D70922055B530009EB415 /* GMDatePicker.swift */; };
+		4E4D70952055B530009EB415 /* GMPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D70932055B530009EB415 /* GMPicker.swift */; };
 		4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */; };
 		4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */; };
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
@@ -122,6 +123,9 @@
 		4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72535F1F37D982006382B4 /* SignUpContentable.swift */; };
 		4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */; };
 		4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */; };
+		4E7DD5CC2055ED81000C8F18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DD5CB2055ED81000C8F18 /* GoogleService-Info.plist */; };
+		4E7DD5CE2055EF1B000C8F18 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */; };
+		4E7DD5D12055F2A1000C8F18 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DD5D02055F2A1000C8F18 /* Logger.swift */; };
 		4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */; };
 		4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */; };
 		4E7DF3C61F54C93800C1A180 /* GradientStatesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C21F54C8ED00C1A180 /* GradientStatesButton.swift */; };
@@ -213,7 +217,6 @@
 		1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
 		1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardTableViewCell.xib; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
-		19856F9D1FD8010000F9949A /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GMDatePicker.swift; path = "../../../../../../Downloads/GMPicker-master/GMPicker/GMDatePicker.swift"; sourceTree = "<group>"; };
 		19B2C0BA204AF5B300066209 /* TransactionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFactory.swift; sourceTree = "<group>"; };
 		19B2C0BC204BDDD700066209 /* DBTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTransaction.swift; sourceTree = "<group>"; };
 		19B2C0BE204BDFC600066209 /* DBBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBBooking.swift; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 		4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampPoint.swift; sourceTree = "<group>"; };
 		4E4CB7261F8C0CA800D1DBF4 /* HampPointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampPointsProvider.swift; sourceTree = "<group>"; };
 		4E4CB7291F8C0D5B00D1DBF4 /* StaticPointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPointsProvider.swift; sourceTree = "<group>"; };
+		4E4D70922055B530009EB415 /* GMDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMDatePicker.swift; sourceTree = "<group>"; };
+		4E4D70932055B530009EB415 /* GMPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPicker.swift; sourceTree = "<group>"; };
 		4E4F38FC1F39F90C00003131 /* CreditCardTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTextFieldFactory.swift; sourceTree = "<group>"; };
 		4E56D9111F2DFE5100736ABB /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		4E5B08821F04731C00236A9E /* Hamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +328,10 @@
 		4E72535F1F37D982006382B4 /* SignUpContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContentable.swift; sourceTree = "<group>"; };
 		4E7D94E21F2384E700C7BB4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E7D94E61F238CB000C7BB4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E7DD5CA2055ED31000C8F18 /* Hamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hamp.entitlements; sourceTree = "<group>"; };
+		4E7DD5CB2055ED81000C8F18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
+		4E7DD5D02055F2A1000C8F18 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		4E7DF3BE1F54C8ED00C1A180 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
 		4E7DF3BF1F54C8ED00C1A180 /* HorizontalCircleGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCircleGradientButton.swift; sourceTree = "<group>"; };
 		4E7DF3C01F54C8ED00C1A180 /* HorizontalGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGradientButton.swift; sourceTree = "<group>"; };
@@ -461,7 +470,8 @@
 		19856F9C1FD800EB00F9949A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				19856F9D1FD8010000F9949A /* GMDatePicker.swift */,
+				4E4D70922055B530009EB415 /* GMDatePicker.swift */,
+				4E4D70932055B530009EB415 /* GMPicker.swift */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -673,8 +683,8 @@
 		4E5B08841F04731C00236A9E /* Hamp */ = {
 			isa = PBXGroup;
 			children = (
+				4E7DD5CA2055ED31000C8F18 /* Hamp.entitlements */,
 				4E5B08851F04731C00236A9E /* AppDelegate.swift */,
-				19856F9C1FD800EB00F9949A /* ThirdParty */,
 				4EC6361D1F43ACEA0045520F /* Controllers */,
 				4E1DFC5D1F67E9670096659F /* Layout */,
 				4E632E271F26508000CDE02D /* Factories */,
@@ -700,6 +710,7 @@
 		4E5B08B41F04733900236A9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E7DD5CB2055ED81000C8F18 /* GoogleService-Info.plist */,
 				4E7253521F37BC8E006382B4 /* TabBar.storyboard */,
 				4EC0BD2A1F4C3EBB0077DD92 /* Tutorial.storyboard */,
 				4ECFFAAF1F30C0FF0043D4B5 /* Localizable.strings */,
@@ -776,6 +787,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4E7DD5CF2055EFA5000C8F18 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		4E7DF3B71F54C8BE00C1A180 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -823,6 +842,7 @@
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				19856F9C1FD800EB00F9949A /* ThirdParty */,
 				4E8EE23A1F55E2F600B5F06C /* Dynamic tableview */,
 				4E47866D1F30DA67007ABE00 /* Validation */,
 				4ECFFAA11F30BDF70043D4B5 /* Localization */,
@@ -832,6 +852,8 @@
 				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
 				19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */,
 				1904C6CD1F8E1C77005144E3 /* MapUtilities */,
+				4E7DD5CF2055EFA5000C8F18 /* Firebase */,
+				4E7DD5D02055F2A1000C8F18 /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1195,6 +1217,14 @@
 					4E5B08811F04731C00236A9E = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1241,6 +1271,7 @@
 				19DFE0271F87E9650091CC24 /* StoreTableViewCell.xib in Resources */,
 				4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */,
 				4E72535A1F37CE89006382B4 /* SignUpGenderTableViewCell.xib in Resources */,
+				4E7DD5CC2055ED81000C8F18 /* GoogleService-Info.plist in Resources */,
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EC0BD2C1F4C3EBB0077DD92 /* Tutorial.storyboard in Resources */,
 				1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */,
@@ -1332,7 +1363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1414,6 +1445,7 @@
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
 				19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */,
+				4E7DD5CE2055EF1B000C8F18 /* RemoteNotificationsHandler.swift in Sources */,
 				19DFE02B1F89155D0091CC24 /* HampSearchBarDelegate.swift in Sources */,
 				4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */,
 				19B2C0C1204BE04000066209 /* DBLocker.swift in Sources */,
@@ -1434,9 +1466,11 @@
 				19B2C0DC204DD46300066209 /* LockTableViewCell.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
+				4E4D70952055B530009EB415 /* GMPicker.swift in Sources */,
 				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
+				4E7DD5D12055F2A1000C8F18 /* Logger.swift in Sources */,
 				4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */,
 				192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
@@ -1447,6 +1481,7 @@
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				19B2C0D9204D9FEC00066209 /* OrderCollectionViewCell.swift in Sources */,
+				4E4D70942055B530009EB415 /* GMDatePicker.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
@@ -1457,7 +1492,6 @@
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
 				4EBAD5C41F4B97E10070CEE9 /* LockerView.swift in Sources */,
 				19B2C0D1204D940500066209 /* OrderHistoryContentProvider.swift in Sources */,
-				19856F9F1FD8010000F9949A /* GMDatePicker.swift in Sources */,
 				4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
 				19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */,
@@ -1726,6 +1760,7 @@
 			baseConfigurationReference = 614C810922CFEC0731C0D9D8 /* Pods-Hamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hamp/Hamp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9QF88MGC2;
@@ -1753,6 +1788,7 @@
 			baseConfigurationReference = D020784CAB42E211144BDAFA /* Pods-Hamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hamp/Hamp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9QF88MGC2;
