@@ -27,7 +27,7 @@ class DescriptionImageCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let iv = UIImageView ()
         iv.backgroundColor = UIColor.white
-        iv.contentMode = .center
+        iv.contentMode = .scaleAspectFit
         return iv
     } ()
     

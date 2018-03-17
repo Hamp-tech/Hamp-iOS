@@ -77,7 +77,7 @@ extension OrderDescriptionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCellID", for: indexPath) as! DescriptionImageCell
         cell.backgroundColor = UIColor.white
-        cell.image = UIImage.init(named: content!.services![indexPath.item].name)
+        cell.image = ServiceImageFactory.getImageWith(serviceName: content!.services![indexPath.item].name)
         cell.numberOfItems = content?.services?[indexPath.item].amount
         return cell
     }
