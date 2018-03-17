@@ -27,9 +27,9 @@ class StaticHistoryProvider: DataProvider {
                 let dbTransactions = transactions.map({
                     DBTransaction.init(transaction: $0)
                 })
-
-                self.hampDataManager.addDataArray(objects: dbTransactions)
-
+                DispatchQueue.main.async {
+                    self.hampDataManager.addDataArray(objects: dbTransactions)
+                }
             } else {
                 print("ERROR DOWNLOADING TRANSACTIONS", response.message)
             }

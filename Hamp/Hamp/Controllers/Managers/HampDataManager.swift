@@ -47,21 +47,12 @@ class HampDataManager {
     
     func addDataArray (objects: [Object]) {
         realmQueue.sync { [unowned self] in
-            let list = self.convertArrayToList(array: objects)
             try! self.database.write {
-                for object in list {
+                for object in objects {
                     self.database.add(object, update: true)
                 }
             }
         }
-    }
-    
-    private func convertArrayToList (array: [Object]) -> List<Object> {
-        let list = List<Object>()
-        for element in array {
-            list.append(element)
-        }
-        return list
     }
     
     func deleteAllFromDatabase()  {

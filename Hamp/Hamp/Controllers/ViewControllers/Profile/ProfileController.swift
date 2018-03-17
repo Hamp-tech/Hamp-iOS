@@ -59,16 +59,19 @@ class ProfileController: HampViewController {
         if (saveButtonState == .saving) {
             saveEditedUser ()
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
+    
     func saveEditedUser () {
-        let user = provider.user()
+        let user = User.init()
 
         do {
             try user.validate()
             Hamp.Users.update(user: user) { (response) in
-                if response.code != .ok {
+                if response.code == .ok {
+                    //ACTUALITZA TableView
+                } else {
                     print ("ERROR: ", response.message)
                 }
             }

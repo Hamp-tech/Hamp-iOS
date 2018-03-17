@@ -11,6 +11,7 @@ import HampKit
 import SafariServices
 
 struct ProfileInfoFactory {
+    
     static func createProfileInfo<T: UIViewController>(user: User?, parent: T) -> [[UserContent]] where T: GMDatePickerDelegate {
         
         let user = user!

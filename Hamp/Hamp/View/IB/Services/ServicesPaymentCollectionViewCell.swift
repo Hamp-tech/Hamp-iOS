@@ -9,10 +9,6 @@
 import UIKit
 import HampKit
 
-protocol CardSelectedDelegate {
-    func cardIsSelected (card: CreditCard)
-}
-
 class ServicesPaymentCollectionViewCell: ReusableCollectionViewCell {
     
     //MARK: IB properties
@@ -21,19 +17,17 @@ class ServicesPaymentCollectionViewCell: ReusableCollectionViewCell {
     
     //MARK: Properties
     var creditCard: CreditCard!
-    var cardSelectedDelegate: CardSelectedDelegate!
     
     //MARK: Life cycle
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let lastNumbers = creditCard.number!
         creditNumberLabel.text = "xxxx xxxx xxxx \(lastNumbers)"
-        
+        checkBox.isUserInteractionEnabled = false
     }
 
     //MARK: Actions
     @IBAction func checkBoxWasPressed(_ sender: CheckBoxButton) {
         sender.isSelected = !sender.isSelected
-        cardSelectedDelegate.cardIsSelected(card: creditCard)
     }
 }

@@ -54,11 +54,11 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
-  - Realm (3.1.1):
-    - Realm/Headers (= 3.1.1)
-  - Realm/Headers (3.1.1)
-  - RealmSwift (3.1.1):
-    - Realm (= 3.1.1)
+  - Realm (3.2.0):
+    - Realm/Headers (= 3.2.0)
+  - Realm/Headers (3.2.0)
+  - RealmSwift (3.2.0):
+    - Realm (= 3.2.0)
 
 DEPENDENCIES:
   - Crashlytics
@@ -87,7 +87,7 @@ CHECKOUT OPTIONS:
     :commit: d038f93bb92725cc8610228c6a7181076cf2b6fc
     :git: https://github.com/ulidev/facebook-sdk-swift.git
   HampKit:
-    :commit: f99475cd3b3633440fc58dacb1bd904dc223cdc5
+    :commit: ea6f8a79304225c699a86e3b5bfb12ba8ef966fb
     :git: https://github.com/Hamp-tech/Hamp-iOS-Kit.git
 
 SPEC CHECKSUMS:
@@ -108,9 +108,9 @@ SPEC CHECKSUMS:
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
-  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
-  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
+  Realm: ae552b9b9eca3a12374a589fa842f220e286a80a
+  RealmSwift: 05727129547dcab3fe828bd87bc30be903736b9c
 
 PODFILE CHECKSUM: fccf4e2059e0c64ea8d3c22a3beb1dc6c40c3026
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0

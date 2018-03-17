@@ -64,6 +64,10 @@ extension OrderManager {
     func servicesHired() -> [OrderableService] {
         return order.orderableServices()
     }
+    
+    func removeServicesHired () {
+        self.order.removeAllServices()
+    }
 }
 
 private extension OrderManager {

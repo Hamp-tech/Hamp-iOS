@@ -34,19 +34,6 @@ class ProfileInfoProvider: ProfileTableProvider {
         isCellEnabled = enabled
     }
     
-    func user() -> User {
-        let name = content(at: IndexPath.init(row: 0, section: 0))?.textFieldText ?? ""
-        let surname = content(at: IndexPath.init(row: 1, section: 0))?.textFieldText ?? ""
-        let email = content(at: IndexPath.init(row: 2, section: 0))?.textFieldText ?? ""
-        let phone = content(at: IndexPath.init(row: 3, section: 0))?.textFieldText ?? ""
-        let birthday = content(at: IndexPath.init(row: 4, section: 0))?.textFieldText ?? ""
-        let gender = (content(at: IndexPath.init(row: 5, section: 0))?.firstOption ?? .leftOption) == .leftOption ? "M":"F"
-        
-        let userID = Hamp.Auth.user!.identifier
-        
-        return User.init(identifier: userID, name: name, surname: surname, email: email, password: nil, phone: phone, birthday: birthday, gender: gender)
-    }
-    
     func areCellsEnabled () -> Bool {
         return isCellEnabled
     }

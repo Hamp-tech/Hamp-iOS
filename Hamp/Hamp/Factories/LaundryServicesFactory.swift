@@ -42,6 +42,6 @@ enum ServiceType: String {
 
 struct LaundryServicesFactory {
     static func service(by type: ServiceType, price: Float = 1) -> Service {
-        return LaundryService.init(identifier: type.rawValue, price: price, name: type.name)
+        return LaundryService.init(identifier: type.rawValue, price: price, name: type.name, amount: 0)
     }
 }

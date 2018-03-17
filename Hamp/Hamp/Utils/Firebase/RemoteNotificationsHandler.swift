@@ -8,6 +8,7 @@
 
 import Firebase
 import UserNotifications
+import HampKit
 
 class RemoteNotificationsHandler: NSObject {
 	
@@ -63,6 +64,15 @@ extension RemoteNotificationsHandler: UNUserNotificationCenterDelegate {
 extension RemoteNotificationsHandler: MessagingDelegate {
 	func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
 		Logger.d("Token received: \(fcmToken)")
+        let user = Hamp.Auth.user
+        
+        if let u = user, u.tokenFCM != fcmToken {
+            u.tokenFCM = fcmToken
+            Hamp.Users.update(user: u) { (response) in
+                Logger.d(response)
+            }
+        }
+        
 	}
 	
 	func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {

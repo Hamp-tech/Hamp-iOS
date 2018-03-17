@@ -26,6 +26,10 @@ class Order {
 extension Order {
     //MARK: Public
     
+    func removeAllServices () {
+        self ._orderableServices.removeAll()
+    }
+    
     /// Add a service to order if services doesn't contains the service
     ///
     /// - Parameter service: service to add

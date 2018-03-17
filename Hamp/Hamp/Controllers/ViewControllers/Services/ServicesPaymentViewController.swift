@@ -14,7 +14,7 @@ class ServicesPaymentViewController: HampViewController {
     //MARK: Properties
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var endOrderButton: HorizontalCircleGradientButton!
-
+    
     var ordersManager: OrderManager!
 
     private var cardsProvider: CreditCardsProvider!
@@ -39,20 +39,27 @@ class ServicesPaymentViewController: HampViewController {
         endOrderButton.alpha = 0.7
     }
     
-    //MARK: Actions
+    //MARK: Actions 
     @IBAction func endOrderWasPressed(sender: UIButton) {
         let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: selectedCreditCard!)
+        
+        self.endOrderButton.isEnabled = false
         
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
             if response.code == .ok {
                 let newTransaction = response.data!
                 DispatchQueue.main.async {
                      ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
+                    self.popToRootController()
                 }
             } else {
                 print("ERROR CREATING TRANSACTION", response.message)
             }
         }
+    }
+
+    func popToRootController () {
+        ordersManager.removeServicesHired()
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
@@ -67,7 +74,6 @@ extension ServicesPaymentViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeReusableCell(indexPath: indexPath) as ServicesPaymentCollectionViewCell
 
         cell.creditCard = cardsProvider.getCreditCardAt(index: indexPath.row)
-        cell.cardSelectedDelegate = self
         
         if let selectedCardID = selectedCreditCard?.identifier {
             let iden = cardsProvider.getCreditCardAt(index: indexPath.row)!.identifier
@@ -77,19 +83,17 @@ extension ServicesPaymentViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! ServicesPaymentCollectionViewCell
+        self.selectedCreditCard = cell.creditCard
+        self.endOrderButton.isEnabled = true
+        self.collectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let reusableView = collectionView.dequeReusableSupplementaryView(kind: kind, indexPath: indexPath) as ServicesPaymentFooterView
         reusableView.delegate = self
         return reusableView
-    }
-}
-
-extension ServicesPaymentViewController: CardSelectedDelegate {
-    func cardIsSelected(card: CreditCard) {
-        selectedCreditCard = card
-        collectionView.reloadData()
-        endOrderButton.isEnabled = true
-        endOrderButton.alpha = 1
     }
 }
 

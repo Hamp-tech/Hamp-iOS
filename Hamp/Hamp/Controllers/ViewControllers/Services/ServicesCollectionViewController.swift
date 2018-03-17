@@ -32,7 +32,6 @@ class ServicesCollectionViewController: HampCollectionViewController {
 //        videoTutorialButton = BarRightButtonsFactory.videoTutorialButton()
 //        videoTutorialButton.addTarget(self, action: #selector(showMap(_:)), for: .touchUpInside)
 //        addRightBarButtonWhenLargeTitles(rightButton: TrailingBarButtonItem.init(with: videoTutorialButton))
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,7 +137,13 @@ extension ServicesCollectionViewController: ServicesCollectionViewCellDelegate {
     }
     
     private func amount() -> Int {
-        return orderManager.amountServicesHired()
+        let amount = orderManager.amountServicesHired()
+        if amount == 0 {
+            for i in 0..<orderServices.count {
+                orderServices[i].service.amount = 0
+            }
+        }
+        return amount
     }
 }
 
