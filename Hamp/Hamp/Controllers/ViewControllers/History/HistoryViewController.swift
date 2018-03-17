@@ -18,22 +18,23 @@ class HistoryViewController: HampTableViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         precondition(dataProvider != nil, "Provide a data provider")
         cellSizeCalculator = HistoryCellSizeCalculator.init(topMargin: 8, bottomMargin: 8)
-        getTransactionsFromProvider ()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.tableView.reloadData()
+        getTransactionsFromProvider ()
+        self.tableView.reloadData()
     }
     
     private func getTransactionsFromProvider () {
         dataProvider.getData { (results) in
+            var trans = [DBTransaction] ()
             for result in results {
-                self.transactions.append(result as! DBTransaction)
+                trans.append(result as! DBTransaction)
             }
+            self.transactions = trans
             self.setupTableView()
             self.tableView.reloadData()
         }
