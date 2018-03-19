@@ -56,7 +56,7 @@ private extension HistoryViewController {
         view.insertSubview(bottomInfiniteLine, at: 0)
         
         let topAnchorMargin = transactions.reduce(0) { (initial, next) in
-            return initial + cellSizeCalculator.height(by: (next as! DBTransaction).booking!)
+            return initial + cellSizeCalculator.height(by: next.booking!)
         }
             
         NSLayoutConstraint.activate([

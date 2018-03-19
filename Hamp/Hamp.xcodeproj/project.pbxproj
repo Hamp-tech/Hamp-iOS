@@ -74,6 +74,7 @@
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
+		4E1B677A20600C5E007176D5 /* UINavigationController+PopToRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B677920600C5E007176D5 /* UINavigationController+PopToRoot.swift */; };
 		4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC581F67CB050096659F /* DataProvider.swift */; };
 		4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */; };
 		4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */; };
@@ -278,6 +279,7 @@
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
+		4E1B677920600C5E007176D5 /* UINavigationController+PopToRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+PopToRoot.swift"; sourceTree = "<group>"; };
 		4E1DFC581F67CB050096659F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		4E1DFC5A1F67D2760096659F /* ProvidersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersManager.swift; sourceTree = "<group>"; };
 		4E1DFC5E1F67E9870096659F /* HistoryCellSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellSizeCalculator.swift; sourceTree = "<group>"; };
@@ -472,8 +474,10 @@
 		19856F9C1FD800EB00F9949A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				4E4D70922055B530009EB415 /* GMDatePicker.swift */,
-				4E4D70932055B530009EB415 /* GMPicker.swift */,
+				4E1B677D206013FE007176D5 /* Fabric */,
+				4E7DD5CF2055EFA5000C8F18 /* Firebase */,
+				4E1B677B206013D1007176D5 /* Facebook */,
+				4E1B677C206013DE007176D5 /* Date Picker */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -551,6 +555,31 @@
 				19EA7E291F7D0DD000AB7B8A /* MapArtWork.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		4E1B677B206013D1007176D5 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		4E1B677C206013DE007176D5 /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4E4D70922055B530009EB415 /* GMDatePicker.swift */,
+				4E4D70932055B530009EB415 /* GMPicker.swift */,
+			);
+			path = "Date Picker";
+			sourceTree = "<group>";
+		};
+		4E1B677D206013FE007176D5 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		4E1DFC5C1F67E9430096659F /* SizeCalculators */ = {
@@ -846,16 +875,12 @@
 			isa = PBXGroup;
 			children = (
 				19856F9C1FD800EB00F9949A /* ThirdParty */,
-				4E8EE23A1F55E2F600B5F06C /* Dynamic tableview */,
 				4E47866D1F30DA67007ABE00 /* Validation */,
 				4ECFFAA11F30BDF70043D4B5 /* Localization */,
-				4E89E05D1F2EC260008C658D /* FacebookAPIGraphManager.swift */,
-				4E22CF651F38EAB700EEC314 /* FabricManager.swift */,
 				4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */,
 				4E965C391F690AC600AF61E8 /* DateConverter.swift */,
 				19DFE02C1F8916F40091CC24 /* SearchBarFiltre.swift */,
 				1904C6CD1F8E1C77005144E3 /* MapUtilities */,
-				4E7DD5CF2055EFA5000C8F18 /* Firebase */,
 				4E7DD5D02055F2A1000C8F18 /* Logger.swift */,
 			);
 			path = Utils;
@@ -1063,6 +1088,7 @@
 		4EDF10051F236E21007E15E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E8EE23A1F55E2F600B5F06C /* Dynamic tableview */,
 				19856FA11FD95A6E00F9949A /* LoadingView */,
 				4E9B1EBC1F6AC26C00BFA88C /* UIScrollView */,
 				4E7DF3B71F54C8BE00C1A180 /* Buttons */,
@@ -1131,6 +1157,7 @@
 				4EC0BD301F4C69830077DD92 /* ClosedRange+Clamp.swift */,
 				4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */,
 				19B2C0D4204D9BBD00066209 /* RealmList + Array.swift */,
+				4E1B677920600C5E007176D5 /* UINavigationController+PopToRoot.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1423,6 +1450,7 @@
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */,
+				4E1B677A20600C5E007176D5 /* UINavigationController+PopToRoot.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
 				4EC2CE7B1F477E1A002439CD /* ServicesPaymentCollectionViewCell.swift in Sources */,

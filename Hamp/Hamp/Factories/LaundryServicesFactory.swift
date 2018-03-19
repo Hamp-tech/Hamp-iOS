@@ -9,14 +9,14 @@
 import Foundation
 
 enum ServiceType: String {
-    case smallBag = "smallBag"
-    case bigBag = "bigBag"
-    case curtain = "curtain"
-    case cushion = "cushion"
-    case sofaCover = "sofaCover"
-    case smallQuilt = "smallQuilt"
-    case bigQuilt = "bigQuilt"
-    case blanket = "blanket"
+    case smallBag = "1"
+    case bigBag = "2"
+    case curtain = "3"
+    case cushion = "4"
+    case sofaCover = "5"
+    case smallQuilt = "6"
+    case bigQuilt = "7"
+    case blanket = "8"
     
     var name: String {
         switch self {

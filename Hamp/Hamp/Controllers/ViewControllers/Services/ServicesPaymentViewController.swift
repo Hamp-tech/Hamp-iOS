@@ -41,16 +41,23 @@ class ServicesPaymentViewController: HampViewController {
     
     //MARK: Actions 
     @IBAction func endOrderWasPressed(sender: UIButton) {
-        let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: selectedCreditCard!)
+		let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: CreditCard(identifier: selectedCreditCard!.identifier))
         
         self.endOrderButton.isEnabled = false
         
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
             if response.code == .ok {
                 let newTransaction = response.data!
-                DispatchQueue.main.async {
-                     ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
-                    self.popToRootController()
+				let message = newTransaction.booking?.pickUpLockers?.reduce("") { $0 + "\n" + "\($1.number!) - \($1.code!)"}
+				
+                DispatchQueue.main.async { [unowned self] in
+					ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
+					self.popToRootController(with: {
+						let alert = UIAlertController(title: "Genial", message: message!, actions: .ok, style: .alert, block: { (response) in
+							print(response)
+						})
+						self.present(alert, animated: true)
+					})
                 }
             } else {
                 print("ERROR CREATING TRANSACTION", response.message)
@@ -58,9 +65,9 @@ class ServicesPaymentViewController: HampViewController {
         }
     }
 
-    func popToRootController () {
+	func popToRootController(with blockOnDismiss: (() -> Void)? = nil) {
         ordersManager.removeServicesHired()
-        self.navigationController?.popToRootViewController(animated: true)
+		navigationController?.popToRootViewController(completion: blockOnDismiss)
     }
 }
 
