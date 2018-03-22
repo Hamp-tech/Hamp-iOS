@@ -194,6 +194,12 @@
 		4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */; };
 		4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
+		4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */; };
+		4EF49DAF2063131F005FE22A /* UINotificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAE2063131F005FE22A /* UINotificable.swift */; };
+		4EF49DB3206315F3005FE22A /* TransactionUINotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB1206315F3005FE22A /* TransactionUINotificationsController.swift */; };
+		4EF49DB4206315F3005FE22A /* TransactionUINotificationsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF49DB2206315F3005FE22A /* TransactionUINotificationsController.xib */; };
+		4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */; };
+		4EF49DB820632387005FE22A /* UINotificationsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB720632387005FE22A /* UINotificationsContainerViewController.swift */; };
 		4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */; };
 		4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -411,6 +417,12 @@
 		4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsProvider.swift; sourceTree = "<group>"; };
 		4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyChildViewController.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
+		4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		4EF49DAE2063131F005FE22A /* UINotificable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificable.swift; sourceTree = "<group>"; };
+		4EF49DB1206315F3005FE22A /* TransactionUINotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUINotificationsController.swift; sourceTree = "<group>"; };
+		4EF49DB2206315F3005FE22A /* TransactionUINotificationsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionUINotificationsController.xib; sourceTree = "<group>"; };
+		4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
+		4EF49DB720632387005FE22A /* UINotificationsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationsContainerViewController.swift; sourceTree = "<group>"; };
 		4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
@@ -593,6 +605,7 @@
 		4E1DFC5D1F67E9670096659F /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */,
 				4E1DFC5C1F67E9430096659F /* SizeCalculators */,
 			);
 			path = Layout;
@@ -641,6 +654,7 @@
 				19DB938E1F9D1B2700742168 /* UserContent.swift */,
 				19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */,
 				19B2C0CC204D904200066209 /* OrderHistoryContent.swift */,
+				4EF49DAE2063131F005FE22A /* UINotificable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -792,6 +806,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4EF49DB020631520005FE22A /* UI Notifications */,
 				192542741F8BC8760098CE79 /* Stores */,
 				19EA7E261F7D0C1600AB7B8A /* Map */,
 				4E6D58301F4CAC2600113636 /* Rating */,
@@ -1158,8 +1173,19 @@
 				4E965C3D1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift */,
 				19B2C0D4204D9BBD00066209 /* RealmList + Array.swift */,
 				4E1B677920600C5E007176D5 /* UINavigationController+PopToRoot.swift */,
+				4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EF49DB020631520005FE22A /* UI Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				4EF49DB1206315F3005FE22A /* TransactionUINotificationsController.swift */,
+				4EF49DB2206315F3005FE22A /* TransactionUINotificationsController.xib */,
+				4EF49DB720632387005FE22A /* UINotificationsContainerViewController.swift */,
+			);
+			path = "UI Notifications";
 			sourceTree = "<group>";
 		};
 		51541EF23E41448D2B691C0C /* Frameworks */ = {
@@ -1305,6 +1331,7 @@
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EC0BD2C1F4C3EBB0077DD92 /* Tutorial.storyboard in Resources */,
 				1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */,
+				4EF49DB4206315F3005FE22A /* TransactionUINotificationsController.xib in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
 				4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */,
 				4E871D161F4AF3230028DA0D /* HistoryTableViewCell.xib in Resources */,
@@ -1422,6 +1449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B2C0C9204BEEDC00066209 /* HampDataManager.swift in Sources */,
+				4EF49DB3206315F3005FE22A /* TransactionUINotificationsController.swift in Sources */,
 				4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */,
 				19050246205D9E7F00FAB13E /* ServiceImageFactory.swift in Sources */,
 				4E7DF3C51F54C93800C1A180 /* CheckBoxButton.swift in Sources */,
@@ -1507,6 +1535,7 @@
 				4E4D70952055B530009EB415 /* GMPicker.swift in Sources */,
 				4EBAD5C01F4B88E80070CEE9 /* HistoryDetailSectionView.swift in Sources */,
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
+				4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
 				4E7DD5D12055F2A1000C8F18 /* Logger.swift in Sources */,
 				4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */,
@@ -1519,6 +1548,7 @@
 				19C8EF7D1F7A88A500D70A07 /* ProfilePickUpCell.swift in Sources */,
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				19B2C0D9204D9FEC00066209 /* OrderCollectionViewCell.swift in Sources */,
+				4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */,
 				4E4D70942055B530009EB415 /* GMDatePicker.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
@@ -1532,6 +1562,7 @@
 				19B2C0D1204D940500066209 /* OrderHistoryContentProvider.swift in Sources */,
 				4E1DFC591F67CB050096659F /* DataProvider.swift in Sources */,
 				4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */,
+				4EF49DAF2063131F005FE22A /* UINotificable.swift in Sources */,
 				19C8EF7A1F7A83C500D70A07 /* ProfileGenderCell.swift in Sources */,
 				4ECA40721F24C0DA003F51EA /* HampTextField.swift in Sources */,
 				4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */,
@@ -1549,6 +1580,7 @@
 				4E4CB7271F8C0CA800D1DBF4 /* HampPointsProvider.swift in Sources */,
 				19C8EF811F7A90A600D70A07 /* ProfileSignOutCell.swift in Sources */,
 				4EBAD5BC1F4B82D90070CEE9 /* HistoryDetailSectionHeaderView.swift in Sources */,
+				4EF49DB820632387005FE22A /* UINotificationsContainerViewController.swift in Sources */,
 				4E22CC191F474B08004F3203 /* TrailingBarButtonItem.swift in Sources */,
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */,

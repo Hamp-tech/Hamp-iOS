@@ -9,8 +9,22 @@
 import UIKit
 
 class TabBarLargeTitlesNavigationViewController: UINavigationController {
-    
-    
+	
+	// MARK: Properties
+	var activityIndicator: UIActivityIndicatorView?
+	var needsActivityIndicator: Bool = false {
+		didSet {
+			if needsActivityIndicator {
+				_addActivityIndicator()
+			} else {
+				activityIndicator?.stopAnimating()
+				activityIndicator?.removeFromSuperview()
+				activityIndicator = nil
+			}
+		}
+	}
+	
+	// MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,5 +36,31 @@ class TabBarLargeTitlesNavigationViewController: UINavigationController {
         navigationBar.barTintColor = .white
         navigationBar.shadowImage = UIImage.init()
     }
+	
+	// MARK: - API
+	func startActivityIndicator() {
+		guard needsActivityIndicator else { return }
+		activityIndicator?.startAnimating()
+	}
+	
+	func stopActivityIndicator() {
+		guard needsActivityIndicator else { return }
+		activityIndicator?.stopAnimating()
+	}
 }
+
+private extension TabBarLargeTitlesNavigationViewController {
+	func _addActivityIndicator() {
+		activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		activityIndicator?.hidesWhenStopped = true
+		
+		let item = UIBarButtonItem(customView: activityIndicator!)
+		if var items = navigationItem.rightBarButtonItems {
+			items.insert(item, at: 0)
+		} else {
+			navigationItem.rightBarButtonItem = item
+		}
+	}
+}
+
 

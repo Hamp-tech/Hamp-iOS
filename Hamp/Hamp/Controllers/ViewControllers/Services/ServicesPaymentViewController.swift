@@ -44,7 +44,12 @@ class ServicesPaymentViewController: HampViewController {
 		let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: CreditCard(identifier: selectedCreditCard!.identifier))
         
         self.endOrderButton.isEnabled = false
-        
+		
+		let nav = self.navigationController as? TabBarLargeTitlesNavigationViewController
+		nav?.needsActivityIndicator = true
+		nav?.startActivityIndicator()
+	
+		return 
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
             if response.code == .ok {
                 let newTransaction = response.data!
