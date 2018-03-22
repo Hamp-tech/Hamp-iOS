@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpBaseTableViewCell: UITableViewCell, SignUpContentableCell, Reusable {
+class SignUpBaseTableViewCell: UITableViewCell, SignUpContentableCell {
     var content: SignUpCellContent!
     
     //MARK: Life cycle

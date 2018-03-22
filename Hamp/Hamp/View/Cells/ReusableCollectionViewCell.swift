@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ReusableCollectionViewCell: UICollectionViewCell, Reusable {
+class ReusableCollectionViewCell: UICollectionViewCell {
     
 }

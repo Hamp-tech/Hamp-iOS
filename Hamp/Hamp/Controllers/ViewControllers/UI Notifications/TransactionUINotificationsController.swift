@@ -17,13 +17,14 @@ class TransactionUINotificationsController: HampViewController {
 	
 	// MARK: - Properties
 	var transaction: HampKit.Transaction!
+	var configurator = TransactionsUINotificationCellConfigurator()
 	
 	// MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 		modalPresentationStyle = .overCurrentContext
 		
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TransactionsUINotificationCell")
+		tableView.register(TransactionsUINotificationsTableViewCell.nib, forCellReuseIdentifier: TransactionsUINotificationsTableViewCell.reuseIdentifier)
 		tableView.rowHeight = 60
     }
 	
@@ -47,7 +48,8 @@ extension TransactionUINotificationsController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionsUINotificationCell", for: indexPath)
+		let cell = tableView.dequeueReusableCell(withIdentifier: TransactionsUINotificationsTableViewCell.reuseIdentifier, for: indexPath) as! TransactionsUINotificationsTableViewCell
+		configurator.configure(cell: cell, values: ("\(indexPath.row)", "1234"))
 		return cell
 	}
 	

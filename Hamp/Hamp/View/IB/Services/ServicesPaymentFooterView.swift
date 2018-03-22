@@ -12,7 +12,7 @@ protocol ServicesPaymentFooterDelegate: class {
     func footerWasPressed(on footerView: ServicesPaymentFooterView)
 }
 
-class ServicesPaymentFooterView: UICollectionReusableView, Reusable {
+class ServicesPaymentFooterView: UICollectionReusableView {
     
     //MARK: Properties
     @IBOutlet weak var visibleContainerView: UIView!
