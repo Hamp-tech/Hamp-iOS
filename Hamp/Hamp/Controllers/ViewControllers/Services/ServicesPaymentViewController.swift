@@ -52,7 +52,8 @@ class ServicesPaymentViewController: HampViewController {
                 DispatchQueue.main.async { [unowned self] in
 					ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
 					self.popToRootController(with: {
-						let noti = TransactionUINotificationsController(transaction: newTransaction)
+						let subtitle = "Deja tu ropa en las siguientes taquillas, en menos de 24h podrás venir a recogerla"
+						let noti = TransactionUINotificationsController(transactionId: newTransaction.identifier!, header: newTransaction.booking!.point!.city!, subtitle: subtitle, lockers: newTransaction.booking!.pickUpLockers!)
 						NotificationsPresenter.shared.present(uinotification: noti)
 					})
                 }

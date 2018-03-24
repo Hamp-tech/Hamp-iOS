@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionUINotificationsController" customModule="Hamp" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="Xoz-oB-SSE" id="pUl-zm-63j"/>
+                <outlet property="locationLabel" destination="yfe-9E-cD6" id="rVp-sk-5ud"/>
                 <outlet property="notificationBottomConstraint" destination="2Pk-iO-KJt" id="ZmV-GW-4k9"/>
                 <outlet property="notificationHeightConstraint" destination="GfH-D9-kfp" id="DMz-xj-1zE"/>
                 <outlet property="tableView" destination="leB-kD-eef" id="MvU-2O-fRQ"/>
@@ -42,9 +44,9 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podrás recoger tu pedido por la tarde de 15h a 22h en el punto de la calle Baix Penedés." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xoz-oB-SSE">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puedes dejar la ropa en las taquillas de abajo, en menos de 24 h tendrás tu ropa límpia." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xoz-oB-SSE">
                             <rect key="frame" x="18" y="92" width="299" height="33.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
