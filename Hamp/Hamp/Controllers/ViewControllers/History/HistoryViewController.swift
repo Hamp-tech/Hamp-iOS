@@ -87,17 +87,9 @@ extension HistoryViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! HistoryTableViewCell
         
-        let mapVC = self.storyboard!.instantiateViewController(withIdentifier: "HistoryDetailMapViewController") as! MapController
-        mapVC.point = cell.transaction.booking!.point
-        
-        let invoiceVC = self.storyboard!.instantiateViewController(withIdentifier: 
-            "HistoryDetailInvoiceViewController") as! OrderController
-        
-        invoiceVC.transaction = cell.transaction
-        
-        let historyDetailViewController = HistoryBookingDetailViewController.init(contentViewController: mapVC, draggableViewController: invoiceVC)
-        historyDetailViewController.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(historyDetailViewController, animated: true)
+        let historyTableViewController = HistoryTableViewController.init(transaction: transactions[indexPath.row])
+//        historyDetailViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(historyTableViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

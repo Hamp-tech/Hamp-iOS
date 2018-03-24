@@ -45,8 +45,7 @@ class HistoryTableViewCell: UITableViewCell, Reusable {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-//        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate)
-        dateLabel.text = transaction.pickUpDate
+        dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate)
         priceLabel.text = "\(Int.init(booking.price))€"
         
         setupLeftSeparator()

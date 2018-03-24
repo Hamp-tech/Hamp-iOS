@@ -28,7 +28,7 @@ class CreditCardsProvider {
 
     func deleteCreditCardAt (index: Int, onSucced: @escaping () -> Void) {
         guard let creditCardID = Hamp.Auth.user!.cards?[index].identifier else {return}
-        
+        print(creditCardID)
         Hamp.Users.deleteCard(userID: Hamp.Auth.user!.identifier!, cardID: creditCardID) { (response) in
             if response.code == .ok {
                 onSucced()
