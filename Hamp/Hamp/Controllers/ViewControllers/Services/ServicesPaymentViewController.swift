@@ -43,25 +43,17 @@ class ServicesPaymentViewController: HampViewController {
     @IBAction func endOrderWasPressed(sender: UIButton) {
 		let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: CreditCard(identifier: selectedCreditCard!.identifier))
         
-        self.endOrderButton.isEnabled = false
-		
-		let nav = self.navigationController as? TabBarLargeTitlesNavigationViewController
-		nav?.needsActivityIndicator = true
-		nav?.startActivityIndicator()
+        endOrderButton.isEnabled = false
 	
-		return 
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
             if response.code == .ok {
                 let newTransaction = response.data!
-				let message = newTransaction.booking?.pickUpLockers?.reduce("") { $0 + "\n" + "\($1.number!) - \($1.code!)"}
 				
                 DispatchQueue.main.async { [unowned self] in
 					ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
 					self.popToRootController(with: {
-						let alert = UIAlertController(title: "Genial", message: message!, actions: .ok, style: .alert, block: { (response) in
-							print(response)
-						})
-						self.present(alert, animated: true)
+						let noti = TransactionUINotificationsController(transaction: newTransaction)
+						NotificationsPresenter.shared.present(uinotification: noti)
 					})
                 }
             } else {

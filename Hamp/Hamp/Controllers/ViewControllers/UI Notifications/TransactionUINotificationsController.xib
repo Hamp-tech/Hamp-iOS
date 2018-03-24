@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionUINotificationsController" customModule="Hamp" customModuleProvider="target">
             <connections>
+                <outlet property="notificationBottomConstraint" destination="2Pk-iO-KJt" id="ZmV-GW-4k9"/>
                 <outlet property="notificationHeightConstraint" destination="GfH-D9-kfp" id="DMz-xj-1zE"/>
                 <outlet property="tableView" destination="leB-kD-eef" id="MvU-2O-fRQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,6 +25,23 @@
                 <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="U4Q-cS-oYJ">
                     <rect key="frame" x="20" y="457" width="335" height="190"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lockers" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-Zu-YgJ">
+                            <rect key="frame" x="121" y="-46" width="92" height="92"/>
+                            <color key="backgroundColor" red="0.90588235294117647" green="0.20392156862745098" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="92" id="URa-dn-VW0"/>
+                                <constraint firstAttribute="width" constant="92" id="jUp-Ly-DiU"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podrás recoger tu pedido por la tarde de 15h a 22h en el punto de la calle Baix Penedés." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xoz-oB-SSE">
                             <rect key="frame" x="18" y="92" width="299" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -113,12 +131,14 @@
                         <constraint firstAttribute="trailing" secondItem="yvt-JK-1nL" secondAttribute="trailing" constant="18" id="E52-cL-k4R"/>
                         <constraint firstAttribute="height" constant="190" id="GfH-D9-kfp"/>
                         <constraint firstAttribute="trailing" secondItem="leB-kD-eef" secondAttribute="trailing" constant="18" id="K7E-0k-kxs"/>
+                        <constraint firstItem="kNp-Zu-YgJ" firstAttribute="top" secondItem="U4Q-cS-oYJ" secondAttribute="top" constant="-46" id="M44-cj-779"/>
                         <constraint firstItem="yfe-9E-cD6" firstAttribute="top" secondItem="U4Q-cS-oYJ" secondAttribute="top" constant="54" id="MEr-ej-sJv"/>
                         <constraint firstItem="leB-kD-eef" firstAttribute="leading" secondItem="U4Q-cS-oYJ" secondAttribute="leading" constant="18" id="ZsZ-rg-73v"/>
                         <constraint firstItem="Xoz-oB-SSE" firstAttribute="top" secondItem="yfe-9E-cD6" secondAttribute="bottom" constant="8" id="byO-EH-LB3"/>
                         <constraint firstAttribute="bottom" secondItem="leB-kD-eef" secondAttribute="bottom" constant="8" id="o4E-ph-FAC"/>
                         <constraint firstItem="leB-kD-eef" firstAttribute="top" secondItem="yvt-JK-1nL" secondAttribute="bottom" constant="8" id="qcU-Wl-Pel"/>
                         <constraint firstAttribute="trailing" secondItem="yfe-9E-cD6" secondAttribute="trailing" constant="18" id="qi1-hm-5DN"/>
+                        <constraint firstItem="kNp-Zu-YgJ" firstAttribute="centerX" secondItem="U4Q-cS-oYJ" secondAttribute="centerX" id="ukd-Bh-T2r"/>
                         <constraint firstItem="yvt-JK-1nL" firstAttribute="top" secondItem="Xoz-oB-SSE" secondAttribute="bottom" constant="8" id="wN3-fF-ImD"/>
                         <constraint firstItem="yfe-9E-cD6" firstAttribute="leading" secondItem="U4Q-cS-oYJ" secondAttribute="leading" constant="18" id="yxy-Ag-Kfd"/>
                     </constraints>
@@ -128,31 +148,11 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lockers" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-Zu-YgJ">
-                    <rect key="frame" x="141" y="412" width="92" height="92"/>
-                    <color key="backgroundColor" red="0.90588235294117647" green="0.20392156862745098" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="92" id="7nh-pd-IBe"/>
-                        <constraint firstAttribute="height" constant="92" id="i3c-kf-0KG"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="2"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="U4Q-cS-oYJ" secondAttribute="bottom" constant="20" id="2Pk-iO-KJt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U4Q-cS-oYJ" secondAttribute="trailing" constant="20" id="VmA-yQ-qTX"/>
-                <constraint firstItem="kNp-Zu-YgJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vmk-fJ-Mer"/>
                 <constraint firstItem="U4Q-cS-oYJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="agE-Ep-ENG"/>
-                <constraint firstItem="U4Q-cS-oYJ" firstAttribute="top" secondItem="kNp-Zu-YgJ" secondAttribute="bottom" constant="-47" id="w27-fr-12e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="182.5"/>

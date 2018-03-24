@@ -59,14 +59,10 @@ private extension AppDelegate {
 		
 		let storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
 		let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
-		let noti = TransactionUINotificationsController(nibName: nil, bundle: nil)
-		
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
 		window?.rootViewController = viewController
 		window?.makeKeyAndVisible()
-		
-//		NotificationsPresenter.shared.present(uinotification: noti)
 	}
 }
 

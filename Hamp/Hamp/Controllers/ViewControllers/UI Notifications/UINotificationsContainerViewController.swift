@@ -27,7 +27,6 @@ class UINotificationsContainerViewController: HampViewController {
 	
 	override func loadView() {
 		let v = UIView(frame: UIScreen.main.bounds)
-		v.backgroundColor = UIColor(white: 0, alpha: 0.6)
 		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(dismissView(sender:)))
 		v.addGestureRecognizer(tap)
@@ -42,10 +41,18 @@ class UINotificationsContainerViewController: HampViewController {
 		noti.frame = view.bounds
 		view.addSubview(noti)
 	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		notification.present(completion: nil)
+	}
 }
 
 private extension UINotificationsContainerViewController {
 	@objc private func dismissView(sender: UITapGestureRecognizer) {
-		dismiss(animated: true)
+		notification.dismiss { [unowned self] in
+			self.dismiss(animated: false)
+		}
+		
 	}
 }

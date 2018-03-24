@@ -10,4 +10,6 @@ import UIKit
 
 protocol UINotificable {
 	func notification() -> UIView
+	func present(completion: (() -> Void)?)
+	func dismiss(completion: (() -> Void)?)
 }
