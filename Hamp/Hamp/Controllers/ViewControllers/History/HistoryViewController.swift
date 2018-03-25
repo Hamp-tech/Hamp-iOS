@@ -87,7 +87,7 @@ extension HistoryViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! HistoryTableViewCell
         
-        let historyTableViewController = HistoryTableViewController.init(transaction: transactions[indexPath.row])
+        let historyTableViewController = HistoryTransactionDetailViewController.init(transaction: transactions[indexPath.row])
 //        historyDetailViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(historyTableViewController, animated: true)
     }

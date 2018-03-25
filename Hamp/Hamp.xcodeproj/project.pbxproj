@@ -17,7 +17,7 @@
 		1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */; };
 		1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
-		19573FFA2066B35F000951CF /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FF92066B35F000951CF /* HistoryTableViewController.swift */; };
+		19573FFA2066B35F000951CF /* HistoryTransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FF92066B35F000951CF /* HistoryTransactionDetailViewController.swift */; };
 		19573FFC2066B5F0000951CF /* HistoryDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFB2066B5F0000951CF /* HistoryDetailContent.swift */; };
 		19573FFE2066B670000951CF /* HistoryDetailContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFD2066B670000951CF /* HistoryDetailContentFactory.swift */; };
 		195740002066B793000951CF /* HistoryDetailCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFF2066B793000951CF /* HistoryDetailCellContent.swift */; };
@@ -209,6 +209,7 @@
 		4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */; };
 		4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
+		4EF119C3206801AB00369744 /* HistoryTransactionDetailMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */; };
 		4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */; };
 		4EF49DAF2063131F005FE22A /* UINotificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAE2063131F005FE22A /* UINotificable.swift */; };
 		4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */; };
@@ -239,7 +240,7 @@
 		1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
 		1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardTableViewCell.xib; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
-		19573FF92066B35F000951CF /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		19573FF92066B35F000951CF /* HistoryTransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailViewController.swift; sourceTree = "<group>"; };
 		19573FFB2066B5F0000951CF /* HistoryDetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailContent.swift; sourceTree = "<group>"; };
 		19573FFD2066B670000951CF /* HistoryDetailContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailContentFactory.swift; sourceTree = "<group>"; };
 		19573FFF2066B793000951CF /* HistoryDetailCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCellContent.swift; sourceTree = "<group>"; };
@@ -445,6 +446,7 @@
 		4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsProvider.swift; sourceTree = "<group>"; };
 		4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyChildViewController.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
+		4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailMapController.swift; sourceTree = "<group>"; };
 		4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
 		4EF49DAE2063131F005FE22A /* UINotificable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificable.swift; sourceTree = "<group>"; };
 		4EF49DB1206315F3005FE22A /* TransactionUINotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUINotificationsController.swift; sourceTree = "<group>"; };
@@ -518,7 +520,8 @@
 		19573FF82066B339000951CF /* NewHistory */ = {
 			isa = PBXGroup;
 			children = (
-				19573FF92066B35F000951CF /* HistoryTableViewController.swift */,
+				19573FF92066B35F000951CF /* HistoryTransactionDetailViewController.swift */,
+				4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */,
 			);
 			path = NewHistory;
 			sourceTree = "<group>";
@@ -1604,7 +1607,7 @@
 				4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */,
 				19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
-				19573FFA2066B35F000951CF /* HistoryTableViewController.swift in Sources */,
+				19573FFA2066B35F000951CF /* HistoryTransactionDetailViewController.swift in Sources */,
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
@@ -1690,6 +1693,7 @@
 				19C8EF901F7BB23300D70A07 /* OrderDescriptionCell.swift in Sources */,
 				4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */,
 				4EC2CE881F479199002439CD /* ServicesPaymentFooterView.swift in Sources */,
+				4EF119C3206801AB00369744 /* HistoryTransactionDetailMapController.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
 				4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */,
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,

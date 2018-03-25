@@ -1,5 +1,5 @@
 //
-//  HistoryTableViewController.swift
+//  HistoryTransactionDetailViewController.swift
 //  Hamp
 //
 //  Created by Aleix Baggerman on 24/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoryTableViewController: UITableViewController {
+class HistoryTransactionDetailViewController: HampTableViewController {
 
     let historyCellID = "HistoryCellID"
 
@@ -31,7 +31,7 @@ class HistoryTableViewController: UITableViewController {
     }
 }
 
-extension HistoryTableViewController {
+extension HistoryTransactionDetailViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return contentProvider.numberOfSections()
     }
