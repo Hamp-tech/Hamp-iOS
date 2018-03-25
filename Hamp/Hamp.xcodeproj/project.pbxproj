@@ -210,6 +210,10 @@
 		4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
 		4EF119C3206801AB00369744 /* HistoryTransactionDetailMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */; };
+		4EF119C520680EA800369744 /* MKMapView+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C420680EA800369744 /* MKMapView+Location.swift */; };
+		4EF119C7206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C6206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift */; };
+		4EF119CA20681C5200369744 /* HistoryTransactionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C820681C5200369744 /* HistoryTransactionDetailTableViewCell.swift */; };
+		4EF119CB20681C5200369744 /* HistoryTransactionDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF119C920681C5200369744 /* HistoryTransactionDetailTableViewCell.xib */; };
 		4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */; };
 		4EF49DAF2063131F005FE22A /* UINotificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAE2063131F005FE22A /* UINotificable.swift */; };
 		4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */; };
@@ -447,6 +451,10 @@
 		4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyChildViewController.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
 		4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailMapController.swift; sourceTree = "<group>"; };
+		4EF119C420680EA800369744 /* MKMapView+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Location.swift"; sourceTree = "<group>"; };
+		4EF119C6206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailCellConfigurator.swift; sourceTree = "<group>"; };
+		4EF119C820681C5200369744 /* HistoryTransactionDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4EF119C920681C5200369744 /* HistoryTransactionDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTransactionDetailTableViewCell.xib; sourceTree = "<group>"; };
 		4EF49DAC206311D4005FE22A /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
 		4EF49DAE2063131F005FE22A /* UINotificable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificable.swift; sourceTree = "<group>"; };
 		4EF49DB1206315F3005FE22A /* TransactionUINotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUINotificationsController.swift; sourceTree = "<group>"; };
@@ -522,6 +530,9 @@
 			children = (
 				19573FF92066B35F000951CF /* HistoryTransactionDetailViewController.swift */,
 				4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */,
+				4EF119C6206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift */,
+				4EF119C820681C5200369744 /* HistoryTransactionDetailTableViewCell.swift */,
+				4EF119C920681C5200369744 /* HistoryTransactionDetailTableViewCell.xib */,
 			);
 			path = NewHistory;
 			sourceTree = "<group>";
@@ -1263,6 +1274,7 @@
 				4E1B677920600C5E007176D5 /* UINavigationController+PopToRoot.swift */,
 				4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */,
 				4EF49DBE2063A9B5005FE22A /* UIView+Reusable.swift */,
+				4EF119C420680EA800369744 /* MKMapView+Location.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1399,6 +1411,7 @@
 				4E7253541F37BC8E006382B4 /* TabBar.storyboard in Resources */,
 				4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */,
 				4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */,
+				4EF119CB20681C5200369744 /* HistoryTransactionDetailTableViewCell.xib in Resources */,
 				4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */,
 				4EC2CE891F479199002439CD /* ServicesPaymentFooterView.xib in Resources */,
 				19B2C0DD204DD46300066209 /* LockTableViewCell.xib in Resources */,
@@ -1548,6 +1561,7 @@
 				19D3524A204E97600018F4DF /* DBPoint.swift in Sources */,
 				4EC636241F43B3080045520F /* ServicesCollectionViewController.swift in Sources */,
 				4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */,
+				4EF119CA20681C5200369744 /* HistoryTransactionDetailTableViewCell.swift in Sources */,
 				4E2305001F2FA01E000AB18C /* UITableView+Reusable.swift in Sources */,
 				4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */,
 				4EE0BA022067384000C2C5D1 /* TransactionUINotificationsController.swift in Sources */,
@@ -1559,6 +1573,7 @@
 				4ECA40741F24D4E4003F51EA /* InputTextField.swift in Sources */,
 				4E4CB7241F8C0BDA00D1DBF4 /* HampPoint.swift in Sources */,
 				4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */,
+				4EF119C7206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift in Sources */,
 				4E1B677A20600C5E007176D5 /* UINavigationController+PopToRoot.swift in Sources */,
 				4E7253601F37D982006382B4 /* SignUpContentable.swift in Sources */,
 				4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */,
@@ -1601,6 +1616,7 @@
 				19B2C0C1204BE04000066209 /* DBLocker.swift in Sources */,
 				4E2304FA1F2F9830000AB18C /* SingUpContentableCell.swift in Sources */,
 				4E22CF6F1F38FD1C00EEC314 /* UIView+Nib.swift in Sources */,
+				4EF119C520680EA800369744 /* MKMapView+Location.swift in Sources */,
 				4EBAD5C61F4B99220070CEE9 /* HistoryDetailDeliveryCodeSectionView.swift in Sources */,
 				4E22CF711F38FF5400EEC314 /* NewCreditCardViewController.swift in Sources */,
 				4ECA351E1F449B530031580B /* LaundryServicesProvider.swift in Sources */,
