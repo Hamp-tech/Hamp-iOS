@@ -17,6 +17,12 @@
 		1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */; };
 		1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */; };
 		192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192542751F8BC8920098CE79 /* StoreMapController.swift */; };
+		19573FFA2066B35F000951CF /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FF92066B35F000951CF /* HistoryTableViewController.swift */; };
+		19573FFC2066B5F0000951CF /* HistoryDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFB2066B5F0000951CF /* HistoryDetailContent.swift */; };
+		19573FFE2066B670000951CF /* HistoryDetailContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFD2066B670000951CF /* HistoryDetailContentFactory.swift */; };
+		195740002066B793000951CF /* HistoryDetailCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19573FFF2066B793000951CF /* HistoryDetailCellContent.swift */; };
+		195740022066BF0F000951CF /* HistoryDetailCellsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195740012066BF0F000951CF /* HistoryDetailCellsProvider.swift */; };
+		195740042066BF94000951CF /* HistoryDetailTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195740032066BF94000951CF /* HistoryDetailTableViewProvider.swift */; };
 		19B2C0BB204AF5B300066209 /* TransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BA204AF5B300066209 /* TransactionFactory.swift */; };
 		19B2C0BD204BDDD700066209 /* DBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BC204BDDD700066209 /* DBTransaction.swift */; };
 		19B2C0BF204BDFC600066209 /* DBBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B2C0BE204BDFC600066209 /* DBBooking.swift */; };
@@ -233,6 +239,12 @@
 		1920E79E2021DF510070AF63 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
 		1920E79F2021DF510070AF63 /* CreditCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardTableViewCell.xib; sourceTree = "<group>"; };
 		192542751F8BC8920098CE79 /* StoreMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapController.swift; sourceTree = "<group>"; };
+		19573FF92066B35F000951CF /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		19573FFB2066B5F0000951CF /* HistoryDetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailContent.swift; sourceTree = "<group>"; };
+		19573FFD2066B670000951CF /* HistoryDetailContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailContentFactory.swift; sourceTree = "<group>"; };
+		19573FFF2066B793000951CF /* HistoryDetailCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCellContent.swift; sourceTree = "<group>"; };
+		195740012066BF0F000951CF /* HistoryDetailCellsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCellsProvider.swift; sourceTree = "<group>"; };
+		195740032066BF94000951CF /* HistoryDetailTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailTableViewProvider.swift; sourceTree = "<group>"; };
 		19B2C0BA204AF5B300066209 /* TransactionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFactory.swift; sourceTree = "<group>"; };
 		19B2C0BC204BDDD700066209 /* DBTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTransaction.swift; sourceTree = "<group>"; };
 		19B2C0BE204BDFC600066209 /* DBBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBBooking.swift; sourceTree = "<group>"; };
@@ -497,6 +509,14 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
+		19573FF82066B339000951CF /* NewHistory */ = {
+			isa = PBXGroup;
+			children = (
+				19573FF92066B35F000951CF /* HistoryTableViewController.swift */,
+			);
+			path = NewHistory;
+			sourceTree = "<group>";
+		};
 		19856F9C1FD800EB00F9949A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +677,7 @@
 		4E2304F81F2F9803000AB18C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				19573FFB2066B5F0000951CF /* HistoryDetailContent.swift */,
 				19DFE02A1F89155D0091CC24 /* HampSearchBarDelegate.swift */,
 				4E2304F91F2F9830000AB18C /* SingUpContentableCell.swift */,
 				4E2304FD1F2F9FB2000AB18C /* Reusable.swift */,
@@ -670,6 +691,7 @@
 				19B2C0CC204D904200066209 /* OrderHistoryContent.swift */,
 				4EF49DAE2063131F005FE22A /* UINotificable.swift */,
 				4E10DB20206723A500770AF9 /* PushNotificationHandleable.swift */,
+				195740032066BF94000951CF /* HistoryDetailTableViewProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -688,6 +710,7 @@
 				19B2C0CE204D928D00066209 /* OrderHistoryCellContent.swift */,
 				19D35247204E968F0018F4DF /* DBLocation.swift */,
 				19D35249204E97600018F4DF /* DBPoint.swift */,
+				19573FFF2066B793000951CF /* HistoryDetailCellContent.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -796,6 +819,7 @@
 				19B2C0BA204AF5B300066209 /* TransactionFactory.swift */,
 				19B2C0D2204D94A900066209 /* OrderHistoryContentFactory.swift */,
 				19050245205D9E7F00FAB13E /* ServiceImageFactory.swift */,
+				19573FFD2066B670000951CF /* HistoryDetailContentFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -821,7 +845,7 @@
 		4E7D94E01F2384CE00C7BB4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4EF49DB020631520005FE22A /* UI Notifications */,
+				19573FF82066B339000951CF /* NewHistory */,
 				192542741F8BC8760098CE79 /* Stores */,
 				19EA7E261F7D0C1600AB7B8A /* Map */,
 				4E6D58301F4CAC2600113636 /* Rating */,
@@ -1164,6 +1188,7 @@
 				191B77FB1F9A6ADE0048C465 /* ProfileInfoProvider.swift */,
 				19B2C0D0204D940500066209 /* OrderHistoryContentProvider.swift */,
 				19B2C0D6204D9E1F00066209 /* OrderHistoryTableProvider.swift */,
+				195740012066BF0F000951CF /* HistoryDetailCellsProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -1523,6 +1548,7 @@
 				4E965C3E1F693DCA00AF61E8 /* UINavigationController+transparentBar.swift in Sources */,
 				19B2C0D5204D9BBD00066209 /* RealmList + Array.swift in Sources */,
 				4ECA35181F44660B0031580B /* ServicesCollectionViewCell.swift in Sources */,
+				19573FFE2066B670000951CF /* HistoryDetailContentFactory.swift in Sources */,
 				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
 				1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
@@ -1555,6 +1581,7 @@
 				4EB242DB1F45C271006F3BA7 /* Service.swift in Sources */,
 				19C8EF8B1F7BA60100D70A07 /* OrderController.swift in Sources */,
 				4ECA40701F24BD96003F51EA /* LogoTitleBaseViewController.swift in Sources */,
+				19573FFA2066B35F000951CF /* HistoryTableViewController.swift in Sources */,
 				4E22CF6D1F38F9DD00EEC314 /* CreditCardUIController.swift in Sources */,
 				4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */,
 				4E72535E1F37D535006382B4 /* SignUpCellFactory.swift in Sources */,
@@ -1569,8 +1596,10 @@
 				4E47866F1F30DA7C007ABE00 /* ValidationManager.swift in Sources */,
 				4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */,
 				4ECFAFCA1F2534BD005FDF05 /* UIImage+Color.swift in Sources */,
+				195740002066B793000951CF /* HistoryDetailCellContent.swift in Sources */,
 				4E7DD5D12055F2A1000C8F18 /* Logger.swift in Sources */,
 				4EDED5461F8CB7D50073DD74 /* StoresViewController.swift in Sources */,
+				195740022066BF0F000951CF /* HistoryDetailCellsProvider.swift in Sources */,
 				192542761F8BC8920098CE79 /* StoreMapController.swift in Sources */,
 				4E56D9121F2DFE5100736ABB /* UIFont+Custom.swift in Sources */,
 				4E4786711F30DAB1007ABE00 /* Validation.swift in Sources */,
@@ -1588,6 +1617,7 @@
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,
 				4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */,
 				19C8EF921F7C2FB400D70A07 /* DescriptionImageCell.swift in Sources */,
+				195740042066BF94000951CF /* HistoryDetailTableViewProvider.swift in Sources */,
 				4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */,
 				4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */,
 				4E72535C1F37CF33006382B4 /* SignUpBaseTableViewCell.swift in Sources */,
@@ -1621,6 +1651,7 @@
 				4EDCFCFC1F451E9300EAE4E4 /* AmountSelectionView.swift in Sources */,
 				19DB93911F9D1D5400742168 /* ProfileTableProvider.swift in Sources */,
 				4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */,
+				19573FFC2066B5F0000951CF /* HistoryDetailContent.swift in Sources */,
 				19D35248204E968F0018F4DF /* DBLocation.swift in Sources */,
 				19DB93991F9E83FA00742168 /* ProfileTableViewDelegate.swift in Sources */,
 				4ECA351C1F4498640031580B /* OrderableService.swift in Sources */,

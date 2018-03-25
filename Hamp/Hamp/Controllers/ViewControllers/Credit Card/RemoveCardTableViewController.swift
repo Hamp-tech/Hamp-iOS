@@ -47,7 +47,9 @@ class RemoveCardTableViewController: HampTableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             creditCardProvider.deleteCreditCardAt(index: indexPath.row, onSucced: { [unowned self] in
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                DispatchQueue.main.async {
+                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
             })
         }
     }
