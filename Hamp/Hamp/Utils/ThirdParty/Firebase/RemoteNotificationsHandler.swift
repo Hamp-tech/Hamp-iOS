@@ -32,7 +32,25 @@ extension RemoteNotificationsHandler {
 	
 	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 		Logger.d(userInfo)
-		completionHandler(.noData)
+		
+		let parsed = parsePushNotification(userInfo: userInfo)
+		
+		guard let action = parsed.action, let content = parsed.content else {
+			completionHandler(.noData)
+			return
+		}
+		
+		switch application.applicationState {
+		case .active:
+			PushNotificationsHandler.executeTask(by: action, content: content) {
+				NotificationsPresenter.shared.show()
+			}
+		default:
+			break
+		}
+		
+		
+		completionHandler(.newData)
 	}
 	
 	func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -48,7 +66,9 @@ private extension RemoteNotificationsHandler {
 		let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
 		UNUserNotificationCenter.current().requestAuthorization(
 			options: authOptions,
-			completionHandler: {_, _ in })
+			completionHandler: { granted, _ in
+				guard granted else { return }
+		})
 		
 		UIApplication.shared.registerForRemoteNotifications()
 	}
@@ -56,8 +76,33 @@ private extension RemoteNotificationsHandler {
 
 extension RemoteNotificationsHandler: UNUserNotificationCenterDelegate {
 	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-		print("Push received: \(response.notification.request.content.body)")
+		Logger.d(response.notification.request.content.userInfo)
+		
+		let parsed = parsePushNotification(userInfo: response.notification.request.content.userInfo)
+		
+		if let action = parsed.action, let content = parsed.content {
+			PushNotificationsHandler.executeTask(by: action, content: content) {
+				NotificationsPresenter.shared.show()
+			}
+		}
+		
+		
 		completionHandler()
+	}
+	
+	private func parsePushNotification(userInfo: [AnyHashable: Any]) -> (action: String?, content: [String: Any]?) {
+		guard let aps = userInfo["aps"] as? [String: Any], let action = aps["category"] as? String else {
+			return (nil, nil)
+		}
+		
+		guard
+			let pushData = userInfo["gcm.notification.data"] as? String,
+			let data = pushData.data(using: .utf8),
+			let content = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+				return (action, nil)
+		}
+		
+		return (action, content)
 	}
 }
 
@@ -72,7 +117,6 @@ extension RemoteNotificationsHandler: MessagingDelegate {
                 Logger.d(response)
             }
         }
-        
 	}
 	
 	func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {

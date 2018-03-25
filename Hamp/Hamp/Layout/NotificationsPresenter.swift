@@ -13,6 +13,7 @@ class NotificationsPresenter {
 	static let shared = NotificationsPresenter()
 	
 	// MARK: - Properties
+	private var notificationsEnqueued: [UINotificable] = []
 	private var topViewController: UIViewController? {
 		get {
 			return UIApplication.topViewController()
@@ -24,6 +25,16 @@ class NotificationsPresenter {
 		let vc = UINotificationsContainerViewController(notification: uinotification)
 		
 		topViewController.present(vc, animated: false)
-		
+	}
+	
+	func enqueu(uinotification: UINotificable) {
+		notificationsEnqueued.append(uinotification)
+	}
+	
+	func show() {
+		let first = notificationsEnqueued.first
+		guard let noti = first else { return }
+		present(uinotification: noti)
+		notificationsEnqueued.removeFirst()
 	}
 }

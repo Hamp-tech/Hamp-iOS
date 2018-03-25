@@ -71,6 +71,9 @@
 		4E08EBF71F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */; };
 		4E08EBF81F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */; };
 		4E08EBFA1F2F9336007C0DFF /* SignUpCellContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */; };
+		4E10DB1F2067226100770AF9 /* PushNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10DB1E2067226100770AF9 /* PushNotificationsHandler.swift */; };
+		4E10DB21206723A500770AF9 /* PushNotificationHandleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10DB20206723A500770AF9 /* PushNotificationHandleable.swift */; };
+		4E10DB23206723BB00770AF9 /* TransactionPushNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10DB22206723BB00770AF9 /* TransactionPushNotificationHandler.swift */; };
 		4E1680BA1F390ED900EF83A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */; };
 		4E1908681F46FDC30036EC87 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */; };
 		4E19086A1F47021E0036EC87 /* VerticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */; };
@@ -286,6 +289,9 @@
 		4E08EBF51F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		4E08EBF61F2F87C2007C0DFF /* SignUpTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		4E08EBF91F2F9336007C0DFF /* SignUpCellContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCellContentFactory.swift; sourceTree = "<group>"; };
+		4E10DB1E2067226100770AF9 /* PushNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsHandler.swift; sourceTree = "<group>"; };
+		4E10DB20206723A500770AF9 /* PushNotificationHandleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationHandleable.swift; sourceTree = "<group>"; };
+		4E10DB22206723BB00770AF9 /* TransactionPushNotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPushNotificationHandler.swift; sourceTree = "<group>"; };
 		4E1680B91F390ED900EF83A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		4E1908671F46FDC30036EC87 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		4E1908691F47021E0036EC87 /* VerticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGradientLayer.swift; sourceTree = "<group>"; };
@@ -663,6 +669,7 @@
 				19DB93901F9D1D5400742168 /* ProfileTableProvider.swift */,
 				19B2C0CC204D904200066209 /* OrderHistoryContent.swift */,
 				4EF49DAE2063131F005FE22A /* UINotificable.swift */,
+				4E10DB20206723A500770AF9 /* PushNotificationHandleable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -846,6 +853,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7DD5CD2055EF1B000C8F18 /* RemoteNotificationsHandler.swift */,
+				4E10DB1E2067226100770AF9 /* PushNotificationsHandler.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -1132,6 +1140,7 @@
 				4E2304F81F2F9803000AB18C /* Protocols */,
 				4E2BB6711F3132A0002DD4EE /* Contents */,
 				4E4CB7231F8C0BDA00D1DBF4 /* HampPoint.swift */,
+				4E10DB22206723BB00770AF9 /* TransactionPushNotificationHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1470,6 +1479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B2C0C9204BEEDC00066209 /* HampDataManager.swift in Sources */,
+				4E10DB1F2067226100770AF9 /* PushNotificationsHandler.swift in Sources */,
 				4EF49DB3206315F3005FE22A /* TransactionUINotificationsController.swift in Sources */,
 				4E7DF3C41F54C93800C1A180 /* BasketButton.swift in Sources */,
 				19050246205D9E7F00FAB13E /* ServiceImageFactory.swift in Sources */,
@@ -1516,6 +1526,7 @@
 				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
 				1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
+				4E10DB21206723A500770AF9 /* PushNotificationHandleable.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
 				4E2304FE1F2F9FB2000AB18C /* Reusable.swift in Sources */,
 				4E4CB72A1F8C0D5B00D1DBF4 /* StaticPointsProvider.swift in Sources */,
@@ -1571,6 +1582,7 @@
 				19B2C0D9204D9FEC00066209 /* OrderCollectionViewCell.swift in Sources */,
 				4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */,
 				4E4D70942055B530009EB415 /* GMDatePicker.swift in Sources */,
+				4E10DB23206723BB00770AF9 /* TransactionPushNotificationHandler.swift in Sources */,
 				4EDF102B1F237D4E007E15E9 /* HorizontalGradientLayer.swift in Sources */,
 				19DFE0291F8913CE0091CC24 /* HampSearchBarView.swift in Sources */,
 				4E05933F1F37E1E9008A3B46 /* UIView+Corner.swift in Sources */,

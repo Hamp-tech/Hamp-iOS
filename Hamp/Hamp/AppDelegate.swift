@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		showMainViewController()
 		
+		application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+		
 		return true
 	}
 	
@@ -39,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 		remoteNotificationsHandler.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+	}
+	
+	func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+		Logger.d("Hey")
 	}
 }
 
