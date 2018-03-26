@@ -15,4 +15,13 @@ extension List {
             $0 as! T
         })
     }
+    
+    convenience init(elements: [Element]) {
+        self.init()
+        elements.forEach(add)
+    }
+    
+    private func add(element: Element) {
+        append(element)
+    }
 }
