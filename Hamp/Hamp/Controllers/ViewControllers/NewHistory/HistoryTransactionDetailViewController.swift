@@ -11,7 +11,6 @@ import UIKit
 class HistoryTransactionDetailViewController: HampTableViewController {
 
 	// MARK: - Properties
-	private var mapViewController: MapController!
     private var contentProvider: HistoryDetailTableViewProvider!
 	private var transaction: DBTransaction!
 	private var configurator = HistoryTransactionDetailCellConfigurator()
@@ -20,8 +19,7 @@ class HistoryTransactionDetailViewController: HampTableViewController {
     init (transaction: DBTransaction) {
         super.init(style: .grouped)
 		self.transaction = transaction
-        contentProvider = HistoryDetailCellsProvider.init(transaction: transaction)
-        mapViewController = MapController (point: transaction.booking!.point!)
+        contentProvider = HistoryDetailCellsProvider(transaction: transaction)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -43,10 +43,11 @@ struct HistoryDetailContentFactory {
             HistoryDetailCellContent.init(title: "Calle", detail: point.address),
             HistoryDetailCellContent.init(title: "Pueblo", detail: point.city)
         ]
+        
         if deliveryLockers.isEmpty {
             return [detalles,servicios, pickUpLockers, direccion]
         }
+        
         return [detalles,servicios,pickUpLockers, deliveryLockers, direccion]
     }
-    
 }

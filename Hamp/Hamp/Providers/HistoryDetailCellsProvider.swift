@@ -8,17 +8,28 @@
 
 import Foundation
 
-struct HistoryDetailCellsProvider: HistoryDetailTableViewProvider {
+class HistoryDetailCellsProvider: HistoryDetailTableViewProvider {
     
-    var content: [[HistoryDetailContent]]!
-    var sectionTitles = ["Detalles", "Servicios", "Taquillas de entrega", "Taquillas de recogida", "Direccion"]
+    // MARK: - Properties
+    private var content: [[HistoryDetailContent]]!
+    private lazy var sectionTitles: [String] = {
+        var sectionTitles = ["Detalles", "Servicios", "Taquillas de entrega", "Direccion"]
+        if let lockers = transaction.booking?.deliveryLockers, !lockers.isEmpty {
+            sectionTitles.insert("Taquillas de recogida", at: 3)
+        }
+        
+        return sectionTitles
+    }()
+    private var transaction: DBTransaction
     
+    // MARK: - Life cycle
     init (transaction: DBTransaction) {
         content = HistoryDetailContentFactory.createCellsContent(transaction: transaction)
-        if content.count < sectionTitles.count {
-            sectionTitles.remove(at: 3)
-        }
+        
+        self.transaction = transaction
     }
+    
+    // MARK: - API
     func numberOfSections() -> Int {
         return content.count
     }
@@ -34,7 +45,4 @@ struct HistoryDetailCellsProvider: HistoryDetailTableViewProvider {
     func getSectionTitle(section: Int) -> String {
         return sectionTitles[section]
     }
-    
-    
-    
 }
