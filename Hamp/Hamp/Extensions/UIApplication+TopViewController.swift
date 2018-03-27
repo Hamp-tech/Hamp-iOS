@@ -16,6 +16,7 @@ extension UIApplication {
 		if let tabController = controller as? UITabBarController {
 			return tabController
 		}
+        
 		if let presented = controller?.presentedViewController {
 			return topViewController(controller: presented)
 		}
