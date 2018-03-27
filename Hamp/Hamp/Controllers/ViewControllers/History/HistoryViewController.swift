@@ -34,6 +34,7 @@ class HistoryViewController: HampTableViewController {
             for result in results {
                 trans.append(result as! DBTransaction)
             }
+            trans.reverse()
             self.transactions = trans
             self.setupTableView()
             self.tableView.reloadData()

@@ -212,15 +212,15 @@ private extension SignInViewController {
     @objc func keyboardWillHide(sender: Notification) {
         moveToolBar(sender: sender, toTop: false)
     }
-    
+
     func moveToolBar(sender: Notification, toTop: Bool) {
-        if let keyboardSize = sender.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? CGRect {
+        if let keyboardSize = (sender.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size {
             let duration = sender.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0.5
             optionsToolbarBottomContraint.constant = toTop ? -keyboardSize.height : 0
-            UIView.animate(withDuration: duration, animations: {
-                self.view.layoutIfNeeded()
-            })
-            
+            self.view.layoutIfNeeded()
+//            UIView.animate(withDuration: duration, animations: {
+//                self.view.layoutIfNeeded()
+//            })
         }
     }
 }
