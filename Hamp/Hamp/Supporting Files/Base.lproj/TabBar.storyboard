@@ -85,37 +85,6 @@
             </objects>
             <point key="canvasLocation" x="6654" y="1320"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="RNB-ED-gn1">
-            <objects>
-                <viewController id="LFG-OQ-zzn" customClass="ProfileController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="j0h-Dl-HeK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="up5-iz-Mtj">
-                                <rect key="frame" x="0.0" y="88" width="320" height="431"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="up5-iz-Mtj" firstAttribute="leading" secondItem="wse-Ky-i8X" secondAttribute="leading" id="1yn-6Q-dfT"/>
-                            <constraint firstItem="up5-iz-Mtj" firstAttribute="bottom" secondItem="wse-Ky-i8X" secondAttribute="bottom" id="36p-lS-qAw"/>
-                            <constraint firstItem="up5-iz-Mtj" firstAttribute="top" secondItem="wse-Ky-i8X" secondAttribute="top" constant="24" id="Yb4-a1-97Y"/>
-                            <constraint firstItem="up5-iz-Mtj" firstAttribute="trailing" secondItem="wse-Ky-i8X" secondAttribute="trailing" id="yjc-2P-kSa"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wse-Ky-i8X"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="always" id="kUO-hn-wil"/>
-                    <connections>
-                        <outlet property="tableView" destination="up5-iz-Mtj" id="Gwc-YE-ViP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bZb-qH-VDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3991.875" y="2066.1971830985917"/>
-        </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yv6-QR-zeN">
             <objects>
@@ -755,12 +724,41 @@ Lorem Ipsum.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="LFG-OQ-zzn" kind="relationship" relationship="rootViewController" id="Y76-zO-2Dt"/>
+                        <segue destination="MgY-pG-lUB" kind="relationship" relationship="rootViewController" id="ARj-yP-P8F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-R4-wYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3204" y="2067"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="Dhh-33-nOh">
+            <objects>
+                <tableViewController id="MgY-pG-lUB" customClass="ProfileTableViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Wnt-XU-7Fd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zSh-V3-QZg">
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zSh-V3-QZg" id="oJg-BO-1qL">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MgY-pG-lUB" id="3K0-xh-CWz"/>
+                            <outlet property="delegate" destination="MgY-pG-lUB" id="WDz-r0-PmD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Perfil" id="4ak-8u-Ht5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNg-hW-Bw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992" y="2066"/>
         </scene>
         <!--Map Controller-->
         <scene sceneID="Qen-JE-KfY">
