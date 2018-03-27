@@ -215,12 +215,8 @@ private extension SignInViewController {
 
     func moveToolBar(sender: Notification, toTop: Bool) {
         if let keyboardSize = (sender.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size {
-            let duration = sender.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0.5
             optionsToolbarBottomContraint.constant = toTop ? -keyboardSize.height : 0
             self.view.layoutIfNeeded()
-//            UIView.animate(withDuration: duration, animations: {
-//                self.view.layoutIfNeeded()
-//            })
         }
     }
 }

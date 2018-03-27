@@ -25,7 +25,6 @@ class HistoryViewController: HampTableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getTransactionsFromProvider ()
-        self.tableView.reloadData()
     }
     
     private func getTransactionsFromProvider () {
@@ -37,6 +36,7 @@ class HistoryViewController: HampTableViewController {
             trans.reverse()
             self.transactions = trans
             self.setupTableView()
+            print(self.transactions)
             self.tableView.reloadData()
         }
     }
@@ -94,6 +94,7 @@ extension HistoryViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
         return cellSizeCalculator.height(by: transactions [indexPath.row].booking!)
     }
 }

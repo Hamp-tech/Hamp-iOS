@@ -20,21 +20,10 @@ class HistoryTableViewCell: UITableViewCell {
     // MARK: - Properties
     var transaction: DBTransaction! {
         didSet {
-            if let oldTransaction = oldValue {
-                if oldTransaction.identifier != transaction.identifier {
-                    booking = transaction.booking!
-                }
-            } else {
-                booking = transaction.booking!
-            }
+            booking = transaction.booking!
         }
     }
-    
-    private var booking: DBBooking! {
-        didSet {
-            createServicesHiredSubviews()
-        }
-    }
+    private var booking: DBBooking!
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -44,11 +33,15 @@ class HistoryTableViewCell: UITableViewCell {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
+        if servicesHiredStackView.arrangedSubviews.isEmpty {
+            createServicesHiredSubviews()
+            setupLeftSeparator()
+        }
+        self.contentView.backgroundColor = .red
+
         dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate)
         priceLabel.text = "\(Int.init(booking.price))€"
         
-        setupLeftSeparator()
     }
 }
 
