@@ -11,19 +11,22 @@ import Foundation
 class ProfileDataProvider: ProfileDataProvidable {
 	
 	// MARK: - Properties
+	private let sections = ProfileSectionFactory.all()
 	
 	// MARK: - API
 	func numberOfSections() -> Int {
-		return 3
+		return sections.count
 	}
 	
-	func numberOfRows() -> Int {
-		return 3
+	func numberOfRows(at section: Int) -> Int {
+		return sections[section].contents.count
 	}
 	
-	func content(at indexPath: IndexPath) -> [ProfileCellContent] {
-		assert(false)
+	func title(at section: Int) -> String? {
+		return sections[section].title
 	}
 	
-	
+	func content(at indexPath: IndexPath) -> ProfileCellContent {
+		return sections[indexPath.section].contents[indexPath.row]
+	}
 }

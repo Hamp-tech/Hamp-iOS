@@ -17,23 +17,44 @@ class ProfileTableViewController: HampTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+		tableView.register(ProfileTableViewCell.nib, forCellReuseIdentifier: ProfileTableViewCell.reuseIdentifier)
+		tableView.tableFooterView = tableFooterView()
     }
+}
 
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return provider.numberOfSections()
-    }
+extension ProfileTableViewController {
+	
+	// MARK: - Table view data source
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		return provider.numberOfSections()
+	}
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return provider.numberOfRows(at: section)
+	}
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.reuseIdentifier, for: indexPath)
+		
+		cell.textLabel?.text = provider.content(at: indexPath).title
+		
+		return cell
+	}
+	
+	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		return provider.title(at: section)
+	}
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return provider.numberOfRows()
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
-
-        cell.textLabel?.text = "\(indexPath.row)"
-
-        return cell
-    }
+private extension ProfileTableViewController {
+	func tableFooterView() -> UIView {
+		let b = UIButton(type: .roundedRect)
+		b.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
+		b.setTitle("Cerrar sesión", for: .normal)
+		b.setTitleColor(.red, for: .normal)
+		b.backgroundColor = .white
+		b.titleLabel?.textAlignment = .center
+		
+		return b
+	}
 }

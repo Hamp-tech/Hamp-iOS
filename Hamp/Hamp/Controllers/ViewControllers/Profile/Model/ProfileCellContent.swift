@@ -12,11 +12,11 @@ class ProfileCellContent {
 	
 	// MARK: - Properties
 	let title: String
-	var value: String
+	var value: String?
 	var isEdited: Bool = false
 	
 	// MARK: - Life cycle
-	init(title: String, value: String) {
+	init(title: String, value: String? = nil) {
 		self.title = title
 		self.value = value
 	}

@@ -145,6 +145,9 @@
 		4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7DF3C11F54C8ED00C1A180 /* VerticalGradientButton.swift */; };
 		4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */; };
 		4E7E32F41F41F29C009C0099 /* FirstTimeActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */; };
+		4E7F996C206BA66E00E3D4EF /* ProfileSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F996B206BA66E00E3D4EF /* ProfileSectionFactory.swift */; };
+		4E7F9970206BAC1D00E3D4EF /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F996E206BAC1D00E3D4EF /* ProfileTableViewCell.swift */; };
+		4E7F9971206BAC1D00E3D4EF /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7F996F206BAC1D00E3D4EF /* ProfileTableViewCell.xib */; };
 		4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */; };
 		4E871D151F4AF3230028DA0D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */; };
 		4E871D161F4AF3230028DA0D /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */; };
@@ -382,6 +385,9 @@
 		4E7DF3C31F54C8ED00C1A180 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4E7E32F31F41F29C009C0099 /* FirstTimeActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeActionsManager.swift; sourceTree = "<group>"; };
+		4E7F996B206BA66E00E3D4EF /* ProfileSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionFactory.swift; sourceTree = "<group>"; };
+		4E7F996E206BAC1D00E3D4EF /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		4E7F996F206BAC1D00E3D4EF /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		4E871D0E1F4AEF910028DA0D /* HampTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampTableViewController.swift; sourceTree = "<group>"; };
 		4E871D131F4AF3230028DA0D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4E871D141F4AF3230028DA0D /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -608,6 +614,8 @@
 		19EA7E221F7CEEC600AB7B8A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4E7F996D206BAC0D00E3D4EF /* View */,
+				4E7F996A206BA64B00E3D4EF /* Factory */,
 				4ED0FDF3206AC9D6006CA14B /* Provider */,
 				4ED0FDEE206AC8F7006CA14B /* Model */,
 				19DB939A1F9F071800742168 /* ProfileCellsID.swift */,
@@ -936,6 +944,23 @@
 				4E7E32F11F41F233009C0099 /* MainTabBarViewController.swift */,
 			);
 			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
+		4E7F996A206BA64B00E3D4EF /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				4E7F996B206BA66E00E3D4EF /* ProfileSectionFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		4E7F996D206BAC0D00E3D4EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E7F996E206BAC1D00E3D4EF /* ProfileTableViewCell.swift */,
+				4E7F996F206BAC1D00E3D4EF /* ProfileTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4E871D101F4AF2D70028DA0D /* History */ = {
@@ -1439,6 +1464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E2E2F501F3A460A0063E466 /* CreditCardUIController.xib in Resources */,
+				4E7F9971206BAC1D00E3D4EF /* ProfileTableViewCell.xib in Resources */,
 				4E7253541F37BC8E006382B4 /* TabBar.storyboard in Resources */,
 				4ECA35191F44660B0031580B /* ServicesCollectionViewCell.xib in Resources */,
 				4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */,
@@ -1581,6 +1607,7 @@
 				4E7DF3C71F54C93800C1A180 /* HorizontalCircleGradientButton.swift in Sources */,
 				19DB93971F9E42A000742168 /* ProfileCell.swift in Sources */,
 				19B2C0CF204D928D00066209 /* OrderHistoryCellContent.swift in Sources */,
+				4E7F9970206BAC1D00E3D4EF /* ProfileTableViewCell.swift in Sources */,
 				4E7DF3C81F54C93800C1A180 /* HorizontalGradientButton.swift in Sources */,
 				4E7DF3C91F54C93800C1A180 /* VerticalGradientButton.swift in Sources */,
 				4ED0FDF7206ACA8B006CA14B /* ProfileDataProvidable.swift in Sources */,
@@ -1625,6 +1652,7 @@
 				19573FFE2066B670000951CF /* HistoryDetailContentFactory.swift in Sources */,
 				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
 				1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */,
+				4E7F996C206BA66E00E3D4EF /* ProfileSectionFactory.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E10DB21206723A500770AF9 /* PushNotificationHandleable.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,

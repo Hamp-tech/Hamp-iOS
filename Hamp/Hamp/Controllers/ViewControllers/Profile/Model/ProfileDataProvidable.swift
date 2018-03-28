@@ -10,6 +10,7 @@ import Foundation
 
 protocol ProfileDataProvidable {
 	func numberOfSections() -> Int
-	func numberOfRows() -> Int
-	func content(at indexPath: IndexPath) -> [ProfileCellContent]
+	func numberOfRows(at section: Int) -> Int
+	func title(at section: Int) -> String?
+	func content(at indexPath: IndexPath) -> ProfileCellContent
 }
