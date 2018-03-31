@@ -229,6 +229,12 @@
 		4EF5A24E206FA87100BD7223 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A24D206FA87100BD7223 /* Navigator.swift */; };
 		4EF5A250206FB2A000BD7223 /* Navigable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A24F206FB2A000BD7223 /* Navigable.swift */; };
 		4EF5A255206FD70E00BD7223 /* UserDetailNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */; };
+		4EF5A258206FDD6600BD7223 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A257206FDD6600BD7223 /* UserDetailTableViewController.swift */; };
+		4EF5A25B206FDDD200BD7223 /* UserDetailDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A25A206FDDD200BD7223 /* UserDetailDataProvider.swift */; };
+		4EF5A25D206FDE5500BD7223 /* UserDetailContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A25C206FDE5500BD7223 /* UserDetailContentFactory.swift */; };
+		4EF5A260206FE2A800BD7223 /* UserDetailTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */; };
+		4EF5A261206FE2A800BD7223 /* UserDetailTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */; };
+		4EF5A263206FE6AD00BD7223 /* UserDetailCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */; };
 		4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */; };
 		4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -487,6 +493,12 @@
 		4EF5A24D206FA87100BD7223 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		4EF5A24F206FB2A000BD7223 /* Navigable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
 		4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailNavigation.swift; sourceTree = "<group>"; };
+		4EF5A257206FDD6600BD7223 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
+		4EF5A25A206FDDD200BD7223 /* UserDetailDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDataProvider.swift; sourceTree = "<group>"; };
+		4EF5A25C206FDE5500BD7223 /* UserDetailContentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailContentFactory.swift; sourceTree = "<group>"; };
+		4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTextFieldCell.swift; sourceTree = "<group>"; };
+		4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailTextFieldCell.xib; sourceTree = "<group>"; };
+		4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCellConfigurator.swift; sourceTree = "<group>"; };
 		4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
@@ -620,6 +632,7 @@
 		19EA7E221F7CEEC600AB7B8A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4EF5A256206FDD0800BD7223 /* Sections */,
 				4EF5A253206FBF4900BD7223 /* Navigator */,
 				4E7F996D206BAC0D00E3D4EF /* View */,
 				4E7F996A206BA64B00E3D4EF /* Factory */,
@@ -1360,6 +1373,27 @@
 			path = Navigator;
 			sourceTree = "<group>";
 		};
+		4EF5A256206FDD0800BD7223 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5A259206FDD7000BD7223 /* User detail */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		4EF5A259206FDD7000BD7223 /* User detail */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5A257206FDD6600BD7223 /* UserDetailTableViewController.swift */,
+				4EF5A25A206FDDD200BD7223 /* UserDetailDataProvider.swift */,
+				4EF5A25C206FDE5500BD7223 /* UserDetailContentFactory.swift */,
+				4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */,
+				4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */,
+				4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */,
+			);
+			path = "User detail";
+			sourceTree = "<group>";
+		};
 		51541EF23E41448D2B691C0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1495,6 +1529,7 @@
 				4ECFFAA21F30BE790043D4B5 /* Login.storyboard in Resources */,
 				4EF119CB20681C5200369744 /* HistoryTransactionDetailTableViewCell.xib in Resources */,
 				4E901D2D1F461A490079696D /* ServicesOrderCollectionViewCell.xib in Resources */,
+				4EF5A261206FE2A800BD7223 /* UserDetailTextFieldCell.xib in Resources */,
 				4EC2CE891F479199002439CD /* ServicesPaymentFooterView.xib in Resources */,
 				19B2C0DD204DD46300066209 /* LockTableViewCell.xib in Resources */,
 				4ECFFAAD1F30C0FF0043D4B5 /* Localizable.strings in Resources */,
@@ -1742,6 +1777,7 @@
 				4EC0BD2F1F4C443A0077DD92 /* TutorialViewController.swift in Sources */,
 				4ED0FDF5206ACA71006CA14B /* ProfileDataProvider.swift in Sources */,
 				19B2C0D9204D9FEC00066209 /* OrderCollectionViewCell.swift in Sources */,
+				4EF5A258206FDD6600BD7223 /* UserDetailTableViewController.swift in Sources */,
 				4EF49DAD206311D4005FE22A /* NotificationsPresenter.swift in Sources */,
 				4E4D70942055B530009EB415 /* GMDatePicker.swift in Sources */,
 				4E10DB23206723BB00770AF9 /* TransactionPushNotificationHandler.swift in Sources */,
@@ -1768,7 +1804,9 @@
 				191B77FC1F9A6ADE0048C465 /* ProfileInfoProvider.swift in Sources */,
 				19C8EF751F7A754B00D70A07 /* ProfileTextField.swift in Sources */,
 				4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */,
+				4EF5A25D206FDE5500BD7223 /* UserDetailContentFactory.swift in Sources */,
 				19B2C0BF204BDFC600066209 /* DBBooking.swift in Sources */,
+				4EF5A260206FE2A800BD7223 /* UserDetailTextFieldCell.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */,
 				4EF49DBF2063A9B5005FE22A /* UIView+Reusable.swift in Sources */,
@@ -1789,12 +1827,14 @@
 				1920E7A02021DF510070AF63 /* CreditCardTableViewCell.swift in Sources */,
 				4E9B1EBE1F6AC2ED00BFA88C /* PulleyPassthroughScrollView.swift in Sources */,
 				4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */,
+				4EF5A25B206FDDD200BD7223 /* UserDetailDataProvider.swift in Sources */,
 				19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */,
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
 				4E965C3C1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift in Sources */,
 				19B2C0CD204D904200066209 /* OrderHistoryContent.swift in Sources */,
 				19EA7E281F7D0C2900AB7B8A /* MapController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,
+				4EF5A263206FE6AD00BD7223 /* UserDetailCellConfigurator.swift in Sources */,
 				4ECA35201F449C230031580B /* OrderService.swift in Sources */,
 				4E871D181F4AF8D50028DA0D /* CircleView.swift in Sources */,
 				19C8EF901F7BB23300D70A07 /* OrderDescriptionCell.swift in Sources */,

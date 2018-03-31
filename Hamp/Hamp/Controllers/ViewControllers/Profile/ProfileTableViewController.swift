@@ -23,7 +23,7 @@ class ProfileTableViewController: HampTableViewController {
 		tableView.register(ProfileTableViewCell.nib, forCellReuseIdentifier: ProfileTableViewCell.reuseIdentifier)
 		tableView.tableFooterView = tableFooterView()
 		
-		
+		tableView.rowHeight = 44
     }
 }
 
@@ -42,7 +42,6 @@ extension ProfileTableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.reuseIdentifier, for: indexPath)
 		
 		cell.textLabel?.text = provider.content(at: indexPath).title
-		
 		return cell
 	}
 	

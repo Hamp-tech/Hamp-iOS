@@ -12,9 +12,7 @@ class UserDetailNavigation: Navigable {
 	// MARK: - Protocol
 	
 	func navigate(on rootViewController: UIViewController) {
-		let vc = UIViewController()
-		vc.view.backgroundColor = UIColor.white
-		
+		let vc = UserDetailTableViewController()
 		rootViewController.navigationController?.pushViewController(vc, animated: true)
 	}
 	

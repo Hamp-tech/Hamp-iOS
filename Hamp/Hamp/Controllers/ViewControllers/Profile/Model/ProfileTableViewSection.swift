@@ -11,11 +11,11 @@ import Foundation
 class ProfileTableViewSection {
 
 	// MARK: - Properties
-	let title: String
+	let title: String?
 	let contents: [ProfileCellContent]
 	
 	// MARK: - Life cycle
-	init(title: String, contents: [ProfileCellContent]) {
+	init(title: String? = nil, contents: [ProfileCellContent]) {
 		self.title = title
 		self.contents = contents
 	}
