@@ -29,4 +29,10 @@ struct UserDetailDataProvider: ProfileDataProvidable {
 	func content(at indexPath: IndexPath) -> ProfileCellContent {
 		return sections[indexPath.section].contents[indexPath.row]
 	}
+	
+	func modifiedContents() -> Set<ProfileCellContent> {
+		var set = Set<ProfileCellContent>()
+		sections.forEach{$0.contents.filter{$0.isEdited}.forEach{set.insert($0)}}
+		return set
+	}
 }

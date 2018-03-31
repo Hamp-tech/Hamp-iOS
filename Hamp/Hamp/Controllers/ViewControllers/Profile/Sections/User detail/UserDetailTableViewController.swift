@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HampKit
 
 class UserDetailTableViewController: HampTableViewController {
 
@@ -48,6 +49,7 @@ extension UserDetailTableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: UserDetailTextFieldCell.reuseIdentifier, for: indexPath) as! UserDetailTextFieldCell
+		cell.delegate = self
 		
 		let content = provider.content(at: indexPath)
 		cellConfigurator.configure(cell: cell, content: content)
@@ -62,6 +64,16 @@ extension UserDetailTableViewController {
 	}
 }
 
+
+extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
+	func valueDidChange(on cell: UserDetailTextFieldCell, value: Any?) {
+		let indexPath = tableView.indexPath(for: cell)!
+		let content = provider.content(at: indexPath)
+		content.value = value as? String
+		content.isEdited = true
+	}
+}
+
 private extension UserDetailTableViewController {
 	@objc func editWasPressed(sender: UIBarButtonItem) {
 		isEditing = !isEditing
@@ -72,7 +84,24 @@ private extension UserDetailTableViewController {
 			cell.textField.becomeFirstResponder()
 			sender.title = "Guardar"
 		} else {
-			sender.title = "Editar"
+			
+			var dict = [String: Any]()
+			provider.modifiedContents().forEach{ dict[$0.jsonKey!] = $0.value! }
+			
+			let user = try! JSONDecoder().decode(User.self, from: JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted))
+			user.identifier = Hamp.Auth.user?.identifier
+			
+			Hamp.Users.update(user: user, onResponse: { (response) in
+				if response.code == .ok {
+					DispatchQueue.main.async {
+						sender.title = "Editar"
+					}
+				} else {
+					print(response.code)
+				}
+			})
+			
+			
 		}
 	}
 }
