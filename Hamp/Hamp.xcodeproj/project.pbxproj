@@ -235,6 +235,8 @@
 		4EF5A260206FE2A800BD7223 /* UserDetailTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */; };
 		4EF5A261206FE2A800BD7223 /* UserDetailTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */; };
 		4EF5A263206FE6AD00BD7223 /* UserDetailCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */; };
+		4EF5A2DE20702F6900BD7223 /* ValidationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A2DD20702F6900BD7223 /* ValidationsFactory.swift */; };
+		4EF5A2E02070377F00BD7223 /* UserDetailCellValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A2DF2070377F00BD7223 /* UserDetailCellValidator.swift */; };
 		4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */; };
 		4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -499,6 +501,8 @@
 		4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTextFieldCell.swift; sourceTree = "<group>"; };
 		4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailTextFieldCell.xib; sourceTree = "<group>"; };
 		4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCellConfigurator.swift; sourceTree = "<group>"; };
+		4EF5A2DD20702F6900BD7223 /* ValidationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationsFactory.swift; sourceTree = "<group>"; };
+		4EF5A2DF2070377F00BD7223 /* UserDetailCellValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCellValidator.swift; sourceTree = "<group>"; };
 		4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
@@ -800,6 +804,7 @@
 			children = (
 				4E47866E1F30DA7C007ABE00 /* ValidationManager.swift */,
 				4E4786701F30DAB1007ABE00 /* Validation.swift */,
+				4EF5A2DD20702F6900BD7223 /* ValidationsFactory.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -1390,6 +1395,7 @@
 				4EF5A25E206FE2A800BD7223 /* UserDetailTextFieldCell.swift */,
 				4EF5A25F206FE2A800BD7223 /* UserDetailTextFieldCell.xib */,
 				4EF5A262206FE6AD00BD7223 /* UserDetailCellConfigurator.swift */,
+				4EF5A2DF2070377F00BD7223 /* UserDetailCellValidator.swift */,
 			);
 			path = "User detail";
 			sourceTree = "<group>";
@@ -1674,6 +1680,7 @@
 				4E7253561F37BE4B006382B4 /* Constants.swift in Sources */,
 				1904C6CF1F8E1CA0005144E3 /* MapUtilitiesDelegate.swift in Sources */,
 				4E46C8BA1F44D55A0051BF84 /* BarRightButtonsFactory.swift in Sources */,
+				4EF5A2E02070377F00BD7223 /* UserDetailCellValidator.swift in Sources */,
 				4E965C3A1F690AC600AF61E8 /* DateConverter.swift in Sources */,
 				19B2C0D7204D9E1F00066209 /* OrderHistoryTableProvider.swift in Sources */,
 				4E22CF5A1F3886D100EEC314 /* UIAlertController+AlertAction.swift in Sources */,
@@ -1831,6 +1838,7 @@
 				19C8EF7F1F7A8DA600D70A07 /* ProfileSwitchCell.swift in Sources */,
 				4E46C8BC1F44E9600051BF84 /* BasketRoundLabel.swift in Sources */,
 				4E965C3C1F693A5000AF61E8 /* HistoryBookingDetailViewController.swift in Sources */,
+				4EF5A2DE20702F6900BD7223 /* ValidationsFactory.swift in Sources */,
 				19B2C0CD204D904200066209 /* OrderHistoryContent.swift in Sources */,
 				19EA7E281F7D0C2900AB7B8A /* MapController.swift in Sources */,
 				4E89E05E1F2EC260008C658D /* FacebookAPIGraphManager.swift in Sources */,

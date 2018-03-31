@@ -16,13 +16,19 @@ class ProfileCellContent {
 	var value: String?
 	var isEdited: Bool = false
 	var jsonKey: String?
+	var validation: ValidationsFactory.Option?
 	
 	// MARK: - Life cycle
-	init(title: String, value: String? = nil, navigation: Navigable? = nil, jsonKey: String? = nil) {
+	init(title: String,
+		 value: String? = nil,
+		 navigation: Navigable? = nil,
+		 jsonKey: String? = nil,
+		 validation: ValidationsFactory.Option? = nil) {
 		self.title = title
 		self.value = value
 		self.navigation = navigation
 		self.jsonKey = jsonKey
+		self.validation = validation
 	}
 }
 

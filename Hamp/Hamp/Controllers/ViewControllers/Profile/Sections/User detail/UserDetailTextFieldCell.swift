@@ -8,6 +8,7 @@
 
 import UIKit
 protocol UserDetailTextFieldCellDelegate: class {
+	func becameFirstResponder(on cell: UserDetailTextFieldCell)
 	func valueDidChange(on cell: UserDetailTextFieldCell, value: Any?)
 }
 
@@ -42,6 +43,10 @@ class UserDetailTextFieldCell: UITableViewCell {
 }
 
 extension UserDetailTextFieldCell: UITextFieldDelegate {
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		delegate?.becameFirstResponder(on: self)
+	}
+	
 	func textFieldDidEndEditing(_ textField: UITextField) {
 		guard previousText != textField.text else { return }
 		delegate?.valueDidChange(on: self, value: textField.text)
