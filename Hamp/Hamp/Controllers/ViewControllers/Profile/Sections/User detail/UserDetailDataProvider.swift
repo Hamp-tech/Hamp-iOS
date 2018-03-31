@@ -11,7 +11,7 @@ import Foundation
 struct UserDetailDataProvider: ProfileDataProvidable {
 	
 	// MARK: - Properties
-	private let sections = UserDetailContentFactory.all()
+	private var sections = UserDetailContentFactory.all()
 	
 	// MARK: - Protocol
 	func numberOfSections() -> Int {
@@ -34,5 +34,9 @@ struct UserDetailDataProvider: ProfileDataProvidable {
 		var set = Set<ProfileCellContent>()
 		sections.forEach{$0.contents.filter{$0.isEdited}.forEach{set.insert($0)}}
 		return set
+	}
+	
+	mutating func reload() {
+		sections = UserDetailContentFactory.all()
 	}
 }

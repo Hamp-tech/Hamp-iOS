@@ -12,7 +12,7 @@ import HampKit
 class UserDetailTableViewController: HampTableViewController {
 
 	// MARK: - Properties
-	private let provider = UserDetailDataProvider()
+	private var provider = UserDetailDataProvider()
 	private let cellConfigurator = UserDetailCellConfigurator()
 	
 	// MARK: - Life cycle
@@ -93,8 +93,10 @@ private extension UserDetailTableViewController {
 			
 			Hamp.Users.update(user: user, onResponse: { (response) in
 				if response.code == .ok {
-					DispatchQueue.main.async {
+					DispatchQueue.main.async { [weak self] in
 						sender.title = "Editar"
+						self?.provider.reload()
+						self?.tableView.reloadData()
 					}
 				} else {
 					print(response.code)
