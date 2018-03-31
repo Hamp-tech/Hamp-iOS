@@ -226,6 +226,9 @@
 		4EF49DAF2063131F005FE22A /* UINotificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DAE2063131F005FE22A /* UINotificable.swift */; };
 		4EF49DB6206320D5005FE22A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DB5206320D5005FE22A /* UIApplication+TopViewController.swift */; };
 		4EF49DBF2063A9B5005FE22A /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF49DBE2063A9B5005FE22A /* UIView+Reusable.swift */; };
+		4EF5A24E206FA87100BD7223 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A24D206FA87100BD7223 /* Navigator.swift */; };
+		4EF5A250206FB2A000BD7223 /* Navigable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A24F206FB2A000BD7223 /* Navigable.swift */; };
+		4EF5A255206FD70E00BD7223 /* UserDetailNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */; };
 		4EF65A5C1F4F775D0078E0EC /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */; };
 		4EFF0DCF1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */; };
 		9C5195597F7D4604999355E1 /* Pods_Hamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C78EEC0E6BE64645FDEEA /* Pods_Hamp.framework */; };
@@ -481,6 +484,9 @@
 		4EF49DBB2063A7A8005FE22A /* TransactionsUINotificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsUINotificationsTableViewCell.xib; sourceTree = "<group>"; };
 		4EF49DBE2063A9B5005FE22A /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
 		4EF49DC02063AD09005FE22A /* TransactionsUINotificationCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsUINotificationCellConfigurator.swift; sourceTree = "<group>"; };
+		4EF5A24D206FA87100BD7223 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		4EF5A24F206FB2A000BD7223 /* Navigable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
+		4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailNavigation.swift; sourceTree = "<group>"; };
 		4EF65A5B1F4F775D0078E0EC /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		4EFF0DCE1F3A38EC00F4D250 /* CreditCardInputTextFieldMaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputTextFieldMaskManager.swift; sourceTree = "<group>"; };
 		4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardUIController.xib; sourceTree = "<group>"; };
@@ -614,6 +620,7 @@
 		19EA7E221F7CEEC600AB7B8A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4EF5A253206FBF4900BD7223 /* Navigator */,
 				4E7F996D206BAC0D00E3D4EF /* View */,
 				4E7F996A206BA64B00E3D4EF /* Factory */,
 				4ED0FDF3206AC9D6006CA14B /* Provider */,
@@ -989,6 +996,7 @@
 		4E89E05C1F2EC24C008C658D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4EF5A24A206FA84F00BD7223 /* Navigator */,
 				19856F9C1FD800EB00F9949A /* ThirdParty */,
 				4E47866D1F30DA67007ABE00 /* Validation */,
 				4ECFFAA11F30BDF70043D4B5 /* Localization */,
@@ -1335,6 +1343,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4EF5A24A206FA84F00BD7223 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5A24D206FA87100BD7223 /* Navigator.swift */,
+				4EF5A24F206FB2A000BD7223 /* Navigable.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		4EF5A253206FBF4900BD7223 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		51541EF23E41448D2B691C0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1653,6 +1678,7 @@
 				19E5947C1F7A603300371FD3 /* ProfileTextFieldCell.swift in Sources */,
 				1920E79A2021DD920070AF63 /* RemoveCardTableViewController.swift in Sources */,
 				4E7F996C206BA66E00E3D4EF /* ProfileSectionFactory.swift in Sources */,
+				4EF5A250206FB2A000BD7223 /* Navigable.swift in Sources */,
 				4ECA406C1F24BBB3003F51EA /* SignInViewController.swift in Sources */,
 				4E10DB21206723A500770AF9 /* PushNotificationHandleable.swift in Sources */,
 				4E7D94E31F2384E700C7BB4B /* LoginViewController.swift in Sources */,
@@ -1667,6 +1693,7 @@
 				4E4F38FD1F39F90C00003131 /* CreditCardTextFieldFactory.swift in Sources */,
 				4E871D0F1F4AEF910028DA0D /* HampTableViewController.swift in Sources */,
 				4E90CA4F1F6717E5003DAA28 /* StaticHistoryProvider.swift in Sources */,
+				4EF5A255206FD70E00BD7223 /* UserDetailNavigation.swift in Sources */,
 				4E7E32F21F41F233009C0099 /* MainTabBarViewController.swift in Sources */,
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
@@ -1784,6 +1811,7 @@
 				4EDCFCFA1F45176800EAE4E4 /* ServiceDetailViewController.swift in Sources */,
 				4E1DFC5F1F67E9870096659F /* HistoryCellSizeCalculator.swift in Sources */,
 				4E1DFC5B1F67D2760096659F /* ProvidersManager.swift in Sources */,
+				4EF5A24E206FA87100BD7223 /* Navigator.swift in Sources */,
 				19DB939B1F9F071900742168 /* ProfileCellsID.swift in Sources */,
 				19EA7E251F7D0A9400AB7B8A /* CustomMapView.swift in Sources */,
 				19B2C0BD204BDDD700066209 /* DBTransaction.swift in Sources */,

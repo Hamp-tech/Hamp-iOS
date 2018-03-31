@@ -24,7 +24,7 @@ private extension ProfileSectionFactory {
 //		let birthday = ProfileCellContent(title: "Fecha de nacimiento", value: "05/05/1994")
 //		let gender = ProfileCellContent(title: "Gender", value: "Male")
 		
-		let userInfo = ProfileCellContent(title: "Detalles personales")
+		let userInfo = ProfileCellContent(title: "Detalles personales", navigation: UserDetailNavigation())
 		let cards = ProfileCellContent(title: "Métodos de pago")
 		return ProfileTableViewSection(title: "Perfil", contents: [userInfo, cards])
 	}

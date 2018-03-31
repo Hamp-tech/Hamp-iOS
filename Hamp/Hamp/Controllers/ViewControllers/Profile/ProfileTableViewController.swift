@@ -12,6 +12,9 @@ class ProfileTableViewController: HampTableViewController {
 
 	// MARK: - Properties
 	private let provider = ProfileDataProvider()
+	private lazy var navigator: Navigator = {
+		return Navigator(rootViewController: self)
+	}()
 	
 	// MARK: - Life cycle
     override func viewDidLoad() {
@@ -19,6 +22,8 @@ class ProfileTableViewController: HampTableViewController {
 		
 		tableView.register(ProfileTableViewCell.nib, forCellReuseIdentifier: ProfileTableViewCell.reuseIdentifier)
 		tableView.tableFooterView = tableFooterView()
+		
+		
     }
 }
 
@@ -43,6 +48,15 @@ extension ProfileTableViewController {
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		return provider.title(at: section)
+	}
+}
+
+extension ProfileTableViewController {
+	// MARK: - Table view delegate
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		guard let nav = provider.content(at: indexPath).navigation else { return }
+		
+		navigator.navigate(navigation: nav)
 	}
 }
 
