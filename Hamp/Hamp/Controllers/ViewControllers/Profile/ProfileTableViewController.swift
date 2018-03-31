@@ -24,6 +24,8 @@ class ProfileTableViewController: HampTableViewController {
 		tableView.tableFooterView = tableFooterView()
 		
 		tableView.rowHeight = 44
+		
+		navigationController?.navigationBar.tintColor = .darkPink
     }
 }
 

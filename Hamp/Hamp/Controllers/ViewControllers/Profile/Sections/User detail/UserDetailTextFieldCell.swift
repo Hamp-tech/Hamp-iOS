@@ -13,17 +13,19 @@ class UserDetailTextFieldCell: UITableViewCell {
 	//MARK: - Properties
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var textField: UITextField!
-//	private(set) lazy var textField: UITextField = {
-//		let width = frame.width - (textLabel!.frame.origin.x + textLabel!.frame.width)
-//		let textfield = UITextField(frame: CGRect(x: 0, y: 0, width: width, height: 30))
-//		textfield.backgroundColor = .red
-//		textfield.translatesAutoresizingMaskIntoConstraints = false
-//		textfield.textAlignment = .right
-//		return textfield
-//	}()
 	
+	override var isEditing: Bool {
+		didSet {
+			textField.isEnabled = isEditing
+			if !isEditing {
+				textField.resignFirstResponder()
+			}
+		}
+	}
 	
+	// MARK: - Life cycle
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
+		textField.isEnabled = false
 	}
 }

@@ -29,8 +29,10 @@ class UserDetailTableViewController: HampTableViewController {
 		title = "Detalles personales"
 		tableView.register(UserDetailTextFieldCell.nib, forCellReuseIdentifier: UserDetailTextFieldCell.reuseIdentifier)
 		tableView.tableFooterView = UIView()
-		
 		tableView.rowHeight = 44
+		
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Editar", style: .plain, target: self, action: #selector(editWasPressed(sender:)))
+		
     }
 }
 
@@ -51,5 +53,26 @@ extension UserDetailTableViewController {
 		cellConfigurator.configure(cell: cell, content: content)
 
 		return cell
+	}
+}
+extension UserDetailTableViewController {
+	// MARK: - Table view delegate
+	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return false
+	}
+}
+
+private extension UserDetailTableViewController {
+	@objc func editWasPressed(sender: UIBarButtonItem) {
+		isEditing = !isEditing
+		tableView.visibleCells.forEach{ $0.isEditing = isEditing }
+		
+		if isEditing {
+			let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! UserDetailTextFieldCell
+			cell.textField.becomeFirstResponder()
+			sender.title = "Guardar"
+		} else {
+			sender.title = "Editar"
+		}
 	}
 }
