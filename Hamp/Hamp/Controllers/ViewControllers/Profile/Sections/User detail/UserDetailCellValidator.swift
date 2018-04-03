@@ -14,10 +14,17 @@ struct UserDetailCellValidator {
 	private let validationManager = ValidationManager()
 	
 	// MARK: - API
-	func validation(cell: UserDetailTextFieldCell, content: ProfileCellContent) {
+	func validation(cell: UserDetailTextFieldCell,
+					content: ProfileCellContent,
+					completion: ((Bool) -> Void)? = nil) {
 		guard let v = content.validation else { return }
-		validationManager.add(by: ValidationsFactory.validation(by: v, toEvaluate: cell.textField.text!, validatedBlock: { (key, valid) in
-			cell.titleLabel.textColor = valid ? .black : .red
+		
+		validationManager.add(
+			by: ValidationsFactory.validation(
+				by: v,
+				toEvaluate: cell.textField.text!,
+				validatedBlock: { (key, valid) in
+					completion?(valid)
 		}, key: content.jsonKey!))
 	}
 	

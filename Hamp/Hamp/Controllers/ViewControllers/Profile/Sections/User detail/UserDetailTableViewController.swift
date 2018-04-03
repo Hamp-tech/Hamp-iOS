@@ -16,6 +16,7 @@ class UserDetailTableViewController: HampTableViewController {
 	private var provider = UserDetailDataProvider()
 	private var validator = UserDetailCellValidator()
 	private var lastCellWithResponder: UserDetailTextFieldCell?
+	private var editedValues = [String: Any]()
 	
 	// MARK: - Life cycle
 	init() {
@@ -61,6 +62,7 @@ extension UserDetailTableViewController {
 }
 extension UserDetailTableViewController {
 	// MARK: - Table view delegate
+	
 	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return false
 	}
@@ -72,19 +74,44 @@ extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
 		lastCellWithResponder = cell
 	}
 	
+	func shouldBecomeFirstResponder(on cell: UserDetailTextFieldCell) -> Bool{
+		let indexPath = tableView.indexPath(for: cell)!
+		let content = provider.content(at: indexPath)
+		
+		guard let input = content.input, (input == .date || input == .gender)  else {
+			return true
+		}
+		
+		return false
+		
+	}
+	
+	func needsToBeRespondered(on cell: UserDetailTextFieldCell) {
+		
+		let indexPath = tableView.indexPath(for: cell)!
+		let content = provider.content(at: indexPath)
+		
+		if let input = content.input, (input == .date || input == .gender) {
+			_ = lastCellWithResponder?.resignFirstResponder()
+			presentPicker(by: input, with: cell)
+		}
+	}
+	
 	func valueDidChange(on cell: UserDetailTextFieldCell, value: Any?) {
 		let indexPath = tableView.indexPath(for: cell)!
 		let content = provider.content(at: indexPath)
 		content.value = value as? String
 		content.isEdited = true
-		validator.validation(cell: cell, content: content)
+		validator.validation(cell: cell, content: content) { valid in
+			cell.titleLabel.textColor = valid ? .black : .red
+		}
 	}
 }
 
 private extension UserDetailTableViewController {
 	@objc func editWasPressed(sender: UIBarButtonItem) {
 		
-		lastCellWithResponder?.resignFirstResponder()
+		_ = lastCellWithResponder?.resignFirstResponder()
 		
 		if !isEditing {
 			
@@ -123,6 +150,37 @@ private extension UserDetailTableViewController {
 				lastCellWithResponder?.isEditing = true
 				lastCellWithResponder?.becomeFirstResponder()
 			})
+		}
+	}
+	
+	func presentPicker(by input: ProfileCellContent.Input, with cell: UserDetailTextFieldCell) {
+		switch input {
+		case .date:
+			presentDatePicker(with: cell)
+		case .gender:
+			presentGender(with: cell)
+		default:
+			break
+		}
+	}
+	
+	func presentDatePicker(with cell: UserDetailTextFieldCell) {
+		DPPickerManager.shared.showPicker(title: "Cumpleaños", picker: { (picker) in
+			picker.date = Date()
+			picker.datePickerMode = .date
+		}) { [unowned self] (date, cancel) in
+			if !cancel {
+				cell.textField.text = DateFormatter.localizedString(from: date!, dateStyle: .short, timeStyle: .none)
+			}
+		}
+	}
+	
+	func presentGender(with cell: UserDetailTextFieldCell) {
+		let values = ["Hombre", "Mujer", "--"]
+		DPPickerManager.shared.showPicker(title: "Género", selected: "Hombre", strings: values) { (value, index, cancel) in
+			if !cancel {
+				cell.textField.text = value
+			}
 		}
 	}
 }

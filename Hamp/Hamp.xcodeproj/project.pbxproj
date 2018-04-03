@@ -101,6 +101,7 @@
 		4E2E2F501F3A460A0063E466 /* CreditCardUIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFF0DD21F3A458200F4D250 /* CreditCardUIController.xib */; };
 		4E2E2F531F3A8F4A0063E466 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E2F521F3A8F4A0063E466 /* String+Substring.swift */; };
 		4E33091A1F45CF6D00A43B25 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3309191F45CF6D00A43B25 /* Order.swift */; };
+		4E380207207169A600E0E93C /* DPPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E380206207169A600E0E93C /* DPPickerManager.swift */; };
 		4E4496561F45EDEC00C5EE99 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496551F45EDEC00C5EE99 /* OrderManager.swift */; };
 		4E4496581F460ADD00C5EE99 /* ServicesOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */; };
 		4E46C8B61F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */; };
@@ -350,6 +351,7 @@
 		4E3309191F45CF6D00A43B25 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4E33092F1F45D2D200A43B25 /* HampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E33093B1F45D30200A43B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E380206207169A600E0E93C /* DPPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPPickerManager.swift; sourceTree = "<group>"; };
 		4E4496551F45EDEC00C5EE99 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		4E4496571F460ADD00C5EE99 /* ServicesOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOrderViewController.swift; sourceTree = "<group>"; };
 		4E46C8B51F44C7C20051BF84 /* UIViewController+LargeTitlesRightBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LargeTitlesRightBarButton.swift"; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 			children = (
 				4E4D70922055B530009EB415 /* GMDatePicker.swift */,
 				4E4D70932055B530009EB415 /* GMPicker.swift */,
+				4E380206207169A600E0E93C /* DPPickerManager.swift */,
 			);
 			path = "Date Picker";
 			sourceTree = "<group>";
@@ -1865,6 +1868,7 @@
 				19B2C0BD204BDDD700066209 /* DBTransaction.swift in Sources */,
 				19E5947A1F7A5D4600371FD3 /* ProfileController.swift in Sources */,
 				4EE0BA012067384000C2C5D1 /* TransactionsUINotificationsTableViewCell.swift in Sources */,
+				4E380207207169A600E0E93C /* DPPickerManager.swift in Sources */,
 				4E22CC1B1F475F13004F3203 /* UIView+ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,7 +43,10 @@ extension ProfileTableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.reuseIdentifier, for: indexPath)
 		
-		cell.textLabel?.text = provider.content(at: indexPath).title
+		let content = provider.content(at: indexPath)
+		cell.textLabel?.text = content.title
+		cell.accessoryType = content.navigation != nil ? .disclosureIndicator : .none
+		
 		return cell
 	}
 	

@@ -15,20 +15,32 @@ class ProfileCellContent {
 	let navigation: Navigable?
 	var value: String?
 	var isEdited: Bool = false
-	var jsonKey: String?
-	var validation: ValidationsFactory.Option?
+	let jsonKey: String?
+	let validation: ValidationsFactory.Option?
+	let input: Input?
 	
 	// MARK: - Life cycle
 	init(title: String,
 		 value: String? = nil,
 		 navigation: Navigable? = nil,
 		 jsonKey: String? = nil,
-		 validation: ValidationsFactory.Option? = nil) {
+		 validation: ValidationsFactory.Option? = nil,
+		 input: Input? = nil) {
 		self.title = title
 		self.value = value
 		self.navigation = navigation
 		self.jsonKey = jsonKey
 		self.validation = validation
+		self.input = input
+	}
+}
+
+extension ProfileCellContent {
+	enum Input {
+		case text
+		case date
+		case gender
+		case password
 	}
 }
 
