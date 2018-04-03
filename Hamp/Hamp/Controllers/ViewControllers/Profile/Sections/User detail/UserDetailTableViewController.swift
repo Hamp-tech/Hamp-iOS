@@ -75,6 +75,8 @@ extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
 	}
 	
 	func shouldBecomeFirstResponder(on cell: UserDetailTextFieldCell) -> Bool{
+		guard isEditing else { return false }
+		
 		let indexPath = tableView.indexPath(for: cell)!
 		let content = provider.content(at: indexPath)
 		
@@ -87,6 +89,7 @@ extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
 	}
 	
 	func needsToBeRespondered(on cell: UserDetailTextFieldCell) {
+		guard isEditing else { return }
 		
 		let indexPath = tableView.indexPath(for: cell)!
 		let content = provider.content(at: indexPath)
@@ -102,8 +105,11 @@ extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
 		let content = provider.content(at: indexPath)
 		content.value = value as? String
 		content.isEdited = true
-		validator.validation(cell: cell, content: content) { valid in
+		validator.validation(cell: cell, content: content) { [weak self] valid in
 			cell.titleLabel.textColor = valid ? .black : .red
+			if valid {
+				self?.updateEditedValues(cell: cell, value: cell.textField.text!)
+			}
 		}
 	}
 }
@@ -114,41 +120,38 @@ private extension UserDetailTableViewController {
 		_ = lastCellWithResponder?.resignFirstResponder()
 		
 		if !isEditing {
+			changeState(to: true)
 			
-			isEditing = true
-			tableView.visibleCells.forEach{ $0.isEditing = true }
+			let cell = tableView.visibleCells.first as? UserDetailTextFieldCell
+			cell?.textField.becomeFirstResponder()
 			
-			let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! UserDetailTextFieldCell
-			cell.textField.becomeFirstResponder()
-			sender.title = "Guardar"
 		} else {
-			tableView.visibleCells.forEach{ $0.isEditing = false }
+			guard editedValues.count > 0 else {
+				changeState(to: false)
+				return
+			}
+			
 			validator.validate(
 				onSuccess: {
-					var dict = [String: Any]()
-					provider.modifiedContents().forEach{ dict[$0.jsonKey!] = $0.value! }
-					
-					let user = try! JSONDecoder().decode(User.self, from: JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted))
+					let user = try! JSONDecoder().decode(User.self, from: JSONSerialization.data(withJSONObject: self.editedValues, options: .prettyPrinted))
 					user.identifier = Hamp.Auth.user?.identifier
 					
 					Hamp.Users.update(user: user, onResponse: { (response) in
 						if response.code == .ok {
 							DispatchQueue.main.async { [unowned self] in
-								sender.title = "Editar"
+								self.changeState(to: false)
 								self.provider.reload()
 								self.tableView.reloadData()
-								self.isEditing = false
 								self.lastCellWithResponder = nil
-								
 							}
 						} else {
+							// TODO: Show alert
 							print(response.code)
 						}
 					})
 			}, onError: {
-				tableView.visibleCells.forEach{ $0.isEditing = true }
 				lastCellWithResponder?.isEditing = true
-				lastCellWithResponder?.becomeFirstResponder()
+				_ = lastCellWithResponder?.becomeFirstResponder()
 			})
 		}
 	}
@@ -170,18 +173,34 @@ private extension UserDetailTableViewController {
 			picker.datePickerMode = .date
 		}) { [unowned self] (date, cancel) in
 			if !cancel {
-				cell.textField.text = DateFormatter.localizedString(from: date!, dateStyle: .short, timeStyle: .none)
+				cell.textField.text = DateConverter.convertDateToString(date: date!)
+				let iso8601 = date!.iso8601()
+				self.updateEditedValues(cell: cell, value: iso8601)
 			}
 		}
 	}
 	
 	func presentGender(with cell: UserDetailTextFieldCell) {
-		let values = ["Hombre", "Mujer", "--"]
+		let values = Gender.rawValues
 		DPPickerManager.shared.showPicker(title: "Género", selected: "Hombre", strings: values) { (value, index, cancel) in
 			if !cancel {
 				cell.textField.text = value
+				let gender = Gender.all[index]
+				self.updateEditedValues(cell: cell, value: gender.code())
+				
 			}
 		}
+	}
+	
+	func updateEditedValues(cell: UserDetailTextFieldCell, value: Any) {
+		let content = provider.content(at: tableView.indexPath(for: cell)!)
+		editedValues[content.jsonKey!] = value
+	}
+	
+	func changeState(to editing: Bool) {
+		isEditing = editing
+		tableView.visibleCells.forEach{ $0.isEditing = editing }
+		navigationItem.rightBarButtonItem?.title = editing ? "Guardar" : "Editar"
 	}
 }
 
