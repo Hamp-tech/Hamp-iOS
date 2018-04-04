@@ -18,7 +18,7 @@ struct ProfileSectionFactory {
 private extension ProfileSectionFactory {
 	static func userInformation() -> ProfileTableViewSection {		
 		let userInfo = ProfileCellContent(title: "Detalles personales", navigation: UserDetailNavigation())
-		let cards = ProfileCellContent(title: "Métodos de pago")
+		let cards = ProfileCellContent(title: "Métodos de pago", navigation: CreditCardsNavigation())
 		return ProfileTableViewSection(title: "Perfil", contents: [userInfo, cards])
 	}
 	
