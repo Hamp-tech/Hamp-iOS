@@ -220,6 +220,8 @@
 		4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */; };
 		4EE88EC51F7D6846006F6A79 /* PulleyChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */; };
 		4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */; };
+		4EEBE7F62077D27C0076BA32 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEBE7F52077D27C0076BA32 /* ChangePasswordTableViewController.swift */; };
+		4EEBE7F82077D7A10076BA32 /* ChangePasswordNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEBE7F72077D7A10076BA32 /* ChangePasswordNavigator.swift */; };
 		4EF119C3206801AB00369744 /* HistoryTransactionDetailMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */; };
 		4EF119C520680EA800369744 /* MKMapView+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C420680EA800369744 /* MKMapView+Location.swift */; };
 		4EF119C7206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF119C6206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift */; };
@@ -486,6 +488,8 @@
 		4EE5F1171F4AD62C0056AA2C /* CreditCardsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardsProvider.swift; sourceTree = "<group>"; };
 		4EE88EC41F7D6845006F6A79 /* PulleyChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyChildViewController.swift; sourceTree = "<group>"; };
 		4EEA1A161F2380B50070E17A /* UIColor+Hamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hamp.swift"; sourceTree = "<group>"; };
+		4EEBE7F52077D27C0076BA32 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
+		4EEBE7F72077D7A10076BA32 /* ChangePasswordNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordNavigator.swift; sourceTree = "<group>"; };
 		4EF119C2206801AB00369744 /* HistoryTransactionDetailMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailMapController.swift; sourceTree = "<group>"; };
 		4EF119C420680EA800369744 /* MKMapView+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Location.swift"; sourceTree = "<group>"; };
 		4EF119C6206817A100369744 /* HistoryTransactionDetailCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionDetailCellConfigurator.swift; sourceTree = "<group>"; };
@@ -1377,6 +1381,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4EEBE7F42077D2510076BA32 /* Change password */ = {
+			isa = PBXGroup;
+			children = (
+				4EEBE7F52077D27C0076BA32 /* ChangePasswordTableViewController.swift */,
+			);
+			path = "Change password";
+			sourceTree = "<group>";
+		};
 		4EF5A24A206FA84F00BD7223 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1391,6 +1403,7 @@
 			children = (
 				4EF5A254206FD70E00BD7223 /* UserDetailNavigation.swift */,
 				4EFC70502075891C00718859 /* CreditCardsNavigation.swift */,
+				4EEBE7F72077D7A10076BA32 /* ChangePasswordNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -1398,6 +1411,7 @@
 		4EF5A256206FDD0800BD7223 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				4EEBE7F42077D2510076BA32 /* Change password */,
 				4EFC6FD42075873800718859 /* Credit card */,
 				4EF5A259206FDD7000BD7223 /* User detail */,
 			);
@@ -1766,6 +1780,7 @@
 				4ECA406E1F24BD31003F51EA /* HampViewController.swift in Sources */,
 				4EFC70512075891C00718859 /* CreditCardsNavigation.swift in Sources */,
 				4E6D58321F4CAC3700113636 /* RatingViewController.swift in Sources */,
+				4EEBE7F82077D7A10076BA32 /* ChangePasswordNavigator.swift in Sources */,
 				19C8EF871F7A9E0000D70A07 /* ProfileUseInfoCell.swift in Sources */,
 				4EFC6FD62075876B00718859 /* RemoveCreditCardsTableViewController.swift in Sources */,
 				4E7DD5CE2055EF1B000C8F18 /* RemoteNotificationsHandler.swift in Sources */,
@@ -1846,6 +1861,7 @@
 				4EF5A260206FE2A800BD7223 /* UserDetailTextFieldCell.swift in Sources */,
 				4ECFFAB21F30C22B0043D4B5 /* Localization.swift in Sources */,
 				19C8EF961F7C405300D70A07 /* OrderCellsID.swift in Sources */,
+				4EEBE7F62077D27C0076BA32 /* ChangePasswordTableViewController.swift in Sources */,
 				4EF49DBF2063A9B5005FE22A /* UIView+Reusable.swift in Sources */,
 				190EE6BE1FD02B0300E6E24C /* ProfileInfoFactory.swift in Sources */,
 				19EA7E2C1F7D138900AB7B8A /* UIView+Anchor.swift in Sources */,

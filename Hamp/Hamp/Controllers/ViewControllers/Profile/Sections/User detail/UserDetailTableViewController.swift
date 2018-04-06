@@ -32,7 +32,7 @@ class UserDetailTableViewController: HampTableViewController {
 		
 		title = "Detalles personales"
 		tableView.register(UserDetailTextFieldCell.nib, forCellReuseIdentifier: UserDetailTextFieldCell.reuseIdentifier)
-		tableView.tableFooterView = UIView()
+		tableView.footer = false
 		tableView.rowHeight = 44
 		
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Editar", style: .plain, target: self, action: #selector(editWasPressed(sender:)))
