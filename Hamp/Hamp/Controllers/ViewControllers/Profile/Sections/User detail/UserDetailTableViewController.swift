@@ -105,11 +105,9 @@ extension UserDetailTableViewController: UserDetailTextFieldCellDelegate {
 		let content = provider.content(at: indexPath)
 		content.value = value as? String
 		content.isEdited = true
-		validator.validation(cell: cell, content: content) { [weak self] valid in
+		self.updateEditedValues(cell: cell, value: cell.textField.text!)
+		validator.validation(cell: cell, content: content) { valid in
 			cell.titleLabel.textColor = valid ? .black : .red
-			if valid {
-				self?.updateEditedValues(cell: cell, value: cell.textField.text!)
-			}
 		}
 	}
 }
@@ -131,22 +129,25 @@ private extension UserDetailTableViewController {
 				return
 			}
 			
+			showLoading()
+			
 			validator.validate(
 				onSuccess: {
 					let user = try! JSONDecoder().decode(User.self, from: JSONSerialization.data(withJSONObject: self.editedValues, options: .prettyPrinted))
 					user.identifier = Hamp.Auth.user?.identifier
 					
 					Hamp.Users.update(user: user, onResponse: { (response) in
-						if response.code == .ok {
-							DispatchQueue.main.async { [unowned self] in
+						DispatchQueue.main.async { [unowned self] in
+							self.hideLoading()
+							if response.code == .ok {
 								self.changeState(to: false)
 								self.provider.reload()
 								self.tableView.reloadData()
 								self.lastCellWithResponder = nil
+							} else {
+								// TODO: Show alert
+								print(response.code)
 							}
-						} else {
-							// TODO: Show alert
-							print(response.code)
 						}
 					})
 			}, onError: {

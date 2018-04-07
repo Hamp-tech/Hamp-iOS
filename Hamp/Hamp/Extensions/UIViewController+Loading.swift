@@ -16,10 +16,6 @@ extension UIViewController {
 	}
 	
 	func hideLoading() {
-		guard let loading = UIApplication.topViewController(), (loading as? LoadingUIController) != nil else {
-			return
-		}
-		
-		loading.dismiss(animated: false)
+		NotificationCenter.default.post(name: NSNotification.Name("dismissLoading"), object: nil)
 	}
 }

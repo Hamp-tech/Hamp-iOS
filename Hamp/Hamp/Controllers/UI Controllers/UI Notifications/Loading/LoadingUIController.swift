@@ -30,23 +30,16 @@ class LoadingUIController: HampViewController {
 		activityContainerView.alpha = 1
 		view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
 		indicator.startAnimating()
+		NotificationCenter.default.addObserver(self, selector: #selector(_dismiss), name: NSNotification.Name(rawValue: "dismissLoading"), object: nil)
+	}
+	
+	deinit {
+		 NotificationCenter.default.removeObserver(self)
 	}
 }
 
-extension LoadingUIController: UINotificable {
-	func notification() -> UIView {
-		return view
-	}
-	
-	func present(completion: (() -> Void)?) {
-		UIView.animate(withDuration: 0.5, animations: { [weak self] in
-			self?.activityContainerView.alpha = 1
-		}, completion: nil)
-	}
-	
-	func dismiss(completion: (() -> Void)?) {
-//		UIView.animate(withDuration: 0.5, animations: { [weak self] in
-//			self?.activityContainerView.alpha = 1
-//			}, completion: nil)
+extension LoadingUIController {
+	@objc private func _dismiss() {
+		dismiss(animated: false)
 	}
 }

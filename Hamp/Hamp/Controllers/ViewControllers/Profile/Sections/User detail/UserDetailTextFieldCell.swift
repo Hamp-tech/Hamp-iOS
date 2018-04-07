@@ -51,7 +51,10 @@ class UserDetailTextFieldCell: UITableViewCell {
 	}
 	
 	override func resignFirstResponder() -> Bool {
-		textField.resignFirstResponder()
+		if textField.isFirstResponder {
+			textFieldDidEndEditing(textField)
+			textField.resignFirstResponder()
+		}
 		return super.resignFirstResponder()
 	}
 }

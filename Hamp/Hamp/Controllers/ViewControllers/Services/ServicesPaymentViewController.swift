@@ -41,25 +41,27 @@ class ServicesPaymentViewController: HampViewController {
     
     //MARK: Actions 
     @IBAction func endOrderWasPressed(sender: UIButton) {
+		showLoading()
 		let transaction = TransactionFactory.createTransaction(services: ordersManager.servicesHired(), amount: ordersManager.order.totalAmount, creditCard: CreditCard(identifier: selectedCreditCard!.identifier))
         
         endOrderButton.isEnabled = false
 	
         Hamp.Transactions.createTransaction(transaction: transaction) { (response) in
-            if response.code == .ok {
-                let newTransaction = response.data!
-				
                 DispatchQueue.main.async { [unowned self] in
-					ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
-					self.popToRootController(with: {
-						let subtitle = "Deja tu ropa en las siguientes taquillas, en menos de 24h podrás venir a recogerla"
-						let noti = TransactionUINotificationsController(transactionId: newTransaction.identifier!, header: newTransaction.booking!.point!.city!, subtitle: subtitle, lockers: newTransaction.booking!.pickUpLockers!)
-						NotificationsPresenter.shared.present(uinotification: noti)
-					})
-                }
-            } else {
-                print("ERROR CREATING TRANSACTION", response.message)
-            }
+					self.hideLoading()
+					if response.code == .ok {
+						let newTransaction = response.data!
+						ProvidersManager.sharedInstance.hampDataManager.addData (object: DBTransaction.init(transaction: newTransaction))
+						self.popToRootController(with: {
+							let subtitle = "Deja tu ropa en las siguientes taquillas, en menos de 24h podrás venir a recogerla"
+							let noti = TransactionUINotificationsController(transactionId: newTransaction.identifier!, header: newTransaction.booking!.point!.city!, subtitle: subtitle, lockers: newTransaction.booking!.pickUpLockers!)
+							NotificationsPresenter.shared.present(uinotification: noti)
+						})
+				} else {
+					print("ERROR CREATING TRANSACTION", response.message)
+				}
+			}
+				
         }
     }
 
