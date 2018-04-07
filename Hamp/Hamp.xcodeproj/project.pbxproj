@@ -858,6 +858,7 @@
 		4E2E2F511F3A87040063E466 /* UI Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E6647C6207915F00052626A /* Loading */,
 				4EE0B9F72067384000C2C5D1 /* UI Notifications */,
 				4E9B1EBB1F6AC24900BFA88C /* Pulley */,
 				4E22CF691F38F9BF00EEC314 /* Credit Card */,
@@ -984,7 +985,7 @@
 				4E6647CA2079164F0052626A /* LoadingUIController.xib */,
 			);
 			name = Loading;
-			path = "Hamp/Controllers/UI Controllers/UI Notifications/Loading";
+			path = "Hamp/Controllers/UI Controllers/Loading";
 			sourceTree = SOURCE_ROOT;
 		};
 		4E6A08811F251B170044570C /* IB */ = {
@@ -1358,7 +1359,6 @@
 			isa = PBXGroup;
 			children = (
 				4EE0B9F82067384000C2C5D1 /* UINotificationsContainerViewController.swift */,
-				4E6647C6207915F00052626A /* Loading */,
 				4E6647C5207915AA0052626A /* Transactions notification */,
 				4EE0B9F92067384000C2C5D1 /* View */,
 			);
