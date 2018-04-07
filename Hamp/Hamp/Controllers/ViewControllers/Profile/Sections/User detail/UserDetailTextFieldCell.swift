@@ -9,6 +9,9 @@
 import UIKit
 protocol UserDetailTextFieldCellDelegate: class {
 	func becameFirstResponder(on cell: UserDetailTextFieldCell)
+//	func resignedFirstResponder(on cell: UserDetailTextFieldCell)
+	func shouldBecomeFirstResponder(on cell: UserDetailTextFieldCell) -> Bool
+	func needsToBeRespondered(on cell: UserDetailTextFieldCell)
 	func valueDidChange(on cell: UserDetailTextFieldCell, value: Any?)
 }
 
@@ -24,21 +27,32 @@ class UserDetailTextFieldCell: UITableViewCell {
 		didSet {
 			textField.isEnabled = isEditing
 			if !isEditing {
-				textField.resignFirstResponder()
+				_ = resignFirstResponder()
 			}
 		}
 	}
 	
+
 	// MARK: - Life cycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		textField.isEnabled = false
 		textField.delegate = self
 	}
 	
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 		previousText = textField.text
+	}
+	
+	// MARK: - Customizing
+	override func becomeFirstResponder() -> Bool {
+		textField.becomeFirstResponder()
+		return super.becomeFirstResponder()
+	}
+	
+	override func resignFirstResponder() -> Bool {
+		textField.resignFirstResponder()
+		return super.resignFirstResponder()
 	}
 }
 
@@ -47,8 +61,17 @@ extension UserDetailTextFieldCell: UITextFieldDelegate {
 		delegate?.becameFirstResponder(on: self)
 	}
 	
+	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+		delegate?.needsToBeRespondered(on: self)
+		return delegate?.shouldBecomeFirstResponder(on: self) ?? true
+	}
+	
 	func textFieldDidEndEditing(_ textField: UITextField) {
+//		self.delegate?.resignedFirstResponder(on: self)
+		
 		guard previousText != textField.text else { return }
 		delegate?.valueDidChange(on: self, value: textField.text)
 	}
+	
+	
 }

@@ -22,35 +22,41 @@ private extension UserDetailContentFactory {
 			title: "Nombre",
 			value: user?.name,
 			jsonKey: "name",
-			validation: ValidationsFactory.Option.filled)
+			validation: ValidationsFactory.Option.filled,
+			input: .text)
 		
 		let surname = ProfileCellContent(
 			title: "Apellido",
 			value: user?.surname,
 			jsonKey: "surname",
-			validation: ValidationsFactory.Option.filled)
+			validation: ValidationsFactory.Option.filled,
+			input: .text)
 		
 		let email = ProfileCellContent(
 			title: "Email",
 			value: user?.email,
 			jsonKey: "email",
-			validation: ValidationsFactory.Option.email)
+			validation: ValidationsFactory.Option.email,
+			input: .text)
 		
 		let phone = ProfileCellContent(
 			title: "Teléfono",
 			value: user?.phone,
 			jsonKey: "phone",
-			validation: ValidationsFactory.Option.phone)
+			validation: ValidationsFactory.Option.phone,
+			input: .text)
 		
 		let birthday = ProfileCellContent(
 			title: "Cumpleaños",
 			value: user?.birthday,
-			jsonKey: "birthday")
+			jsonKey: "birthday",
+			input: .date)
 		
 		let gender = ProfileCellContent(
 			title: "Gender",
 			value: user?.gender,
-			jsonKey: "gender")
+			jsonKey: "gender",
+			input: .gender)
 		
 		return ProfileTableViewSection(contents: [name, surname, email, phone, birthday, gender])
 	}

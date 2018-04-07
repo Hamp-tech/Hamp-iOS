@@ -1,18 +1,18 @@
 //
-//  UserDetailNavigation.swift
+//  ChangePasswordNavigator.swift
 //  Hamp
 //
-//  Created by Joan Molinas Ramon on 31/3/18.
+//  Created by Joan Molinas Ramon on 6/4/18.
 //  Copyright © 2018 com.hamp.hampiOS. All rights reserved.
 //
 
 import UIKit
 
-class UserDetailNavigation: Navigable {
+class ChangePasswordNavigator: Navigable {
 	
 	// MARK: - Protocol
 	func navigate(on rootViewController: UIViewController) {
-		let vc = UserDetailTableViewController()
+		let vc = ChangePasswordTableViewController()
 		rootViewController.navigationController?.pushViewController(vc, animated: true)
 	}
 }

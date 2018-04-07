@@ -12,11 +12,6 @@ import UIKit
     func manCheckboxWasPressed(_ cell: SignUpGenderTableViewCell)
     func womanCheckboxWasPressed(_ cell: SignUpGenderTableViewCell)
 }
-
-public enum Gender: String {
-    case man = "M", woman = "W", unknown = "U"
-}
-
 class SignUpGenderTableViewCell: SignUpBaseTableViewCell {
     
     //MARK: IB properties
