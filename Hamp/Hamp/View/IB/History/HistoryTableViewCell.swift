@@ -37,7 +37,6 @@ class HistoryTableViewCell: UITableViewCell {
             createServicesHiredSubviews()
             setupLeftSeparator()
         }
-        self.contentView.backgroundColor = .red
 
         dateLabel.text = DateConverter.getHistoryDateFormatFromISO8601(iso8601Date: transaction.pickUpDate)
         priceLabel.text = "\(Int.init(booking.price))€"

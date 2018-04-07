@@ -134,13 +134,13 @@
         <!--History-->
         <scene sceneID="X23-K4-T3l">
             <objects>
-                <tableViewController id="183-Gv-Pd0" customClass="HistoryViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="183-Gv-Pd0" customClass="HistoryTableViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B4L-X9-UOp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kno-jF-6TB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HistoryCellID" selectionStyle="default" indentationWidth="10" id="kno-jF-6TB" customClass="NewHistoryTableViewCell" customModule="Hamp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kno-jF-6TB" id="UVf-fx-ae2">
@@ -306,7 +306,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386" width="59" height="35"/>
+                                <rect key="frame" x="245" y="386" width="59" height="36.5"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

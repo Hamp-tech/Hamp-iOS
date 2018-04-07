@@ -13,7 +13,6 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         injectDependencesToViewControllers()
-        foo()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,14 +28,12 @@ class MainTabBarViewController: UITabBarController {
         super.viewWillAppear(animated)
         selectedIndex = 1
     }
-    
-    private func foo () {
-    }
+
 }
 
 private extension MainTabBarViewController {
     func injectDependencesToViewControllers() {
-        let historyViewController = ((viewControllers?.first as! UINavigationController).topViewController as! HistoryViewController)
+        let historyViewController = ((viewControllers?.first as! UINavigationController).topViewController as! HistoryTableViewController)
         historyViewController.dataProvider = ProvidersManager.sharedInstance.historyProvider
     }
 }
