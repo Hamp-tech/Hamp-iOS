@@ -13,13 +13,9 @@ class SignUpViewController: LogoTitleBaseViewController {
     
     //MARK: Properties
     @IBOutlet weak private var tableView: UITableView!
-    
-    private let loadingScreen = LoadingViewController ()
-    
-    let contentTypes = SignUpCellContentFactory.contentTypes
-
-    var contents: [SignUpCellContent]!
-    var validationsManager = ValidationManager()
+    private let contentTypes = SignUpCellContentFactory.contentTypes
+    private var contents: [SignUpCellContent]!
+    private var validationsManager = ValidationManager()
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -45,7 +41,7 @@ class SignUpViewController: LogoTitleBaseViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func singUp(_ sender: UIButton) {
+    @IBAction func signUp(_ sender: UIButton) {
         for i in 0..<tableView.numberOfRows(inSection: 0) {
             let cell = tableView.cellForRow(at: IndexPath.init(row: i, section: 0))
             cell?.resignFirstResponder()
@@ -64,16 +60,18 @@ class SignUpViewController: LogoTitleBaseViewController {
             do {
                 try user.validate()
         
-                Hamp.Auth.signUp(user: user, onResponse: { (response) in
-                    if response.code == .ok {
-                        self.loadingScreen.dismissViewController()
-                        ProvidersManager.sharedInstance.downloadProvidersData()
-                        self.showTabBarViewController()
-                    } else {
-                        self.loadingScreen.dismissViewController()
-                        self.showAlertError(with: "Sign Up error", message: response.message)
-                    }
+                Hamp.Auth.signUp(user: user, onResponse: { [unowned self] (response) in
+					DispatchQueue.main.async {
+						self.hideLoading()
+						if response.code == .ok {
+							ProvidersManager.sharedInstance.downloadProvidersData()
+							self.showTabBarViewController()
+						} else {
+							self.showAlertError(with: "Sign Up error", message: response.message)
+						}
+					}
                 })
+				showLoading()
             } catch let error {
                 let userError = error as! UserError
                 self.showAlertError(with: "Sign Up error", message: userError.description)
@@ -81,7 +79,6 @@ class SignUpViewController: LogoTitleBaseViewController {
         }) {
             self.showAlertError(with: "Sign Up Error", message: "Ups... Something go wrong.")
         }
-        present (loadingScreen, animated: true, completion: nil)
     }
 }
 

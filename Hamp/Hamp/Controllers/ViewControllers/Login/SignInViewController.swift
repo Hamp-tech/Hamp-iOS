@@ -16,11 +16,11 @@ class SignInViewController: LogoTitleBaseViewController {
     private var validationsManager = ValidationManager()
     
     //MARK: Public Properties
-    @IBOutlet weak private var mailTextField: InputTextField!
-    @IBOutlet weak private var passwordTextField: InputTextField!
-    @IBOutlet weak private var optionsToolbar: SignInToolbar!
-    @IBOutlet weak var optionsToolbarBottomContraint: NSLayoutConstraint!
-    @IBOutlet weak var loginButton: HorizontalCircleGradientButton!
+    @IBOutlet private weak var mailTextField: InputTextField!
+    @IBOutlet private weak var passwordTextField: InputTextField!
+    @IBOutlet private weak var optionsToolbar: SignInToolbar!
+    @IBOutlet private weak var optionsToolbarBottomContraint: NSLayoutConstraint!
+    @IBOutlet private weak var loginButton: HorizontalCircleGradientButton!
     
     //MARK: Life cycle
     override func viewDidLoad() {
