@@ -19,13 +19,16 @@ class NotificationsPresenter {
 			return UIApplication.topViewController()
 		}
 	}
+	private var viewControllerActive: UINotificationsContainerViewController?
 	
 	func present(uinotification: UINotificable) {
 		guard let topViewController = topViewController else { return }
 		let vc = UINotificationsContainerViewController(notification: uinotification)
 		
 		topViewController.present(vc, animated: false)
+		viewControllerActive = vc
 	}
+	
 	
 	func enqueu(uinotification: UINotificable) {
 		notificationsEnqueued.append(uinotification)

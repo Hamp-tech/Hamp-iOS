@@ -14,7 +14,6 @@ class SignInViewController: LogoTitleBaseViewController {
 
     //MARK: Private properties
     private var validationsManager = ValidationManager()
-    private let loadingScreen = LoadingViewController ()
     
     //MARK: Public Properties
     @IBOutlet weak private var mailTextField: InputTextField!
@@ -115,18 +114,18 @@ class SignInViewController: LogoTitleBaseViewController {
         guard let password = passwordTextField.text else {return}
         
         validationsManager.validate(onSuccess: {
-            Hamp.Auth.signIn(email: email, password: password, onResponse: { (response) in
-                if response.code == .ok {
-                    self.loadingScreen.dismissViewController()
-                    ProvidersManager.sharedInstance.downloadProvidersData()
-                    self.showTabBarViewController()
-                } else {
-                    self.loadingScreen.dismissViewController()
-                    self.showAlertError(with: "Sign in error", message: response.message)
-                }
-                
+            Hamp.Auth.signIn(email: email, password: password, onResponse: { [unowned self] (response) in
+				DispatchQueue.main.async {
+					self.hideLoading()
+					if response.code == .ok {
+						ProvidersManager.sharedInstance.downloadProvidersData()
+						self.showTabBarViewController()
+					} else {
+						self.showAlertError(with: "Sign in error", message: response.message)
+					}
+				}
             })
-            present(loadingScreen, animated: false, completion: nil)
+			showLoading()
         }, onError: {
             print("Not correct fields")
         })

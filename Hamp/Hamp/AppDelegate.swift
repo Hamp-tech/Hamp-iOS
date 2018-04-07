@@ -26,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		showMainViewController()
 		
-		application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
-		
 		return true
 	}
 	

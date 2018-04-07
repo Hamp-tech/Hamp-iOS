@@ -12,4 +12,5 @@ pod 'Crashlytics'
 pod 'InputMask'
 pod 'RealmSwift'
 pod 'Firebase/Messaging'
+pod 'NVActivityIndicatorView'
 end

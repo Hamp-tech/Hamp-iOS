@@ -53,6 +53,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - Protobuf (3.5.0)
   - Realm (3.3.0):
     - Realm/Headers (= 3.3.0)
@@ -68,6 +71,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - HampKit (from `https://github.com/Hamp-tech/Hamp-iOS-Kit.git`, branch `features`)
   - InputMask
+  - NVActivityIndicatorView
   - RealmSwift
 
 EXTERNAL SOURCES:
@@ -107,10 +111,11 @@ SPEC CHECKSUMS:
   HampKit: cbc2e9dad18ddb3dbbce364789074673038571ab
   InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
   RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
 
-PODFILE CHECKSUM: fccf4e2059e0c64ea8d3c22a3beb1dc6c40c3026
+PODFILE CHECKSUM: df96f5d04ec1817dfa699124613c11984608e154
 
 COCOAPODS: 1.4.0

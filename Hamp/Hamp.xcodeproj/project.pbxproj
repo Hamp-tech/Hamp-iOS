@@ -129,6 +129,9 @@
 		4E5B08861F04731C00236A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B08851F04731C00236A9E /* AppDelegate.swift */; };
 		4E5B088D1F04731C00236A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5B088C1F04731C00236A9E /* Assets.xcassets */; };
 		4E632E211F264A8900CDE02D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E632E201F264A8900CDE02D /* SignUpViewController.swift */; };
+		4E6647CB2079164F0052626A /* LoadingUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6647C92079164F0052626A /* LoadingUIController.swift */; };
+		4E6647CC2079164F0052626A /* LoadingUIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6647CA2079164F0052626A /* LoadingUIController.xib */; };
+		4E6647CE2079320A0052626A /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6647CD2079320A0052626A /* UIViewController+Loading.swift */; };
 		4E6A08851F251D240044570C /* SignInToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6A08841F251D240044570C /* SignInToolbar.swift */; };
 		4E6AB6711F6AC6F400B750EF /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AB6701F6AC6F400B750EF /* PulleyViewController.swift */; };
 		4E6AB6731F6AC8A900B750EF /* PulleyPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AB6721F6AC8A900B750EF /* PulleyPosition.swift */; };
@@ -385,6 +388,9 @@
 		4E5B08A51F04731C00236A9E /* HampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampUITests.swift; sourceTree = "<group>"; };
 		4E5B08A71F04731C00236A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E632E201F264A8900CDE02D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4E6647C92079164F0052626A /* LoadingUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUIController.swift; sourceTree = "<group>"; };
+		4E6647CA2079164F0052626A /* LoadingUIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingUIController.xib; sourceTree = "<group>"; };
+		4E6647CD2079320A0052626A /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		4E6A08841F251D240044570C /* SignInToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInToolbar.swift; sourceTree = "<group>"; };
 		4E6AB6701F6AC6F400B750EF /* PulleyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
 		4E6AB6721F6AC8A900B750EF /* PulleyPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyPosition.swift; sourceTree = "<group>"; };
@@ -960,6 +966,27 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		4E6647C5207915AA0052626A /* Transactions notification */ = {
+			isa = PBXGroup;
+			children = (
+				4EE0B9FC2067384000C2C5D1 /* TransactionUINotificationsController.swift */,
+				4EE0B9FD2067384000C2C5D1 /* TransactionsUINotificationCellConfigurator.swift */,
+				4EE0B9FE2067384000C2C5D1 /* TransactionUINotificationsController.xib */,
+			);
+			name = "Transactions notification";
+			path = "Hamp/Controllers/UI Controllers/UI Notifications/Transactions notification";
+			sourceTree = SOURCE_ROOT;
+		};
+		4E6647C6207915F00052626A /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				4E6647C92079164F0052626A /* LoadingUIController.swift */,
+				4E6647CA2079164F0052626A /* LoadingUIController.xib */,
+			);
+			name = Loading;
+			path = "Hamp/Controllers/UI Controllers/UI Notifications/Loading";
+			sourceTree = SOURCE_ROOT;
+		};
 		4E6A08811F251B170044570C /* IB */ = {
 			isa = PBXGroup;
 			children = (
@@ -1331,10 +1358,9 @@
 			isa = PBXGroup;
 			children = (
 				4EE0B9F82067384000C2C5D1 /* UINotificationsContainerViewController.swift */,
+				4E6647C6207915F00052626A /* Loading */,
+				4E6647C5207915AA0052626A /* Transactions notification */,
 				4EE0B9F92067384000C2C5D1 /* View */,
-				4EE0B9FC2067384000C2C5D1 /* TransactionUINotificationsController.swift */,
-				4EE0B9FD2067384000C2C5D1 /* TransactionsUINotificationCellConfigurator.swift */,
-				4EE0B9FE2067384000C2C5D1 /* TransactionUINotificationsController.xib */,
 			);
 			name = "UI Notifications";
 			path = "Hamp/Controllers/UI Controllers/UI Notifications";
@@ -1391,6 +1417,7 @@
 				4EF119C420680EA800369744 /* MKMapView+Location.swift */,
 				4E7A5BB5207410CD005CE76F /* Date+ISO8601.swift */,
 				4EFC7052207589DB00718859 /* UITableView+Disable.swift */,
+				4E6647CD2079320A0052626A /* UIViewController+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1601,6 +1628,7 @@
 				4E7D94E71F238CB000C7BB4B /* LaunchScreen.storyboard in Resources */,
 				4EC0BD2C1F4C3EBB0077DD92 /* Tutorial.storyboard in Resources */,
 				4EE0BA042067384000C2C5D1 /* TransactionUINotificationsController.xib in Resources */,
+				4E6647CC2079164F0052626A /* LoadingUIController.xib in Resources */,
 				1920E7A12021DF510070AF63 /* CreditCardTableViewCell.xib in Resources */,
 				4EE0BA002067384000C2C5D1 /* TransactionsUINotificationsTableViewCell.xib in Resources */,
 				4EDF10041F236AE4007E15E9 /* FredokaOne-Regular.ttf in Resources */,
@@ -1627,6 +1655,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HampKit/HampKit.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -1642,6 +1671,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HampKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -1821,6 +1851,7 @@
 				4EE0B9FF2067384000C2C5D1 /* UINotificationsContainerViewController.swift in Sources */,
 				19C8EF8E1F7BA8E900D70A07 /* OrderPaymentCell.swift in Sources */,
 				19B2C0DC204DD46300066209 /* LockTableViewCell.swift in Sources */,
+				4E6647CE2079320A0052626A /* UIViewController+Loading.swift in Sources */,
 				4EC2CE781F477736002439CD /* ServicesPaymentViewController.swift in Sources */,
 				4EE5F1181F4AD62C0056AA2C /* CreditCardsProvider.swift in Sources */,
 				4E4D70952055B530009EB415 /* GMPicker.swift in Sources */,
@@ -1910,6 +1941,7 @@
 				4EC2CE881F479199002439CD /* ServicesPaymentFooterView.swift in Sources */,
 				4EF119C3206801AB00369744 /* HistoryTransactionDetailMapController.swift in Sources */,
 				4EEA1A171F2380B50070E17A /* UIColor+Hamp.swift in Sources */,
+				4E6647CB2079164F0052626A /* LoadingUIController.swift in Sources */,
 				4EB242DD1F45C2CC006F3BA7 /* LaundryServicesFactory.swift in Sources */,
 				4EDCFCF81F45150300EAE4E4 /* HampCollectionViewController.swift in Sources */,
 				4EDF250C1F45E67F00CC29A0 /* OrderManager.swift in Sources */,
