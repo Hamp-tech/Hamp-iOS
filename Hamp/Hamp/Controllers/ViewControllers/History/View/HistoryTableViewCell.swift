@@ -12,7 +12,8 @@ class HistoryTableViewCell: UITableViewCell {
 
     //MARK: Properties
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var servicesStackView: UIStackView!
+	@IBOutlet weak var headerView: UIView!
+	@IBOutlet weak var servicesStackView: UIStackView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!

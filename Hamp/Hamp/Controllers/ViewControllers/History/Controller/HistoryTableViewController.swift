@@ -13,6 +13,7 @@ class HistoryTableViewController: HampTableViewController {
     //MARK: Properties
 	private var historyDataProvider = ProvidersManager.sharedInstance.historyProvider
 	private var transactions = [DBTransaction]()
+	private let configurator = HistoryCellConfigurator()
 	
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -44,7 +45,15 @@ extension HistoryTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
-		
+		configurator.configurate(cell: cell, content: transactions[indexPath.row])
         return cell
     }
+}
+
+extension HistoryTableViewController {
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let transaction = transactions[indexPath.row]
+		let detail = HistoryTransactionDetailViewController(transaction: transaction)
+		navigationController?.pushViewController(detail, animated: true)
+	}
 }

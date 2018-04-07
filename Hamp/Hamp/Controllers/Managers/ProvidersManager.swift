@@ -11,7 +11,7 @@ import Foundation
 struct ProvidersManager {
     
     // MARK: - Properties
-    static let sharedInstance = ProvidersManager.init()
+    static let sharedInstance = ProvidersManager()
     let hampDataManager: HampDataManager
     let historyProvider: StaticHistoryProvider
     

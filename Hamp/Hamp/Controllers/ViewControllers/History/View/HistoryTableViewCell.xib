@@ -75,7 +75,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18,50 €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8n-2e-ssp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18,50 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8n-2e-ssp">
                                                 <rect key="frame" x="265" y="35" width="80" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="RD1-ys-Lzf"/>
@@ -137,6 +137,7 @@
             <connections>
                 <outlet property="containerView" destination="dbV-Zi-Msa" id="znh-zM-AfA"/>
                 <outlet property="detailLabel" destination="saL-FY-dN1" id="KR4-i8-VaJ"/>
+                <outlet property="headerView" destination="Qfp-G2-6qh" id="yuj-So-jNQ"/>
                 <outlet property="priceLabel" destination="Q8n-2e-ssp" id="6sz-XE-Gpu"/>
                 <outlet property="servicesStackView" destination="S5K-2D-GuB" id="sL3-lS-EkX"/>
                 <outlet property="titleLabel" destination="pU8-lU-RfY" id="mH2-gm-ppo"/>

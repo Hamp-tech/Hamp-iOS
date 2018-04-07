@@ -9,13 +9,11 @@
 import UIKit
 
 extension UIColor {
-    
-    /// #F08086
+	
     static let ligthPink = UIColor(hexString: "#F08086")
-    
-    
-    /// #E72F72
     static let darkPink = UIColor(hexString: "#E72F72")
+	static let lightGray = UIColor(hexString: "#F2F2F2")
+	static let superLightPink = UIColor(hexString: "#FCE4EC")
 }
 
 extension UIColor {

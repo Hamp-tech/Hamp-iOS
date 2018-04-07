@@ -31,6 +31,8 @@ private extension LaundryServicesProvider {
     }
     
     private static func orderService(service: Service, by imageName: String) -> OrderableService {
-        return OrderService.init(service: service, imageName: imageName)
+        return OrderService(service: service, imageName: imageName)
     }
+	
+	
 }
