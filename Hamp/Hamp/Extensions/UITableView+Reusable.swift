@@ -8,13 +8,11 @@
 
 import UIKit
 
-//extension UITableViewCell: Reusable { }
-
 extension UITableView {
     /// Register cell
     ///
     /// - Parameter _: cell type to register
-    func registerReusableCell<T: UITableViewCell>(_ : T.Type) where T: Reusable {
+    func registerReusableCell<T: UITableViewCell>(_ : T.Type) {
         if let nib = T.nib {
             self.register(nib, forCellReuseIdentifier: T.reuseIdentifier)
         } else {
@@ -26,7 +24,7 @@ extension UITableView {
     ///
     /// - Parameter indexPath: indexPath of cell
     /// - Returns: cell on this indexPath
-    func dequeReusableCell<T: UITableViewCell>(indexPath: IndexPath) -> T where T: Reusable  {
+    func dequeReusableCell<T: UITableViewCell>(indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
     

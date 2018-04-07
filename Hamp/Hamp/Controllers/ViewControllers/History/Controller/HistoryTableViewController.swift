@@ -11,20 +11,16 @@ import UIKit
 class HistoryTableViewController: HampTableViewController {
     
     //MARK: Properties
-    let cellID = "HistoryCellID"
-    
+	
     var dataProvider: DataProvider!
     
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells ()
+        tableView.registerReusableCell(HistoryTableViewCell.self)
         tableView.separatorStyle = .none
-    }
-    
-    private func registerCells () {
-        let nib = UINib(nibName: "NewHistoryTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellID)
+		tableView.rowHeight = 170
+		tableView.footer = false
     }
 }
 
@@ -39,21 +35,8 @@ extension HistoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        let cell = tableView.dequeReusableCell(indexPath: indexPath) as HistoryTableViewCell
+		
         return cell
     }
 }
-
-//MARK: TableView delegate
-extension HistoryTableViewController {
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
-    }
-}
-
-
-
-
-
-
-

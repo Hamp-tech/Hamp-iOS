@@ -1,5 +1,5 @@
 //
-//  NewHistoryCellConfigurator.swift
+//  HistoryCellConfigurator.swift
 //  Hamp
 //
 //  Created by Aleix Baggerman on 05/04/2018.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct NewHistoryCellConfigurator {
-    func configurate (cell: NewHistoryTableViewCell, content: HistoryCellContenable) {
+struct HistoryCellConfigurator {
+    func configurate (cell: HistoryTableViewCell, content: HistoryCellContenable) {
         
     }
 }

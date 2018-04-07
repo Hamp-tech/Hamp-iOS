@@ -1,5 +1,5 @@
 //
-//  NewHistoryTableViewCell.swift
+//  HistoryTableViewCell.swift
 //  Hamp
 //
 //  Created by Aleix Baggerman on 05/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewHistoryTableViewCell: UITableViewCell {
+class HistoryTableViewCell: UITableViewCell {
 
     //MARK: Properties
     @IBOutlet weak var containerView: UIView!
@@ -20,17 +20,11 @@ class NewHistoryTableViewCell: UITableViewCell {
     //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+		
         containerView.clipsToBounds = true
-        servicesStackView.distribution = .fillEqually
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        servicesStackView = UIStackView()
-    }
-    
+	
     //MARK: Prepare data
-    
     func setStackViewImages (images: [UIImage]) {
         images.forEach { (image) in
             let imageView = UIImageView(image: image)
