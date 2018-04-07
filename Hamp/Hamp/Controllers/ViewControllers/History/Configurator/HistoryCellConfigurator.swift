@@ -9,7 +9,7 @@
 import Foundation
 
 struct HistoryCellConfigurator {
-    func configurate (cell: HistoryTableViewCell, content: HistoryCellContenable) {
+    func configurate (cell: HistoryTableViewCell, content: DBTransaction) {
         
     }
 }

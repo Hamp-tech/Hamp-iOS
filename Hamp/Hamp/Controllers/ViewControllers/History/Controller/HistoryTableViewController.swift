@@ -11,9 +11,9 @@ import UIKit
 class HistoryTableViewController: HampTableViewController {
     
     //MARK: Properties
+	private var historyDataProvider = ProvidersManager.sharedInstance.historyProvider
+	private var transactions = [DBTransaction]()
 	
-    var dataProvider: DataProvider!
-    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,14 @@ class HistoryTableViewController: HampTableViewController {
 		tableView.rowHeight = 170
 		tableView.footer = false
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		historyDataProvider.getData { [weak self] (results) in
+			self?.transactions = results.map{$0 as! DBTransaction}.reversed()
+			self?.tableView.reloadData()
+		}
+	}
 }
 
 //MARK: TableView data source
@@ -31,7 +39,7 @@ extension HistoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return transactions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

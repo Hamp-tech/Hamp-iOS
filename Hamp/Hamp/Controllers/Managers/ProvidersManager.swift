@@ -16,9 +16,9 @@ struct ProvidersManager {
     let historyProvider: StaticHistoryProvider
     
     private init () {
-        hampDataManager = HampDataManager.init()
+        hampDataManager = HampDataManager()
         hampDataManager.createDataBase()
-        historyProvider = StaticHistoryProvider.init(hampDataManager: hampDataManager)
+        historyProvider = StaticHistoryProvider(hampDataManager: hampDataManager)
     }
     
     // MARK: - Public API
