@@ -11,15 +11,17 @@ import UIKit
 public class GradientStatesButtonActionContent {
     public typealias StatesActionBlock = ()->()
     public var identifier: String!
-    public var action: StatesActionBlock!
+    public var action: StatesActionBlock
     public var title: String?
+    public var isEnabled: Bool
     
     init(identifier: String,
-         action: @escaping StatesActionBlock,
-         title: String?) {
+         action: (@escaping StatesActionBlock),
+         title: String?, isEnabled: Bool) {
         self.identifier = identifier
         self.action = action
         self.title = title
+        self.isEnabled = isEnabled
     }
 }
 
@@ -39,6 +41,7 @@ class GradientStatesButton: HorizontalCircleGradientButton {
         
         currentContent = c
         self.setTitle(c.title, for: .normal)
+        self.isEnabled = c.isEnabled
     }
     
     func executeAction() {

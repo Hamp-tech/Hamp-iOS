@@ -29,7 +29,6 @@ class NotificationsPresenter {
 		viewControllerActive = vc
 	}
 	
-	
 	func enqueu(uinotification: UINotificable) {
 		notificationsEnqueued.append(uinotification)
 	}

@@ -20,11 +20,10 @@ class NewCreditCardViewController: HampViewController {
         
         creditCardProvider = CreditCardsProvider.init()
         creditCardView.delegate = self
+        
         let notCompletedCreditCardContent = createContent(
-            action: {
-                self.dismiss(animated: true, completion: nil)
-        },  title: Localization.localizableString(by: "new-credit-card.button.not-completed-text"),
-            identifier: gradientStatesButtonNotCompletedContentIdentifier)
+            action: {},  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
+            identifier: gradientStatesButtonNotCompletedContentIdentifier, isEnabled: false)
         
         let completedCreditCardContent = createContent(
             action: {
@@ -48,12 +47,11 @@ class NewCreditCardViewController: HampViewController {
                     }
                 })
         },  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
-            identifier: gradientStatesButtonCompletedContentIdentifier)
+            identifier: gradientStatesButtonCompletedContentIdentifier, isEnabled: true)
         
-        statesGradientButton.addActionContent(content: notCompletedCreditCardContent,
-                                              identifier: notCompletedCreditCardContent.identifier)
-        statesGradientButton.addActionContent(content: completedCreditCardContent,
-                                              identifier: completedCreditCardContent.identifier)
+        statesGradientButton.addActionContent(content: notCompletedCreditCardContent, identifier: notCompletedCreditCardContent.identifier)
+        statesGradientButton.addActionContent(content: completedCreditCardContent, identifier: completedCreditCardContent.identifier)
+        
         statesGradientButton.changeContent(to: gradientStatesButtonNotCompletedContentIdentifier)
      }
     
@@ -64,10 +62,10 @@ class NewCreditCardViewController: HampViewController {
 
 private extension NewCreditCardViewController {
     //MARK: Private
-    func createContent(action: @escaping GradientStatesButtonActionContent.StatesActionBlock, title: String?, identifier: String) -> GradientStatesButtonActionContent {
+    func createContent(action: @escaping GradientStatesButtonActionContent.StatesActionBlock, title: String?, identifier: String, isEnabled: Bool) -> GradientStatesButtonActionContent {
         return GradientStatesButtonActionContent.init(identifier: identifier,
                                                       action: action,
-                                                      title: title)
+                                                      title: title, isEnabled: isEnabled)
     }
 }
 

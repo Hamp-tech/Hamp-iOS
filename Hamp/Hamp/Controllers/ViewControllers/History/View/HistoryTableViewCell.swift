@@ -21,7 +21,6 @@ class HistoryTableViewCell: UITableViewCell {
     //MARK: Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-		
         containerView.clipsToBounds = true
     }
 	

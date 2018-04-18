@@ -42,5 +42,22 @@ struct DateConverter {
         let year = dateFormatter.string(from: Date())
         return Int(year) ?? 0
     }
+    
+    static func getMonthStringBy (month: Int) -> String {
+        guard month > 0 && month <= 12 else {return "Incorrect Month"}
+        let months = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Decembre"]
+        return months[month - 1]
+    }
+    
+    static func convertDateToLongString (date: Date) -> String {
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        
+        let dateString = String(day) + " de " + getMonthStringBy(month: month) + " del " + String(year)
+        
+        return dateString
+    }
 
 }
