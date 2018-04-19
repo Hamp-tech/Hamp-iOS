@@ -21,25 +21,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--New Credit Card View Controller-->
+        <!--Add credit card-->
         <scene sceneID="opF-13-2Gc">
             <objects>
                 <viewController storyboardIdentifier="newCreditCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wqr-5f-awJ" customClass="NewCreditCardViewController" customModule="Hamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IaC-Qi-cbA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add credit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9F-m3-ary">
-                                <rect key="frame" x="31" y="49" width="273" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="RDJ-cJ-bpb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQB-WU-ij3" customClass="GradientStatesButton" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="31" y="514" width="273" height="34"/>
+                                <rect key="frame" x="31" y="465" width="273" height="34"/>
                                 <color key="backgroundColor" red="0.90776830909999995" green="0.18556371329999999" blue="0.44698578119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Raz-F2-WLH"/>
@@ -53,7 +44,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-Wx-3j2" customClass="CreditCardUIController" customModule="Hamp" customModuleProvider="target">
-                                <rect key="frame" x="38" y="120" width="244" height="130.5"/>
+                                <rect key="frame" x="38" y="104" width="244" height="130.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bg1-Wx-3j2" secondAttribute="height" multiplier="43:23" id="9W5-hx-bKW"/>
                                 </constraints>
@@ -65,17 +56,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bg1-Wx-3j2" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="38" id="4ns-dK-HjO"/>
+                            <constraint firstItem="bg1-Wx-3j2" firstAttribute="top" secondItem="6mE-db-xuG" secondAttribute="top" constant="40" id="5iG-E0-jii"/>
                             <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="MQB-WU-ij3" secondAttribute="trailing" constant="16" id="Hq8-k4-OX3"/>
-                            <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="z9F-m3-ary" secondAttribute="trailing" constant="16" id="Qee-aO-pU2"/>
                             <constraint firstItem="6mE-db-xuG" firstAttribute="trailing" secondItem="bg1-Wx-3j2" secondAttribute="trailing" constant="38" id="be6-Kc-QBr"/>
                             <constraint firstItem="6mE-db-xuG" firstAttribute="bottom" secondItem="MQB-WU-ij3" secondAttribute="bottom" constant="20" id="f6o-Tv-kWO"/>
-                            <constraint firstItem="z9F-m3-ary" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="31" id="hyX-Yp-sqp"/>
                             <constraint firstItem="MQB-WU-ij3" firstAttribute="leading" secondItem="6mE-db-xuG" secondAttribute="leading" constant="31" id="py1-Bc-jzk"/>
-                            <constraint firstItem="z9F-m3-ary" firstAttribute="top" secondItem="6mE-db-xuG" secondAttribute="top" constant="29" id="tBI-GE-99v"/>
-                            <constraint firstItem="bg1-Wx-3j2" firstAttribute="top" secondItem="z9F-m3-ary" secondAttribute="bottom" constant="28" id="tn3-EB-C2E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6mE-db-xuG"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add credit card" id="zI2-Ke-Ncz">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="8EF-y4-itc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="creditCardView" destination="bg1-Wx-3j2" id="4uR-eg-a0T"/>
                         <outlet property="statesGradientButton" destination="MQB-WU-ij3" id="x4w-ds-rSq"/>
@@ -261,7 +252,7 @@ Lorem Ipsum.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="jny-SG-SPK">
-                                <rect key="frame" x="245" y="386.5" width="59" height="35"/>
+                                <rect key="frame" x="245" y="386.5" width="59" height="36.5"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                 <color key="textColor" red="0.90588235289999997" green="0.1843137255" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -477,7 +468,7 @@ Lorem Ipsum.</string>
                     <connections>
                         <outlet property="collectionView" destination="7Kv-U4-h4Q" id="VlI-TK-jz9"/>
                         <outlet property="endOrderButton" destination="gsi-6r-qOE" id="jyx-RE-mv9"/>
-                        <segue destination="wqr-5f-awJ" kind="presentation" identifier="presentAddCreditCard" id="89w-Hn-EOR"/>
+                        <segue destination="wqr-5f-awJ" kind="show" identifier="presentAddCreditCard" id="89w-Hn-EOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApA-np-uyy" userLabel="First Responder" sceneMemberID="firstResponder"/>

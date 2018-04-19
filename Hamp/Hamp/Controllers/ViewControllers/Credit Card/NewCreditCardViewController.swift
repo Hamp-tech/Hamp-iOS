@@ -18,6 +18,8 @@ class NewCreditCardViewController: HampViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configurateNavigationItems ()
+        
         creditCardProvider = CreditCardsProvider.init()
         creditCardView.delegate = self
         
@@ -62,6 +64,14 @@ class NewCreditCardViewController: HampViewController {
 
 private extension NewCreditCardViewController {
     //MARK: Private
+    func configurateNavigationItems () {
+        let view = UIView ()
+        view.backgroundColor = .red
+        let trailingButton = TrailingBarButtonItem(with: view)
+       navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: nil)
+//        navigationController?.addRightBarButtonWhenLargeTitles(rightButton: trailingButton)
+    }
+    
     func createContent(action: @escaping GradientStatesButtonActionContent.StatesActionBlock, title: String?, identifier: String, isEnabled: Bool) -> GradientStatesButtonActionContent {
         return GradientStatesButtonActionContent.init(identifier: identifier,
                                                       action: action,
