@@ -18,8 +18,6 @@ class NewCreditCardViewController: HampViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configurateNavigationItems ()
-        
         creditCardProvider = CreditCardsProvider.init()
         creditCardView.delegate = self
         
@@ -38,14 +36,14 @@ class NewCreditCardViewController: HampViewController {
                 loadingSpinner.startAnimating()
                 
                 self.creditCardProvider.addCreditCard(creditCard: self.creditCardView.getCreditCard(), onSucced: {
-                    self.dismiss(animated: true, completion: nil)
                     DispatchQueue.main.async {
                         loadingSpinner.stopAnimating()
+                        _ = self.navigationController?.popViewController(animated: true)
                     }
                 }, onError: { (errorMessage) in
-                    self.dismiss(animated: true, completion: nil)
                     DispatchQueue.main.async {
                         loadingSpinner.stopAnimating()
+                        _ = self.navigationController?.popViewController(animated: true)
                     }
                 })
         },  title: Localization.localizableString(by: "new-credit-card.button.completed-text"),
@@ -64,13 +62,6 @@ class NewCreditCardViewController: HampViewController {
 
 private extension NewCreditCardViewController {
     //MARK: Private
-    func configurateNavigationItems () {
-        let view = UIView ()
-        view.backgroundColor = .red
-        let trailingButton = TrailingBarButtonItem(with: view)
-       navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: nil)
-//        navigationController?.addRightBarButtonWhenLargeTitles(rightButton: trailingButton)
-    }
     
     func createContent(action: @escaping GradientStatesButtonActionContent.StatesActionBlock, title: String?, identifier: String, isEnabled: Bool) -> GradientStatesButtonActionContent {
         return GradientStatesButtonActionContent.init(identifier: identifier,

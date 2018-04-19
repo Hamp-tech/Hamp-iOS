@@ -124,12 +124,12 @@ extension CreditCardUIController: CreditCardInputTextDelegate{
             showErrorLabel(errorText: CreditCardError.missingParameter("name").description)
         } catch CreditCardError.missingParameter("number") {
             showErrorLabel(errorText: CreditCardError.missingParameter("number").description)
-        } catch CreditCardError.missingParameter("expMonth") {
-            showErrorLabel(errorText: CreditCardError.missingParameter("expMonth").description)
-        } catch CreditCardError.missingParameter("expYear") {
-            showErrorLabel(errorText: CreditCardError.missingParameter("expYear").description)
-        } catch CreditCardError.missingParameter("CVV") {
-            showErrorLabel(errorText: CreditCardError.missingParameter("CVV").description)
+        } catch CreditCardError.missingParameter("month") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("month").description)
+        } catch CreditCardError.missingParameter("year") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("year").description)
+        } catch CreditCardError.missingParameter("cvc") {
+            showErrorLabel(errorText: CreditCardError.missingParameter("cvc").description)
         } catch {}
         
         guard nextValue < textFields.count else { return }
